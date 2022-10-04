@@ -5176,7 +5176,7 @@ break
 //=================================================//
 case 'owner': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5203,7 +5203,7 @@ break
 //=================================================//
 case 'menu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5295,7 +5295,7 @@ break
 //=================================================//
 case 'soundbot': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5330,7 +5330,7 @@ break
 //=================================================//
 case 'funnmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5379,7 +5379,7 @@ break
 //=================================================//
 case 'bugmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5475,7 +5475,7 @@ break
 //=================================================//
 case 'primbonmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5526,7 +5526,7 @@ haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 break
 case 'islamiyah': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5553,7 +5553,7 @@ break
 //=================================================//
 case 'beritanews': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5591,7 +5591,7 @@ break
 //=================================================//
 case 'groupmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5641,7 +5641,7 @@ break
 //=================================================//
 case 'voicechanger': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5674,7 +5674,7 @@ break
 //=================================================//
 case 'asupanmata': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5708,7 +5708,7 @@ break
 //=================================================//
 case 'searchmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5740,7 +5740,7 @@ break
 //=================================================//
 case 'scrapconvert': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5780,7 +5780,7 @@ break
 //=================================================//
 case 'cmdmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5810,7 +5810,7 @@ break
 //=================================================//
 case 'downloadmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5838,7 +5838,7 @@ break
 //=================================================//
 case 'ownermenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5886,7 +5886,7 @@ break
 //=================================================//
 case 'scraperimage': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -5946,7 +5946,7 @@ break
 //=================================================//
 case 'randomsound': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -6129,7 +6129,7 @@ break
 //=================================================//
 case 'rpgmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
