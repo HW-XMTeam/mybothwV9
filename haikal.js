@@ -237,21 +237,6 @@ if (!('mute' in chats)) chats.mute = false
 } else global.db.data.chats[m.chat] = {
 mute: false,
 }
-let setting = db.data.settings[botNumber]
-if (typeof setting !== 'object') db.data.settings[botNumber] = {}
-if (setting) {
-if (!isNumber(setting.status)) setting.status = 0
-if (!('templateImage' in setting)) setting.templateImage = true
-if (!('templateVideo' in setting)) setting.templateVideo = false
-if (!('templateGif' in setting)) setting.templateGif = false
-if (!('templateDocument' in setting)) setting.templateDocument = false
-} else db.data.settings[botNumber] = {
-status: 0,
-templateImage: true,
-templateVideo: false,
-templateGif: false,
-templateDocument: false,
-}
 } catch (err) {
 console.log(err)
 }
@@ -5191,10 +5176,13 @@ break
 //=================================================//
 case 'owner': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Groups Bot', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5204,85 +5192,29 @@ caption: `
 ◎ Owner : 085714170944
 
 [ 🇲🇨 Ini adalah Bot Pribadi Tekan Link Di Bawah Untuk Bergabung ]`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
-case 'bannum': {
+//=================================================//
+case 'menu': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Ban Number', url: linkpro}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
 caption: `
-◎ Lib : Multi-Device
-◎ Terbit : *01-09-1999*
-◎ Owner : 085714170944
-
-🇲🇨 *Hello My Name Hw Mods Bot
-Which number do you want banned?? Please Click the Button Below*`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
-}
-haikal.sendMessage(m.chat, templateMessage)
-}
-break
-
-//=================================================//
-case 'setmenu': {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
-let setbot = db.data.settings[botNumber]
- if (args[0] === 'templateImage'){
-setbot.templateImage = true
-setbot.templateVideo = false
-setbot.templateGif = false
-setbot.templateDocument = false
-sticSukses(from)
-} else if (args[0] === 'templateVideo'){
-setbot.templateImage = false
-setbot.templateVideo = true
-setbot.templateGif = false
-setbot.templateDocument = false
-sticSukses(from)
-} else if (args[0] === 'templateGif'){
-setbot.templateImage = false
-setbot.templateVideo = false
-setbot.templateGif = true
-setbot.templateDocument = false
-sticSukses(from)
-} else if (args[0] === 'templateDocument'){
-setbot.templateImage = false
-setbot.templateVideo = false
-setbot.templateGif = false
-setbot.templateDocument = true
-sticSukses(from)
-} else {
-let sections = [
-{
-title: "CHANGE MENU BOT",
-rows: [
-{title: "Template Image", rowId: `setmenu templateImage`, description: `Ubah bot menu menjadi Template Image`},
-{title: "Template Video", rowId: `setmenu templateVideo`, description: `Ubah bot menu menjadi Template Video`},
-{title: "Template Gif", rowId: `setmenu templateGif`, description: `Ubah bot menu menjadi Template Gif`},
-{title: "Template Document", rowId: `setmenu templateDocument`, description: `Ubah bot menu menjadi Document Template `}
-]
-},
-]
-haikal.sendListMsg(m.chat, `Silahkan Pilih SetAllMenu Yang Anda Mau!`, haikal.user.name, `Hay Kak ${pushname} 👋`, `Click Disini`, sections, m)
-}
-}
-break
-//=================================================//
-case 'menu': {
-if (isBan) throw sticBanLu(from)
-anu = `Hay Kak ${pushname} 👋 Selamat ${salam}
+Hay Kak ${pushname} 👋 Selamat ${salam}
 
 ◎ Owner : ${botname}
 ◎ Lib : Multi-Device
@@ -5293,7 +5225,6 @@ anu = `Hay Kak ${pushname} 👋 Selamat ${salam}
 *MENU*
 ┏━━⊱ 
 ┣❏➥ bot
-┣❏➥ bannum
 ┣❏➥ rpgmenu
 ┣❏➥ scraperimage
 ┣❏➥ asupanmata
@@ -5321,62 +5252,23 @@ anu = `Hay Kak ${pushname} 👋 Selamat ${salam}
 contact me Wa.me/6285714170944
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 Base Script
-©Haikal`
-let btn = [{
-urlButton: {
-displayText: 'Youtube',
-url: 'https://youtube.com/c/HwModsWa857'
+©Haikal`,
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-}, {
-callButton: {
-displayText: 'Number Phone Owner',
-phoneNumber: '+6285714170944'
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
-}, {
-quickReplyButton: {
-displayText: 'Bug Menu',
-id: 'bugmenu'
-}
-}, {
-quickReplyButton: {
-displayText: 'Settings Menu',
-id: 'setmenu'
-}
-}, {
-quickReplyButton: {
-displayText: 'Musik',
-id: 'randomsound'
-}
-}]
- let setbot = db.data.settings[botNumber]
-if (setbot.templateImage) {
-haikal.send5ButImg(m.chat, anu, haikal.user.name, global.thumb, btn)
-} else if (setbot.templateGif) {
-haikal.send5ButGif(m.chat, anu, haikal.user.name, global.ggikal, btn)
-} else if (setbot.templateVideo) {
-haikal.send5ButVid(m.chat, anu, haikal.user.name, global.visoka, btn)
-} else if (setbot.templateDocument) {
-                        let buttonmenu = [
-        	{ urlButton: { displayText: `YouTube`, url : `${youtube}` } },
-            { urlButton: { displayText: `Script`, url: `${myweb}` } },
-            { quickReplyButton: { displayText: `Menu`, id: 'menu'} },
-            { quickReplyButton: { displayText: `Bug Menu`, id: 'bugmenu'} },
-            { quickReplyButton: { displayText: `Owner`, id: 'owner'} }
-        	]
-        	haikal.sendMessage(m.chat, { caption: anu, document: fs.readFileSync('./baseikal/lib/cheems.xlsx'), mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
-                        }
-                     }
-            break
+break
 //=================================================//
 case 'bot': {
 if (!isCreator) return
-/*if (!isCreator) return Kalau Mau Self Hapus Aja yang Tanda*/ /* sama */
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "productMessage": {
 "product": {
 "productImage": messa.imageMessage,
-"productId": "4383282311765462",
+"productId": "449756950375071",
 "title": ` © Hay Kak ${pushname} 👋 Selamat ${salam} Apa Yang Bisa Saya Bantu 🙏`,
 "description": ` - © HW MODS WA -
 
@@ -5403,10 +5295,13 @@ break
 //=================================================//
 case 'soundbot': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5425,19 +5320,23 @@ slebew
 cantik
 kesel
 ngeselin`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'funnmenu': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5470,19 +5369,23 @@ family100
 tebak [option]
 math [mode]
 suitpvp [@tag]`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'bugmenu': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5496,27 +5399,21 @@ caption:  ` © Hay Kak ${pushname} 👋 Selamat ${salam}
 *[ 🌷 ] Bugmenu*
 
 🔥 628xxx|5|5 ( nomot target )
-
 🔥 1237891xx|5|5 ( id group )
-
 jagoanom [ reply nomor target ]
-
 santetdia 628xxx@s.whatsapp.net|10|10s ( nomor target )
-
 santetgc  1237891xxxx@g.us|10|10s ( id group )
-
 ampas1 628xxx ( nomor target )
-
 ampas2 112674448xxx ( id group )
-
 catalogpc 628xxx@s.whatsapp.net|10|10s ( nomor target )
-
 cataloggc 1237891xxxx@g.us|10|10s ( id group )
 
 Ketik > m.chat di group ( untuk mendapatkan id group)
 
 welcome [ on / off ]
 spam [ Reply Bug For Spam ]
+senbug [ Bug Pilihan ]
+bugvip [ Bug Pilihan ]
 ha [ bugvn ]
 hi [ bugvn ]
 hu [ bugvn ]
@@ -5568,19 +5465,23 @@ bugbcimage [ Bug image Broadcast ]
 bugbcvideo [ Bug Video Broadcas ]
 bugbc audio [ Bug Audio Broadcast ]
 bugbctext [ Bug Text Broadcast ]`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'primbonmenu': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5616,18 +5517,22 @@ nomorhoki
  masasubur
  zodiak
  shio`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 case 'islamiyah': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5638,19 +5543,24 @@ iqra
  alquran
  juzamma
  tafsirsurah`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'beritanews': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5671,19 +5581,23 @@ tempo-news
 antara-news
 cnn-news
 fajar-news `,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'groupmenu': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5717,19 +5631,23 @@ linkgroup
  upvote
  cekvote
  hapusvote`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'voicechanger': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5746,19 +5664,23 @@ reverse
 robot
 slow
 tupai`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'asupanmata': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5776,19 +5698,23 @@ cecan-thai
 cecan-jepan
 cecan
 bokep`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'searchmenu': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5804,19 +5730,23 @@ wikimedia [query]
 ytsearch [query]
 ringtone [query]
 searchgroups [query]`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'scrapconvert': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5840,19 +5770,23 @@ dbinary
 styletext
 smeme
 ss [url]`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'cmdmenu': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5866,19 +5800,23 @@ addmsg
 listmsg
 getmsg
 delmsg`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'downloadmenu': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5890,19 +5828,23 @@ ytmp4 [url]
 getmusic [query]
 getvideo [query]
 mediafire [url]`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'ownermenu': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5922,7 +5864,6 @@ bcaudio
 bcall [text]
 setppbot [image]
 setexif
-setmenu [option]
 ping
 owner
 creator
@@ -5935,19 +5876,23 @@ listpc
 listgc
 listonline
 speedtest`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'scraperimage': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -5991,19 +5936,23 @@ handhold
 darkjoke
 meme
 meme2`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'randomsound': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -6170,19 +6119,23 @@ sound158
 sound159
 sound160
 sound161`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
 case 'rpgmenu': {
 if (isBan) throw sticBanLu(from)
-const templateButtons = [
-{index: 1, urlButton: {displayText: 'Join Group', url: linkgrupss}}
+if (!isRegistered) return replyReg(mess.verif)
+let buttons = [
+{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
+{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
 ]
-const templateMessage = {
+const buttonMessage = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
 gifPlayback:true,
 jpegThumbnail:log0,
@@ -6195,10 +6148,11 @@ beli
 jual
 heal
 berburu0`,
-footer: '© HW MODS WA',
-templateButtons: templateButtons
+footer: haikal.user.name,
+buttons: buttons,
+headerType: 4
 }
-haikal.sendMessage(m.chat, templateMessage)
+haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
 }
 break
 //=================================================//
