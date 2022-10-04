@@ -4769,6 +4769,7 @@ m.reply('Succes mematikan antilink di group ini 🌷')
 m.reply('on untuk mengaktifkan, off untuk menonaktifkan')
 }
 }
+break
 case 'bugghoib': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -5203,20 +5204,8 @@ break
 //=================================================//
 case 'menu': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
-Hay Kak ${pushname} 👋 Selamat ${salam}
-
-◎ Owner : ${botname}
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `◎ Owner : ${botname}
 ◎ Lib : Multi-Device
 ◎ Terbit : *01-09-1999*
 
@@ -5225,12 +5214,10 @@ Hay Kak ${pushname} 👋 Selamat ${salam}
 *MENU*
 ┏━━⊱ 
 ┣❏➥ bot
-┣❏➥ rpgmenu
 ┣❏➥ scraperimage
 ┣❏➥ asupanmata
 ┣❏➥ scrapconvert
 ┣❏➥ bugmenu
-┣❏➥ cerpen
 ┣❏➥ randomsound
 ┣❏➥ nsfw
 ┣❏➥ soundbot
@@ -5252,12 +5239,14 @@ Hay Kak ${pushname} 👋 Selamat ${salam}
 contact me Wa.me/6285714170944
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 Base Script
-©Haikal`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+©Haikal`, contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
@@ -5295,17 +5284,8 @@ break
 //=================================================//
 case 'soundbot': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] soundbot* 
  
 kal
@@ -5320,27 +5300,21 @@ slebew
 cantik
 kesel
 ngeselin`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'funnmenu': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] funnmenu* 
 bagaimanakah
 kapankah
@@ -5362,34 +5336,23 @@ hilih
 huluh
 heleh
 holoh
-jadian
-jodohku
 delttt
-family100
-tebak [option]
-math [mode]
 suitpvp [@tag]`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'bugmenu': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption:  ` © Hay Kak ${pushname} 👋 Selamat ${salam}
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `© Hay Kak ${pushname} 👋 Selamat ${salam}
  - © HW MODS WA -
 
 ◎ Owner : ${botname}
@@ -5465,27 +5428,21 @@ bugbcimage [ Bug image Broadcast ]
 bugbcvideo [ Bug Video Broadcas ]
 bugbc audio [ Bug Audio Broadcast ]
 bugbctext [ Bug Text Broadcast ]`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'primbonmenu': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] primbonmenu* 
 nomorhoki
  artimimpi
@@ -5517,54 +5474,41 @@ nomorhoki
  masasubur
  zodiak
  shio`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 case 'islamiyah': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] islamiyah* 
 iqra
  hadist
  alquran
  juzamma
  tafsirsurah`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'beritanews': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] beritanews* 
 merdeka-news
 kontan-news 
@@ -5581,27 +5525,21 @@ tempo-news
 antara-news
 cnn-news
 fajar-news `,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'groupmenu': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Group Menu* 
 linkgroup
  ephemeral [option]
@@ -5617,8 +5555,6 @@ linkgroup
  tagall [text]
  promote @user
  demote @user
- vote [text]
- devote
  inspect
  mute on / off
  getname
@@ -5627,31 +5563,22 @@ linkgroup
  intro
  getpic
  penjara
- intro
- upvote
- cekvote
- hapusvote`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+ intro`,
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'voicechanger': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Voice Changer* 
 bass
 blown
@@ -5664,27 +5591,21 @@ reverse
 robot
 slow
 tupai`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'asupanmata': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Asupan Mata* 
 asupan
 asupanukhty
@@ -5698,27 +5619,21 @@ cecan-thai
 cecan-jepan
 cecan
 bokep`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'searchmenu': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Search Menu* 
 play [query]
 yts [query]
@@ -5730,27 +5645,21 @@ wikimedia [query]
 ytsearch [query]
 ringtone [query]
 searchgroups [query]`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'scrapconvert': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Scrap Convert* 
 attp
 ttp
@@ -5770,27 +5679,21 @@ dbinary
 styletext
 smeme
 ss [url]`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'cmdmenu': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Cmd Menu* 
 setcmd
 listcmd
@@ -5800,27 +5703,21 @@ addmsg
 listmsg
 getmsg
 delmsg`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'downloadmenu': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Download Menu* 
 pinterestdl [url]
 ytmp3 [url]
@@ -5828,27 +5725,21 @@ ytmp4 [url]
 getmusic [query]
 getvideo [query]
 mediafire [url]`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'ownermenu': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Owner Menu* 
 react [emoji]
 chat [option]
@@ -5856,12 +5747,7 @@ join [link]
 leave
 block @user
 unblock @user
-bcgroup [text]
-bcimage
-bctext
-bcvideo
-bcaudio
-bcall [text]
+bcText [text]
 setppbot [image]
 setexif
 ping
@@ -5876,33 +5762,25 @@ listpc
 listgc
 listonline
 speedtest`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'scraperimage': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Scraper Image* 
-anime
 coffe
 quotesanime
 couple
-umma
 wibu
 loli
 bully
@@ -5936,27 +5814,21 @@ handhold
 darkjoke
 meme
 meme2`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
 case 'randomsound': {
 if (isBan) throw sticBanLu(from)
-
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
+if (!isRegistered) return replyReg(mess.verif)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Sound Menu* 
 sound1
 sound2
@@ -6119,11 +5991,14 @@ sound158
 sound159
 sound160
 sound161`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnail: kalimage,
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+}}, { quoted:hw})
 }
 break
 //=================================================//
