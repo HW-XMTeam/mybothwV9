@@ -5204,7 +5204,7 @@ break
 //=================================================//
 case 'menu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `◎ Owner : ${botname}
 ◎ Lib : Multi-Device
 ◎ Terbit : *01-09-1999*
@@ -5284,7 +5284,7 @@ break
 //=================================================//
 case 'soundbot': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] soundbot* 
  
@@ -5313,7 +5313,7 @@ break
 //=================================================//
 case 'funnmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] funnmenu* 
 bagaimanakah
@@ -5351,7 +5351,7 @@ break
 //=================================================//
 case 'bugmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `© Hay Kak ${pushname} 👋 Selamat ${salam}
  - © HW MODS WA -
 
@@ -5441,7 +5441,7 @@ break
 //=================================================//
 case 'primbonmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] primbonmenu* 
 nomorhoki
@@ -5486,7 +5486,7 @@ thumbnail: kalimage,
 break
 case 'islamiyah': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] islamiyah* 
 iqra
@@ -5507,7 +5507,7 @@ break
 //=================================================//
 case 'beritanews': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] beritanews* 
 merdeka-news
@@ -5538,7 +5538,7 @@ break
 //=================================================//
 case 'groupmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Group Menu* 
 linkgroup
@@ -5577,7 +5577,7 @@ break
 //=================================================//
 case 'voicechanger': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Voice Changer* 
 bass
@@ -5604,7 +5604,7 @@ break
 //=================================================//
 case 'asupanmata': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Asupan Mata* 
 asupan
@@ -5632,7 +5632,7 @@ break
 //=================================================//
 case 'searchmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Search Menu* 
 play [query]
@@ -5658,7 +5658,7 @@ break
 //=================================================//
 case 'scrapconvert': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Scrap Convert* 
 attp
@@ -5692,7 +5692,7 @@ break
 //=================================================//
 case 'cmdmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Cmd Menu* 
 setcmd
@@ -5716,7 +5716,7 @@ break
 //=================================================//
 case 'downloadmenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Download Menu* 
 pinterestdl [url]
@@ -5738,7 +5738,7 @@ break
 //=================================================//
 case 'ownermenu': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Owner Menu* 
 react [emoji]
@@ -5775,7 +5775,7 @@ break
 //=================================================//
 case 'scraperimage': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Scraper Image* 
 coffe
@@ -5827,7 +5827,7 @@ break
 //=================================================//
 case 'randomsound': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Sound Menu* 
 sound1
