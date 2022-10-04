@@ -167,19 +167,6 @@ return list[Math.floor(list.length * Math.random())]
 let documents = [doc1,doc2,doc3,doc4,doc5,doc6]
 let docs = pickRandom(documents)
 //=================================================//
-const hw = { 
-key: {
-fromMe: false, 
-participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "14169948404-1305080833@g.us" } : {}) 
-},
-"message": {
-"extendedTextMessage": {
-"text": "© HW MODS WA ]️",
-"previewType": "NONE",
-"contextInfo": {
-"stanzaId": "3EB0382EDBB2",
-"participant": "6285714170944@s.whatsapp.net"
-}}}}
 //=================================================//
 const doc = { 
 key: {
@@ -194,7 +181,7 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {})
 "fileLength": "64455",
 "pageCount": 1,
 "mediaKey": "P32GszzU5piUZ5HKluLD5h/TZzubVJ7lCAd1PIz3Qb0=",
-"fileName": `HW MODS WA${ngazap(prefix)}`,
+"fileName": `HW MODS WA${buttonkal}`,
 "fileEncSha256": "ybdZlRjhY+aXtytT0G2HHN4iKWCFisG2W69AVPLg5yk="
 }}}
 //=================================================//
@@ -213,7 +200,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 //=================================================//
 //=================================================//
@@ -1756,73 +1743,73 @@ break
 case 'kal': {
 if (isBan) throw sticBanLu(from)
  hey = fs.readFileSync('./baseikal/sound/tes.mp3')
- haikal.sendMessage(m.chat, {audio: hey, mimetype: 'audio/mpeg', ptt:true }, {quoted:hw})
+ haikal.sendMessage(m.chat, {audio: hey, mimetype: 'audio/mpeg', ptt:true }, {quoted:m})
  }
  break
 case 'ngakak': {
 if (isBan) throw sticBanLu(from)
  hiy = fs.readFileSync('./baseikal/sound/ketawa.mp3')
- haikal.sendMessage(m.chat, {audio: hiy, mimetype: 'audio/mpeg', ptt:true }, {quoted:hw})
+ haikal.sendMessage(m.chat, {audio: hiy, mimetype: 'audio/mpeg', ptt:true }, {quoted:m})
  }
  break
 case 'ketawa': {
 if (isBan) throw sticBanLu(from)
  hoy = fs.readFileSync('./baseikal/sound/ketawa.mp3')
- haikal.sendMessage(m.chat, {audio: hoy, mimetype: 'audio/mpeg', ptt:true }, {quoted:hw})
+ haikal.sendMessage(m.chat, {audio: hoy, mimetype: 'audio/mpeg', ptt:true }, {quoted:m})
  }
  break
 case 'awkwk': {
 if (isBan) throw sticBanLu(from)
  huy = fs.readFileSync('./baseikal/sound/awkwk.mp3')
- haikal.sendMessage(m.chat, {audio: huy, mimetype: 'audio/mpeg', ptt:true }, {quoted:hw})
+ haikal.sendMessage(m.chat, {audio: huy, mimetype: 'audio/mpeg', ptt:true }, {quoted:m})
  }
  break
 case 'bang': {
 if (isBan) throw sticBanLu(from)
  mi = fs.readFileSync('./baseikal/sound/bang.mp3')
- haikal.sendMessage(m.chat, {audio: mi, mimetype: 'audio/mpeg', ptt:true }, {quoted:hw})
+ haikal.sendMessage(m.chat, {audio: mi, mimetype: 'audio/mpeg', ptt:true }, {quoted:m})
  }
  break
 case 'nob': {
 if (isBan) throw sticBanLu(from)
  miki = fs.readFileSync('./baseikal/sound/nob.mp3')
- haikal.sendMessage(m.chat, {audio: miki, mimetype: 'audio/mpeg', ptt:true }, {quoted:hw})
+ haikal.sendMessage(m.chat, {audio: miki, mimetype: 'audio/mpeg', ptt:true }, {quoted:m})
  }
  break
 case 'musik': {
 if (isBan) throw sticBanLu(from)
  mo = fs.readFileSync('./baseikal/sound/ikehcok.mp3')
- haikal.sendMessage(m.chat, {audio: mo, mimetype: 'audio/mpeg', ptt:true }, {quoted:hw})
+ haikal.sendMessage(m.chat, {audio: mo, mimetype: 'audio/mpeg', ptt:true }, {quoted:m})
  }
  break
 case 'mastah': {
 if (isBan) throw sticBanLu(from)
  mu = fs.readFileSync('./baseikal/sound/mastah.mp3')
- haikal.sendMessage(m.chat, {audio: mu, mimetype: 'audio/mpeg', ptt:true }, {quoted:hw})
+ haikal.sendMessage(m.chat, {audio: mu, mimetype: 'audio/mpeg', ptt:true }, {quoted:m})
  }
  break
 case 'slebew': {
 if (isBan) throw sticBanLu(from)
  me = fs.readFileSync('./baseikal/sound/ikehcok.mp3')
- haikal.sendMessage(m.chat, {audio: me, mimetype: 'audio/mpeg', ptt:true }, {quoted:hw})
+ haikal.sendMessage(m.chat, {audio: me, mimetype: 'audio/mpeg', ptt:true }, {quoted:m})
  }
  break
 case 'cantik': {
 if (isBan) throw sticBanLu(from)
  muku = fs.readFileSync('./baseikal/sound/loli.mp3')
- haikal.sendMessage(m.chat, {audio: muku, mimetype: 'audio/mpeg', ptt:true }, {quoted:hw})
+ haikal.sendMessage(m.chat, {audio: muku, mimetype: 'audio/mpeg', ptt:true }, {quoted:m})
  }
  break
 case 'kesel': {
 if (isBan) throw sticBanLu(from)
  meke = fs.readFileSync('./baseikal/sound/kesel.mp3')
- haikal.sendMessage(m.chat, {audio: meke, mimetype: 'audio/mpeg', ptt:true }, {quoted:hw})
+ haikal.sendMessage(m.chat, {audio: meke, mimetype: 'audio/mpeg', ptt:true }, {quoted:m})
  }
  break
 case 'ngeselin': {
 if (isBan) throw sticBanLu(from)
  moko = fs.readFileSync('./baseikal/sound/ngeselin.mp3')
- haikal.sendMessage(m.chat, {audio: moko, mimetype: 'audio/mpeg', ptt:true }, {quoted:hw})
+ haikal.sendMessage(m.chat, {audio: moko, mimetype: 'audio/mpeg', ptt:true }, {quoted:m})
  }
  break
 //=================================================//
@@ -3359,7 +3346,7 @@ sticWait(from)
 let media = await quoted.download()
 let { toPTT } = require('./baseikal/lib/converter')
 let audio = await toPTT(media, 'mp4')
-haikal.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:hw})
+haikal.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
 }
 break
 case 'togif': {
@@ -4365,20 +4352,20 @@ if (isBan) throw sticBanLu(from)
 oh = `Example : ${prefix + command} 3\n\nIQRA Yang tersedia : 1,2,3,4,5,6`
 if (!text) throw oh
 yy = await getBuffer(`https://islamic-api-indonesia.herokuapp.com/api/data/pdf/iqra${text}`)
-haikal.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:hw}).catch ((err) => reply(oh))
+haikal.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => reply(oh))
 }
 break
 //=================================================//
 case 'juzamma': {
 if (isBan) throw sticBanLu(from)
 if (args[0] === 'pdf') {
-haikal.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:hw})
+haikal.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:m})
 } else if (args[0] === 'docx') {
-haikal.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.docx'}, mimetype: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: 'juz-amma-arab-latin-indonesia.docx'}, {quoted:hw})
+haikal.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.docx'}, mimetype: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: 'juz-amma-arab-latin-indonesia.docx'}, {quoted:m})
 } else if (args[0] === 'pptx') {
-haikal.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pptx'}, mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', fileName: 'juz-amma-arab-latin-indonesia.pptx'}, {quoted:hw})
+haikal.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pptx'}, mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', fileName: 'juz-amma-arab-latin-indonesia.pptx'}, {quoted:m})
 } else if (args[0] === 'xlsx') {
-haikal.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:hw})
+haikal.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:m})
 } else {
 reply(`Mau format apa ? Example : ${prefix + command} pdf
 Format yang tersedia : pdf, docx, pptx, xlsx`)
@@ -5247,7 +5234,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5308,7 +5295,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5346,7 +5333,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5444,7 +5431,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5490,7 +5477,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 case 'islamiyah': {
@@ -5510,7 +5497,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5541,7 +5528,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5580,7 +5567,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5607,7 +5594,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5635,7 +5622,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5661,7 +5648,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5695,7 +5682,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5719,7 +5706,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5741,7 +5728,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5778,7 +5765,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -5830,7 +5817,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
@@ -6007,7 +5994,7 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 thumbnail: kalimage,
 }
-}}, { quoted:hw})
+}}, { quoted:m})
 }
 break
 //=================================================//
