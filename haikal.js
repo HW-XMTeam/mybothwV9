@@ -349,15 +349,15 @@ jawaban = tebaklagu[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
 await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
 delete tebaklagu[m.sender.split('@')[0]]
-} else bangkal('*Jawaban Salah!*')
+} else anjay('*Jawaban Salah!*')
 }
 if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
 kuis = true
 jawaban = kuismath[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
-await bangkal(`🎮 Kuis Matematika🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? kirim ${prefix}math mode`)
+await anjay(`🎮 Kuis Matematika🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? kirim ${prefix}math mode`)
 delete kuismath[m.sender.split('@')[0]]
-} else bangkal('*Jawaban Salah!*')
+} else anjay('*Jawaban Salah!*')
 }
 if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
 kuis = true
@@ -365,7 +365,7 @@ jawaban = tebakgambar[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
 await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
 delete tebakgambar[m.sender.split('@')[0]]
-} else bangkal('*Jawaban Salah!*')
+} else anjay('*Jawaban Salah!*')
 }
 if (tebakkata.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
 kuis = true
@@ -373,7 +373,7 @@ jawaban = tebakkata[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
 await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
 delete tebakkata[m.sender.split('@')[0]]
-} else bangkal('*Jawaban Salah!*')
+} else anjay('*Jawaban Salah!*')
 }
 if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
 kuis = true
@@ -383,7 +383,7 @@ if (budy.toLowerCase() == jawaban) {
 await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
 delete caklontong[m.sender.split('@')[0]]
 delete caklontong_desk[m.sender.split('@')[0]]
-} else bangkal('*Jawaban Salah!*')
+} else anjay('*Jawaban Salah!*')
 }
 if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
 kuis = true
@@ -391,7 +391,7 @@ jawaban = tebakkalimat[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
 await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
 delete tebakkalimat[m.sender.split('@')[0]]
-} else bangkal('*Jawaban Salah!*')
+} else anjay('*Jawaban Salah!*')
 }
 if (tebaklirik.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
 kuis = true
@@ -399,7 +399,7 @@ jawaban = tebaklirik[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
 await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
 delete tebaklirik[m.sender.split('@')[0]]
-} else bangkal('*Jawaban Salah!*')
+} else anjay('*Jawaban Salah!*')
 }
 if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
 kuis = true
@@ -407,7 +407,7 @@ jawaban = tebaktebakan[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
 await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak tebakan', buttonText: { displayText: 'Tebak Tebakan' }, type: 1 }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
 delete tebaktebakan[m.sender.split('@')[0]]
-} else bangkal('*Jawaban Salah!*')
+} else anjay('*Jawaban Salah!*')
 }
 //=================================================//
 if (budy.startsWith('©️')) {
@@ -464,13 +464,13 @@ let reg = /^(gunting|batu|kertas)/i
 if (jwb && reg.test(m.text) && !roof.pilih && !m.isGroup) {
 roof.pilih = reg.exec(m.text.toLowerCase())[0]
 roof.text = m.text
-bangkal(`Kamu telah memilih ${m.text} ${!roof.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
+anjay(`Kamu telah memilih ${m.text} ${!roof.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
 if (!roof.pilih2) haikal.sendText(roof.p2, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
 }
 if (jwb2 && reg.test(m.text) && !roof.pilih2 && !m.isGroup) {
 roof.pilih2 = reg.exec(m.text.toLowerCase())[0]
 roof.text2 = m.text
-bangkal(`Kamu telah memilih ${m.text} ${!roof.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
+anjay(`Kamu telah memilih ${m.text} ${!roof.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
 if (!roof.pilih) haikal.sendText(roof.p, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
 }
 let stage = roof.pilih
@@ -499,14 +499,14 @@ if (!user) continue
 let afkTime = user.afkTime
 if (!afkTime || afkTime < 0) continue
 let reason = user.afkReason || ''
-bangkal(`
+anjay(`
 Apakah Ada Yang Ingin Di Tanyakan ${reason ? 'Ada Yang Bisa Saya Bantu? ' + reason : 'Terima Kasih'}
 Waktu ${clockString(new Date - afkTime)}
 `.trim())
 }
 if (db.data.users[m.sender].afkTime > -1) {
 let user = global.db.data.users[m.sender]
-bangkal(`
+anjay(`
 Hello Saya Bot Hw Mods${user.afkReason ? ' Baiklah ' + user.afkReason : ''}
 Selama ${clockString(new Date - user.afkTime)}
 `.trim())
@@ -5227,7 +5227,7 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `◎ Owner : ${botname}
 contact me Wa.me/6285714170944
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 Base Script
-©THE REXJU BOTS`, contextInfo:{"externalAdReply": {"title": `SC THE REXJU BOTS`,"body": `Selamat ${salam} kak ${pushname}`,
+©Haikal`, contextInfo:{"externalAdReply": {"title": `SC THE REXJU BOTS`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
 showAdAttribution: true,
 sourceUrl: `https://youtube.com/c/HwModsWa857`,
@@ -6035,24 +6035,24 @@ sat = JSON.stringify(sul, null, 2)
 bang = util.format(sat)
 if (sat == undefined) {
 bang = util.format(sul)}
-return bangkal(bang)}
+return anjay(bang)}
 try {
 m.reply(util.format(eval(`(async () => { return ${budy.slice(3)} })()`)))
 } catch (e) {
-bangkal(String(e))}}
+anjay(String(e))}}
 if (budy.startsWith('>')) {
 if (!isCreator) return sticOwner(from)
 try {
 let evaled = await eval(budy.slice(2))
 if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
-await bangkal(evaled)
+await anjay(evaled)
 } catch (err) {
-await bangkal(String(err))}}
+await anjay(String(err))}}
 if (budy.startsWith('$')) {
 if (!isCreator) return 
 exec(budy.slice(2), (err, stdout) => {
-if(err) return bangkal(err)
-if (stdout) return bangkal(stdout)})}
+if(err) return anjay(err)
+if (stdout) return anjay(stdout)})}
 //=================================================//
 //=================================================//
 if (isCmd && budy.toLowerCase() != undefined) {
