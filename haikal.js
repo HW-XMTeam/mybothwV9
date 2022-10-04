@@ -190,7 +190,7 @@ const deploy = (teks) => {
   haikal.relayMessage(m.chat, { requestPaymentMessage: { Message: { extendedTextMessage: { text: teks, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, background: thumb }}}}, {})}
 //=================================================//
 const reply = (teks) => {
-return haikal.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": `SC THE REXJU BOTS`,"body": `Selamat ${salam} kak ${pushname}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": kalimage,"sourceUrl": `https://youtube.com/c/HwModsWa857`}}}, { quoted: hw })} 
+return haikal.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": `SC THE REXJU BOTS`,"body": `Selamat ${salam} kak ${pushname}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": kalimage,"sourceUrl": `https://youtube.com/c/HwModsWa857`}}}, { quoted: m })} 
 //=================================================//
 const anjay = (teks) => {
  haikal.sendMessage(m.chat, { image: kalimage, caption: teks, contextInfo:{"externalAdReply": {"title": `SC THE REXJU BOTS`,"body": `Selamat ${salam} kak ${pushname}`,
@@ -309,7 +309,7 @@ let hash = global.db.data.sticker[m.msg.fileSha256.toString('base64')]
 let { text, mentionedJid } = hash
 let messages = await generateWAMessage(m.chat, { text: text, mentions: mentionedJid }, {
 userJid: haikal.user.id,
-quoted: hw.quoted && m.quoted.fakeObj
+quoted: m.quoted && m.quoted.fakeObj
 })
 messages.key.fromMe = areJidsSameUser(m.sender, haikal.user.id)
 messages.key.id = m.key.id
@@ -1818,10 +1818,10 @@ if (isBan) throw sticBanLu(from)
 if (!quoted) throw 'Reply Image'
 if (/image/.test(mime)) {
 anu = await haikal.downloadAndSaveMediaMessage(quoted)
-haikal.sendMessage(m.chat, {image: {url: anu},viewOnce : true},{quoted: hw })
+haikal.sendMessage(m.chat, {image: {url: anu},viewOnce : true},{quoted: m })
 } else if (/video/.test(mime)) {
 anu = await haikal.downloadAndSaveMediaMessage(quoted)
-haikal.sendMessage(m.chat, {video: {url: anu},viewOnce : true},{quoted: hw })
+haikal.sendMessage(m.chat, {video: {url: anu},viewOnce : true},{quoted: m })
 }
 }
 break
@@ -1945,7 +1945,7 @@ case "darkjoke": case "darkjokes":
 if (isBan) throw sticBanLu(from)
 var res = await Darkjokes()
 teks = "*Darkjokes*"
-haikal.sendMessage(m.chat, { image : { url : res }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res }, caption: teks }, { quoted: m })
 break
 //=================================================//
 case 'cnn-news':
@@ -1994,7 +1994,7 @@ teks += `Upload: ${i.berita_diupload}\n`
 teks += `Link: ${i.berita_url}\n`
 }
 teks += ""
-haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted: m })
 })
 break
 //=================================================//
@@ -2012,7 +2012,7 @@ teks += `Jenis: ${i.berita_jenis}\n`
 teks += `Link: ${i.berita_url}\n`
 }
 teks += ""
-haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted: m })
 })
 break
 //=================================================//
@@ -2030,7 +2030,7 @@ teks += `Jenis: ${i.berita_jenis}\n`
 teks += `Link: ${i.berita_url}\n`
 }
 teks += ""
-haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted: m })
 })
 break
 //=================================================//
@@ -2048,7 +2048,7 @@ teks += `Jenis: ${i.berita_jenis}\n`
 teks += `Link: ${i.berita_url}\n`
 }
 teks += ""
-haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted: m })
 })
 break
 //=================================================//
@@ -2065,7 +2065,7 @@ teks += `Upload: ${i.berita_diupload}\n`
 teks += `Link: ${i.berita_url}\n`
 }
 teks += ""
-haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted: m })
 })
 break
 //=================================================//
@@ -2081,7 +2081,7 @@ teks += `Berita: ${i.berita}\n`
 teks += `Link: ${i.berita_url}\n`
 }
 teks += ""
-haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted: m })
 })
 break
 //=================================================//
@@ -2116,7 +2116,7 @@ teks += `Upload: ${i.berita_diupload}\n`
 teks += `Link: ${i.berita_url}\n`
 }
 teks += ""
-haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted: m })
 })
 break
 //=================================================//
@@ -2150,7 +2150,7 @@ teks += `Upload: ${i.berita_diupload}\n`
 teks += `Link: ${i.berita_url}\n`
 }
 teks += ""
-haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted: m })
 })
 break
 //=================================================//
@@ -2168,7 +2168,7 @@ teks += `Jenis: ${i.berita_jenis}\n`
 teks += `Link: ${i.berita_url}\n`
 }
 teks += ""
-haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted: m })
 })
 break
 //=================================================//
@@ -2186,7 +2186,7 @@ teks += `Upload: ${i.berita_diupload}\n`
 teks += `Link: ${i.berita_url}\n`
 }
 teks += ""
-haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted: m })
 })
 break
 //=================================================//
@@ -2203,7 +2203,7 @@ teks += `Upload: ${i.berita_diupload}\n`
 teks += `Link: ${i.berita_url}\n`
 }
 teks += ""
-haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted: m })
 })
 break
 //=================================================//
@@ -2214,7 +2214,7 @@ teks = ""
 teks += "Jalan Tikus Meme\n\n"
 teks += `Source: ${res}`
 teks += ""
-haikal.sendMessage(m.chat, { image : { url : res }, caption: teks }, { quoted : hw })
+haikal.sendMessage(m.chat, { image : { url : res }, caption: teks }, { quoted: m })
 break
 //=================================================//
 /*Random*/
@@ -2223,7 +2223,7 @@ break
 if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} saya wibu`)
 const apa = ['Iya', 'Tidak', 'Bisa Jadi', 'Betul']
 const kah = apa[Math.floor(Math.random() * apa.length)]
-haikal.sendMessage(from, { text: `Pertanyaan : Apakah ${q}\nJawaban : ${kah}` }, { quoted: hw })
+haikal.sendMessage(from, { text: `Pertanyaan : Apakah ${q}\nJawaban : ${kah}` }, { quoted: m })
 break
 //=================================================//
 case 'bisakah':
@@ -2231,7 +2231,7 @@ if (isBan) throw sticBanLu(from)
 if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} saya wibu`)
 const bisa = ['Bisa','Gak Bisa','Gak Bisa Ajg Aaokawpk','TENTU PASTI KAMU BISA!!!!']
 const ga = bisa[Math.floor(Math.random() * bisa.length)]
-haikal.sendMessage(from, { text: `Pertanyaan : ${q}\nJawaban : ${ga}` }, { quoted: hw })
+haikal.sendMessage(from, { text: `Pertanyaan : ${q}\nJawaban : ${ga}` }, { quoted: m })
 break
 //=================================================//
 case 'bagaimanakah':
@@ -2239,7 +2239,7 @@ if (isBan) throw sticBanLu(from)
 if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} saya wibu`)
 const gimana = ['Gak Gimana2', 'Sulit Itu Bro', 'Maaf Bot Tidak Bisa Menjawab', 'Coba Deh Cari Di Gugel','astaghfirallah Beneran???','Pusing ah','Owhh Begitu:(','Yang Sabar Ya Bos:(','Gimana yeee']
 const ya = gimana[Math.floor(Math.random() * gimana.length)]
-haikal.sendMessage(from, { text: `Pertanyaan : ${q}\nJawaban : ${ya}` }, { quoted: hw })
+haikal.sendMessage(from, { text: `Pertanyaan : ${q}\nJawaban : ${ya}` }, { quoted: m })
 break
 //=================================================//
 case 'rate':
@@ -2247,7 +2247,7 @@ if (isBan) throw sticBanLu(from)
 if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} Gambar aku`)
 const ra = ['5', '10', '15' ,'20', '25','30','35','40','45','50','55','60','65','70','75','80','85','90','100']
 const te = ra[Math.floor(Math.random() * ra.length)]
-haikal.sendMessage(from, { text: `Rate : ${q}\nJawaban : *${te}%*` }, { quoted: hw })
+haikal.sendMessage(from, { text: `Rate : ${q}\nJawaban : *${te}%*` }, { quoted: m })
 break
 //=================================================//
 case 'gantengcek':
@@ -2256,7 +2256,7 @@ if (isBan) throw sticBanLu(from)
 if (!q) return reply(`Penggunaan ${command} Nama\n\nContoh : ${command} haikal`)
 const gan = ['5', '10', '15' ,'20', '25','30','35','40','45','50','55','60','65','70','75','80','85','90','100']
 const teng = gan[Math.floor(Math.random() * gan.length)]
-haikal.sendMessage(from, { text: `Nama : ${q}\nJawaban : *${teng}%*` }, { quoted: hw })
+haikal.sendMessage(from, { text: `Nama : ${q}\nJawaban : *${teng}%*` }, { quoted: m })
 break
 //=================================================//
 case 'cantikcek':
@@ -2265,7 +2265,7 @@ if (isBan) throw sticBanLu(from)
 if (!q) return reply(`Penggunaan ${command} Nama\n\nContoh : ${command} haikal`)
 const can = ['5', '10', '15' ,'20', '25','30','35','40','45','50','55','60','65','70','75','80','85','90','100']
 const tik = can[Math.floor(Math.random() * can.length)]
-haikal.sendMessage(from, { text: `Nama : ${q}\nJawaban : *${tik}%*` }, { quoted: hw })
+haikal.sendMessage(from, { text: `Nama : ${q}\nJawaban : *${tik}%*` }, { quoted: m })
 break
 //=================================================//
 case 'sangecek':
@@ -2278,7 +2278,7 @@ if (isBan) throw sticBanLu(from)
 if (!q) return reply(`Penggunaan ${command} Nama\n\nContoh : ${command} ${pushname}`)
 const sangeh = ['5', '10', '15','20', '25','30','35','40','45','50','55','60','65','70','75','80','85','90','100']
 const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
-haikal.sendMessage(from, { text: `Nama : ${q}\nJawaban : *${sange}%*` }, { quoted: hw })
+haikal.sendMessage(from, { text: `Nama : ${q}\nJawaban : *${sange}%*` }, { quoted: m })
 break
 //=================================================//
 case 'kapankah':
@@ -2286,7 +2286,7 @@ if (isBan) throw sticBanLu(from)
 if (!q) return reply(`Penggunaan ${command} Pertanyaan\n\nContoh : ${command} Saya Mati`)
 const kapan = ['5 Hari Lagi', '10 Hari Lagi', '15 Hari Lagi','20 Hari Lagi', '25 Hari Lagi','30 Hari Lagi','35 Hari Lagi','40 Hari Lagi','45 Hari Lagi','50 Hari Lagi','55 Hari Lagi','60 Hari Lagi','65 Hari Lagi','70 Hari Lagi','75 Hari Lagi','80 Hari Lagi','85 Hari Lagi','90 Hari Lagi','100 Hari Lagi','5 Bulan Lagi', '10 Bulan Lagi', '15 Bulan Lagi','20 Bulan Lagi', '25 Bulan Lagi','30 Bulan Lagi','35 Bulan Lagi','40 Bulan Lagi','45 Bulan Lagi','50 Bulan Lagi','55 Bulan Lagi','60 Bulan Lagi','65 Bulan Lagi','70 Bulan Lagi','75 Bulan Lagi','80 Bulan Lagi','85 Bulan Lagi','90 Bulan Lagi','100 Bulan Lagi','1 Tahun Lagi','2 Tahun Lagi','3 Tahun Lagi','4 Tahun Lagi','5 Tahun Lagi','Besok','Lusa',`Abis Command Ini Juga Lu ${q}`]
 const kapankah = kapan[Math.floor(Math.random() * kapan.length)]
-haikal.sendMessage(from, { text: `Pertanyaan : ${q}\nJawaban : *${kapankah}*` }, { quoted: hw })
+haikal.sendMessage(from, { text: `Pertanyaan : ${q}\nJawaban : *${kapankah}*` }, { quoted: m })
 break
 //=================================================//
 case 'wangy':
@@ -2351,7 +2351,7 @@ break
 //=================================================//
 case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
 if (isBan) throw sticBanLu(from)
-haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c2fda8b471c869a46b8c5.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n Bot Rental Prices\n⭔ 13k Per Group via E-Walet 1 Month\n⭔ 18k via pulsa 1 Month\n\n Premium Price Bot\n⭔ 8k per User 1 bulan\n\nPayment can be via Paypal/link aja/pulsa\n\nFor more details, you can chat with the owner\nhttps://wa.me/6285714170944 (Owner)\n\nDonate For Me : \n\n⭔ Paypal : https://trakteer.id/hw-mods-wa-haikal\n⭔ Saweria : https://saweria.co/hwmodswa` }, { quoted: hw })
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c2fda8b471c869a46b8c5.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n Bot Rental Prices\n⭔ 13k Per Group via E-Walet 1 Month\n⭔ 18k via pulsa 1 Month\n\n Premium Price Bot\n⭔ 8k per User 1 bulan\n\nPayment can be via Paypal/link aja/pulsa\n\nFor more details, you can chat with the owner\nhttps://wa.me/6285714170944 (Owner)\n\nDonate For Me : \n\n⭔ Paypal : https://trakteer.id/hw-mods-wa-haikal\n⭔ Saweria : https://saweria.co/hwmodswa` }, { quoted: m })
 }
 break
 //=================================================//
@@ -2416,7 +2416,7 @@ if (args[0] === "lagu") {
 if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
 let anu = await fetchJson('https://fatiharridho.github.io/tebaklagu.json')
 let result = anu[Math.floor(Math.random() * anu.length)]
-let msg = await haikal.sendMessage(m.chat, { audio: { url: result.link_song }, mimetype: 'audio/mpeg' }, { quoted: hw })
+let msg = await haikal.sendMessage(m.chat, { audio: { url: result.link_song }, mimetype: 'audio/mpeg' }, { quoted: m })
 haikal.sendText(m.chat, `Lagu Tersebut Adalah Lagu dari?\n\nArtist : ${result.artist}\nWaktu : 60s`, msg).then(() => {
 tebaklagu[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 })
@@ -2514,7 +2514,7 @@ _whoa wait zimbot processing..._
 
 *THE REXJU BOTS*`
 reply(`${result4}`)
-haikal.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime }, { quoted : hw }).catch ((err) => reply('*Failed to download File*'))
+haikal.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime }, { quoted: m }).catch ((err) => reply('*Failed to download File*'))
 }
 break
 //=================================================//
@@ -2847,7 +2847,7 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
 for (let mem of participants) {
 teks += `⭔ @${mem.id.split('@')[0]}\n`
 }
-haikal.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: hw })
+haikal.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
 }
 break
 //=================================================//
@@ -2856,7 +2856,7 @@ if (isBan) throw sticBanLu(from)
 if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
-haikal.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: hw })
+haikal.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
 }
 break
 //=================================================//
@@ -3296,7 +3296,7 @@ exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 fs.unlinkSync(media)
 if (err) throw err
 let buffer = fs.readFileSync(ran)
-haikal.sendMessage(m.chat, { image: buffer }, { quoted: hw })
+haikal.sendMessage(m.chat, { image: buffer }, { quoted: m })
 fs.unlinkSync(ran)
 })
 }
@@ -3310,7 +3310,7 @@ if (!/webp/.test(mime)) throw `*reply sticker with caption* *${prefix + command}
 let { webp2mp4File } = require('./baseikal/lib/uploader')
 let media = await haikal.downloadAndSaveMediaMessage(quoted)
 let webpToMp4 = await webp2mp4File(media)
-await haikal.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' } }, { quoted: hw })
+await haikal.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' } }, { quoted: m })
 await fs.unlinkSync(media)
 }
 break
@@ -3322,7 +3322,7 @@ if (!quoted) throw `*Send/Reply the Video/Audio You Want to Use as Audio With Ca
 let media = await quoted.download()
 let { toAudio } = require('./baseikal/lib/converter')
 let audio = await toAudio(media, 'mp4')
-haikal.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : hw })
+haikal.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted: m })
 }
 break
 case 'tomp3': {
@@ -3334,7 +3334,7 @@ if (!quoted) throw `*Send/Reply Video/Audio You Want to Convert into MP3 With Ca
 let media = await quoted.download()
 let { toAudio } = require('./baseikal/lib/converter')
 let audio = await toAudio(media, 'mp4')
-haikal.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Convert By ${haikal.user.name}.mp3`}, { quoted : hw })
+haikal.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Convert By ${haikal.user.name}.mp3`}, { quoted: m })
 }
 break
 case 'tovn': case 'toptt': {
@@ -3357,7 +3357,7 @@ if (!/webp/.test(mime)) throw `*reply sticker with caption* *${prefix + command}
  let { webp2mp4File } = require('./baseikal/lib/uploader')
 let media = await haikal.downloadAndSaveMediaMessage(quoted)
 let webpToMp4 = await webp2mp4File(media)
-await haikal.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' }, gifPlayback: true }, { quoted: hw })
+await haikal.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' }, gifPlayback: true }, { quoted: m })
 await fs.unlinkSync(media)
 }
 break
@@ -3387,7 +3387,7 @@ let no = 1
 for (let i of search.all) {
 teks += `⭔ No : ${no++}\n⭔ Type : ${i.type}\n⭔ Video ID : ${i.videoId}\n⭔ Title : ${i.title}\n⭔ Views : ${i.views}\n⭔ Duration : ${i.timestamp}\n⭔ Upload At : ${i.ago}\n⭔ Author : ${i.author.name}\n⭔ Url : ${i.url}\n\n─────────────────\n\n`
 }
-haikal.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },caption: teks }, { quoted: hw })
+haikal.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },caption: teks }, { quoted: m })
 }
 break
 //=================================================//
@@ -3426,7 +3426,7 @@ footer: haikal.user.name,
 buttons: buttons,
 headerType: 4
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 })
 }
 break
@@ -3458,7 +3458,7 @@ footer: haikal.user.name,
 buttons: buttons,
 headerType: 4
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
 //=================================================//
@@ -3497,7 +3497,7 @@ let quality = args[1] ? args[1] : '128kbps'
 let media = await yta(urls[text - 1], quality)
 if (media.filesize >= 100000) return reply('File Melebihi Batas '+util.format(media))
 haikal.sendImage(m.chat, media.thumb, `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${urls[text - 1]}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '128kbps'}`, m)
-haikal.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: hw })
+haikal.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
 }
 break
 //=================================================//
@@ -3512,7 +3512,7 @@ if (!urls) throw `Mungkin pesan yang anda reply tidak mengandung result ytsearch
 let quality = args[1] ? args[1] : '360p'
 let media = await ytv(urls[text - 1], quality)
 if (media.filesize >= 100000) return reply('File Melebihi Batas '+util.format(media))
-haikal.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${urls[text - 1]}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '360p'}` }, { quoted: hw })
+haikal.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${urls[text - 1]}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '360p'}` }, { quoted: m })
 }
 break
 //=================================================//
@@ -3521,7 +3521,7 @@ if (isBan) throw sticBanLu(from)
 let { pinterest } = require('./baseikal/lib/scraper')
 anu = await pinterest(text)
 result = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendMessage(m.chat, { image: { url: result }, caption: '⭔ Media Url : '+result }, { quoted: hw })
+haikal.sendMessage(m.chat, { image: { url: result }, caption: '⭔ Media Url : '+result }, { quoted: m })
 }
 break
 //=================================================//
@@ -3529,8 +3529,8 @@ case 'couple': {
 if (isBan) throw sticBanLu(from)
 let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
 let random = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male` }, { quoted: hw })
-haikal.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female` }, { quoted: hw })
+haikal.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male` }, { quoted: m })
+haikal.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female` }, { quoted: m })
 }
 break
 //=================================================//
@@ -3546,7 +3546,7 @@ footer: haikal.user.name,
 buttons: buttons,
 headerType: 4
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
 //=================================================//
@@ -3566,7 +3566,7 @@ footer: haikal.user.name,
 buttons: buttons,
 headerType: 4
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
 //=================================================//
@@ -3586,7 +3586,7 @@ footer: haikal.user.name,
 buttons: buttons,
 headerType: 4
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
 //=================================================//
@@ -3604,7 +3604,7 @@ footer: 'Press The Button Below',
 buttons: buttons,
 headerType: 2
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
 //=================================================//
@@ -4328,10 +4328,10 @@ footer: haikal.user.name,
 buttons,
 headerType: 4
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 } else if (anu.type == 'image') {
 anu.media.map(async (url) => {
-haikal.sendMessage(m.chat, { image: { url }, caption: `⭔ Title : ${anu.title}\n⭔ Author : ${anu.author.name}\n⭔ Like : ${anu.like}\n⭔ Caption : ${anu.caption}` }, { quoted: hw })
+haikal.sendMessage(m.chat, { image: { url }, caption: `⭔ Title : ${anu.title}\n⭔ Author : ${anu.author.name}\n⭔ Like : ${anu.like}\n⭔ Caption : ${anu.caption}` }, { quoted: m })
 })
 }
 }
@@ -4343,7 +4343,7 @@ if (!text) throw `Example : ${prefix + command} black rover`
 let { ringtone } = require('./baseikal/lib/scraper')
 let anu = await ringtone(text)
 let result = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: hw })
+haikal.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
 }
 break
 //=================================================//
@@ -4419,7 +4419,7 @@ let txt = `*Arab* : ${res.result.data.text.arab}
 
 ( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
 reply(txt)
-haikal.sendMessage(m.chat, {audio: { url: res.result.data.audio.primary }, mimetype: 'audio/mpeg'}, { quoted : hw })
+haikal.sendMessage(m.chat, {audio: { url: res.result.data.audio.primary }, mimetype: 'audio/mpeg'}, { quoted: m })
 }
 break
 //=================================================//
@@ -4459,7 +4459,7 @@ exec(`ffmpeg -i ${media} ${set} ${ran}`, (err, stderr, stdout) => {
 fs.unlinkSync(media)
 if (err) return reply(err)
 let buff = fs.readFileSync(ran)
-haikal.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : hw })
+haikal.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted: m })
 fs.unlinkSync(ran)
 })
 } else reply(`Balas audio yang ingin diubah dengan caption *${prefix + command}*`)
@@ -5185,7 +5185,7 @@ footer: haikal.user.name,
 buttons: buttons,
 headerType: 4
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
 //=================================================//
@@ -5265,7 +5265,7 @@ SILAHKAN KETIK MENU UNTUK MENGGUNAKAN BOT LEBIB LANJUT ✌️`,
 },
 "businessOwnerJid": "6285714170944@s.whatsapp.net",
 }
-}), { userJid: m.chat, quoted: hw })
+}), { userJid: m.chat, quoted: m })
 haikal.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
 }
 break
@@ -6023,7 +6023,7 @@ footer: haikal.user.name,
 buttons: buttons,
 headerType: 4
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: hw })
+haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
 //=================================================//
