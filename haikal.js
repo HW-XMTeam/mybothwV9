@@ -84,6 +84,7 @@ let tebakkalimat = db.data.game.kalimat = []
 let tebaklirik = db.data.game.lirik = []
 let tebaktebakan = db.data.game.tebakan = []
 let vote = db.data.others.vote = []
+virgam = fs.readFileSync(`./baseikal/image/deden.jpeg`)
 const kalimage = fs.readFileSync ('./baseikal/image/hwmodsgans.jpg')
 const thumbnail = fs.readFileSync ('./baseikal/image/mamak.jpg')
 const { mediafireDl } = require('./baseikal/lib/mediafire.js')
@@ -302,14 +303,14 @@ return
 if (AntiLink) {
 linkgce = await haikal.groupInviteCode(from)
 if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-m.reply(`\`\`\`「 Detect Link 」\`\`\`\n\nAnda tidak akan dikick bot karena yang anda kirim adalah link group yg ada di group ini`)
+anjay(`\`\`\`「 Detect Link 」\`\`\`\n\nAnda tidak akan dikick bot karena yang anda kirim adalah link group yg ada di group ini`)
 } else if (isUrl(m.text)) {
 bvl = `\`\`\`「 Detect Link 」\`\`\`\n\nAdmin telah mengirim link, admin dibebaskan untuk mengirim link apapun`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
+if (isAdmins) return anjay(bvl)
+if (m.key.fromMe) return anjay(bvl)
+if (isCreator) return anjay(bvl)
 kice = m.sender
-await haikal.groupParticipantsUpdate(m.chat, [kice], 'remove').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+await haikal.groupParticipantsUpdate(m.chat, [kice], 'remove').then((res) => anjay(jsonformat(res))).catch((err) => anjay(jsonformat(err)))
 haikal.sendMessage(from, {text:`\`\`\`「 Detect Link 」\`\`\`\n\n@${kice.split("@")[0]} Telah dikick karena send link di group ini`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
@@ -426,9 +427,9 @@ if (budy.startsWith('©️')) {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 try {
-return m.reply(JSON.stringify(eval(`${args.join(' ')}`),null,'\t'))
+return anjay(JSON.stringify(eval(`${args.join(' ')}`),null,'\t'))
 } catch (e) {
-m.reply(e)
+anjay(e)
 }
 }
 //=================================================//
@@ -1598,10 +1599,10 @@ if (isBan) throw sticBanLu(from)
 //=================================================//
 case 'inspect': {
 if (isBan) throw sticBanLu(from)
-if (!args[0]) return m.reply("Linknya?")
+if (!args[0]) return anjay("Linknya?")
 let linkRegex = args.join(" ")
 let coded = linkRegex.split("https://chat.whatsapp.com/")[1]
-if (!coded) return m.reply("Link Invalid")
+if (!coded) return anjay("Link Invalid")
 haikal.query({
 tag: "iq",
 attrs: {
@@ -1840,7 +1841,7 @@ break
 //=================================================//
 case 'anime': {
 if (isBan) throw sticBanLu(from) 
-if (!text) return m.reply(`you are looking for what anime apa?\n\nEXAMPLE ${prefix}anime naruto`)
+if (!text) return anjay(`you are looking for what anime apa?\n\nEXAMPLE ${prefix}anime naruto`)
 anu = await fetchJson(`https://api.jikan.moe/v4/anime?q=${text}`)
 let sections = [] 
 for (let i of anu.data) {
@@ -1869,11 +1870,11 @@ break
 //=================================================//
 case 'translate': case 'terjemahan': case 'tr': {
 if (isBan) throw sticBanLu(from)
-if (!args.join(" ")) return m.reply("Text?")
+if (!args.join(" ")) return anjay("Text?")
 tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=en&kata=${args.join(" ")}`)
 Infoo = tes.info
 Detek = tes.translate
-m.reply(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
+anjay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
 //=================================================//
@@ -1896,31 +1897,31 @@ break
 case 'darkjoke':{
 if (isBan) throw sticBanLu(from)
 anu = await getBuffer(`https://api.xteam.xyz/asupan/darkjoke?APIKEY=apivproject`)
-haikal.sendMessage(m.chat, { image: anu, caption: `Beliau ini....` }, { quoted: m}).catch((err) => m.reply('Maaf server Xteam sedang down'))
+haikal.sendMessage(m.chat, { image: anu, caption: `Beliau ini....` }, { quoted: m}).catch((err) => anjay('Maaf server Xteam sedang down'))
 }
 break
 //=================================================//
 case 'meme':{
 if (isBan) throw sticBanLu(from)
 anu = await getBuffer(`https://api.xteam.xyz/randomimage/meme?APIKEY=apivproject`)
-haikal.sendMessage(m.chat, { image: anu, caption: `Bilek` }, { quoted: m}).catch((err) => m.reply('Maaf server Xteam sedang down'))
+haikal.sendMessage(m.chat, { image: anu, caption: `Bilek` }, { quoted: m}).catch((err) => anjay('Maaf server Xteam sedang down'))
 }
 break
 //=================================================//
 case 'meme2':{
 if (isBan) throw sticBanLu(from)
 anu = await getBuffer(`https://api.xteam.xyz/randomimage/meme2?APIKEY=apivproject`)
-haikal.sendMessage(m.chat, { image: anu, caption: `bilek` }, { quoted: m}).catch((err) => m.reply('Maaf server Xteam sedang down'))
+haikal.sendMessage(m.chat, { image: anu, caption: `bilek` }, { quoted: m}).catch((err) => anjay('Maaf server Xteam sedang down'))
 }
 break
 //=================================================//
 case 'ss': case 'ssweb': {
 if (isBan) throw sticBanLu(from)
-////if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(mess.endLimit)
+////if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return anjay(mess.endLimit)
 if (!text) throw `Example : ${prefix + command} Url`
 anu = await fetchJson(`https://shot.screenshotapi.net/screenshot?&url=${text}`) 
 buf = await getBuffer(anu.screenshot) 
-haikal.sendMessage(m.chat, { image: { url: anu.screenshot }, jpegThumbnail:buf, caption: `*${command} From ${text}*` }, { quoted: m }).catch((err) => m.reply(jsonformat('*error*')))
+haikal.sendMessage(m.chat, { image: { url: anu.screenshot }, jpegThumbnail:buf, caption: `*${command} From ${text}*` }, { quoted: m }).catch((err) => anjay(jsonformat('*error*')))
 }
 break
 //=================================================//
@@ -2647,7 +2648,7 @@ if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-await haikal.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+await haikal.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => anjay(jsonformat(res))).catch((err) => anjay(jsonformat(err)))
 }
 break
 //=================================================//
@@ -2658,7 +2659,7 @@ if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-await haikal.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+await haikal.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => anjay(jsonformat(res))).catch((err) => anjay(jsonformat(err)))
 }
 break
 //=================================================//
@@ -2701,13 +2702,13 @@ break
 //=================================================//
 case 'nsfw': {
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!isBotAdmins) return m.reply(mess.botAdmin)
-if (!isAdmins && !isCreator) return m.reply(mess.admin)
+if (!m.isGroup) return anjay(mess.group)
+if (!isBotAdmins) return anjay(mess.botAdmin)
+if (!isAdmins && !isCreator) return anjay(mess.admin)
 if (args[0] === "on") {
-if (AntiNsfw) return m.reply('Sudah Aktif')
+if (AntiNsfw) return anjay('Sudah Aktif')
 ntnsfw.push(from)
-m.reply('Sukses Telah mengaktifkan Nsfw Di group Ini')
+anjay('Sukses Telah mengaktifkan Nsfw Di group Ini')
 var groupe = await haikal.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -2716,10 +2717,10 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur +18, Harap Jangan Coli / Colmek Melihat Nya`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiNsfw) return m.reply('Sudah Non Aktif')
+if (!AntiNsfw) return anjay('Sudah Non Aktif')
 let off = ntnsfw.indexOf(from)
 ntnsfw.splice(off, 1)
-m.reply('Sukses Mematikan Nsfw di group ini')
+anjay('Sukses Mematikan Nsfw di group ini')
 } else {
 let buttonsntnsfw = [
 { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
@@ -2736,7 +2737,7 @@ hneko `, `${global.botname}`, m)
 break
 case 'trap' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
+if (!m.isGroup) return anjay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)
@@ -2756,7 +2757,7 @@ break
 case 'hentai-neko' :
 case 'hneko' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
+if (!m.isGroup) return anjay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
  let hnekobot = [
@@ -2775,7 +2776,7 @@ break
 case 'hentai-waifu' :
 case 'nwaifu' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
+if (!m.isGroup) return anjay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`) 
@@ -2825,8 +2826,8 @@ const { generateProfilePicture } = require("./baseikal/lib/myfunc")
 var { img } = await generateProfilePicture(media)
 await haikal.query({ tag: 'iq',attrs: { to: botNumber, type:'set', xmlns: 'w:profile:picture'}, content: [{ tag: 'picture', attrs: { type: 'image' }, content: img }]})
 } else { await haikal.updateProfilePicture(botNumber, { url: media }) }
-m.reply(mess.success)
-} catch { m.reply('Gagal Mengganti Photo Profile') }
+anjay(mess.success)
+} catch { anjay('Gagal Mengganti Photo Profile') }
 }
 break
 case 'setppgroup': case 'setppgrup': case 'setppgc': {
@@ -2844,8 +2845,8 @@ const { generateProfilePicture } = require("./baseikal/lib/myfunc")
 var { img } = await generateProfilePicture(media)
 await haikal.query({ tag: 'iq',attrs: { to: m.chat, type:'set', xmlns: 'w:profile:picture'}, content: [{ tag: 'picture', attrs: { type: 'image' }, content: img }]})
 } else { await haikal.updateProfilePicture(m.chat, { url: media }) }
-m.reply(mess.success)
-} catch { m.reply('Gagal Mengganti Photo Profile') }
+anjay(mess.success)
+} catch { anjay('Gagal Mengganti Photo Profile') }
 }
 break
 //=================================================//
@@ -3255,8 +3256,8 @@ case 'spam': {
 if (!isCreator) throw sticOwner(from)
 if (isBan) throw sticBanLu(from)
 if (!m.isGroup) return groupon(from)
-if (!m.quoted) return m.reply("Reply pesanya!")
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+if (!m.quoted) return anjay("Reply pesanya!")
+if (args.length == 0) return anjay(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
@@ -3283,11 +3284,11 @@ await fs.unlinkSync(FaTiH)
 //=================================================// 
 case 'smeme': case 'stickermeme': case 'stickmeme': {
 if (isBan) throw sticBanLu(from)
-/*if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
+/*if (!isPremium && global.db.data.users[m.sender].limit < 1) return anjay(mess.endLimit) // respon ketika limit habis
 db.data.users[m.sender].limit -= 1 */ // -1 limit 
-if (!text) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
-if (text.includes('|')) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
-if (!/image/.test(mime)) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
+if (!text) return anjay(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
+if (text.includes('|')) return anjay(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
+if (!/image/.test(mime)) return anjay(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
 sticWait(from)
 arg = args.join(' ')
 mee = await haikal.downloadAndSaveMediaMessage(quoted)
@@ -4604,7 +4605,7 @@ case 'nowa':
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
                 var teks = body.slice(6)
-                if (!teks) return m.reply("lah?")
+                if (!teks) return anjay("lah?")
                 var numberPattern = /\d+/g;
                 var nomer = teks.match(numberPattern)
                 var random_length = teks.length - nomer[0].length;
@@ -4648,7 +4649,7 @@ if (isBan) throw sticBanLu(from)
                         console.log(i)
                     }
                 }
-                m.reply(nomerny)
+                anjay(nomerny)
                 console.log("Done dump")
 				break
 case 'ping': case 'botstatus': case 'statusbot': {
@@ -4718,12 +4719,12 @@ break
 //=================================================//
 case 'kalkulator': case 'kal': {
 if (isBan) throw sticBanLu(from)
-if (args.length < 1) return m.reply(`*Example :*\n${prefix}kalkulator 2 * 5\n\n*List Bilangan :*\n•> Kali : *\n•> Bagi : /\n•> Tambah : +\n•> Kurang : -`)
+if (args.length < 1) return anjay(`*Example :*\n${prefix}kalkulator 2 * 5\n\n*List Bilangan :*\n•> Kali : *\n•> Bagi : /\n•> Tambah : +\n•> Kurang : -`)
 let qsd = args.join(" ")
 if (typeof mathjs.evaluate(qsd) !== 'number') {
-m.reply('Error')
+anjay('Error')
 } else {
-m.reply(`\`\`\`「 Kalkulator 」\`\`\`\n\n*•> Hitung :* ${qsd}\n*•> Hasil :* ${mathjs.evaluate(qsd.replace(/×/g, "*").replace(/x/g, "*").replace(/÷/g, "/"))}`)
+anjay(`\`\`\`「 Kalkulator 」\`\`\`\n\n*•> Hitung :* ${qsd}\n*•> Hasil :* ${mathjs.evaluate(qsd.replace(/×/g, "*").replace(/x/g, "*").replace(/÷/g, "/"))}`)
 }
 }
 break
@@ -4738,7 +4739,7 @@ break
 case 'penjara':
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (!q) return m.reply(`*Contoh* :\n#penjara namagroup`)
+if (!q) return anjay(`*Contoh* :\n#penjara namagroup`)
 let cret = await haikal.groupCreate(args.join(" "), [])
 let response = await haikal.groupInviteCode(cret.id)
 teks = `「 *Create Group* 」
@@ -4748,25 +4749,25 @@ _▸ Owner : @${cret.owner.split("@")[0]}_
 _▸ Time : ${moment(cret.creation * 1000).tz("Asia/Jakarta").format("DD/MM/YYYY HH:mm:ss")} WIB_
 https://chat.whatsapp.com/${response}
 `
-m.reply(teks)
+anjay(teks)
 break
 case 'antilink': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (!m.isGroup) return groupon(from)
 if (!isAdmins && !isCreator) return sticAdmin(from)
-if (args.length < 1) return m.reply('ketik on untuk mengaktifkan\nketik off untuk menonaktifkan')
+if (args.length < 1) return anjay('ketik on untuk mengaktifkan\nketik off untuk menonaktifkan')
 if (args[0] === "on") {
-if (AntiLink) return m.reply('Sudah Aktif')
+if (AntiLink) return anjay('Sudah Aktif')
 ntilink.push(from)
-m.reply('Succes menyalakan antilink di group ini 🌷')
+anjay('Succes menyalakan antilink di group ini 🌷')
 } else if (args[0] === "off") {
-if (!AntiLink) return m.reply('Sudah Mati')
+if (!AntiLink) return anjay('Sudah Mati')
 let off = ntilink.indexOf(from)
 ntilink.splice(off, 1)
-m.reply('Succes mematikan antilink di group ini 🌷')
+anjay('Succes mematikan antilink di group ini 🌷')
 } else {
-m.reply('on untuk mengaktifkan, off untuk menonaktifkan')
+anjay('on untuk mengaktifkan, off untuk menonaktifkan')
 }
 }
 break
@@ -4776,9 +4777,9 @@ if (isBan) throw sticBanLu(from)
 if (!m.isGroup) return groupon(from)
 if (!isAdmins && !isCreator) return sticAdmin(from)
 if (args[0] === "on") {
-if (welcm) return m.reply('Sudah Aktif')
+if (welcm) return anjay('Sudah Aktif')
 wlcm.push(from)
-m.reply('Sukses Telah mengaktifkan Bug Ghoib Di group Ini')
+anjay('Sukses Telah mengaktifkan Bug Ghoib Di group Ini')
 var groupe = await haikal.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -4787,10 +4788,10 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur Bug Admin Dan Penyapa, Harap Berhati-hati`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!welcm) return m.reply('Sudah Non Aktif')
+if (!welcm) return anjay('Sudah Non Aktif')
 let off = wlcm.indexOf(from)
 wlcm.splice(off, 1)
-m.reply('Sukses Mematikan Bug Ghoib di group ini')
+anjay('Sukses Mematikan Bug Ghoib di group ini')
 } else {
 let buttonsntnsfww = [
 { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
@@ -4866,7 +4867,7 @@ displayText: 'Menambang Lagi ⛏️'
  }, type: 1},
  ]
  let buttonMessage = {
- image: { url: './baseikal/stickernye/tambang.jpg' },
+ image: { url: './baseikal/imagenye/tambang.jpg' },
  caption: caption,
  footer: pushname,
  buttons: buttons,
@@ -5055,22 +5056,22 @@ var gajah = gajahnya[Math.floor(Math.random() * gajahnya.length)]
 var lukanya = luka[Math.floor(Math.random() * luka.length)]
 var lokasinya = location[Math.floor(Math.random() * location.length)]
  if (lokasinya === 'Hutan') {
- var image = './baseikal/stickernye/rimba.jpg'
+ var image = './baseikal/imagenye/rimba.jpg'
 } else
  if (lokasinya === 'Hutan Amazon') {
- var image ='./baseikal/stickernye/amazon.jpg'
+ var image ='./baseikal/imagenye/amazon.jpg'
 } else
  if (lokasinya === 'Hutan Tropis') {
- var image = './baseikal/stickernye/tropis.jpg'
+ var image = './baseikal/imagenye/tropis.jpg'
 } else
  if (lokasinya === 'Padang Rumput') {
- var image = './baseikal/stickernye/padang_rumput.jpg'
+ var image = './baseikal/imagenye/padang_rumput.jpg'
 } else
  if (lokasinya === 'Hutan Afrika') {
- var image = './baseikal/stickernye/afrika.jpg'
+ var image = './baseikal/imagenye/afrika.jpg'
 } else
  if (lokasinya === 'Pegunungan') {
-var image = './baseikal/stickernye/pegunungan.jpg'
+var image = './baseikal/imagenye/pegunungan.jpg'
 }
  setTimeout( () => {
 let teksehmazeh = `_[ Hasil Berburu ]_\n`
@@ -5116,7 +5117,7 @@ addGajah(m.sender, gajah)
 case 'cowner': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (!args[0]) return m.reply(`*Example* : #cowner add 628xxxx`)
+if (!args[0]) return anjay(`*Example* : #cowner add 628xxxx`)
 if (args[1]) {
 orgnye = args[1]
 } else if (m.quoted) {
@@ -5124,16 +5125,16 @@ orgnye = m.quoted.sender.split("@")[0]
 }
 const isCwner = owner.includes(orgnye)
 if (args[0] === "add") {
-if (isCwner) return m.reply('User sudah menjadi owner')
+if (isCwner) return anjay('User sudah menjadi owner')
 owner.push(orgnye)
-m.reply(`Succes add friends`)
+anjay(`Succes add friends`)
 } else if (args[0] === "del") {
-if (!isCwner) return m.reply('User bukan owner')
+if (!isCwner) return anjay('User bukan owner')
 let delcwner = owner.indexOf(orgnye)
 owner.splice(delcwner, 1)
-m.reply(`Succes del friends`)
+anjay(`Succes del friends`)
 } else {
-m.reply("Error")
+anjay("Error")
 }
 }
 break
@@ -5142,7 +5143,7 @@ case 'getname': {
 if (isBan) throw sticBanLu(from)
 if (qtod === "true") {
 namenye = await haikal.getName(m.quoted.sender)
-m.reply(namenye)
+anjay(namenye)
 } else if (qtod === "false") {
 haikal.sendMessage(from, {text:"Reply orangnya"}, {quoted:m})
 }
@@ -5362,13 +5363,21 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `© Hay Kak ${pushname} �
 *[ 🌷 ] Bugmenu*
 
 🔥 628xxx|5|5 ( nomot target )
+
 🔥 1237891xx|5|5 ( id group )
+
 jagoanom [ reply nomor target ]
+
 santetdia 628xxx@s.whatsapp.net|10|10s ( nomor target )
+
 santetgc  1237891xxxx@g.us|10|10s ( id group )
+
 ampas1 628xxx ( nomor target )
+
 ampas2 112674448xxx ( id group )
+
 catalogpc 628xxx@s.whatsapp.net|10|10s ( nomor target )
+
 cataloggc 1237891xxxx@g.us|10|10s ( id group )
 
 Ketik > m.chat di group ( untuk mendapatkan id group)
@@ -6022,7 +6031,7 @@ mining
 beli
 jual
 heal
-berburu0`,
+berburu`,
 footer: haikal.user.name,
 buttons: buttons,
 headerType: 4
