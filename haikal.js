@@ -1228,7 +1228,7 @@ deploy(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 //=================================================//
-case 'tiktok': case 'tiktoknowm': case 'bugtiktok'
+case 'tiktok': case 'tiktoknowm': case 'bugtiktok':
 if (isBan) throw sticBanLu(from)
 if (!q) return anjay(`Link Nya Kak`)
 if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return anjay(`Contoh ${prefix+command} https://vm.tiktok.com/ZSdQycjUx/?k=1`)
