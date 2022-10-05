@@ -4783,7 +4783,7 @@ displayText: 'Menambang Lagi ⛏️'
  }, type: 1},
  ]
  let buttonMessage = {
- image: { url: './baseikal/imagenye/tambang.jpg' },
+ image: { url: './baseikal/gambarnye/tambang.jpg' },
  caption: caption,
  footer: pushname,
  buttons: buttons,
@@ -4972,22 +4972,22 @@ var gajah = gajahnya[Math.floor(Math.random() * gajahnya.length)]
 var lukanya = luka[Math.floor(Math.random() * luka.length)]
 var lokasinya = location[Math.floor(Math.random() * location.length)]
  if (lokasinya === 'Hutan') {
- var image = './baseikal/imagenye/rimba.jpg'
+ var image = './baseikal/gambarnye/rimba.jpg'
 } else
  if (lokasinya === 'Hutan Amazon') {
- var image ='./baseikal/imagenye/amazon.jpg'
+ var image ='./baseikal/gambarnye/amazon.jpg'
 } else
  if (lokasinya === 'Hutan Tropis') {
- var image = './baseikal/imagenye/tropis.jpg'
+ var image = './baseikal/gambarnye/tropis.jpg'
 } else
  if (lokasinya === 'Padang Rumput') {
- var image = './baseikal/imagenye/padang_rumput.jpg'
+ var image = './baseikal/gambarnye/padang_rumput.jpg'
 } else
  if (lokasinya === 'Hutan Afrika') {
- var image = './baseikal/imagenye/afrika.jpg'
+ var image = './baseikal/gambarnye/afrika.jpg'
 } else
  if (lokasinya === 'Pegunungan') {
-var image = './baseikal/imagenye/pegunungan.jpg'
+var image = './baseikal/gambarnye/pegunungan.jpg'
 }
  setTimeout( () => {
 let teksehmazeh = `_[ Hasil Berburu ]_\n`
