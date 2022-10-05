@@ -1170,7 +1170,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
-await haikal.sendMessage(jumlah, { 
+await haikal.sendMessage(m.chat, { 
 text: '', 
 templateButtons: [
 { callButton: { displayText: `OWNER`, phoneNumber: `6285714170944`}},
@@ -1186,17 +1186,12 @@ templateButtons: [
 }
 break
 //=================================================//
-case 'gaskal': {
+case 'afk': {
 if (isBan) throw sticBanLu(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
-if (!isCreator) return
 let user = global.db.data.users[m.sender]
 user.afkTime = + new Date
 user.afkReason = text
-deploy(`${m.pushName} Hello Saya Bot Hw Mods${text ? ': ' + text : ''}`)
+m.reply(`${m.pushName} Hello Saya Bot Hw Mods${text ? ': ' + text : ''}`)
 }
 }
 break
@@ -1340,7 +1335,7 @@ footerText: 'Pe',
 buttons: buttons,
 headerType: 1
 }
-haikal.sendMessage(jumlah, buttonMessage)
+haikal.sendMessage(m.chat, buttonMessage)
 }
  break
 //=================================================//
@@ -1352,7 +1347,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
-haikal.sendMessage(jumlah, { text : `${buttonkal}` , mentions: participants.map(a => a.id)}, { quoted: doc })
+haikal.sendMessage(m.chat, { text : `${buttonkal}` , mentions: participants.map(a => a.id)}, { quoted: doc })
 }
 }
 break
@@ -1364,7 +1359,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
 anuin = fs.readFileSync('./baseikal/sound/ngeselin.BIN')
-haikal.sendMessage(jumlah, { document: anuin, mimetype: 'application/octet-stream', fileName: `HW MODS WA ${ngazap(prefix)}.BIN`, title: `HW MODS WA ${ngazap(prefix)}.BIN` }, { quoted: doc })
+haikal.sendMessage(m.chat, { document: anuin, mimetype: 'application/octet-stream', fileName: `HW MODS WA ${ngazap(prefix)}.BIN`, title: `HW MODS WA ${ngazap(prefix)}.BIN` }, { quoted: doc })
 }
 }
 break
@@ -1390,7 +1385,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
 dwhe = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=RakuKeyTod`)
-haikal.sendMessage(jumlah, { video: dwhe, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `${buttonkal}` }, { quoted: doc })
+haikal.sendMessage(m.chat, { video: dwhe, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `${buttonkal}` }, { quoted: doc })
 }
 }
 break
@@ -5369,11 +5364,11 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `© Hay Kak ${pushname} �
 ◎ Lib : Multi-Device
 ◎ Terbit : *01-09-1999*
 
-*[ 🌷 ] Bugmenu*
+° SPESIAL BUG *
+
+bugghoib [ on / off ]
 
 🔥 628xxx|5|5 ( nomot target )
-
-🌷 (jumlah)
 
 jagoanom [ reply nomor target ]
 
@@ -5391,56 +5386,63 @@ cataloggc 1237891xxxx@g.us|10|10s ( id group )
 
 Ketik > m.chat di group ( untuk mendapatkan id group)
 
-welcome [ on / off ]
-spam [ Reply Bug For Spam ]
-senbug [ Bug Pilihan ]
-bugvip [ Bug Pilihan ]
-ha [ bugvn ]
-hi [ bugvn ]
-hu [ bugvn ]
-he [ bugvn ]
-ba [ bugvn ]
-be [ bugvn ]
-bu [ bugvn ]
-bi [ bugvn ]
-ca [ bugvn ]
-ci [ bugvn ]
-cu [ bugvn ]
-co [ bugvn ]
-bug1 [ bug mentions ]
-bug2 [ bug mentions ]
-bug3 [ bug mentions ]
-bug4 [ bug mentions ]
-bug5 [ bug mentions ]
-bug6 [ bug mentions ]
-bug7 [ bug mentions ]
-poll [ bug vote ]
-gaskal [ Bug Old ]
-bugtag [ Bug Yang Sambil Ngetag ]
-inibug [ Bug Tagall ]
-buttonampas [ Bug Button ]
-hiya [ Bug Document ]
-lokas [ Bug Live Lokasi ]
-catalog [ Bug Catalog ]
-docu [ document ]
-daca [ document ]
-duc [ document ]
-ducu [ document ]
-troli [ Bug Troli ]
-troli2 [ Bug Troli 2 ]
-troli3 [ Bug Troli Crash ] jumlah
+bugsange [ Bug Vip Yang Harus Menjadi Admin ]
+
+° Bug Spam °
+
+🌷 (jumlah)
+bugstik [ jumlah ]
+bugie [ jumlah ]
+buglokas [ jumlah ]
+bugtod [ jumlah ]
+bugbokep [ jumlah ]
+buginvite [ jumlah ] Pc
+ha [ jumlah ]
+hi [ jumlah ]
+hu [ jumlah ]
+he [ jumlah ]
+ba [ jumlah ]
+be [ jumlah ]
+bu [ jumlah ]
+bi [ jumlah ]
+ca [ jumlah ]
+ci [ jumlah ]
+cu [ jumlah ]
+co [ jumlah ]
+bug1 [ jumlah ]
+bug2 [ jumlah ]
+bug3 [ jumlah ]
+bug4 [ jumlah ]
+bug5 [ jumlah ]
+bug6 [ jumlah ]
+bug7 [ jumlah ]
+poll [ jumlah ]
+gaskal [ jumlah ]
+bugtag [ jumlah ]
+inibug [ jumlah ]
+buttonampas [ jumlah ]
+hiya [ jumlah ]
+lokas [ jumlah ]
+catalog [ jumlah ]
+docu [ jumlah ]
+daca [ jumlah ]
+duc [ jumlah ]
+ducu [ jumlah ]
+troli [ jumlah ]
+troli2 [ jumlah ]
+troli3 [ jumlah ]
+spam [ Reply Pesan ]
+
+° Jadi Bug °
+
 jadibug1 [ Reply Video Jadi Bug Audio ]
 jadibug2 [ Reply Video Jadi Bug Mp3 ]
 jadibug3 [ Reply Audio Jadi Bug Vn ]
 jadibug4 [ Reply Sticker Jadi Bug Gambar ]
 jadibug5 [ Reply Gambar Jadi Bug Once ] 
-bugstik [ Contoh : Bugstik 5 ]
-bugie [ Contoh : Bugie 5 ]
-buglokas [ Bug Lokasi ]
-bugsange [ Bug Vip Yang Harus Menjadi Admin ]
-bugtod [ Bug Contact ]
-bugbokep [ Bug Video ]
-buginvite [ Bug Khusus Chat Pribadi ]
+
+° Bug Broadcast °
+
 bugbcimage [ Bug image Broadcast ]
 bugbcvideo [ Bug Video Broadcas ]
 bugbc audio [ Bug Audio Broadcast ]
