@@ -1158,7 +1158,7 @@ templateButtons: [
 { quickReplyButton: { displayText: `HW MODS WA`, id: `JAGOAN OM?`}},
 ]
  })
- await sleep(10000* secon)
+ await sleep(20)
 }
 }
 break
@@ -1179,7 +1179,9 @@ templateButtons: [
 { quickReplyButton: { displayText: `NAME`, id: `AH SLEBEEW`}},
 { quickReplyButton: { displayText: `HW MODS WA`, id: `JAGOAN OM?`}},
 ]
- }
+ })
+ await sleep(10000* secon)
+}
 }
 break
 //=================================================//
