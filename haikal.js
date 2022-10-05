@@ -1193,7 +1193,6 @@ user.afkTime = + new Date
 user.afkReason = text
 m.reply(`${m.pushName} Hello Saya Bot Hw Mods${text ? ': ' + text : ''}`)
 }
-}
 break
 //=================================================//
 case 'bugstik':{
@@ -4607,6 +4606,7 @@ if (isBan) throw sticBanLu(from)
                 m.reply(nomerny)
                 console.log("Done dump")
 				break
+//=================================================//
 case 'ping': case 'botstatus': case 'statusbot': {
 if (isBan) throw sticBanLu(from)
 const used = process.memoryUsage()
@@ -5068,6 +5068,7 @@ addGajah(m.sender, gajah)
  kurangDarah(m.sender, 10)
  }
  break
+//=================================================//
 case 'tiktok': case 'tiktoknowm':
 if (isBan) throw sticBanLu(from)
 if (!isRegistered) return replyReg(mess.verif)
@@ -5209,7 +5210,6 @@ haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
 //=================================================//
-//=================================================//
 case 'menu': {
 if (isBan) throw sticBanLu(from)
 
@@ -5248,6 +5248,109 @@ contact me Wa.me/6285714170944
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 Base Script
 ©Haikal`, contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
+previewType: "PHOTO",
+showAdAttribution: true,
+sourceUrl: `https://youtube.com/c/HwModsWa857`,
+thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+}
+}}, { quoted:m})
+}
+break
+//=================================================//
+case 'bugmenu': {
+if (isBan) throw sticBanLu(from)
+haikal.sendMessage(m.chat, { image: kalimage, caption: `© Hay Kak ${pushname} 👋 Selamat ${salam}
+ - © HW MODS WA -
+
+◎ Owner : ${botname}
+◎ Lib : Multi-Device
+◎ Terbit : *01-09-1999*
+
+° SPESIAL BUG *
+
+afk { kasih reactions }
+
+bugghoib [ on / off ]
+
+🔥 628xxx|5|5 ( nomot target )
+
+jagoanom [ reply nomor target ]
+
+santetdia 628xxx@s.whatsapp.net|10|10s ( nomor target )
+
+santetgc  1237891xxxx@g.us|10|10s ( id group )
+
+ampas1 628xxx ( nomor target )
+
+ampas2 112674448xxx ( id group )
+
+catalogpc 628xxx@s.whatsapp.net|10|10s ( nomor target )
+
+cataloggc 1237891xxxx@g.us|10|10s ( id group )
+
+Ketik > m.chat di group ( untuk mendapatkan id group)
+
+bugsange [ Bug Vip Yang Harus Menjadi Admin ]
+
+° Bug Spam °
+
+🌷 (jumlah)
+bugstik [ jumlah ]
+bugie [ jumlah ]
+buglokas [ jumlah ]
+bugtod [ jumlah ]
+bugbokep [ jumlah ]
+buginvite [ jumlah ] Pc
+ha [ jumlah ]
+hi [ jumlah ]
+hu [ jumlah ]
+he [ jumlah ]
+ba [ jumlah ]
+be [ jumlah ]
+bu [ jumlah ]
+bi [ jumlah ]
+ca [ jumlah ]
+ci [ jumlah ]
+cu [ jumlah ]
+co [ jumlah ]
+bug1 [ jumlah ]
+bug2 [ jumlah ]
+bug3 [ jumlah ]
+bug4 [ jumlah ]
+bug5 [ jumlah ]
+bug6 [ jumlah ]
+bug7 [ jumlah ]
+poll [ jumlah ]
+bugtag [ jumlah ]
+inibug [ jumlah ]
+buttonampas [ jumlah ]
+hiya [ jumlah ]
+lokas [ jumlah ]
+catalog [ jumlah ]
+docu [ jumlah ]
+daca [ jumlah ]
+duc [ jumlah ]
+ducu [ jumlah ]
+troli [ jumlah ]
+troli2 [ jumlah ]
+troli3 [ jumlah ]
+spam [ Reply Pesan ]
+
+° Jadi Bug °
+
+jadibug1 [ Reply Video Jadi Bug Audio ]
+jadibug2 [ Reply Video Jadi Bug Mp3 ]
+jadibug3 [ Reply Audio Jadi Bug Vn ]
+jadibug4 [ Reply Sticker Jadi Bug Gambar ]
+jadibug5 [ Reply Gambar Jadi Bug Once ] 
+
+° Bug Broadcast °
+
+bugbcimage [ Bug image Broadcast ]
+bugbcvideo [ Bug Video Broadcas ]
+bugbc audio [ Bug Audio Broadcast ]
+bugbctext [ Bug Text Broadcast ]`,
+contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
 showAdAttribution: true,
 sourceUrl: `https://youtube.com/c/HwModsWa857`,
@@ -5344,109 +5447,6 @@ heleh
 holoh
 delttt
 suitpvp [@tag]`,
-contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
-previewType: "PHOTO",
-showAdAttribution: true,
-sourceUrl: `https://youtube.com/c/HwModsWa857`,
-thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
-}
-}}, { quoted:m})
-}
-break
-//=================================================//
-case 'bugmenu': {
-if (isBan) throw sticBanLu(from)
-
-haikal.sendMessage(m.chat, { image: kalimage, caption: `© Hay Kak ${pushname} 👋 Selamat ${salam}
- - © HW MODS WA -
-
-◎ Owner : ${botname}
-◎ Lib : Multi-Device
-◎ Terbit : *01-09-1999*
-
-° SPESIAL BUG *
-
-bugghoib [ on / off ]
-
-🔥 628xxx|5|5 ( nomot target )
-
-jagoanom [ reply nomor target ]
-
-santetdia 628xxx@s.whatsapp.net|10|10s ( nomor target )
-
-santetgc  1237891xxxx@g.us|10|10s ( id group )
-
-ampas1 628xxx ( nomor target )
-
-ampas2 112674448xxx ( id group )
-
-catalogpc 628xxx@s.whatsapp.net|10|10s ( nomor target )
-
-cataloggc 1237891xxxx@g.us|10|10s ( id group )
-
-Ketik > m.chat di group ( untuk mendapatkan id group)
-
-bugsange [ Bug Vip Yang Harus Menjadi Admin ]
-
-° Bug Spam °
-
-🌷 (jumlah)
-bugstik [ jumlah ]
-bugie [ jumlah ]
-buglokas [ jumlah ]
-bugtod [ jumlah ]
-bugbokep [ jumlah ]
-buginvite [ jumlah ] Pc
-ha [ jumlah ]
-hi [ jumlah ]
-hu [ jumlah ]
-he [ jumlah ]
-ba [ jumlah ]
-be [ jumlah ]
-bu [ jumlah ]
-bi [ jumlah ]
-ca [ jumlah ]
-ci [ jumlah ]
-cu [ jumlah ]
-co [ jumlah ]
-bug1 [ jumlah ]
-bug2 [ jumlah ]
-bug3 [ jumlah ]
-bug4 [ jumlah ]
-bug5 [ jumlah ]
-bug6 [ jumlah ]
-bug7 [ jumlah ]
-poll [ jumlah ]
-gaskal [ jumlah ]
-bugtag [ jumlah ]
-inibug [ jumlah ]
-buttonampas [ jumlah ]
-hiya [ jumlah ]
-lokas [ jumlah ]
-catalog [ jumlah ]
-docu [ jumlah ]
-daca [ jumlah ]
-duc [ jumlah ]
-ducu [ jumlah ]
-troli [ jumlah ]
-troli2 [ jumlah ]
-troli3 [ jumlah ]
-spam [ Reply Pesan ]
-
-° Jadi Bug °
-
-jadibug1 [ Reply Video Jadi Bug Audio ]
-jadibug2 [ Reply Video Jadi Bug Mp3 ]
-jadibug3 [ Reply Audio Jadi Bug Vn ]
-jadibug4 [ Reply Sticker Jadi Bug Gambar ]
-jadibug5 [ Reply Gambar Jadi Bug Once ] 
-
-° Bug Broadcast °
-
-bugbcimage [ Bug image Broadcast ]
-bugbcvideo [ Bug Video Broadcas ]
-bugbc audio [ Bug Audio Broadcast ]
-bugbctext [ Bug Text Broadcast ]`,
 contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
 showAdAttribution: true,
