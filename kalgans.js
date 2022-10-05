@@ -2,7 +2,7 @@
 › Create By Haikal
 › Base Ori Haikal
 
-🌷 KALAU MAU RENAME TARO CREDITS GUA : Я𝚯𝐓𝚯R */
+🌷 KALAU MAU RENAME TARO CREDITS GUA : HW MODS WA */
 
 require('./hwkal')
 const { default: makeWASocket, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
@@ -174,7 +174,7 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `Jangan Lupa Tersenyum ☺️`,
-body: `SUBSCRIBE Я𝚯𝐓𝚯R`,
+body: `SUBSCRIBE HW MODS WA`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: link,
@@ -201,7 +201,7 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `Jangan Lupa Tersenyum ☺️`,
-body: `SUBSCRIBE Я𝚯𝐓𝚯R`,
+body: `SUBSCRIBE HW MODS WA`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: link,
