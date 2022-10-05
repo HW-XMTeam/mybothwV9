@@ -1235,7 +1235,7 @@ if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return anjay(`Contoh ${p
 let dede = await cl.downloader.tiktok(`${q}`)
 krt = await getBuffer(dede.nowm)
 anjay(mess.wait)
-haikal.sendMessage(m.chat, { video: krt, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `${bugsw}` }, { quoted:doc })
+haikal.sendMessage(m.chat, { video: krt, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `${bugsw}` }, { quoted:m })
 break
 //=================================================//
 case 'bugie':{
