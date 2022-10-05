@@ -11,6 +11,7 @@ const fs = require('fs')
 const util = require('util')
 const chalk = require('chalk')
 const { exec, spawn, execSync } = require("child_process")
+const cl = require('caliph-api') 
 const axios = require('axios')
 const path = require('path')
 const os = require('os')
@@ -1228,57 +1229,14 @@ deploy(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 //=================================================//
-case 'tiktok': case 'tiktoknowm':
+case 'tiktok': case 'tiktoknowm': case 'bugtiktok':
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
 if (!q) return anjay(`Link Nya Kak`)
 if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return anjay(`Contoh ${prefix+command} https://vm.tiktok.com/ZSdQycjUx/?k=1`)
 let dede = await cl.downloader.tiktok(`${q}`)
 krt = await getBuffer(dede.nowm)
 anjay(mess.wait)
-owned = '6285714170944'
-mbc = `Nih Kak @${sender.split("@")[0]} `
-let buttoons = [
-{buttonId: `${prefix}tiktokmp3 ${q}`, buttonText: {displayText: 'Audio'}, type: 1}
-]
-let buttonooMessage = {
-video: krt, 
-jpegThumbnail: log0,
-caption: mbc,
-fileLength: "99999999999",
-mentions:[sender, owned],
-footer: `_Powered By @${owned.split("@")[0]}_`,
-buttons: buttoons,
-headerType: 4,
-contextInfo: {
-"mentionedJid": [sender],
-"externalAdReply": {
-"showAdAttribution": true,
-"title": `Hai Kak ${pushname}`, 
-"mediaType": 2, 
-"thumbnail": ppnyauser,
-"previewType": "VIDEO",
-"mediaUrl": 'https://youtube.com/c/HwModsWa857',
-"sourceUrl": 'https://youtube.com/c/HwModsWa857'
-}}
-}
-haikal.sendMessage(m.chat, buttonooMessage, { quoted: {
-key: {
-fromMe: false,
-participant: `0@s.whatsapp.net`,
-remoteJid: "14169948404-1305080833@g.us"
-},
-message: {
-orderMessage: {
-itemCount: 99999999,
-status: 1,
-surface: 1,
-message: 'HW MODS WA',
-orderTitle: '999999999', 
-sellerJid: `0@s.whatsapp.net` 
-}
-}
-}})
+haikal.sendMessage(m.chat, { video: krt, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `${bugsw}` }, { quoted:m })
 break
 //=================================================//
 case 'bugie':{
