@@ -5184,7 +5184,6 @@ break
 //=================================================//
 case 'owner': {
 if (isBan) throw sticBanLu(from)
-
 let buttons = [
 {buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
 {buttonId: `ownermenu`, buttonText: {displayText: 'OWNER'}, type: 1},
