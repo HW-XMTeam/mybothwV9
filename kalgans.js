@@ -686,6 +686,7 @@ filename,
 size: await getSizeMedia(data),
 ...type,
 data}}
+return haikal}
 //=================================================//
 startHaikal()
 let file = require.resolve(__filename)
