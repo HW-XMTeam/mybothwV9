@@ -687,28 +687,6 @@ size: await getSizeMedia(data),
 ...type,
 data}}
 //=================================================//
-haikal.sendFile = async(jid, PATH, fileName, quoted = {}, options = {}) => {
-let types = await haikal.getFile(PATH, true)
-let { filename, size, ext, mime, data } = types
-let type = '', mimetype = mime, pathFile = filename
-if (options.asDocument) type = 'document'
-if (options.asSticker || /webp/.test(mime)) {
-let { writeExif } = require('./baseikal/lib/sticker.js')
-let media = { mimetype: mime, data }
-pathFile = await writeExif(media, { packname: global.packname, author: global.packname2, categories: options.categories ? options.categories : [] })
-await fs.promises.unlink(filename)
-type = 'sticker'
-mimetype = 'image/webp'}
-else if (/image/.test(mime)) type = 'image'
-else if (/video/.test(mime)) type = 'video'
-else if (/audio/.test(mime)) type = 'audio'
-else type = 'document'
-await haikal.sendMessage(jid, { [type]: { url: pathFile }, mimetype, fileName, ...options }, { quoted, ...options })
-return fs.promises.unlink(pathFile)}
-haikal.parseMention = async(text) => {
-return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')}
-return haikal}
-//=================================================//
 startHaikal()
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
