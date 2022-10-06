@@ -9,41 +9,45 @@ require('./hwkal')
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
 const fs = require('fs')
 const util = require('util')
+const os = require('os')
+const mathjs = require('mathjs')
 const chalk = require('chalk')
-const { exec, spawn, execSync } = require("child_process")
 const cl = require('caliph-api') 
 const axios = require('axios')
 const path = require('path')
-const os = require('os')
+const mel = require('kitsune-api')
+const moment = require('moment-timezone')
+const speed = require('performance-now')
+const { performance } = require('perf_hooks')
+const { Primbon } = require('scrape-primbon')
+const primbon = new Primbon()
+const { exec, spawn, execSync } = require("child_process")
 const { ngazap } = require('./baseikal/virtex/ngazap')
 const { buttonvirus } = require('./baseikal/virtex/buttonvirus')
 const { buttonkal } = require('./baseikal/virtex/buttonkal')
 const { bugsw } = require('./baseikal/virtex/bugsw')
 const { virtex, vipi } = require('./baseikal/virtex/virtex.js')
-const mel = require('kitsune-api')
-const moment = require('moment-timezone')
-const mathjs = require('mathjs')
-const speed = require('performance-now')
-const { performance } = require('perf_hooks')
-const { Primbon } = require('scrape-primbon')
-const primbon = new Primbon()
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom, getGroupAdmins } = require('./baseikal/lib/myfunc')
 const { FajarNews, BBCNews, metroNews, CNNNews, iNews, KumparanNews, TribunNews, DailyNews, DetikNews, OkezoneNews, CNBCNews, KompasNews, SindoNews, TempoNews, IndozoneNews, AntaraNews, RepublikaNews, VivaNews, KontanNews, MerdekaNews, KomikuSearch, AniPlanetSearch, KomikFoxSearch, KomikStationSearch, MangakuSearch, KiryuuSearch, KissMangaSearch, KlikMangaSearch, PalingMurah, LayarKaca21, AminoApps, Mangatoon, WAModsSearch, Emojis, CoronaInfo, JalanTikusMeme,Cerpen, Quotes, Couples, Darkjokes } = require("dhn-api");
 //=================================================//
-const content = JSON.stringify(m.message)
 //=================================================//
 virgam = fs.readFileSync(`./baseikal/image/deden.jpeg`)
+const content = JSON.stringify(m.message)
+const cerpen = require('./baseikal/lib/cerpen')
 const kalimage = fs.readFileSync ('./baseikal/image/hwmodsgans.jpg')
 const thumbnail = fs.readFileSync ('./baseikal/image/mamak.jpg')
 const { mediafireDl } = require('./baseikal/lib/mediafire.js')
 const banned = JSON.parse(fs.readFileSync('./baseikal/dbnye/banned.json'))
 const ntilink = JSON.parse(fs.readFileSync("./baseikal/lib/antilink.json"))
+const time = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('HH:mm:ss z')
+const wita = moment(Date.now()).tz('Asia/Makassar').locale('id').format('HH:mm:ss z')
+const wit = moment(Date.now()).tz('Asia/Jayapura').locale('id').format('HH:mm:ss z')
+const salam = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('a')
+const qtod = m.quoted? "true":"false"
 //=================================================//
-// Function
-const cerpen = require('./baseikal/lib/cerpen')
-wm = 'HW MODS WA'
+let picaks = [flaming,fluming,flarun,flasmurf]
+let picak = picaks[Math.floor(Math.random() * picaks.length)]
 //=================================================//
-// Time & Date
 const time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')
 if(time2 < "23:59:00"){
 var ucapanWaktu = 'Selamat Malam'
@@ -63,12 +67,6 @@ var ucapanWaktu = 'Selamat Pagi'
 if(time2 < "05:00:00"){
 var ucapanWaktu = 'Selamat Malam'
  }
-const time = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('HH:mm:ss z')
-const wita = moment(Date.now()).tz('Asia/Makassar').locale('id').format('HH:mm:ss z')
-const wit = moment(Date.now()).tz('Asia/Jayapura').locale('id').format('HH:mm:ss z')
-const salam = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('a')
-const qtod = m.quoted? "true":"false"
-// Date
 moment.tz.setDefault("Asia/Jakarta").locale("id");
 //=================================================//
 module.exports = haikal = async (haikal, m, chatUpdate, store) => {
@@ -90,8 +88,6 @@ const quoted = m.quoted ? m.quoted : m
 const mime = (quoted.msg || quoted).mimetype || ''
 const isMedia = /image|video|sticker|audio/.test(mime)
 const from = mek.key.remoteJid
-//=================================================//
-// Group
 const groupMetadata = m.isGroup ? await haikal.groupMetadata(m.chat).catch(e => {}) : ''
 const groupName = m.isGroup ? groupMetadata.subject : ''
 const participants = m.isGroup ? await groupMetadata.participants : ''
@@ -103,10 +99,6 @@ const isPremium = isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') 
 const AntiLink = m.isGroup ? ntilink.includes(from) : false 
 const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
 const AntiNsfww = m.isGroup ? ntnsfww.includes(from) : false
-//=================================================//
-// Random Image Simple Menu
-let picaks = [flaming,fluming,flarun,flasmurf]
-let picak = picaks[Math.floor(Math.random() * picaks.length)]
 //=================================================//
 const doc = { 
 key: {
@@ -157,12 +149,9 @@ mute: false,
 console.log(err)
 }
 //=================================================//
-
-// Public & Self
 if (!haikal.public) {
 if (!m.key.fromMe) return
 }
-//console bukan kontol
 if (m.message) {
 console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32m CMD \x1b[1;37m]', time, chalk.
 green(budy || m.mtype), 'from', chalk.green(pushname), 'in', chalk.green(groupName ? groupName : 'Private Chat' ), 'args :', chalk.green(text.length))
@@ -260,7 +249,6 @@ m.reply(e)
 }
 }
 //=================================================//
-//=================================================//
 let mentionUser = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]
 for (let jid of mentionUser) {
 let user = global.db.data.users[jid]
@@ -335,6 +323,7 @@ haikal.relayMessage(m.chat, pollCreation.message, { messageId: pollCreation.key.
 deploy('sukses sendbug')}
 }
 break
+//=================================================//
 case 'jadikatalog': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
