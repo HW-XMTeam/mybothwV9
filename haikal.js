@@ -35,57 +35,6 @@ const { FajarNews, BBCNews, metroNews, CNNNews, iNews, KumparanNews, TribunNews,
 //=================================================//
 const content = JSON.stringify(m.message)
 //=================================================//
-//RPG FUNCTION
-const { 
-addInventoriDarah,cekDuluJoinAdaApaKagaDiJson,addDarah,kurangDarah, getDarah 
-}= require('./src/darah.js')
-const { 
-cekInventoryAdaAtauGak,addInventori, addBesi, addEmas, addEmerald,addUmpan,addPotion,kurangBesi, kurangEmas, kurangEmerald, kurangUmpan,kurangPotion,getBesi, getEmas, getEmerald, getUmpan, getPotion
-} = require('./src/alat_tukar.js')
-const {addInventoriMonay,cekDuluJoinAdaApaKagaMonaynyaDiJson,addMonay,kurangMonay, getMonay 
-} = require('./src/monay.js')
-const { addInventoriLimit, cekDuluJoinAdaApaKagaLimitnyaDiJson, addLimit, kurangLimit, getLimit 
-} = require('./src/limit.js')
-const { cekDuluHasilBuruanNya, addInventoriBuruan, addIkan, addAyam,addKelinci,addDomba,addSapi, addGajah, kurangIkan, kurangAyam,kurangKelinci,kurangDomba,kurangSapi, kurangGajah, getIkan, getAyam,getKelinci,getDomba,getSapi, getGajah
-} = require('./src/buruan.js')
-let DarahAwal =global.rpg.darahawal
-const isDarah = cekDuluJoinAdaApaKagaDiJson(m.sender)
-const isCekDarah = getDarah(m.sender)
-const isUmpan = getUmpan(m.sender)
-const isPotion = getPotion(m.sender)
-const isIkan = getIkan(m.sender)
-const isAyam = getAyam(m.sender)
-const isKelinci = getKelinci(m.sender)
-const isDomba = getDomba(m.sender)
-const isSapi = getSapi(m.sender)
-const isGajah = getGajah(m.sender)
-const isMonay = getMonay(m.sender)
-const isLimit = getLimit(m.sender)
-const isBesi = getBesi(m.sender)
-const isEmas = getEmas(m.sender)
-const isEmerald = getEmerald(m.sender)
-const isInventory = cekInventoryAdaAtauGak(m.sender)
-const isInventoriBuruan = cekDuluHasilBuruanNya(m.sender)
-const isInventoryLimit = cekDuluJoinAdaApaKagaLimitnyaDiJson(m.sender)
-const isInventoryMonay = cekDuluJoinAdaApaKagaMonaynyaDiJson(m.sender)
-const ikan = ['🐟','🐠','🐡']
-//=================================================//
-//rpg database\\
-let _buruan = JSON.parse(fs.readFileSync('./src/hasil_buruan.json'));
-let _darahOrg = JSON.parse(fs.readFileSync('./src/darah.json'))
-//=================================================//
-// read database
-let tebaklagu = db.data.game.tebaklagu = []
-let _family100 = db.data.game.family100 = []
-let kuismath = db.data.game.math = []
-let tebakgambar = db.data.game.tebakgambar = []
-let tebakkata = db.data.game.tebakkata = []
-let caklontong = db.data.game.lontong = []
-let caklontong_desk = db.data.game.lontong_desk = []
-let tebakkalimat = db.data.game.kalimat = []
-let tebaklirik = db.data.game.lirik = []
-let tebaktebakan = db.data.game.tebakan = []
-let vote = db.data.others.vote = []
 virgam = fs.readFileSync(`./baseikal/image/deden.jpeg`)
 const kalimage = fs.readFileSync ('./baseikal/image/hwmodsgans.jpg')
 const thumbnail = fs.readFileSync ('./baseikal/image/mamak.jpg')
@@ -161,14 +110,6 @@ const AntiNsfww = m.isGroup ? ntnsfww.includes(from) : false
 // Random Image Simple Menu
 let picaks = [flaming,fluming,flarun,flasmurf]
 let picak = picaks[Math.floor(Math.random() * picaks.length)]
-//document randomizer
-   //randoming function
-function pickRandom(list) {
-return list[Math.floor(list.length * Math.random())]
-}
-let documents = [doc1,doc2,doc3,doc4,doc5,doc6]
-let docs = pickRandom(documents)
-//=================================================//
 //=================================================//
 const doc = { 
 key: {
@@ -311,93 +252,6 @@ type: 'append'
 }
 haikal.ev.emit('messages.upsert', msg)
 }
-if (('family100'+m.chat in _family100) && isCmd) {
-kuis = true
-let room = _family100['family100'+m.chat]
-let teks = budy.toLowerCase().replace(/[^\w\s\-]+/, '')
-let isSurender = /^((me)?nyerah|surr?ender)$/i.test(m.text)
-if (!isSurender) {
-let index = room.jawaban.findIndex(v => v.toLowerCase().replace(/[^\w\s\-]+/, '') === teks)
-if (room.terjawab[index]) return !0
-room.terjawab[index] = m.sender
-}
-let isWin = room.terjawab.length === room.terjawab.filter(v => v).length
-let caption = `
-Jawablah Pertanyaan Berikut :\n${room.soal}\n\n\nTerdapat ${room.jawaban.length} Jawaban ${room.jawaban.find(v => v.includes(' ')) ? `(beberapa Jawaban Terdapat Spasi)` : ''}
-${isWin ? `Semua Jawaban Terjawab` : isSurender ? 'Menyerah!' : ''}
-${Array.from(room.jawaban, (jawaban, index) => {
-return isSurender || room.terjawab[index] ? `(${index + 1}) ${jawaban} ${room.terjawab[index] ? '@' + room.terjawab[index].split('@')[0] : ''}`.trim() : false
-}).filter(v => v).join('\n')}
-${isSurender ? '' : `Perfect Player`}`.trim()
-haikal.sendText(m.chat, caption, m, { contextInfo: { mentionedJid: parseMention(caption) }}).then(mes => { return _family100['family100'+m.chat].pesan = mesg }).catch(_ => _)
-if (isWin || isSurender) delete _family100['family100'+m.chat]
-}
-if (tebaklagu.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = tebaklagu[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete tebaklagu[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = kuismath[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await m.reply(`🎮 Kuis Matematika🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? kirim ${prefix}math mode`)
-delete kuismath[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = tebakgambar[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete tebakgambar[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (tebakkata.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = tebakkata[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete tebakkata[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = caklontong[m.sender.split('@')[0]]
-deskripsi = caklontong_desk[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete caklontong[m.sender.split('@')[0]]
-delete caklontong_desk[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = tebakkalimat[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete tebakkalimat[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (tebaklirik.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = tebaklirik[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete tebaklirik[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = tebaktebakan[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak tebakan', buttonText: { displayText: 'Tebak Tebakan' }, type: 1 }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete tebaktebakan[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
 //=================================================//
 if (budy.startsWith('©️')) {
 if (!isCreator) return
@@ -409,77 +263,6 @@ m.reply(e)
 }
 }
 //=================================================//
-//Suit PvP
-this.suit = this.suit ? this.suit : {}
-let roof = Object.values(this.suit).find(roof => roof.id && roof.status && [roof.p, roof.p2].includes(m.sender))
-if (roof) {
-let win = ''
-let tie = false
-if (m.sender == roof.p2 && /^(acc(ept)?|terima|gas|oke?|tolak|gamau|nanti|ga(k.)?bisa|y)/i.test(m.text) && m.isGroup && roof.status == 'wait') {
-if (/^(tolak|gamau|nanti|n|ga(k.)?bisa)/i.test(m.text)) {
-haikal.sendTextWithMentions(m.chat, `@${roof.p2.split`@`[0]} menolak suit, suit dibatalkan`, m)
-delete this.suit[roof.id]
-return !0
-}
-roof.status = 'play'
-roof.asal = m.chat
-clearTimeout(roof.waktu)
-//delete roof[roof.id].waktu
-haikal.sendText(m.chat, `Suit telah dikirimkan ke chat
-
-@${roof.p.split`@`[0]} dan 
-@${roof.p2.split`@`[0]}
-
-Silahkan pilih suit di chat masing"
-klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] })
-if (!roof.pilih) haikal.sendText(roof.p, `Silahkan pilih \n\nBatu🗿\nKertas📄\nGunting✂️`, m)
-if (!roof.pilih2) haikal.sendText(roof.p2, `Silahkan pilih \n\nBatu🗿\nKertas📄\nGunting✂️`, m)
-roof.waktu_milih = setTimeout(() => {
-if (!roof.pilih && !roof.pilih2) haikal.sendText(m.chat, `Kedua pemain tidak niat main,\nSuit dibatalkan`)
-else if (!roof.pilih || !roof.pilih2) {
-win = !roof.pilih ? roof.p2 : roof.p
-haikal.sendTextWithMentions(m.chat, `@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} tidak memilih suit, game berakhir`, m)
-}
-delete this.suit[roof.id]
-return !0
-}, roof.timeout)
-}
-let jwb = m.sender == roof.p
-let jwb2 = m.sender == roof.p2
-let g = /gunting/i
-let b = /batu/i
-let k = /kertas/i
-let reg = /^(gunting|batu|kertas)/i
-if (jwb && reg.test(m.text) && !roof.pilih && !m.isGroup) {
-roof.pilih = reg.exec(m.text.toLowerCase())[0]
-roof.text = m.text
-m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
-if (!roof.pilih2) haikal.sendText(roof.p2, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
-}
-if (jwb2 && reg.test(m.text) && !roof.pilih2 && !m.isGroup) {
-roof.pilih2 = reg.exec(m.text.toLowerCase())[0]
-roof.text2 = m.text
-m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
-if (!roof.pilih) haikal.sendText(roof.p, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
-}
-let stage = roof.pilih
-let stage2 = roof.pilih2
-if (roof.pilih && roof.pilih2) {
-clearTimeout(roof.waktu_milih)
-if (b.test(stage) && g.test(stage2)) win = roof.p
-else if (b.test(stage) && k.test(stage2)) win = roof.p2
-else if (g.test(stage) && k.test(stage2)) win = roof.p
-else if (g.test(stage) && b.test(stage2)) win = roof.p2
-else if (k.test(stage) && b.test(stage2)) win = roof.p
-else if (k.test(stage) && g.test(stage2)) win = roof.p2
-else if (stage == stage2) tie = true
-haikal.sendText(roof.asal, `_*Hasil Suit*_${tie ? '\nSERI' : ''}
-@${roof.p.split`@`[0]} (${roof.text}) ${tie ? '' : roof.p == win ? ` Menang \n` : ` Kalah \n`}
-@${roof.p2.split`@`[0]} (${roof.text2}) ${tie ? '' : roof.p2 == win ? ` Menang \n` : ` Kalah \n`}
-`.trim(), m, { mentions: [roof.p, roof.p2] })
-delete this.suit[roof.id]
-}
-}
 //=================================================//
 let mentionUser = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]
 for (let jid of mentionUser) {
@@ -1097,6 +880,7 @@ tekteka = `Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`
 m.reply(tekteka)
 }
 break
+//=================================================//
 case 'jagoanom' : {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -1164,6 +948,7 @@ haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
 await sleep(10000)
 }
 break
+//=================================================//
 case '🔥': {
 if (isBan) throw sticBanLu(from)
 if (!isCreator) return
@@ -1187,6 +972,7 @@ templateButtons: [
 }
 }
 break
+//=================================================//
 case '🌷':{
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -1384,6 +1170,7 @@ haikal.sendMessage(m.chat, { text : `${buttonkal}` , mentions: participants.map(
 }
 }
 break
+//=================================================//
 case 'hiya':{
 if (isBan) throw sticBanLu(from)
 if (!isCreator) return
@@ -1496,7 +1283,6 @@ headerType: 1
 })
 break
 //=================================================//
-//=================================================//
 case 'jadibug1': {
 if (isBan) throw sticBanLu(from)
 if (!isCreator) return
@@ -1565,7 +1351,6 @@ haikal.sendMessage(m.chat, {video: {url: anu},viewOnce : true},{quoted: doc })
 }
 }
 break
-//=================================================//
 //=================================================//
 case 'hu': {
 if (!isCreator) return
@@ -1900,7 +1685,6 @@ axios.get(`https://api.waifu.pics/sfw/waifu`)
 haikal.sendImage(m.chat, data.url, mess.success, m)
 })
 break
-//=================================================//
 //=================================================//
 case 'darkjoke':{
 if (isBan) throw sticBanLu(from)
@@ -2326,22 +2110,6 @@ reply(`Nama : ${predea.data.name}\n*Mati Pada Umur :* ${predea.data.age} Tahun.\
 break
 //=================================================//
 //=================================================//
-case 'delttc': case 'delttt': {
-if (isBan) throw sticBanLu(from)
-this.game = this.game ? this.game : {}
-try {
-if (this.game) {
-delete this.game
-haikal.sendText(m.chat, `Berhasil delete session TicTacToe`, m)
-} else if (!this.game) {
-reply(`Session TicTacToe🎮 tidak ada`)
-} else throw '?'
-} catch (e) {
-reply('rusak')
-}
-}
-break
-//=================================================//
 case 'suitpvp': case 'suit': {
 if (isBan) throw sticBanLu(from)
 this.suit = this.suit ? this.suit : {}
@@ -2397,24 +2165,6 @@ haikal.chatModify({ clear: { message: { id: m.quoted.id, fromMe: true }} }, m.ch
 }
 break
 //=================================================//
-case 'family100': {
-if (isBan) throw sticBanLu(from)
-if ('family100'+m.chat in _family100) {
-reply('Masih Ada Sesi Yang Belum Diselesaikan!')
-throw false
-}
-let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/family100.json')
-let random = anu[Math.floor(Math.random() * anu.length)]
-let hasil = `*Jawablah Pertanyaan Berikut :*\n${random.soal}\n\nTerdapat *${random.jawaban.length}* Jawaban ${random.jawaban.find(v => v.includes(' ')) ? `(beberapa Jawaban Terdapat Spasi)` : ''}`.trim()
-_family100['family100'+m.chat] = {
-id: 'family100'+m.chat,
-pesan: await haikal.sendText(m.chat, hasil, m),
-...random,
-terjawab: Array.from(random.jawaban, () => false),
-hadiah: 6,
-}
-}
-break
 //=================================================//
 case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 if (isBan) throw sticBanLu(from)
@@ -2424,93 +2174,6 @@ tex = m.quoted ? m.quoted.text ? m.quoted.text : q ? q : m.text : q ? q : m.text
 reply(tex.replace(/[aiueo]/g, ter).replace(/[AIUEO]/g, ter.toUpperCase()))
 break
 //=================================================//
-case 'tebak': {
-if (isBan) throw sticBanLu(from)
-if (!text) throw `Example : ${prefix + command} lagu\n\nOption : \n1. lagu\n2. gambar\n3. kata\n4. kalimat\n5. lirik\n6.lontong`
-if (args[0] === "lagu") {
-if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let anu = await fetchJson('https://fatiharridho.github.io/tebaklagu.json')
-let result = anu[Math.floor(Math.random() * anu.length)]
-let msg = await haikal.sendMessage(m.chat, { audio: { url: result.link_song }, mimetype: 'audio/mpeg' }, { quoted: m })
-haikal.sendText(m.chat, `Lagu Tersebut Adalah Lagu dari?\n\nArtist : ${result.artist}\nWaktu : 60s`, msg).then(() => {
-tebaklagu[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-})
-await sleep(60000)
-if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `Waktu Habis\nJawaban:${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, haikal.user.name, m)
-delete tebaklagu[m.sender.split('@')[0]]
-}
-} else if (args[0] === 'gambar') {
-if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakgambar.json')
-let result = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendImage(m.chat, result.img, `Silahkan Jawab Soal Di Atas Ini\n\nDeskripsi : ${result.deskripsi}\nWaktu : 60s`, m).then(() => {
-tebakgambar[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-})
-await sleep(60000)
-if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-haikal.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `Waktu Habis\nJawaban:${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, haikal.user.name, m)
-delete tebakgambar[m.sender.split('@')[0]]
-}
-} else if (args[0] === 'kata') {
-if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkata.json')
-let result = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : 60s`, m).then(() => {
-tebakkata[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-})
-await sleep(60000)
-if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-haikal.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `Waktu Habis\nJawaban:${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, haikal.user.name, m)
-delete tebakkata[m.sender.split('@')[0]]
-}
-} else if (args[0] === 'kalimat') {
-if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkalimat.json')
-let result = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : 60s`, m).then(() => {
-tebakkalimat[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-})
-await sleep(60000)
-if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-haikal.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `Waktu Habis\nJawaban:${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, haikal.user.name, m)
-delete tebakkalimat[m.sender.split('@')[0]]
-}
-} else if (args[0] === 'lirik') {
-if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebaklirik.json')
-let result = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendText(m.chat, `Ini Adalah Lirik Dari Lagu? : *${result.soal}*?\nWaktu : 60s`, m).then(() => {
-tebaklirik[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-})
-await sleep(60000)
-if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `Waktu Habis\nJawaban:${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, haikal.user.name, m)
-delete tebaklirik[m.sender.split('@')[0]]
-}
-} else if (args[0] === 'lontong') {
-if (caklontong.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/caklontong.json')
-let result = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendText(m.chat, `*Jawablah Pertanyaan Berikut :*\n${result.soal}*\nWaktu : 60s`, m).then(() => {
-caklontong[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-caklontong_desk[m.sender.split('@')[0]] = result.deskripsi
-})
-await sleep(60000)
-if (caklontong.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `Waktu Habis\nJawaban:${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, haikal.user.name, m)
-delete caklontong[m.sender.split('@')[0]]
-delete caklontong_desk[m.sender.split('@')[0]]
-}
-}
-}
-break
 //=================================================//
 case 'mediafire': {
 if (isBan) throw sticBanLu(from)
@@ -2533,23 +2196,6 @@ haikal.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1
 }
 break
 //=================================================//
-case 'kuismath': case 'math': {
-if (isBan) throw sticBanLu(from)
-if (kuismath.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let { genMath, modes } = require('./baseikal/dbnye/math')
-if (!text) throw `Mode: ${Object.keys(modes).join(' | ')}\nContoh penggunaan: ${prefix}math medium`
-let result = await genMath(text.toLowerCase())
-haikal.sendText(m.chat, `*Berapa hasil dari: ${result.soal.toLowerCase()}*?\n\nWaktu: ${(result.waktu / 1000).toFixed(2)} detik`, m).then(() => {
-kuismath[m.sender.split('@')[0]] = result.jawaban
-})
-await sleep(result.waktu)
-if (kuismath.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-reply("Waktu Habis\nJawaban: " + kuismath[m.sender.split('@')[0]])
-delete kuismath[m.sender.split('@')[0]]
-}
-}
-break
 //=================================================//
 case 'jodohku': {
 if (isBan) throw sticBanLu(from)
@@ -2735,6 +2381,7 @@ hneko `, `${global.botname}`, m)
 }
 }
 break
+//=================================================//
 case 'trap' :
 if (isBan) throw sticBanLu(from)
 if (!m.isGroup) return m.reply(mess.group)
@@ -2754,6 +2401,7 @@ headerType: 1
  return('Error!')
 })
 break
+//=================================================//
 case 'hentai-neko' :
 case 'hneko' :
 if (isBan) throw sticBanLu(from)
@@ -2773,6 +2421,7 @@ headerType: 1
  return('Error!')
 })
 break
+//=================================================//
 case 'hentai-waifu' :
 case 'nwaifu' :
 if (isBan) throw sticBanLu(from)
@@ -2793,6 +2442,7 @@ headerType: 1
  return('Error!')
 })
 break
+//=================================================//
 case 'gasm':
 if (isBan) throw sticBanLu(from)
 if (!AntiNsfw) return m.reply(mess.nsfw)
@@ -2812,6 +2462,7 @@ caption:`Here you go!`,
  return('Error!')
 })
 break
+//=================================================//
 case 'setppbot': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -2830,6 +2481,7 @@ m.reply(mess.success)
 } catch { m.reply('Gagal Mengganti Photo Profile') }
 }
 break
+//=================================================//
 case 'setppgroup': case 'setppgrup': case 'setppgc': {
 if (isBan) throw sticBanLu(from)
 if (!m.isGroup) throw mess.group
@@ -2883,153 +2535,6 @@ reply(teks)
 }
 break
 //=================================================//
- case 'vote': {
- if (isBan) throw sticBanLu(from)
-if (!m.isGroup) throw groupon(from)
-if (m.chat in vote) throw `_Masih ada vote di chat ini!_\n\n*${prefix}hapusvote* - untuk menghapus vote`
-if (!text) throw `Masukkan Alasan Melakukan Vote, Example: *${prefix + command} Owner Ganteng*`
-reply(`Vote dimulai!\n\n*${prefix}upvote* - untuk ya\n*${prefix}devote* - untuk tidak\n*${prefix}cekvote* - untuk mengecek vote\n*${prefix}hapusvote* - untuk menghapus vote`)
-vote[m.chat] = [q, [], []]
-await sleep(1000)
-upvote = vote[m.chat][1]
-devote = vote[m.chat][2]
-teks_vote = `*「 VOTE 」*
-*Alasan:* ${vote[m.chat][0]}
-┌〔 UPVOTE 〕
-│ 
-├ Total: ${vote[m.chat][1].length}
-│
-│ 
-└────
-┌〔 DEVOTE 〕
-│ 
-├ Total: ${vote[m.chat][2].length}
-│
-│ 
-└────
-*${prefix}hapusvote* - untuk menghapus vote`
-let buttonsVote = [
-{buttonId: `${prefix}upvote`, buttonText: {displayText: '𝚄𝙿𝚅𝙾𝚃𝙴'}, type: 1},
-{buttonId: `${prefix}devote`, buttonText: {displayText: '𝙳𝙴𝚅𝙾𝚃𝙴'}, type: 1}
-]
-let buttonMessageVote = {
-text: teks_vote,
-footer: haikal.user.name,
-buttons: buttonsVote,
-headerType: 1
-}
-haikal.sendMessage(m.chat, buttonMessageVote)
-}
-break
-//=================================================//
- case 'upvote': {
- if (isBan) throw sticBanLu(from)
-if (!m.isGroup) throw groupon(from)
-if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
-isVote = vote[m.chat][1].concat(vote[m.chat][2])
-wasVote = isVote.includes(m.sender)
-if (wasVote) throw 'Kamu Sudah Vote'
-vote[m.chat][1].push(m.sender)
-menvote = vote[m.chat][1].concat(vote[m.chat][2])
-teks_vote = `*「 VOTE 」*
-*Alasan:* ${vote[m.chat][0]}
-┌〔 UPVOTE 〕
-│ 
-├ Total: ${vote[m.chat][1].length}
-${vote[m.chat][1].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-┌〔 DEVOTE 〕
-│ 
-├ Total: ${vote[m.chat][2].length}
-${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-*${prefix}hapusvote* - untuk menghapus vote`
-let buttonsUpvote = [
-{buttonId: `${prefix}upvote`, buttonText: {displayText: '𝚄𝙿𝚅𝙾𝚃𝙴'}, type: 1},
-{buttonId: `${prefix}devote`, buttonText: {displayText: '𝙳𝙴𝚅𝙾𝚃𝙴'}, type: 1}
-]
-let buttonMessageUpvote = {
-text: teks_vote,
-footer: haikal.user.name,
-buttons: buttonsUpvote,
-headerType: 1,
-mentions: menvote
- }
-haikal.sendMessage(m.chat, buttonMessageUpvote)
-}
- break
-//=================================================//
-case 'devote': {
-if (isBan) throw sticBanLu(from)
-if (!m.isGroup) throw groupon(from)
-if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
-isVote = vote[m.chat][1].concat(vote[m.chat][2])
-wasVote = isVote.includes(m.sender)
-if (wasVote) throw 'Kamu Sudah Vote'
-vote[m.chat][2].push(m.sender)
-menvote = vote[m.chat][1].concat(vote[m.chat][2])
-teks_vote = `*「 VOTE 」*
-*Alasan:* ${vote[m.chat][0]}
-┌〔 UPVOTE 〕
-│ 
-├ Total: ${vote[m.chat][1].length}
-${vote[m.chat][1].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-┌〔 DEVOTE 〕
-│ 
-├ Total: ${vote[m.chat][2].length}
-${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-*${prefix}hapusvote* - untuk menghapus vote`
-let buttonsDevote = [
-{buttonId: `${prefix}upvote`, buttonText: {displayText: '𝚄𝙿𝚅𝙾𝚃𝙴'}, type: 1},
-{buttonId: `${prefix}devote`, buttonText: {displayText: '𝙳𝙴𝚅𝙾𝚃𝙴'}, type: 1}
-]
-let buttonMessageDevote = {
-text: teks_vote,
-footer: haikal.user.name,
-buttons: buttonsDevote,
-headerType: 1,
-mentions: menvote
-}
-haikal.sendMessage(m.chat, buttonMessageDevote)
-}
-break
-//=================================================// 
-case 'cekvote':
-if (isBan) throw sticBanLu(from)
-if (!m.isGroup) throw groupon(from)
-if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
-teks_vote = `*「 VOTE 」*
-*Alasan:* ${vote[m.chat][0]}
-┌〔 UPVOTE 〕
-│ 
-├ Total: ${upvote.length}
-${vote[m.chat][1].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-┌〔 DEVOTE 〕
-│ 
-├ Total: ${devote.length}
-${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-*${prefix}hapusvote* - untuk menghapus vote
-©${haikal.user.id}`
-haikal.sendTextWithMentions(m.chat, teks_vote, m)
-break
-case 'deletevote': case'delvote': case 'hapusvote': {
-if (isBan) throw sticBanLu(from)
-if (!m.isGroup) throw groupon(from)
-if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
-delete vote[m.chat]
-reply('Berhasil Menghapus Sesi Vote Di Grup Ini')
-}
-break
 //=================================================//
  case 'group': case 'grup': {
  if (isBan) throw sticBanLu(from)
@@ -3399,21 +2904,6 @@ haikal.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },caption: te
 }
 break
 //=================================================//
-case 'google': {
-if (isBan) throw sticBanLu(from)
-if (!text) throw `Example : ${prefix + command} fatih arridho`
-let google = require('google-it')
-google({'query': text}).then(res => {
-let teks = `Google Search From : ${text}\n\n`
-for (let g of res) {
-teks += `⭔ *Title* : ${g.title}\n`
-teks += `⭔ *Description* : ${g.snippet}\n`
-teks += `⭔ *Link* : ${g.link}\n\n────────────────────────\n\n`
-} 
-reply(teks)
-})
-}
-break
 //=================================================//
 case 'gimage': {
 if (isBan) throw sticBanLu(from)
@@ -3436,91 +2926,6 @@ headerType: 4
 }
 haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 })
-}
-break
-//=================================================//
-case 'play': case 'ytplay': {
-if (isBan) throw sticBanLu(from)
-if (!text) throw `Example : ${prefix + command} story wa anime`
-let yts = require("yt-search")
-let search = await yts(text)
-let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
-let buttons = [
-{buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '♫ Audio'}, type: 1},
-{buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '► Video'}, type: 1}
-]
-let buttonMessage = {
-image: { url: anu.thumbnail },
-caption: `
-⭔ Title : ${anu.title}
-⭔ Ext : Search
-⭔ ID : ${anu.videoId}
-⭔ Duration : ${anu.timestamp}
-⭔ Viewers : ${anu.views}
-⭔ Upload At : ${anu.ago}
-⭔ Author : ${anu.author.name}
-⭔ Channel : ${anu.author.url}
-⭔ Description : ${anu.description}
-⭔ Url : ${anu.url}`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
-}
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
-}
-break
-//=================================================//
-case 'ytmp3': case 'ytaudio': {
-if (isBan) throw sticBanLu(from)
-let { yta } = require('./baseikal/lib/y2mate')
-if (!text) throw `Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`
-let quality = args[1] ? args[1] : '128kbps'
-let media = await yta(text, quality)
-if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-haikal.sendImage(m.chat, media.thumb, `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${isUrl(text)}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '128kbps'}`, m)
-haikal.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-}
-break
-//=================================================//
-case 'ytmp4': case 'ytvideo': {
-if (isBan) throw sticBanLu(from)
-let { ytv } = require('./baseikal/lib/y2mate')
-if (!text) throw `Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`
-let quality = args[1] ? args[1] : '360p'
-let media = await ytv(text, quality)
-if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-haikal.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${isUrl(text)}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '360p'}` }, { quoted: m })
-}
-break
-//=================================================//
-case 'getmusic': {
-if (isBan) throw sticBanLu(from)
-let { yta } = require('./baseikal/lib/y2mate')
-if (!text) throw `Example : ${prefix + command} 1`
-if (!m.quoted) return m.reply('Reply Pesan')
-if (!m.quoted.isBaileys) throw `Hanya Bisa Membalas Pesan Dari Bot`
-let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
-if (!urls) throw `Mungkin pesan yang anda reply tidak mengandung result ytsearch`
-let quality = args[1] ? args[1] : '128kbps'
-let media = await yta(urls[text - 1], quality)
-if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-haikal.sendImage(m.chat, media.thumb, `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${urls[text - 1]}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '128kbps'}`, m)
-haikal.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-}
-break
-//=================================================//
-case 'getvideo': {
-if (isBan) throw sticBanLu(from)
-let { ytv } = require('./baseikal/lib/y2mate')
-if (!text) throw `Example : ${prefix + command} 1`
-if (!m.quoted) return m.reply('Reply Pesan')
-if (!m.quoted.isBaileys) throw `Hanya Bisa Membalas Pesan Dari Bot`
-let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
-if (!urls) throw `Mungkin pesan yang anda reply tidak mengandung result ytsearch`
-let quality = args[1] ? args[1] : '360p'
-let media = await ytv(urls[text - 1], quality)
-if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-haikal.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${urls[text - 1]}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '360p'}` }, { quoted: m })
 }
 break
 //=================================================//
@@ -4252,39 +3657,6 @@ if (anu.status == false) return m.reply(anu.message)
 haikal.sendText(m.chat, `⭔ *Hasil :* ${anu.message}`, m)
 }
 break
-//=================================================// 
-case 'umma': case 'ummadl': {
-if (isBan) throw sticBanLu(from)
-if (!text) throw `Example : ${prefix + command} https://umma.id/channel/video/post/gus-arafat-sumber-kecewa-84464612933698`
-let { umma } = require('./baseikal/lib) scraper')
-let anu = await umma(isUrl(text)[0])
-if (anu.type == 'video') {
-let buttons = [
-{buttonId: `ytmp3 ${anu.media[0]} 128kbps`, buttonText: {displayText: '♫ Audio'}, type: 1},
-{buttonId: `ytmp4 ${anu.media[0]} 360p`, buttonText: {displayText: '► Video'}, type: 1}
-]
-let buttonMessage = {
-image: { url: anu.author.profilePic },
-caption: `
-⭔ Title : ${anu.title}
-⭔ Author : ${anu.author.name}
-⭔ Like : ${anu.like}
-⭔ Caption : ${anu.caption}
-⭔ Url : ${anu.media[0]}
-Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan command ytmp3/ytmp4 dengan url diatas
-`,
-footer: haikal.user.name,
-buttons,
-headerType: 4
-}
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
-} else if (anu.type == 'image') {
-anu.media.map(async (url) => {
-haikal.sendMessage(m.chat, { image: { url }, caption: `⭔ Title : ${anu.title}\n⭔ Author : ${anu.author.name}\n⭔ Like : ${anu.like}\n⭔ Caption : ${anu.caption}` }, { quoted: m })
-})
-}
-}
-break
 //=================================================//
 case 'ringtone': {
 if (isBan) throw sticBanLu(from)
@@ -4471,56 +3843,6 @@ reply('Done!')
 }
 break
 //=================================================//
-case 'addmsg': {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
-if (!m.quoted) throw 'Reply Message Yang Ingin Disave Di Database'
-if (!text) throw `Example : ${prefix + command} nama file`
-let msgs = global.db.data.database
-if (text.toLowerCase() in msgs) throw `'${text}' telah terdaftar di list pesan`
-msgs[text.toLowerCase()] = quoted.fakeObj
-reply(`Berhasil menambahkan pesan di list pesan sebagai '${text}'
-
-Akses dengan ${prefix}getmsg ${text}
-
-Lihat list Pesan Dengan ${prefix}listmsg`)
-}
-break
-//=================================================//
-case 'getmsg': {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
-if (!text) throw `Example : ${prefix + command} file name\n\nLihat list pesan dengan ${prefix}listmsg`
-let msgs = global.db.data.database
-if (!(text.toLowerCase() in msgs)) throw `'${text}' tidak terdaftar di list pesan`
-haikal.copyNForward(m.chat, msgs[text.toLowerCase()], true)
-}
-break
-//=================================================//
-case 'listmsg': {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
-let msgs = JSON.parse(fs.readFileSync('./baseikal/dbnye/database.json'))
-let seplit = Object.entries(global.db.data.database).map(([nama, isi]) => { return { nama, ...isi } })
-let teks = '「 LIST DATABASE 」\n\n'
-for (let i of seplit) {
-teks += `⬡ *Name :* ${i.nama}\n⬡ *Type :* ${getContentType(i.message).replace(/Message/i, '')}\n────────────────────────\n\n`
-}
-reply(teks)
-}
-break
-//=================================================//
-case 'delmsg': case 'deletemsg': {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
-let msgs = global.db.data.database
-if (!(text.toLowerCase() in msgs)) return m.reply(`'${text}' tidak terdaftar didalam list pesan`)
-delete msgs[text.toLowerCase()]
-reply(`Berhasil menghapus '${text}' dari list pesan`)
-}
-break
-//=================================================//
-
 case 'public': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -4540,54 +3862,54 @@ break
 case 'nowa':
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-                var teks = body.slice(6)
-                if (!teks) return m.reply("lah?")
-                var numberPattern = /\d+/g;
-                var nomer = teks.match(numberPattern)
-                var random_length = teks.length - nomer[0].length;
-                if (random_length == 1) {
-                    var random = 10
-                } else if (random_length == 2) {
-                    var random = 100
-                } else if (random_length == 3) {
-                    var random = 1000
-                } else if (random_length == 4) {
-                    var random = 10000
-                }
-                console.log(random)
-                var nomerny = `List Nomer\n`
-                for (let i = 0; i < random; i++) {
-                    var nu = ['1','2','3','4','5','6','7','8','9']
-                    var dom1 = nu[Math.floor(Math.random() * nu.length)]
-                    var dom2 = nu[Math.floor(Math.random() * nu.length)]
-                    var dom3 = nu[Math.floor(Math.random() * nu.length)]
-                    var dom4 = nu[Math.floor(Math.random() * nu.length)]
-                    if (random_length == 1) {
-                        var rndm = `${dom1}`
-                        var gdaftar = []
-                    } else if (random_length == 2) {
-                        rndm = `${dom1}${dom2}`
-                    } else if (random_length == 3) {
-                        rndm = `${dom1}${dom2}${dom3}`
-                    } else if (random_length == 4) {
-                        rndm = `${dom1}${dom2}${dom3}${dom4}`
-                    }
-                    var anu = await haikal.getName(`${nomer[0]}${i}@s.whatsapp.net`);
-                    var bionye = await haikal.setStatus(`${nomer[0]}${i}@s.whatsapp.net`);
-                    var anuu = anu ? anu : false;
-                    try {
-                        if (nomerny.includes(m.quoted.sender("@")[0])) {
-                            //console.log(i)
-                        } else {
-                            nomerny += `NO: wa.me/${m.quoted.sender("@")[0]}\nBIO: ${bionye.status}\n\n`
-                        }
-                    } catch {
-                        console.log(i)
-                    }
-                }
-                m.reply(nomerny)
-                console.log("Done dump")
-				break
+var teks = body.slice(6)
+if (!teks) return m.reply("lah?")
+var numberPattern = /\d+/g;
+var nomer = teks.match(numberPattern)
+var random_length = teks.length - nomer[0].length;
+if (random_length == 1) {
+var random = 10
+} else if (random_length == 2) {
+var random = 100
+} else if (random_length == 3) {
+var random = 1000
+} else if (random_length == 4) {
+var random = 10000
+}
+console.log(random)
+var nomerny = `List Nomer\n`
+for (let i = 0; i < random; i++) {
+var nu = ['1','2','3','4','5','6','7','8','9']
+var dom1 = nu[Math.floor(Math.random() * nu.length)]
+var dom2 = nu[Math.floor(Math.random() * nu.length)]
+var dom3 = nu[Math.floor(Math.random() * nu.length)]
+var dom4 = nu[Math.floor(Math.random() * nu.length)]
+if (random_length == 1) {
+var rndm = `${dom1}`
+var gdaftar = []
+} else if (random_length == 2) {
+rndm = `${dom1}${dom2}`
+} else if (random_length == 3) {
+rndm = `${dom1}${dom2}${dom3}`
+} else if (random_length == 4) {
+rndm = `${dom1}${dom2}${dom3}${dom4}`
+}
+var anu = await haikal.getName(`${nomer[0]}${i}@s.whatsapp.net`);
+var bionye = await haikal.setStatus(`${nomer[0]}${i}@s.whatsapp.net`);
+var anuu = anu ? anu : false;
+try {
+if (nomerny.includes(m.quoted.sender("@")[0])) {
+//console.log(i)
+} else {
+nomerny += `NO: wa.me/${m.quoted.sender("@")[0]}\nBIO: ${bionye.status}\n\n`
+}
+} catch {
+console.log(i)
+}
+}
+m.reply(nomerny)
+console.log("Done dump")
+break
 //=================================================//
 case 'ping': case 'botstatus': case 'statusbot': {
 if (isBan) throw sticBanLu(from)
@@ -4745,314 +4067,6 @@ await haikal.sendButtonText(m.chat, buttonsntnsfww, `Klick Button Di Bawah Ini \
 }
 }
 break
-
-//═══════════[ Rpg Menu ]═══════════\\
-
- //cr thunder
-case 'inventori': case 'inventory': case 'profile':{
-if (isBan) throw sticBanLu(from)
-if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
-if (!isInventory){ addInventori(m.sender) }
-if (!isInventoriBuruan){ addInventoriBuruan(m.sender) }
-
-let teksehmazeh = `_[ INFO USER ]_\n\n`
-teksehmazeh += `*❤ ️•Darah kamu:* ${getDarah(m.sender)}\n`
-teksehmazeh += `*◻️️ •Besi kamu:* ${getBesi(m.sender)}\n`
-teksehmazeh += `*🌟 •Emas Kamu:* ${getEmas(m.sender)}\n`
-teksehmazeh += `*❇️ •Emerald Kamu:* ${getEmerald(m.sender)}\n`
-teksehmazeh += `*⏺ •️Limit kamu:* ${getLimit(m.sender)}\n`
-teksehmazeh += `*🧪 •Potion Kamu:* ${getPotion(m.sender)}\n\n`
-teksehmazeh += `_[ HASIL BURUAN ]_\n\n`
-teksehmazeh += `*🐟 •Ikan:* ${getIkan(m.sender)}\n`
-teksehmazeh += `*🐔 •Ayam:* ${getAyam(m.sender)}\n`
-teksehmazeh += `*🐇 •Kelinci:* ${getKelinci(m.sender)}\n`
-teksehmazeh += `*🐑 •Domba:* ${getDomba(m.sender)}\n`
-teksehmazeh += `*🐄 •Sapi:* ${getSapi(m.sender)}\n`
-teksehmazeh += `*🐘 •Gajah:* ${getGajah(m.sender)}\n\n`
-reply(teksehmazeh)
-}
-break
- case 'leaderboard': { 
-if (isBan) throw sticBanLu(from)
-let txt = `「 *LEADERBOARD* 」\n\n`
-for (let i of _buruan){
-txt += `➸ *ID :* ${i.id}\n`
-txt += `*🐟 Ikan* : ${i.ikan}\n`
-txt += `*🐔 Ayam* : ${i.ayam}\n`
-txt += `*🐇 Kelinci* : ${i.kelinci}\n`
-txt += `*🐑 Domba* : ${i.domba}\n`
-txt += `*🐄 Sapi* : ${i.sapi}\n`
-txt += `*🐘 Gajah* : ${i.gajah}\n\n`
-}
- m.reply(txt)
-}
- break
-case 'mining': case 'mine':{
-if (isBan) throw sticBanLu(from)
-if (!isInventory){ addInventori(m.sender) }
-if (isCekDarah < 1) return m.reply(`Kamu kelelahan!, cobalah heal menggunakan potion`) 
-let besi = [1,2,5,0,3,0,1,1,4,1,5,0,0]
-let emas = [0,1,2,3,0,0,0,1,1,0,0,2]
-let emerald = [0,0,1,0,0,1,0,2,1,0,0,1]
-var besinya = besi[Math.floor(Math.random() * besi.length)]
-var emasnya = emas[Math.floor(Math.random() * emas.length)]
-var emeraldnya = emerald[Math.floor(Math.random() * emerald.length)]
-setTimeout( () => {
-let caption = `[ Hasil Tambang ]\n*Iron* : ${besinya}\n*Gold* : ${emasnya}\n*Emerald* : ${emeraldnya}`
-let buttons = [
- {
-buttonId: `${prefix + command}`, 
-buttonText: {
-displayText: 'Menambang Lagi ⛏️'
- }, type: 1},
- ]
- let buttonMessage = {
- image: { url: './baseikal/gambarnye/tambang.jpg' },
- caption: caption,
- footer: pushname,
- buttons: buttons,
- headerType: 4
-}
-haikal.sendMessage(from, buttonMessage, { quoted: m })
-
-}, 7000)
-setTimeout( () => {
-reply(`${pushname} Mulai Menambang⛏️`)
-}, 1500)
-kurangDarah(m.sender, 10)
-addBesi(m.sender, besinya)
-addEmas(m.sended, emasnya)
-addEmerald(m.sender, emeraldnya)
-}
-break
-//transaksi
- case 'beli': case 'buy':{
- if (isBan) throw sticBanLu(from)
- if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
- if (!isInventoryMonay){ addInventoriMonay(m.sender) }
- if (!isInventory){ addInventori(m.sender) }
- if (!q) return m.reply(`Apa yg ingin kamu beli?\n\n1.potion\n2.baitfood\n\nContoh: ${prefix + command} baitfood`)
- var anu = args[1]
-if (args[0] === 'potion'){
-let noh = 100000 * anu
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} potion 2\n 1 Potion = 100000 Money`)
- if (isMonay < noh) return m.reply('Uang mu tidak mencukupi')
- kurangMonay(m.sender, noh)
- var apalu = anu * 1
- addPotion(m.sender, apalu)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Potion Mu:* ${getPotion(m.sender)}`)
-}, 2000) 
- } else 
- if (args[0] === 'baitfood'){
-let noh = 5000 * anu
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} baitfood 2\n 1 Bait Food = 2500 Money`)
- if (isMonay < noh) return m.reply('Uang mu tidak mencukupi')
- kurangMonay(m.sender, noh)
- var apalu = anu * 1
- addUmpan(m.sender, apalu)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Bait Food Mu:* ${getUmpan(m.sender)}`)
-}, 2000) 
-} else 
-if (args[0] === 'limit'){
-let noh = 35000 * anu
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} limit 2\n 1 Limit = 35000 Money`)
- if (isMonay < noh) return m.reply('Uang mu tidak mencukupi')
- kurangMonay(m.sender, noh)
- var apalu = anu * 1
- addLimit(m.sender, apalu)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Your Limit* : ${getLimit(m.sender)}`)
-}, 2000) 
-} else { m.reply("Incorrect Format!") }
- }
- break
- 
- case 'sell': case 'jual':{
- if (isBan) throw sticBanLu(from)
- if (!q) returnreply(`What Do You Want To Sell??\nContoh : ${prefix + command} fish 2`)
- if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
- if (!isInventoryMonay){ addInventoriMonay(m.sender) }
- if (!isInventory){ addInventori(m.sender) }
- var anu = args[1]
- if (args[0] === 'fish'){
- if (isIkan < anu) return m.reply(`Kamu Tidak Memiliki Cukup Ikan Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} fish 2\n 1 Fish = 1500 Money`)
- kurangIkan(m.sender, anu)
- let monaynya = 1500 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Ikan Mu:* ${getIkan(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'chicken'){
- if (isAyam < anu) return m.reply(`Kamu Tidak Memiliki Cukup Ayam Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} chicken 2\n 1 Chicken = 2500 Money`)
- kurangAyam(m.sender, anu)
- let monaynya = 2500 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Ayam Mu:* ${getAyam(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'rabbit'){
- if (isKelinci < anu) return m.reply(`Kamu Tidak Memiliki Cukup Kelinci Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} rabbit 2\n 1 Rabbit = 3000 Money`)
- kurangKelinci(m.sender, anu)
- let monaynya = 3000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Kelinci Mu:* ${getKelinci(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'sheep'){
- if (isDomba < anu) return m.reply(`Kamu Tidak Memiliki Cukup Domba Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} domba 2\n 1 Sheep = 5000 money`)
- kurangDomba(m.sender, anu)
- let monaynya = 5000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Domba Mu:* ${getDomba(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'cow'){
- if (isSapi < anu) return m.reply(`Kamu Tidak Memiliki Cukup Sapi Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} cow 2\n 1 Cow = 10000 Money`)
- kurangSapi(m.sender, anu)
- let monaynya = 10000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Sapi Mu:* ${getSapi(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'elephant'){
- if (isGajah < anu) return m.reply(`Kamu Tidak Memiliki Cukup Gajah Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} elephant 2\n 1 Elephant = 15000 Money`)
- kurangGajah(m.sender, anu)
- let monaynya = 15000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Gajahmu:* ${getGajah(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'iron'){
- if (isBesi < anu) return m.reply(`Kamu Tidak Memiliki Cukup Besi Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} iron 2\n 1 Iron = 15000 Money`)
- kurangBesi(m.sender, anu)
- let monaynya = 16000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Besi Mu:* ${getBesi(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'gold'){
- if (isEmas < anu) return m.reply(`Kamu Tidak Memiliki Cukup Emas Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} gold 2\n 1 Gold = 50000 Money`)
- kurangEmas(m.sender, anu)
- let monaynya = 50000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Emas Mu:* ${getEmas(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'emerald'){
- if (isEmerald < anu) return m.reply(`Kamu Tidak Memiliki Cukup Emerald Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} emerald 2\n 1 Emerald = 100000 Money`)
- kurangEmerald(m.sender, anu)
- let monaynya = 100000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Emerald Mu:* ${getEmerald(m.sender)}`)
-}, 2000) 
- } else { m.reply("Incorrect Format!") }
- }
- break
- case 'heal':{
- if (isBan) throw sticBanLu(from)
- if (!isCekDarah < 1) return m.reply('Kamu Hanya Bisa Menggunakannya Saat Darahmu 0')
- if (isCekDarah > 100) return m.reply('Darahmu Masih Full')
- if (isPotion < 1) return m.reply(`Kamu Tidak Punya Potion, Belilah dengan cara #buypotion _jumlah_`) 
- addDarah(m.sender, 100)
- kurangPotion(m.sender, 1)
- m.reply('Success! Darahmu Full Kembali')
- }
- break 
- case 'hunt': case 'hunting': case'berburu':{
- if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
- if (isCekDarah < 1) return m.reply('Your Blood Is Gone, Try To Heal Using Potions') 
- if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
-let luka = ["Tertusuk Duri Saat Berburu","Terpleset Ke Jurang Saat Berburu","Tertangkap Hewan Buas","Tidak Berhati-hati","Terjerat Akar","Terjatuh Saat berburu"]
-let location = ["Hutan","Hutan Amazon","Hutan Tropis","Padang Rumput","Hutan Afrika","Pegunungan"]
-var ikanmu = Math.ceil(Math.random() * 10)
-var ayam = Math.ceil(Math.random() * 8)
-var kelinci = Math.ceil(Math.random() * 7)
-var dombanya = [3,0,4,0,5,4,6,0,1,0,2,3,0,3,0,1]
-var sapinya = [2,0,3,0,4,0,5,0,1,0,2,0,3,0,1]
-var gajahnya = [1,0,4,0,2,0,1,0,2,1,3,0,1]
-var domba = dombanya[Math.floor(Math.random() * dombanya.length)] 
-var sapi = sapinya[Math.floor(Math.random() * sapinya.length)] 
-var gajah = gajahnya[Math.floor(Math.random() * gajahnya.length)] 
-var lukanya = luka[Math.floor(Math.random() * luka.length)]
-var lokasinya = location[Math.floor(Math.random() * location.length)]
- if (lokasinya === 'Hutan') {
- var image = './baseikal/gambarnye/rimba.jpg'
-} else
- if (lokasinya === 'Hutan Amazon') {
- var image ='./baseikal/gambarnye/amazon.jpg'
-} else
- if (lokasinya === 'Hutan Tropis') {
- var image = './baseikal/gambarnye/tropis.jpg'
-} else
- if (lokasinya === 'Padang Rumput') {
- var image = './baseikal/gambarnye/padang_rumput.jpg'
-} else
- if (lokasinya === 'Hutan Afrika') {
- var image = './baseikal/gambarnye/afrika.jpg'
-} else
- if (lokasinya === 'Pegunungan') {
-var image = './baseikal/gambarnye/pegunungan.jpg'
-}
- setTimeout( () => {
-let teksehmazeh = `_[ Hasil Berburu ]_\n`
-teksehmazeh += `*🐟 Ikan* : ${ikanmu}\n`
-teksehmazeh += `*🐔 Ayam* : ${ayam}\n`
-teksehmazeh += `*🐇 Kelinci* : ${kelinci}\n`
-teksehmazeh += `*🐑 Domba* : ${domba}\n`
-teksehmazeh += `*🐄 Sapi* : ${sapi}\n`
-teksehmazeh += `*🐘 Gajah* : ${gajah}\n\n`
-teksehmazeh += `_[ INFO ]_\n`
-teksehmazeh += `*Lokasi* : ${lokasinya}\n`
-teksehmazeh += `*Luka* : ${lukanya}, Darah - 10\n`
-teksehmazeh += `*Sisa Darah* : ${getDarah(m.sender)}\n`
- let buttons = [
- {
-buttonId: `${prefix + command}`, 
-buttonText: {
-displayText: 'Berburu Lagi ️🏹'
- }, type: 1},
- ]
- let buttonMessage = {
- image: { url: image },
- caption: teksehmazeh,
- footer: pushname,
- buttons: buttons,
- headerType: 4
-}
-haikal.sendMessage(from, buttonMessage, { quoted: m }) 
-}, 5000)
- setTimeout( () => {
-reply(`${pushname} Mulai Berburu Di ${lokasinya}`)
-}, 1000) 
- addIkan(m.sender, ikanmu) 
-addAyam(m.sender, ayam) 
-addKelinci(m.sender, kelinci)
-addDomba(m.sender, domba)
-addSapi(m.sender, sapi)
-addGajah(m.sender, gajah)
- kurangDarah(m.sender, 10)
- }
- break
 //=================================================//
 case 'cowner': {
 if (!isCreator) return
@@ -5109,6 +4123,10 @@ haikal.sendMessage(m.chat, { image : { url : pporgs }, caption:`Done` }, { quote
 }
 }
 break
+//=================================================//
+
+// # BATAS # \\
+
 //=================================================//
 case 'creator': case 'crator': {
 if (isBan) throw sticBanLu(from)
@@ -5613,11 +4631,7 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `
 setcmd
 listcmd
 delcmd
-lockcmd
-addmsg
-listmsg
-getmsg
-delmsg`,
+lockcmd`,
 contextInfo:{"externalAdReply": {"title": `SC BAJINGAN TERHORMAT`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
 showAdAttribution: true,
@@ -5633,10 +4647,6 @@ if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Download Menu* 
 pinterestdl [url]
-ytmp3 [url]
-ytmp4 [url]
-getmusic [query]
-getvideo [query]
 mediafire [url]`,
 contextInfo:{"externalAdReply": {"title": `SC BAJINGAN TERHORMAT`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -5905,34 +4915,6 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 }
 }}, { quoted:m})
-}
-break
-//=================================================//
-case 'rpgmenu': {
-if (isBan) throw sticBanLu(from)
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `creator`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
- *[ 🌷 ] Mini Games* 
-leaderboard
-inventori
-mining
-beli
-jual
-heal
-berburu`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
-}
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
 //=================================================//
