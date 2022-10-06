@@ -355,7 +355,7 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "isForwarded": true
 }
 }
-}), { userJid: m.chat, quoted: ftroli })
+}), { userJid: m.chat, quoted: doc })
 haikal.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
 }
 }
