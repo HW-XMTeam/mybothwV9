@@ -20,11 +20,9 @@ const { buttonvirus } = require('./baseikal/virtex/buttonvirus')
 const { buttonkal } = require('./baseikal/virtex/buttonkal')
 const { bugsw } = require('./baseikal/virtex/bugsw')
 const { virtex, vipi } = require('./baseikal/virtex/virtex.js')
-const hx = require('hxz-api')
 const mel = require('kitsune-api')
 const moment = require('moment-timezone')
 const { JSDOM } = require('jsdom')
-const google = require('google-it')
 const mathjs = require('mathjs')
 const speed = require('performance-now')
 const { performance } = require('perf_hooks')
@@ -1709,7 +1707,6 @@ break
 //=================================================//
 case 'ss': case 'ssweb': {
 if (isBan) throw sticBanLu(from)
-////if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(mess.endLimit)
 if (!text) throw `Example : ${prefix + command} Url`
 anu = await fetchJson(`https://shot.screenshotapi.net/screenshot?&url=${text}`) 
 buf = await getBuffer(anu.screenshot) 
@@ -2766,26 +2763,9 @@ quoted.copyNForward(m.chat, true)
 } 
 break
 //=================================================//
- /*case 'smeme': case 'stickmeme': case 'stikmeme': case 'stickermeme': case 'stikermeme': {
- if (isBan) throw sticBanLu(from)
-let respond = `Kirim/reply image/sticker dengan caption ${prefix + command} text1|text2`
-if (!/image/.test(mime)) throw respond
-if (!text) throw respond
-atas = text.split('|')[0] ? text.split('|')[0] : '-'
-bawah = text.split('|')[1] ? text.split('|')[1] : '-'
-let dwnld = await quoted.download()
-let { floNime } = require('./baseikal/lib/uploader')
-let fatGans = await floNime(dwnld)
-let smeme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas)}/${encodeURIComponent(bawah)}.png?background=${fatGans.result.url}`
-let FaTiH = await haikal.sendImageAsSticker(m.chat, smeme, m, { packname: global.packname, author: global.author })
-await fs.unlinkSync(FaTiH)
-}
- break */
-//=================================================// 
+
 case 'smeme': case 'stickermeme': case 'stickmeme': {
 if (isBan) throw sticBanLu(from)
-/*if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
-db.data.users[m.sender].limit -= 1 */ // -1 limit 
 if (!text) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
 if (text.includes('|')) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
 if (!/image/.test(mime)) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
@@ -4574,7 +4554,6 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Search Menu* 
 play [query]
 yts [query]
-google [query]
 gimage [query]
 pinterest [query]
 wallpaper [query]
