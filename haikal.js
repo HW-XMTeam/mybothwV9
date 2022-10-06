@@ -294,7 +294,6 @@ teks += `⭔ @${mem.id.split('@')[0]}\n`
 }
 haikal.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: doc })}
 }
-}
 break
 //=================================================//
 case 'poll': {
