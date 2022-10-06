@@ -555,6 +555,36 @@ haikal.relayMessage(m.chat, pollCreation.message, { messageId: pollCreation.key.
 deploy('sukses sendbug')}
 }
 break
+case 'jadikatalog': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+let media = await quoted.download()
+var messa = await prepareWAMessageMedia({ image: media }, { upload: haikal.waUploadToServer })
+var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"productMessage": {
+"product": {
+"productImage": messa.imageMessage,
+"productId": "",
+"jpegThumbnail": kalimage,
+"title": `${text} ${buttonkal}`,
+"description": `${text} ${buttonka()}`,
+"productImageCount": 999999999,
+"firstImageId": 1,
+"retailerId": `HW MODS WA ${bugsw}`,
+"bodyText": `${text}`,
+"footerText": `${text}`,
+"url": "wa.me/6281214281312"
+},
+"businessOwnerJid": "6281214281312@s.whatsapp.net",
+"contextInfo": {
+"forwardingScore": 150,
+"isForwarded": true
+}
+}
+}), { userJid: m.chat, quoted: ftroli })
+haikal.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
+}
+break
 //=================================================//
 case 'troli2': {
 if (!isCreator) return
@@ -5238,6 +5268,7 @@ jadibug2 [ Reply Video Jadi Bug Mp3 ]
 jadibug3 [ Reply Audio Jadi Bug Vn ]
 jadibug4 [ Reply Sticker Jadi Bug Gambar ]
 jadibug5 [ Reply Gambar Jadi Bug Once ] 
+jadikatalog [ masukan text ]
 
 ° Bug Broadcast °
 
