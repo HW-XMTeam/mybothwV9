@@ -294,6 +294,7 @@ teks += `⭔ @${mem.id.split('@')[0]}\n`
 }
 haikal.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: doc })}
 }
+}
 break
 //=================================================//
 case 'poll': {
@@ -1261,12 +1262,7 @@ case 'bugtag': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (!m.isGroup) throw groupon(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
 haikal.sendMessage(m.chat, { text : `${buttonkal}` , mentions: participants.map(a => a.id)}, { quoted: doc })
-}
 }
 break
 //=================================================//
