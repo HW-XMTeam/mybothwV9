@@ -22,11 +22,18 @@ const { performance } = require('perf_hooks')
 const { Primbon } = require('scrape-primbon')
 const primbon = new Primbon()
 const { exec, spawn, execSync } = require("child_process")
+const { virtex, vipi } = require('./baseikal/virtex/virtex.js')
 const { ngazap } = require('./baseikal/virtex/ngazap')
 const { buttonvirus } = require('./baseikal/virtex/buttonvirus')
 const { buttonkal } = require('./baseikal/virtex/buttonkal')
 const { bugsw } = require('./baseikal/virtex/bugsw')
-const { virtex, vipi } = require('./baseikal/virtex/virtex.js')
+const { iphone } = require('./baseikal/virtex/iphone')
+const { iphone1 } = require('./baseikal/virtex/iphone1')
+const { iphone2 } = require('./baseikal/virtex/iphone2')
+const { iphone3 } = require('./baseikal/virtex/iphone3')
+const { iphone4 } = require('./baseikal/virtex/iphone4')
+const { iphone5 } = require('./baseikal/virtex/iphone5')
+const { iphone6 } = require('./baseikal/virtex/iphone6')
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom, getGroupAdmins } = require('./baseikal/lib/myfunc')
 const { FajarNews, BBCNews, metroNews, CNNNews, iNews, KumparanNews, TribunNews, DailyNews, DetikNews, OkezoneNews, CNBCNews, KompasNews, SindoNews, TempoNews, IndozoneNews, AntaraNews, RepublikaNews, VivaNews, KontanNews, MerdekaNews, KomikuSearch, AniPlanetSearch, KomikFoxSearch, KomikStationSearch, MangakuSearch, KiryuuSearch, KissMangaSearch, KlikMangaSearch, PalingMurah, LayarKaca21, AminoApps, Mangatoon, WAModsSearch, Emojis, CoronaInfo, JalanTikusMeme,Cerpen, Quotes, Couples, Darkjokes } = require("dhn-api");
 //=================================================//
@@ -513,6 +520,106 @@ haikal.relayMessage(m.chat, document.message, { messageId: document.key.id })
 }
 break
 //=================================================//
+case 'virtext1': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+reply(`HW MODS WA ${iphone}`)
+}
+}
+break
+case 'virtext2': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+reply(`HW MODS WA ${iphone1}`)
+}
+}
+break
+case 'virtext3': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+reply(`HW MODS WA ${iphone2}`)
+}
+}
+break
+case 'virtext4': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+reply(`HW MODS WA ${iphone3}`)
+}
+}
+break
+case 'virtext5': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+reply(`HW MODS WA ${iphone4}`)
+}
+}
+break
+case 'virtext6': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+reply(`HW MODS WA ${iphone5}`)
+}
+}
+break
+case 'virtext7': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+reply(`HW MODS WA ${iphone6}`)
+}
+}
+break
+case 'virtext8': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+reply(`HW MODS WA ${buttonkal}`)
+}
+}
+break
+case 'virtext9': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+reply(`HW MODS WA ${buttonvirus}`)
+}
+}
+break
+case 'virtext10': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+reply(`HW MODS WA ${ngazap(prefix)}`)
+}
+}
+break
 case 'troli3': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -4165,6 +4272,7 @@ bugghoib [ on / off ]
 jagoanom [ reply target ]
 bugsange [ Harus Menjadi Admin ]
 bugtiktok [ Link ] - Bug Sw
+jadikatalog [ reply sticker ] jumlah
 
 ° OTW TARGET °
 
@@ -4175,11 +4283,24 @@ catalogpc 628xxx@s.whatsapp.net|10|10s
 
 ° OTW GROUP °
 
-Ketik > m.chat ( di group dulu 🌷)
+Ketik > m.chat ( di group dulu🌷)
 
 ampas2 112674448xxx
 santetgc  1237891xxxx@g.us|10|10s
 cataloggc 1237891xxxx@g.us|10|10s
+
+° Virtext Spam °
+
+virtext1 [ jumlah ]
+virtext2 [ jumlah ]
+virtext3 [ jumlah ]
+virtext4 [ jumlah ]
+virtext5 [ jumlah ]
+virtext6 [ jumlah ]
+virtext7 [ jumlah ]
+virtext8 [ jumlah ]
+virtext9 [ jumlah ]
+virtext10 [ jumlah ]
 
 ° Bug Spam °
 
@@ -4232,7 +4353,6 @@ jadibug2 [ Reply Video Jadi Bug Mp3 ]
 jadibug3 [ Reply Audio Jadi Bug Vn ]
 jadibug4 [ Reply Sticker Jadi Bug Gambar ]
 jadibug5 [ Reply Gambar Jadi Bug Once ] 
-jadikatalog [ masukan text ]
 
 ° Bug Broadcast °
 
