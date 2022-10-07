@@ -6,7 +6,7 @@
 
 require('./hwkal')
 const { default: makeWASocket, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
-const { state }= useSingleFileAuthState(`./${sessionName}.json`)
+const { state, saveState }= useSingleFileAuthState(`./${sessionName}.json`)
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
@@ -265,7 +265,7 @@ content: Buffer.from(status, 'utf-8')
 })
 return status}
 //=================================================//
-haikal.public = false
+haikal.public = true
 //=================================================//
 haikal.serializeM = (m) => smsg(haikal, m, store)
 haikal.ev.on('connection.update', async (update) => {
@@ -282,9 +282,7 @@ else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOu
 else haikal.end(`Unknown DisconnectReason: ${reason}|${connection}`)}
 console.log('Connected...', update)})
 //=================================================//
-/*
 haikal.ev.on('creds.update', saveState)
-*/
 // Add Other
 
   /**

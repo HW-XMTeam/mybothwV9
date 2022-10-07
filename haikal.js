@@ -78,7 +78,7 @@ moment.tz.setDefault("Asia/Jakarta").locale("id");
 //=================================================//
 module.exports = haikal = async (haikal, m, chatUpdate, store) => {
  try {
- var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
+var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
 var budy = (typeof m.text == 'string' ? m.text : '')
 var prefix = prefa ? /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : "" : prefa ?? global.prefix
 //=================================================//
@@ -159,10 +159,6 @@ console.log(err)
 if (!haikal.public) {
 if (!m.key.fromMe) return
 }
-if (m.message) {
-console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32m CMD \x1b[1;37m]', time, chalk.
-green(budy || m.mtype), 'from', chalk.green(pushname), 'in', chalk.green(groupName ? groupName : 'Private Chat' ), 'args :', chalk.green(text.length))
- }
 //=================================================// 
 let cron = require('node-cron')
 cron.schedule('00 12 * * *', () => {
@@ -2242,7 +2238,6 @@ break
 //=================================================//
 case 'mediafire': {
 if (isBan) throw sticBanLu(from)
-////if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return  
 if (!text) throw '*Enter a Link Query!*'
 if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) throw '*The link you provided is not valid*'
 const baby1 = await mediafireDl(text)
@@ -2865,7 +2860,6 @@ break
 //=================================================//
 case 'tomp4': case 'tovideo': {
 if (isBan) throw sticBanLu(from)
- // //if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return 
 if (!quoted) throw 'Reply Image'
 if (!/webp/.test(mime)) throw `*reply sticker with caption* *${prefix + command}*`
 let { webp2mp4File } = require('./baseikal/lib/uploader')
