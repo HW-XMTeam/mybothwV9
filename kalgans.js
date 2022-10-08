@@ -2,11 +2,11 @@
 › Create By Haikal
 › Base Ori Haikal
 
-🌷 KALAU MAU RENAME TARO CREDITS GUA : HW MODS WA */
+🌷 KALAU MAU RENAME TARO CREDITS GUA : SLIMKYY BOTSS㐅 */
 
 require('./hwkal')
 const { default: makeWASocket, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
-const { state }= useSingleFileAuthState(`./${sessionName}.json`)
+const { state, saveState }= useSingleFileAuthState(`./${sessionName}.json`)
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
@@ -52,7 +52,6 @@ global.db.data = {
 users: {},
 chats: {},
 database: {},
-game: {},
 settings: {},
 others: {},
 sticker: {},
@@ -169,12 +168,12 @@ mentions: [num],
 fileName: `HELLO 👋 SELAMAT DATANG DI GROUP ${metadata.subject}`,
 fileLength: 99999999999999,
 caption: he,
-footer: `© Я𝚯𝐓𝚯R`,
+footer: `© SLIMKYY BOTSS㐅`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `Jangan Lupa Tersenyum ☺️`,
-body: `SUBSCRIBE HW MODS WA`,
+body: `SUBSCRIBE SLIMKYY BOTSS㐅`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: link,
@@ -196,12 +195,12 @@ mentions: [num],
 fileName: `SELAMAT TINGGAL 👋 ${metadata.subject}`,
 fileLength: 99999999999999,
 caption: he,
-footer: `© Я𝚯𝐓𝚯R`,
+footer: `© SLIMKYY BOTSS㐅`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `Jangan Lupa Tersenyum ☺️`,
-body: `SUBSCRIBE HW MODS WA`,
+body: `SUBSCRIBE SLIMKYY BOTSS㐅`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: link,
@@ -266,7 +265,7 @@ content: Buffer.from(status, 'utf-8')
 })
 return status}
 //=================================================//
-haikal.public = false
+haikal.public = true
 //=================================================//
 haikal.serializeM = (m) => smsg(haikal, m, store)
 haikal.ev.on('connection.update', async (update) => {
@@ -283,9 +282,7 @@ else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOu
 else haikal.end(`Unknown DisconnectReason: ${reason}|${connection}`)}
 console.log('Connected...', update)})
 //=================================================//
-/*
 haikal.ev.on('creds.update', saveState)
-*/
 // Add Other
 
   /**

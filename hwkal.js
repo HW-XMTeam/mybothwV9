@@ -15,23 +15,19 @@ global.flasmurf = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutp
 //ubah aja kalau ada yang gapunya gsh di hps anggap aja credits :), note tanda ' gausah di hapus!
 global.youtube = 'https://youtube.com/c/HwModsWa857'
 global.ig = 'https://www.instagram.com/hikal_857/?hl=id'
-global.mygc = 'wa.me/6285714170944'
-global.myweb = 'https://eclass.iainsalatiga.ac.id/app/upload/users/1/10892/my_files/XhiroMhonshine.html'
-global.linkgrupss = "https://chat.whatsapp.com/Jh7zaCSnPCBC4gdYOEVm0K"
-global.linkpro = 'mailto:support@whatsapp.com?subject=Deactivate%20My%20Account%20Number&body=Please%20Deactivate%20The%20My%20Account%20Number%20%2B62XXXXXXXX%20Immediately%20Because%20The%20Number%20Has%20Been%20Lost'
 global.email = 'denyp857@gmail.com'
 global.region = 'indonesia'
 //—————「 Set Nama Own & Bot 」—————//
-global.ownername = 'HW MODS WA' //ubah jadi nama mu, note tanda ' gausah di hapus!
-global.botname = 'HW MODS WA' //ubah jadi nama bot mu, note tanda ' gausah di hapus!
-global.footer = 'HW MODS WA' //ubah jadi nama mu, note tanda ' gausah di hapus!
+global.ownername = 'SLIMKYY BOTSS㐅' //ubah jadi nama mu, note tanda ' gausah di hapus!
+global.botname = 'SLIMKYY BOTSS㐅' //ubah jadi nama bot mu, note tanda ' gausah di hapus!
+global.footer = 'SLIMKYY BOTSS㐅' //ubah jadi nama mu, note tanda ' gausah di hapus!
 //=================================================//
 // Other
-global.owner = ['6281214281312']
-global.premium = ['6281214281312']
-global.packname = 'HW MODS WA'
-global.ownerr = ['HW MODS WA']
-global.author = 'HW MODS WA'
+global.owner = ['6285772363954']
+global.premium = ['6285772363954']
+global.packname = 'SLIMKYY BOTSS㐅'
+global.ownerr = ['SLIMKYY BOTSS㐅']
+global.author = 'SLIMKYY BOTSS㐅'
 global.sessionName = './sessionye/haikal'
 global.prefa = ['','!','.',',','🐤','🗿']
 global.sp = '⭔'
@@ -39,16 +35,9 @@ global.mess = {
     nsfw: '*Fitur NSFW tidak diaktifkan, chat admin grup supaya diaktifkan*_',
     wait: '*Loading... Sabar Wibu*_',
     private: 'Fitur Digunakan Hanya Untuk Private Chat!',
-    bot: 'Fitur Khusus Pengguna Nomor Bot',
-    endLimit: 'Limit Harian Anda Telah Habis, Limit Akan Direset Setiap Jam 12',
+    bot: 'Fitur Khusus Pengguna Nomor Bot',    
 }
 //=================================================//
-global.doc1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-global.doc2 = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-global.doc3 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-global.doc4 = 'application/zip'
-global.doc5 = 'application/pdf'
-global.doc6 = 'application/vnd.android.package-archive'
 global.f1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
 global.f2 = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
 global.f3 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
@@ -60,20 +49,9 @@ global.limitawal = {
     premium: "Infinity",
     free: 100
 }
-   global.rpg = {
-   darahawal: 100,
-   besiawal: 5,
-   goldawal: 1,
-   emeraldawal: 1,
-   umpanawal: 1,
-   potionawal: 1
-}
 //=================================================//
 global.thumb = fs.readFileSync("./baseikal/image/hw.jpg")
-global.visoka = fs.readFileSync("./baseikal/video/hikal.gif")
 global.log0 = fs.readFileSync("./baseikal/image/haikal.jpg")
-global.menuimg = 'https://k.top4top.io/p_2388xws321.jpg'
-global.ggikal = fs.readFileSync("./baseikal/video/haikal.mp4")
 //=================================================//
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
