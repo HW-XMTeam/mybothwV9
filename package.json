@@ -21,7 +21,7 @@
 "author": "Haikal Hw.",
 "license": "MIT",
 "dependencies": {
-"@adiwajshing/baileys": "github:HW-XMTeam/baileys",
+"@adiwajshing/baileys": "4.4.0",
 "@adiwajshing/keyed-db": "^0.2.4",
 "awesome-phonenumber": "^2.64.0",
 "axios": "^0.24.0",
@@ -66,10 +66,10 @@
 "devDependencies": {},
 "repository": {
 "type": "git",
-"url": "git+https://github.com/HW-XMTeam/Haikal-Morou.git"
+"url": "git+https://github.com/HW-XMTeam/INI-KERASA.git"
 },
 "bugs": {
-"url": "https://github.com/HW-XMTeam/Haikal-Morou/issues"
+"url": "https://github.com/HW-XMTeam/INI-KERASA/issues"
 },
-"homepage": "https://github.com/HW-XMTeam/Haikal-Morou#readme"
+"homepage": "https://github.com/HW-XMTeam#readme"
 }
