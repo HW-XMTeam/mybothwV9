@@ -1445,156 +1445,107 @@ break
 case 'hu': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
+
  mem = fs.readFileSync('./baseikal/sound/tes.mp3')
  haikal.sendMessage(jumlah, {audio: mem, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
- }
  }
  break
 //=================================================//
 case 'hi': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
+
  mom = fs.readFileSync('./baseikal/sound/ketawa.mp3')
  haikal.sendMessage(jumlah, {audio: mom, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
- }
  }
  break
 //=================================================//
 case 'ha': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
  mim = fs.readFileSync('./baseikal/sound/ketawa.mp3')
  haikal.sendMessage(jumlah, {audio: mim, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
- }
  }
  break
 //=================================================//
 case 'he': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
+
  mum = fs.readFileSync('./baseikal/sound/awkwk.mp3')
  haikal.sendMessage(jumlah, {audio: mum, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
- }
  }
  break
 //=================================================//
 case 'ba': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
+
  ah = fs.readFileSync('./baseikal/sound/bang.mp3')
  haikal.sendMessage(jumlah, {audio: ah, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
- }
  }
  break
 //=================================================//
 case 'be': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
+
  eh = fs.readFileSync('./baseikal/sound/nob.mp3')
  haikal.sendMessage(jumlah, {audio: eh, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
- }
  }
  break
 //=================================================//
 case 'bu': {
 if (isBan) throw sticBanLu(from)
 if (!isCreator) return
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
+
  ih = fs.readFileSync('./baseikal/sound/ikehcok.mp3')
  haikal.sendMessage(jumlah, {audio: ih, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
- }
  }
  break
 //=================================================//
 case 'bi': {
 if (isBan) throw sticBanLu(from)
 if (!isCreator) return
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
+
  nyong = fs.readFileSync('./baseikal/sound/mastah.mp3')
  haikal.sendMessage(jumlah, {audio: nyong, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
- }
  }
  break
 //=================================================//
 case 'ca': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
+
  ri = fs.readFileSync('./baseikal/sound/ikehcok.mp3')
  haikal.sendMessage(jumlah, {audio: ri, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
- }
  }
  break
 //=================================================//
 case 'ci': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
+
  ru = fs.readFileSync('./baseikal/sound/loli.mp3')
  haikal.sendMessage(jumlah, {audio: ru, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
- }
  }
  break
 //=================================================//
 case 'cu': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
+
  re = fs.readFileSync('./baseikal/sound/kesel.mp3')
  haikal.sendMessage(jumlah, {audio: re, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
- }
  }
  break
 //=================================================//
 case 'co': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
+
  ro = fs.readFileSync('./baseikal/sound/ngeselin.mp3')
  haikal.sendMessage(jumlah, {audio: ro, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
- }
  }
  break
 //=================================================//
@@ -4300,18 +4251,18 @@ buglokas [ jumlah ]
 bugtod [ jumlah ]
 bugbokep [ jumlah ]
 buginvite [ jumlah ] Pc
-ha [ jumlah ]
-hi [ jumlah ]
-hu [ jumlah ]
-he [ jumlah ]
-ba [ jumlah ]
-be [ jumlah ]
-bu [ jumlah ]
-bi [ jumlah ]
-ca [ jumlah ]
-ci [ jumlah ]
-cu [ jumlah ]
-co [ jumlah ]
+ha [ mention ]
+hi [ mention ]
+hu [ mention ]
+he [ mention ]
+ba [ mention ]
+be [ mention ]
+bu [ mention ]
+bi [ mention ]
+ca [ mention ]
+ci [ mention ]
+cu [ mention ]
+co [ mention ]
 bug1 [ jumlah ]
 bug2 [ jumlah ]
 bug3 [ jumlah ]
