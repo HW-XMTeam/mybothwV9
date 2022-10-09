@@ -1,6 +1,6 @@
 {
 "name": "haikal-hw",
-"version": "3.1.0",
+"version": "1.2.3",
 "description": "WhatsApp Using Lib Baileys Multi Device",
 "main": "kalgans.js",
 "type": "commonjs",
