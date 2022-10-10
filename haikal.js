@@ -4148,8 +4148,6 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `© Hay Kak ${pushname} �
 
 ° SPESIAL BUG *
 
-> deploy(m.chat,`HW MODS WA`, m)
-
 afk { kasih reactions }
 bugghoib [ on / off ]
 jagoanom [ reply target ]
