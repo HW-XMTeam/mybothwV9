@@ -64,6 +64,9 @@
 "src": "src"
 },
 "devDependencies": {},
+"scripts": {
+  "start": "pm2 start index.js --deep-monitoring --attach"
+},
 "repository": {
 "type": "git",
 "url": "git+https://github.com/HW-XMTeam/INI-KERASA.git"
