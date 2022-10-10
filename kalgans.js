@@ -88,27 +88,24 @@ require("./haikal")(haikal, m, chatUpdate, store)
 console.log(err)}})
 //=================================================//
 haikal.getName = (jid, withoutContact  = false) => {
-        id = haikal.decodeJid(jid)
-        withoutContact = haikal.withoutContact || withoutContact 
-        let v
-        if (id.endsWith("@g.us")) return new Promise(async (resolve) => {
-            v = store.contacts[id] || {}
-            if (!(v.name || v.subject)) v = haikal.groupMetadata(id) || {}
-            resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
-        })
-        else v = id === '0@s.whatsapp.net' ? {
-            id,
-            name: 'WhatsApp'
-        } : id === haikal.decodeJid(haikal.user.id) ?
-            haikal.user :
-            (store.contacts[id] || {})
-            return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
-    }
+id = haikal.decodeJid(jid)
+withoutContact = haikal.withoutContact || withoutContact 
+let v
+if (id.endsWith("@g.us")) return new Promise(async (resolve) => {
+v = store.contacts[id] || {}
+if (!(v.name || v.subject)) v = haikal.groupMetadata(id) || {}
+resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
+})
+else v = id === '0@s.whatsapp.net' ? {
+id,
+name: 'WhatsApp'
+} : id === haikal.decodeJid(haikal.user.id) ?
+haikal.user :
+(store.contacts[id] || {})
+return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
+}
 // Group Update
 haikal.ev.on('groups.update', async pea => {
-if (!wlcm.includes(anu.id)) return
-//console.log(pea)
-// Get Profile Picture Group
 try {
 ppgc = await haikal.profilePictureUrl(pea[0].id, 'image')
 } catch {
@@ -125,13 +122,10 @@ haikal.send5ButImg(pea[0].id, `「 Perhatian !!!! 」\n\nInfo group telah dibuka
 } else {
 haikal.send5ButImg(pea[0].id, `「 Perhatian !!!! 」\n\nGroup Subject telah diganti menjadi *${pea[0].subject}*`, `Pengaturan Group Telah Di Ubah Oleh Admin`, wm_fatih, [])}})
 //=================================================//
-///anu
 function pickRandom(list) {
 return list[Math.floor(list.length * Math.random())]}
-//dokumen random
 let doku = [f1,f2,f3,f4,f5,f6]
 let feler = pickRandom(doku)
-// yoi
 //=================================================//
 haikal.ev.on('group-participants.update', async (anu) => {
 console.log(anu)
@@ -265,6 +259,8 @@ content: Buffer.from(status, 'utf-8')
 })
 return status}
 //=================================================//
+
+//Kalau Mau Self Lu Buat Jadi False
 haikal.public = true
 //=================================================//
 haikal.serializeM = (m) => smsg(haikal, m, store)

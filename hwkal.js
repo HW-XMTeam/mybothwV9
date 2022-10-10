@@ -1,3 +1,7 @@
+// Buat Lu Yang Jual Sc Ini Yang Jujur Jangan Samp Nipu Apalagi Lari Dari Tanggung Jawab
+
+// Base Haikal Hw Mods : Copyan Dari Base Dika
+
 
 const fs = require('fs')
 const chalk = require('chalk')
@@ -5,6 +9,7 @@ const chalk = require('chalk')
 global.wlcm = []
 global.ntnsfw = []
 global.ntnsfww = []
+
 //gausah di apa² in!
 global.flaming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.fluming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=fluffy-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
@@ -13,8 +18,8 @@ global.flasmurf = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutp
 //=================================================//
 //—————「 Set Kebutuhan Button & Kontak 」—————//
 //ubah aja kalau ada yang gapunya gsh di hps anggap aja credits :), note tanda ' gausah di hapus!
-global.youtube = 'https://youtube.com/c/HwModsWa857'
-global.ig = 'https://www.instagram.com/hikal_857/?hl=id'
+global.youtube = 'https://youtube.com/c/HwModsWa857' // ubah aia
+global.ig = 'https://www.instagram.com/hikal_857/?hl=id' // ubah aja
 global.email = 'denyp857@gmail.com'
 global.region = 'indonesia'
 //—————「 Set Nama Own & Bot 」—————//
@@ -23,14 +28,16 @@ global.botname = 'HW MODS WA' //ubah jadi nama bot mu, note tanda ' gausah di ha
 global.footer = 'HW MODS WA' //ubah jadi nama mu, note tanda ' gausah di hapus!
 //=================================================//
 // Other
-global.owner = ['6281214281312']
-global.premium = ['6281214281312']
-global.packname = 'HW MODS WA'
-global.ownerr = ['HW MODS WA']
-global.author = 'HW MODS WA'
-global.sessionName = './sessionye/haikal'
-global.prefa = ['','!','.',',','🐤','🗿']
-global.sp = '⭔'
+global.owner = ['6281214281312'] // ubah aja pake nomor lu
+global.premium = ['6281214281312'] // ubah aja pake nomor lu
+global.packname = 'HW MODS WA' // ubah aja
+global.ownerr = ['HW MODS WA'] // ubaha aja
+global.author = 'HW MODS WA' //ubah aja
+global.sessionName = './sessionye/haikal' //Gausaj Di Ubah
+global.prefa = ['','!','.',',','🐤','🗿'] // Gausah Mendingan 
+global.sp = '⭔' // Gausah Juga
+
+// Terserah
 global.mess = {
     nsfw: '*Fitur NSFW tidak diaktifkan, chat admin grup supaya diaktifkan*_',
     wait: '*Loading... Sabar Wibu*_',
@@ -38,6 +45,7 @@ global.mess = {
     bot: 'Fitur Khusus Pengguna Nomor Bot',    
 }
 //=================================================//
+//Gausah Di Apa2 in
 global.f1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
 global.f2 = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
 global.f3 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
@@ -50,6 +58,7 @@ global.limitawal = {
     free: 100
 }
 //=================================================//
+//Terserah Kalau Paham 
 global.thumb = fs.readFileSync("./baseikal/image/hw.jpg")
 global.log0 = fs.readFileSync("./baseikal/image/haikal.jpg")
 //=================================================//
