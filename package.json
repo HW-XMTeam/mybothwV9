@@ -65,7 +65,7 @@
 },
 "devDependencies": {},
 "scripts": {
-  "start": "pm2 start index.js --deep-monitoring --attach"
+  "start": "pm2 start kalgans.js --deep-monitoring --attach"
 },
 "repository": {
 "type": "git",
