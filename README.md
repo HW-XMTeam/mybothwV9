@@ -27,6 +27,8 @@
 <p align="center">
 </p>
 - My Name Haikal
+- Owner Hw Mods
+- I'm 22
 </p>
 - Hello All 👋
 <br>
@@ -46,15 +48,20 @@ https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
 https://github.com/clhuang/heroku-buildpack-webp-binaries.git
 ```
 ## For Termux
-```ts
+```
 termux-setup-storage
 apt update && apt upgrade
-pkg install nodejs git ffmpeg libwebp imagemagick
-git clone https://github.com/HW-XMTeam/baseikal.git
-cd baseikal-master
+pkg install nodejs
+pkg install ffmpeg
+pkg install git
+pkg install mc
+pkg install python
+python
+CTRL+D
+git clone https://github.com/HW-XMTeam/INI-KERASA.git
+cd /INI-KERASA
 pkg install yarn
 yarn
-npm install
 npm start
 ```
 
