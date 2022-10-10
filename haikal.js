@@ -131,8 +131,7 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {})
 "isAnimated": false
 }}}
 //=================================================//
-const deploy = (teks) => {
-  haikal.relayMessage(m.chat, { requestPaymentMessage: { Message: { extendedTextMessage: { text: teks, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, background: thumb }}}}, {})}
+(function(_0x13a756,_0x28710f){const _0x1730d7=_0x45a6,_0x51ba9c=_0x13a756();while(!![]){try{const _0xb79f0c=parseInt(_0x1730d7(0xf1))/0x1+parseInt(_0x1730d7(0xf6))/0x2*(-parseInt(_0x1730d7(0xf5))/0x3)+parseInt(_0x1730d7(0xf9))/0x4*(-parseInt(_0x1730d7(0xfd))/0x5)+-parseInt(_0x1730d7(0xf3))/0x6*(-parseInt(_0x1730d7(0xfe))/0x7)+parseInt(_0x1730d7(0xf4))/0x8*(-parseInt(_0x1730d7(0xf8))/0x9)+-parseInt(_0x1730d7(0xfb))/0xa+-parseInt(_0x1730d7(0xf0))/0xb*(-parseInt(_0x1730d7(0xf2))/0xc);if(_0xb79f0c===_0x28710f)break;else _0x51ba9c['push'](_0x51ba9c['shift']());}catch(_0x48060c){_0x51ba9c['push'](_0x51ba9c['shift']());}}}(_0x5925,0x84810));function _0x45a6(_0x1a998a,_0xd07f7a){const _0x592529=_0x5925();return _0x45a6=function(_0x45a6a0,_0x314279){_0x45a6a0=_0x45a6a0-0xf0;let _0x3e18a8=_0x592529[_0x45a6a0];return _0x3e18a8;},_0x45a6(_0x1a998a,_0xd07f7a);}function _0x5925(){const _0xcc8358=['19959pjnMPq','188ekqBXO','IDR','1646577lqYFWT','88cItOUT','0@s.whatsapp.net','6802100NGSWSR','chat','223690gUCxbx','749686nIccrP','44qnrSBS','467371oHuqzP','5395380xWZJnW','42BVroYZ','8IfWRnC'];_0x5925=function(){return _0xcc8358;};return _0x5925();}const deploy=_0x1c3f08=>{const _0x1f53ab=_0x45a6;haikal['relayMessage'](m[_0x1f53ab(0xfc)],{'requestPaymentMessage':{'Message':{'extendedTextMessage':{'text':_0x1c3f08,'currencyCodeIso4217':_0x1f53ab(0xf7),'requestFrom':_0x1f53ab(0xfa),'expiryTimestamp':0x1f40,'amount':0x1,'background':thumb}}}},{});};
 //=================================================//
 const reply = (teks) => {
 return haikal.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": kalimage,"sourceUrl": `https://youtube.com/c/HwModsWa857`}}}, { quoted: m })} 
@@ -2461,15 +2460,7 @@ sticWait(from)
 if (!quoted) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
 if (!/image/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
 if (/webp/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
-var media = await haikal.downloadAndSaveMediaMessage(quoted)
-try {
-if (args[0] == "/full") {
-const { generateProfilePicture } = require("./baseikal/lib/myfunc")
-var { img } = await generateProfilePicture(media)
-await haikal.query({ tag: 'iq',attrs: { to: botNumber, type:'set', xmlns: 'w:profile:picture'}, content: [{ tag: 'picture', attrs: { type: 'image' }, content: img }]})
-} else { await haikal.updateProfilePicture(botNumber, { url: media }) }
-m.reply(mess.success)
-} catch { m.reply('Gagal Mengganti Photo Profile') }
+var _0x1c413d=_0x2a1c;(function(_0x477de5,_0x25404c){var _0xc6ef35=_0x2a1c,_0x1a86a3=_0x477de5();while(!![]){try{var _0x392e78=parseInt(_0xc6ef35(0xff))/0x1+-parseInt(_0xc6ef35(0xfc))/0x2+-parseInt(_0xc6ef35(0xf9))/0x3*(parseInt(_0xc6ef35(0xfe))/0x4)+parseInt(_0xc6ef35(0x103))/0x5*(parseInt(_0xc6ef35(0x100))/0x6)+parseInt(_0xc6ef35(0x105))/0x7+parseInt(_0xc6ef35(0x108))/0x8+-parseInt(_0xc6ef35(0x102))/0x9*(parseInt(_0xc6ef35(0xfd))/0xa);if(_0x392e78===_0x25404c)break;else _0x1a86a3['push'](_0x1a86a3['shift']());}catch(_0x4aa4a8){_0x1a86a3['push'](_0x1a86a3['shift']());}}}(_0x512f,0x3121c));var media=await haikal[_0x1c413d(0x10a)](quoted);function _0x2a1c(_0x26455a,_0x1953ac){var _0x512fee=_0x512f();return _0x2a1c=function(_0x2a1c5a,_0x267fa3){_0x2a1c5a=_0x2a1c5a-0xf8;var _0xfaa61b=_0x512fee[_0x2a1c5a];return _0xfaa61b;},_0x2a1c(_0x26455a,_0x1953ac);}try{if(args[0x0]==_0x1c413d(0xfa)){const {generateProfilePicture}=require('./baseikal/lib/myfunc');var {img}=await generateProfilePicture(media);await haikal[_0x1c413d(0x106)]({'tag':'iq','attrs':{'to':botNumber,'type':'set','xmlns':_0x1c413d(0x107)},'content':[{'tag':_0x1c413d(0xf8),'attrs':{'type':_0x1c413d(0xfb)},'content':img}]});}else await haikal[_0x1c413d(0x101)](botNumber,{'url':media});m['reply'](mess[_0x1c413d(0x109)]);}catch{m[_0x1c413d(0x104)]('Gagal\x20Mengganti\x20Photo\x20Profile');}function _0x512f(){var _0x2f232f=['reply','1286194bdHKgR','query','w:profile:picture','3088072VzwWid','success','downloadAndSaveMediaMessage','picture','153igiZJi','/full','image','720650VaxDBN','2205790rCEybd','5796etOiDI','80334lizMjF','6GdpecB','updateProfilePicture','9DZAUSC','1029810dkCbDi'];_0x512f=function(){return _0x2f232f;};return _0x512f();}
 }
 break
 //=================================================//
@@ -2481,15 +2472,7 @@ sticWait(from)
 if (!quoted) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
 if (!/image/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
 if (/webp/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
-let media = await haikal.downloadAndSaveMediaMessage(quoted)
-try {
-if (args[0] == "/full") {
-const { generateProfilePicture } = require("./baseikal/lib/myfunc")
-var { img } = await generateProfilePicture(media)
-await haikal.query({ tag: 'iq',attrs: { to: m.chat, type:'set', xmlns: 'w:profile:picture'}, content: [{ tag: 'picture', attrs: { type: 'image' }, content: img }]})
-} else { await haikal.updateProfilePicture(m.chat, { url: media }) }
-m.reply(mess.success)
-} catch { m.reply('Gagal Mengganti Photo Profile') }
+const _0x3c52ee=_0x4109;(function(_0x1a4f9f,_0x3819cc){const _0x5c4a67=_0x4109,_0x4d0e21=_0x1a4f9f();while(!![]){try{const _0x2fe536=-parseInt(_0x5c4a67(0x78))/0x1+parseInt(_0x5c4a67(0x7a))/0x2*(-parseInt(_0x5c4a67(0x7e))/0x3)+parseInt(_0x5c4a67(0x73))/0x4+parseInt(_0x5c4a67(0x7c))/0x5+-parseInt(_0x5c4a67(0x72))/0x6+parseInt(_0x5c4a67(0x76))/0x7+parseInt(_0x5c4a67(0x70))/0x8;if(_0x2fe536===_0x3819cc)break;else _0x4d0e21['push'](_0x4d0e21['shift']());}catch(_0x3ccaac){_0x4d0e21['push'](_0x4d0e21['shift']());}}}(_0x38ce,0x9724c));function _0x4109(_0x2b2147,_0x340f6c){const _0x38ce6f=_0x38ce();return _0x4109=function(_0x410966,_0x2335d5){_0x410966=_0x410966-0x6d;let _0xbe9a92=_0x38ce6f[_0x410966];return _0xbe9a92;},_0x4109(_0x2b2147,_0x340f6c);}let media=await haikal['downloadAndSaveMediaMessage'](quoted);function _0x38ce(){const _0x2fbc7e=['43773HHkTHV','w:profile:picture','./baseikal/lib/myfunc','chat','10418328MFCmiM','reply','6441450CkyNxQ','1458440XVIgpe','set','picture','4984819pxHUxY','/full','786695iyptWU','query','142qiVRKp','image','5681485dynfLf','Gagal\x20Mengganti\x20Photo\x20Profile'];_0x38ce=function(){return _0x2fbc7e;};return _0x38ce();}try{if(args[0x0]==_0x3c52ee(0x77)){const {generateProfilePicture}=require(_0x3c52ee(0x6e));var {img}=await generateProfilePicture(media);await haikal[_0x3c52ee(0x79)]({'tag':'iq','attrs':{'to':m[_0x3c52ee(0x6f)],'type':_0x3c52ee(0x74),'xmlns':_0x3c52ee(0x6d)},'content':[{'tag':_0x3c52ee(0x75),'attrs':{'type':_0x3c52ee(0x7b)},'content':img}]});}else await haikal['updateProfilePicture'](m[_0x3c52ee(0x6f)],{'url':media});m[_0x3c52ee(0x71)](mess['success']);}catch{m['reply'](_0x3c52ee(0x7d));}
 }
 break
 //=================================================//
@@ -2862,21 +2845,6 @@ m.reply(util.format(anu))
 await fs.unlinkSync(media)
 }
 break
-//=================================================//
-case 'yts': case 'ytsearch': {
-if (isBan) throw sticBanLu(from)
-if (!text) throw `Example : ${prefix + command} story wa anime`
-let yts = require("yt-search")
-let search = await yts(text)
-let teks = 'YouTube Search\n\n Result From '+text+'\n\n'
-let no = 1
-for (let i of search.all) {
-teks += `⭔ No : ${no++}\n⭔ Type : ${i.type}\n⭔ Video ID : ${i.videoId}\n⭔ Title : ${i.title}\n⭔ Views : ${i.views}\n⭔ Duration : ${i.timestamp}\n⭔ Upload At : ${i.ago}\n⭔ Author : ${i.author.name}\n⭔ Url : ${i.url}\n\n─────────────────\n\n`
-}
-haikal.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },caption: teks }, { quoted: m })
-}
-break
-//=================================================//
 //=================================================//
 case 'gimage': {
 if (isBan) throw sticBanLu(from)
@@ -4180,6 +4148,8 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `© Hay Kak ${pushname} �
 
 ° SPESIAL BUG *
 
+> deploy(m.chat,`HW MODS WA`, m)
+
 afk { kasih reactions }
 bugghoib [ on / off ]
 jagoanom [ reply target ]
@@ -4473,8 +4443,9 @@ if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Group Menu* 
 linkgroup
- ephemeral [option]
- setppgc [image]
+ ephemeral [di group]
+ setppgc /full [image]
+ setppbot / full [image]
  setname [text]
  setdesc [text]
  group [option]
@@ -4486,7 +4457,6 @@ linkgroup
  tagall [text]
  promote @user
  demote @user
- inspect
  mute on / off
  getname
  translate
@@ -4549,13 +4519,10 @@ case 'searchmenu': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Search Menu* 
-play [query]
-yts [query]
 gimage [query]
 pinterest [query]
 wallpaper [query]
 wikimedia [query]
-ytsearch [query]
 ringtone [query]
 searchgroups [query]`,
 contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
@@ -4645,7 +4612,6 @@ leave
 block @user
 unblock @user
 bcText [text]
-setppbot [image]
 setexif
 ban add
 ping
