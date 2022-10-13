@@ -5,7 +5,7 @@
 🌷 KALAU MAU RENAME TARO CREDITS GUA : HW MODS WA */
 
 require('./hwkal')
-const { default: makeWASocket, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
+const { default: haikalConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
 const fs = require('fs')
 const pino = require('pino')
 const chalk = require('chalk')
@@ -64,7 +64,7 @@ if (global.db.data) await global.db.write()
   }, 30 * 1000)
 //=================================================//
 async function startHaikal() {
-const haikal = makeWASocket({
+const haikal = haikalConnect({
 logger: pino({ level: 'silent' }),
 printQRInTerminal: true,
 browser: ['Haikal Multi Device','Safari','1.0.0'],

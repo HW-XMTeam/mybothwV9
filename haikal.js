@@ -158,6 +158,17 @@ if (!('mute' in chats)) chats.mute = false
 } else global.db.data.chats[m.chat] = {
 mute: false,
 }
+let settings = db.data.settings[botNumber]
+if (typeof settings !== 'object') db.data.settings[botNumber] = {}
+if (settings) {
+if (!('available' in settings)) settings.available = true
+if (!('composing' in settings)) settings.composing = false
+if (!('recording' in settings)) settings.recording = false
+} else db.data.settings[botNumber] = {
+available: true,
+composing: false,
+recording: false,
+}
 } catch (err) {
 console.log(err)
 }
@@ -165,6 +176,10 @@ console.log(err)
 if (!haikal.public) {
 if (!m.key.fromMe) return
 }
+if (m.message) {
+console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32m CMD \x1b[1;37m]', time, chalk.
+green(), 'from', chalk.green(pushname), 'in', chalk.green(groupName ? groupName : 'Private Chat' ), 'args :', chalk.green(text.length))
+ }
 //=================================================// 
 let cron = require('node-cron')
 cron.schedule('00 12 * * *', () => {
@@ -204,6 +219,17 @@ haikal.sendImageAsSticker(m.chat, ano, m, { packname: global.packname, author: g
 var SiGroupadmin = (hehe) => {
 ano = fs.readFileSync('./baseikal/stickernye/SiGroupadmin.webp')
 haikal.sendImageAsSticker(m.chat, ano, m, { packname: global.packname, author: global.author })
+}
+   // autovn
+if(autorecording){
+if(autorecording == false)
+await jobotz.sendPresenceUpdate('recording', m.chat)
+} else if(autoketik){
+if(autoketik == false)
+await jobotz.sendPresenceUpdate('composing', m.chat)
+} else if(available){
+if(available == false)
+await jobotz.sendPresenceUpdate('available', m.chat)
 }
 //=================================================//
 // Mute Chat
@@ -3999,6 +4025,56 @@ await haikal.sendButtonText(m.chat, buttonsntnsfww, `Klick Button Di Bawah Ini \
 ⚠️ DANGERR ⚠️
 
  `, `HW MODS WA`, m)
+}
+}
+break
+case 'autovn': {
+if (!isCreator && !isBan) return 
+if (args.length < 1) return m.reply(`Ketik on untuk mengaktifkan\nKetik off untuk menonaktifkan`)
+if (args[0] === 'on') {
+if (autorecording === true) return
+global.autorecording = true
+m.reply(`Berhasil mengaktifkan autovn!`)
+} else if (args[0] === 'off') {
+if (autorecording === false) return
+global.autorecording = false
+m.reply(`Berhasil menonaktifkan autovn!`)
+} else {
+m.reply('Pilih on atau off')
+}
+}
+break
+
+case 'autoketik': {
+if (!isCreator && !isBan) return 
+if (args.length < 1) return m.reply(`Ketik on untuk mengaktifkan\nKetik off untuk menonaktifkan`)
+if (args[0] === 'on') {
+if (autoketik === true) return
+global.autoketik = true
+m.reply(`Berhasil mengaktifkan autoketik!`)
+} else if (args[0] === 'off') {
+if (autoketik === false) return
+global.autoketik = false
+m.reply(`Berhasil menonaktifkan autoketik!`)
+} else {
+m.reply('Pilih on atau off')
+}
+}
+break
+
+case 'autoavailable': {
+if (!isCreator && !isBan) return 
+if (args.length < 1) return m.reply(`Ketik on untuk mengaktifkan\nKetik off untuk menonaktifkan`)
+if (args[0] === 'on') {
+if (autoavailable === true) return
+global.autoavailable = true
+m.reply(`Berhasil mengaktifkan autoavailable!`)
+} else if (args[0] === 'off') {
+if (autoavailable === false) return
+global.autoavailable = false
+m.reply(`Berhasil menonaktifkan autoavailable!`)
+} else {
+m.reply('Pilih on atau off')
 }
 }
 break
