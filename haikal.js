@@ -6644,7 +6644,7 @@ m.reply('on untuk mengaktifkan, off untuk menonaktifkan')
 }
 break
 //=================================================//
-case 'bugghoib': {
+case 'bugghoib': case 'welcome': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (!m.isGroup) return groupon(from)
@@ -6826,7 +6826,12 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `◎ Owner : ${botname}
 ◎ Lib : Multi-Device
 ◎ Terbit : *01-09-1999*
 
-[ 🇲🇨 Ini adalah Bot Pribadi  Dari Indonesia 👋 ]
+[ 🇲🇨 Hello 👋 ]
+
+autoketik on / off
+autovn on / off
+autoavailable on / off
+welcone on / off
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 *MENU*
 ┏━━⊱
@@ -6872,6 +6877,7 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `© Hay Kak ${pushname} �
 ◎ Owner : ${botname}
 ◎ Lib : Multi-Device
 ◎ Terbit : *01-09-1999*
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° VIP BUG ° 
 
@@ -6880,6 +6886,7 @@ Hub : ${botname}
 
 🌷 [ jumlah ] #Update Baileys
 🔥 628xxx|5|5 #Update Baileys
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° SPESIAL BUG *
 
@@ -6889,12 +6896,14 @@ jagoanom [ reply target ]
 bugsange [ Harus Menjadi Admin ]
 bugtiktok [ Link ] - Bug Sw
 jadikatalog [ reply sticker ] jumlah
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° OTW TARGET °
 
 ampas1 628xxx
 santetdia 628xxx@s.whatsapp.net|10|10s
 catalogpc 628xxx@s.whatsapp.net|10|10s
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° OTW GROUP °
 
@@ -6903,6 +6912,7 @@ Ketik > m.chat ( di group dulu🌷)
 ampas2 112674448xxx
 santetgc  1237891xxxx@g.us|10|10s
 cataloggc 1237891xxxx@g.us|10|10s
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° Virtext Spam °
 
@@ -6916,6 +6926,7 @@ virtext7 [ jumlah ]
 virtext8 [ jumlah ]
 virtext9 [ jumlah ]
 virtext10 [ jumlah ]
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° Bug Spam °
 
@@ -6960,6 +6971,7 @@ troli [ jumlah ]
 troli2 [ jumlah ]
 troli3 [ jumlah ]
 spam [ Reply Pesan ]
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° Jadi Bug °
 
@@ -6968,6 +6980,7 @@ jadibug2 [ Reply Video Jadi Bug Mp3 ]
 jadibug3 [ Reply Audio Jadi Bug Vn ]
 jadibug4 [ Reply Sticker Jadi Bug Gambar ]
 jadibug5 [ Reply Gambar Jadi Bug Once ] 
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° Bug Broadcast °
 
