@@ -2082,7 +2082,7 @@ var bugshinchan = generateWAMessageFromContent(m.chat, proto.Message.fromObject(
 },
 "footerText": `${buttonkal}`,
 }
-}), { userJid: m.chat, quoted: doc })
+}), { userJid: m.chat, quoted: hw })
 haikal.relayMessage(m.chat, bugshinchan.message, { messageId: bugshinchan.key.id })
 }
 }
