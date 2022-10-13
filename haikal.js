@@ -2076,7 +2076,7 @@ var bugshinchan = generateWAMessageFromContent(m.chat, proto.Message.fromObject(
 ],
 "headerImage": {
 "productId": "7007318245952499",
-"jpegThumbnail": virgam,
+"jpegThumbnail": kalimage
 },
 "businessOwnerJid": "6281214281312@s.whatsapp.net",
 },
