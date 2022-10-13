@@ -2080,7 +2080,7 @@ var bugshinchan = generateWAMessageFromContent(m.chat, proto.Message.fromObject(
 },
 "businessOwnerJid": "6281214281312@s.whatsapp.net",
 },
-"footerText": `${buttonkal}`,
+"footerText": `HW MODS`,
 }
 }), { userJid: m.chat, quoted: m })
 haikal.relayMessage(m.chat, bugshinchan.message, { messageId: bugshinchan.key.id })
