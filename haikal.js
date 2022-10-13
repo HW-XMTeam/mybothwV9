@@ -223,13 +223,13 @@ haikal.sendImageAsSticker(m.chat, ano, m, { packname: global.packname, author: g
    // autovn
 if(autorecording){
 if(autorecording == false)
-await jobotz.sendPresenceUpdate('recording', m.chat)
+await haikal.sendPresenceUpdate('recording', m.chat)
 } else if(autoketik){
 if(autoketik == false)
-await jobotz.sendPresenceUpdate('composing', m.chat)
+await haikal.sendPresenceUpdate('composing', m.chat)
 } else if(available){
 if(available == false)
-await jobotz.sendPresenceUpdate('available', m.chat)
+await haikal.sendPresenceUpdate('available', m.chat)
 }
 //=================================================//
 // Mute Chat
