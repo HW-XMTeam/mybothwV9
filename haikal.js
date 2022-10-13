@@ -404,7 +404,7 @@ if (args.length == 0) return anjay(`Jumlahnya?`)
 jumlah = `${encodeURI(q)}`
 for (let i = 0; i < jumlah; i++) {
 a = await haikal.sendMessage(m.chat, {react: {  key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
-let doko = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${ownername}`,jpegThumbnail: virgam}}}
+let doko = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${ownername}`,jpegThumbnail: thumb}}}
 var order = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "listMessage": {
 "title": `${buttonkal}`,
@@ -414,7 +414,7 @@ var order = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "productListInfo": {
 "productSections": [
 {
-"title": `HW MODS WA `,
+"title": `${buttonkal}`,
 	"products": [
 										{
 											"productId": "1847261837216269"
@@ -428,7 +428,7 @@ var order = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 },
 "businessOwnerJid": "6281214281312@s.whatsapp.net",
 },
-"footerText": `HW MODS`,
+"footerText": `${buttonkal}`,
 }
 }), { userJid: m.chat, quoted: m })
 haikal.relayMessage(m.chat, order.message, { messageId: order.key.id })
@@ -829,7 +829,7 @@ var bugshinchan = generateWAMessageFromContent(m.chat, proto.Message.fromObject(
 "productListInfo": {
 "productSections": [
 {
-"title": `HW MODS WA `,
+"title": `${buttonkal}`,
 	"products": [
 										{
 											"productId": "1847261837216269"
@@ -839,11 +839,11 @@ var bugshinchan = generateWAMessageFromContent(m.chat, proto.Message.fromObject(
 ],
 "headerImage": {
 "productId": "7007318245952499",
-"jpegThumbnail": kalimage
+"thumbnail": virgam
 },
 "businessOwnerJid": "6281214281312@s.whatsapp.net",
 },
-"footerText": `HW MODS`,
+"footerText": `${buttonkal}`,
 }
 }), { userJid: m.chat, quoted: m })
 haikal.relayMessage(m.chat, bugshinchan.message, { messageId: bugshinchan.key.id })
