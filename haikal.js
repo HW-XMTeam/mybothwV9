@@ -227,8 +227,8 @@ await haikal.sendPresenceUpdate('recording', m.chat)
 } else if(autoketik){
 if(autoketik == false)
 await haikal.sendPresenceUpdate('composing', m.chat)
-} else if(available){
-if(available == false)
+} else if(autoavailable){
+if(autoavailable == true)
 await haikal.sendPresenceUpdate('available', m.chat)
 }
 //=================================================//
