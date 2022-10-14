@@ -2,7 +2,7 @@
 › Create By Haikal
 › Base Ori Haikal
 
-🌷 KALAU MAU RENAME TARO CREDITS GUA : HW MODS WA */
+🌷 KALAU MAU RENAME TARO CREDITS GUA : 𝚁𝙴𝚇𝙹𝚄𝟼𝟼𝟼 */
 
 require('./hwkal')
 const { default: makeWASocket, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
@@ -152,7 +152,7 @@ let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid"
 he = `HELLO 👋 SELAMAT DATANG DI GROUP ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
 let link = `https://eclass.iainsalatiga.ac.id/app/upload/users/1/10892/my_files/XhiroMhonshine.html`
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: buttonvirus}, type: 1},
+{buttonId: `𝚁𝙴𝚇𝙹𝚄𝟼𝟼𝟼`, buttonText: {displayText: buttonvirus}, type: 1},
 ]
 let buttonMessage = {
 document: fs.readFileSync('./baseikal/lib/tes.xlsx'),
@@ -162,12 +162,12 @@ mentions: [num],
 fileName: `HELLO 👋 SELAMAT DATANG DI GROUP ${metadata.subject}`,
 fileLength: 99999999999999,
 caption: he,
-footer: `© HW MODS WA`,
+footer: `© 𝚁𝙴𝚇𝙹𝚄𝟼𝟼𝟼`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `Jangan Lupa Tersenyum ☺️`,
-body: `SUBSCRIBE HW MODS WA`,
+body: `SUBSCRIBE 𝚁𝙴𝚇𝙹𝚄𝟼𝟼𝟼`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: link,
@@ -179,7 +179,7 @@ let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid"
 he = `SELAMAT TINGGAL KAWAN 👋 ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
 let link = `https://eclass.iainsalatiga.ac.id/app/upload/users/1/10892/my_files/XhiroMhonshine.html'`
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: buttonvirus}, type: 1},
+{buttonId: `𝚁𝙴𝚇𝙹𝚄𝟼𝟼𝟼`, buttonText: {displayText: buttonvirus}, type: 1},
 ]
 let buttonMessage = {
 document: fs.readFileSync('./baseikal/lib/tes.xlsx'),
@@ -189,12 +189,12 @@ mentions: [num],
 fileName: `SELAMAT TINGGAL 👋 ${metadata.subject}`,
 fileLength: 99999999999999,
 caption: he,
-footer: `© HW MODS WA`,
+footer: `© 𝚁𝙴𝚇𝙹𝚄𝟼𝟼𝟼`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `Jangan Lupa Tersenyum ☺️`,
-body: `SUBSCRIBE HW MODS WA`,
+body: `SUBSCRIBE 𝚁𝙴𝚇𝙹𝚄𝟼𝟼𝟼`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: link,
