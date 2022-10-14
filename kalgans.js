@@ -6,18 +6,18 @@
 
 require('./hwkal')
 const { default: makeWASocket, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
-const { state }= useSingleFileAuthState(`./${sessionName}.json`)
-const pino = require('pino')
-const { Boom } = require('@hapi/boom')
 const fs = require('fs')
-const yargs = require('yargs/yargs')
+const pino = require('pino')
 const chalk = require('chalk')
-const FileType = require('file-type')
 const path = require('path')
-const { buttonvirus } = require('./baseikal/virtex/buttonvirus')
 const _ = require('lodash')
 const axios = require('axios')
+const FileType = require('file-type')
+const yargs = require('yargs/yargs')
+const { Boom } = require('@hapi/boom')
 const PhoneNumber = require('awesome-phonenumber')
+const { buttonvirus } = require('./baseikal/virtex/buttonvirus')
+const { state, saveState }= useSingleFileAuthState(`./${sessionName}.json`)
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./baseikal/lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./baseikal/lib/myfunc')
 //=================================================//
@@ -52,7 +52,6 @@ global.db.data = {
 users: {},
 chats: {},
 database: {},
-game: {},
 settings: {},
 others: {},
 sticker: {},
@@ -89,27 +88,24 @@ require("./haikal")(haikal, m, chatUpdate, store)
 console.log(err)}})
 //=================================================//
 haikal.getName = (jid, withoutContact  = false) => {
-        id = haikal.decodeJid(jid)
-        withoutContact = haikal.withoutContact || withoutContact 
-        let v
-        if (id.endsWith("@g.us")) return new Promise(async (resolve) => {
-            v = store.contacts[id] || {}
-            if (!(v.name || v.subject)) v = haikal.groupMetadata(id) || {}
-            resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
-        })
-        else v = id === '0@s.whatsapp.net' ? {
-            id,
-            name: 'WhatsApp'
-        } : id === haikal.decodeJid(haikal.user.id) ?
-            haikal.user :
-            (store.contacts[id] || {})
-            return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
-    }
+id = haikal.decodeJid(jid)
+withoutContact = haikal.withoutContact || withoutContact 
+let v
+if (id.endsWith("@g.us")) return new Promise(async (resolve) => {
+v = store.contacts[id] || {}
+if (!(v.name || v.subject)) v = haikal.groupMetadata(id) || {}
+resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
+})
+else v = id === '0@s.whatsapp.net' ? {
+id,
+name: 'WhatsApp'
+} : id === haikal.decodeJid(haikal.user.id) ?
+haikal.user :
+(store.contacts[id] || {})
+return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
+}
 // Group Update
 haikal.ev.on('groups.update', async pea => {
-if (!wlcm.includes(anu.id)) return
-//console.log(pea)
-// Get Profile Picture Group
 try {
 ppgc = await haikal.profilePictureUrl(pea[0].id, 'image')
 } catch {
@@ -126,13 +122,10 @@ haikal.send5ButImg(pea[0].id, `「 Perhatian !!!! 」\n\nInfo group telah dibuka
 } else {
 haikal.send5ButImg(pea[0].id, `「 Perhatian !!!! 」\n\nGroup Subject telah diganti menjadi *${pea[0].subject}*`, `Pengaturan Group Telah Di Ubah Oleh Admin`, wm_fatih, [])}})
 //=================================================//
-///anu
 function pickRandom(list) {
 return list[Math.floor(list.length * Math.random())]}
-//dokumen random
 let doku = [f1,f2,f3,f4,f5,f6]
 let feler = pickRandom(doku)
-// yoi
 //=================================================//
 haikal.ev.on('group-participants.update', async (anu) => {
 console.log(anu)
@@ -159,7 +152,7 @@ let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid"
 he = `HELLO 👋 SELAMAT DATANG DI GROUP ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
 let link = `https://eclass.iainsalatiga.ac.id/app/upload/users/1/10892/my_files/XhiroMhonshine.html`
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: buttonvirus}, type: 1},
+{buttonId: `HW MODS WA`, buttonText: {displayText: buttonvirus}, type: 1},
 ]
 let buttonMessage = {
 document: fs.readFileSync('./baseikal/lib/tes.xlsx'),
@@ -169,7 +162,7 @@ mentions: [num],
 fileName: `HELLO 👋 SELAMAT DATANG DI GROUP ${metadata.subject}`,
 fileLength: 99999999999999,
 caption: he,
-footer: `© Я𝚯𝐓𝚯R`,
+footer: `© HW MODS WA`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
@@ -186,7 +179,7 @@ let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid"
 he = `SELAMAT TINGGAL KAWAN 👋 ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
 let link = `https://eclass.iainsalatiga.ac.id/app/upload/users/1/10892/my_files/XhiroMhonshine.html'`
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: buttonvirus}, type: 1},
+{buttonId: `HW MODS WA`, buttonText: {displayText: buttonvirus}, type: 1},
 ]
 let buttonMessage = {
 document: fs.readFileSync('./baseikal/lib/tes.xlsx'),
@@ -196,7 +189,7 @@ mentions: [num],
 fileName: `SELAMAT TINGGAL 👋 ${metadata.subject}`,
 fileLength: 99999999999999,
 caption: he,
-footer: `© Я𝚯𝐓𝚯R`,
+footer: `© HW MODS WA`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
@@ -266,7 +259,9 @@ content: Buffer.from(status, 'utf-8')
 })
 return status}
 //=================================================//
-haikal.public = false
+
+//Kalau Mau Self Lu Buat Jadi False
+haikal.public = true
 //=================================================//
 haikal.serializeM = (m) => smsg(haikal, m, store)
 haikal.ev.on('connection.update', async (update) => {
@@ -283,9 +278,7 @@ else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOu
 else haikal.end(`Unknown DisconnectReason: ${reason}|${connection}`)}
 console.log('Connected...', update)})
 //=================================================//
-/*
 haikal.ev.on('creds.update', saveState)
-*/
 // Add Other
 
   /**
