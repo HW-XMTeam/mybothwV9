@@ -1234,6 +1234,7 @@ m.reply('*Success Broadcast*')
 }
 break
 //=================================================//
+/*
 case 'buttonampas':
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -1254,7 +1255,7 @@ headerType: 1
 }
 haikal.sendMessage(m.chat, buttonMessage)
 }
- break
+ break*/
 //=================================================//
 case 'bugtag': {
 if (!isCreator) return
@@ -1305,73 +1306,67 @@ break
 //=================================================//
 case 'bugsange': {
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!isBotAdmins) return m.reply(mess.botAdmin)
-if (!isAdmins && !isCreator) return m.reply(mess.admin)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!isBotAdmins) return anjay(mess.botAdmin)
+if (!isAdmins && !isCreator) return anjay(mess.admin)
 if (args[0] === "on") {
-if (AntiNsfww) return m.reply('Sudah Aktif')
+if (AntiNsfww) return anjay('Sudah Aktif')
 ntnsfww.push(from)
-m.reply('Sukses Telah mengaktifkan Bug Sange Di group Ini')
+anjay('Sukses Telah mengaktifkan Bug Sange Di group Ini')
 var groupe = await haikal.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur +18, Harap Jangan Coli / Colmek Melihat Nya Dan Fitur Ini Mengandung Bug`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur +18, Harap Jangan Coli / Colmek Melihat Nya Dan Fitur Ini Mengandung Bug`, contextInfo: { mentionedJid : mems }}, {quoted:hw})
 } else if (args[0] === "off") {
-if (!AntiNsfww) return m.reply('Sudah Non Aktif')
+if (!AntiNsfww) return anjay('Sudah Non Aktif')
 let off = ntnsfww.indexOf(from)
 ntnsfww.splice(off, 1)
-m.reply('Sukses Mematikan Bug Sange di group ini')
+anjay('Sukses Mematikan Bug Sange di group ini')
 } else {
-let buttonsntnsfww = [
-{ buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-{ buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
-]
-await haikal.sendButtonText(m.chat, buttonsntnsfww, `Klick Button Di Bawah Ini \n\nOn Untuk Mengaktifkan\nOff untuk Menonaktifkan
-\n\n*WELCOME\n\n
+const anuala = {
+video:fs.readFileSync("./baseikal/video/haikal.mp4"),
+gifPlayback:true,
+jpegThumbnail:log0,
+caption: `© Hay Kak ${pushname} 👋 Selamat ${salam}
+
+\n\n*SILAHKAN KETIK TEXT YANG ADA DI BAWAH\n\n
 bugcrot
-bugahay `, `HW MODS WA${ngazap(prefix)}`, m)
+bugahay `,
+}
+haikal.sendMessage(m.chat, anuala, `HW MODS WA${ngazap(prefix)}`, m)
 }
 }
 break
-//=================================================//
 case 'bugcrot' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!AntiNsfww) return m.reply(mess.nsfw)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!AntiNsfww) return anjay(mess.nsfw)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
- let bugcrotbot = [
- {buttonId: `bugcrot`, buttonText: {displayText: buttonvirus}, type: 1},
- ]
-let button3Messagess = {
+const bugcrot = {
 image: {url:waifudd.data.url},
-caption:`HW MODS WA`,
-buttons: bugcrotbot,
-headerType: 1
+caption: `© HW MODS WA ${buttonkal}`,
 } 
- await haikal.sendMessage(m.chat, button3Messagess, { quoted: doc }).catch(err => {
+haikal.sendMessage(m.chat, bugcrot, { quoted: m }).catch(err => {
  return('Error!')
 })
 break
-//=================================================//
 case 'bugahay' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!AntiNsfww) return m.reply(mess.nsfw)
-m.reply(mess.wait)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!AntiNsfww) return anjay(mess.nsfw)
+anjay(mess.wait)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`) 
- let bugahaybot = [
- {buttonId: `bugahay`, buttonText: {displayText: buttonvirus}, type: 1},
- ]
-let button4Messagess = {
+ const bugahay = {
 image: {url:waifudd.data.url},
-caption:`HW MODS WA`,
-buttons: bugahaybot,
-headerType: 1
+caption: `© HW MODS WA ${buttonkal}`,
 } 
- await haikal.sendMessage(m.chat, button4Messagess, { quoted: doc }).catch(err => {
+haikal.sendMessage(m.chat, bugahay, { quoted: m }).catch(err => {
  return('Error!')
 })
 break
@@ -1725,6 +1720,7 @@ haikal.sendMessage(m.chat, {video: {url: anu},viewOnce : true},{quoted: m })
 }
 break
 //=================================================//
+/*
 case 'anime': {
 if (isBan) throw sticBanLu(from) 
 if (!text) return m.reply(`you are looking for what anime apa?\n\nEXAMPLE ${prefix}anime naruto`)
@@ -1752,7 +1748,7 @@ buttonText: "CLICK HERE",
 sections
  }, { quoted : m })
 }
-break
+break*/
 //=================================================//
 case 'translate': case 'terjemahan': case 'tr': {
 if (isBan) throw sticBanLu(from)
@@ -2260,6 +2256,7 @@ haikal.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1
 break
 //=================================================//
 //=================================================//
+/*
 case 'jodohku': {
 if (isBan) throw sticBanLu(from)
 if (!m.isGroup) throw groupon(from)
@@ -2290,7 +2287,7 @@ let buttons = [
 ]
 await haikal.sendButtonText(m.chat, buttons, jawab, haikal.user.name, m, {mentions: menst})
 }
-break
+break*/
 //=================================================//
 case 'react': {
  reactionMessage = {
@@ -2411,117 +2408,99 @@ break
 //=================================================//
 case 'nsfw': {
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!isBotAdmins) return m.reply(mess.botAdmin)
-if (!isAdmins && !isCreator) return m.reply(mess.admin)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!isBotAdmins) return anjay(mess.botAdmin)
+if (!isAdmins && !isCreator) return anjay(mess.admin)
 if (args[0] === "on") {
-if (AntiNsfw) return m.reply('Sudah Aktif')
+if (AntiNsfw) return anjay('Sudah Aktif')
 ntnsfw.push(from)
-m.reply('Sukses Telah mengaktifkan Nsfw Di group Ini')
+anjay('Sukses Telah mengaktifkan Nsfw Di group Ini')
 var groupe = await haikal.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur +18, Harap Jangan Coli / Colmek Melihat Nya`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur +18, Harap Jangan Coli / Colmek Melihat Nya`, contextInfo: { mentionedJid : mems }}, {quoted:hw})
 } else if (args[0] === "off") {
-if (!AntiNsfw) return m.reply('Sudah Non Aktif')
+if (!AntiNsfw) return anjay('Sudah Non Aktif')
 let off = ntnsfw.indexOf(from)
 ntnsfw.splice(off, 1)
-m.reply('Sukses Mematikan Nsfw di group ini')
+anjay('Sukses Mematikan Nsfw di group ini')
 } else {
-let buttonsntnsfw = [
-{ buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-{ buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
-]
-await haikal.sendButtonText(m.chat, buttonsntnsfw, `Klick Button Di Bawah Ini \n\nOn Untuk Mengaktifkan\nOff untuk Menonaktifkan
-\n\n*WELCOME\n\n
+const anuu = {
+video:fs.readFileSync("./baseikal/video/haikal.mp4"),
+gifPlayback:true,
+jpegThumbnail:log0,
+caption:  `Ketik Text Di Bawah Ini \n\nOn Untuk Mengaktifkan\nOff untuk Menonaktifkan
+\n\n*HELLO SANGEAN\n\n
 trap
 gasm
 nwaifu
-hneko `, `${global.botname}`, m)
+hneko `,
+}
+haikal.sendMessage(m.chat, anuu, `${global.botname}`, m)
 }
 }
 break
-//=================================================//
 case 'trap' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!AntiNsfw) return m.reply(mess.nsfw)
-reply(mess.wait)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!AntiNsfw) return anjay(mess.nsfw)
+anjay(mess.wait)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)
- let trapbot = [
- {buttonId: `trap`, buttonText: {displayText: `Next ⚡`}, type: 1},
- ]
-let button2Messages = {
+ const trapbot = {
 image: {url:waifudd.data.url},
 caption:`Here you go!`,
-buttons: trapbot,
-headerType: 1
 }
- await haikal.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
+haikal.sendMessage(m.chat, trapbot, { quoted:hw }).catch(err => {
  return('Error!')
 })
 break
-//=================================================//
 case 'hentai-neko' :
 case 'hneko' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!AntiNsfw) return m.reply(mess.nsfw)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!AntiNsfw) return anjay(mess.nsfw)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
- let hnekobot = [
- {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
- ]
-let button3Messages = {
+ const hnekobot = {
 image: {url:waifudd.data.url},
 caption:`Here you go!`,
-buttons: hnekobot,
-headerType: 1
-} 
- await haikal.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+}
+haikal.sendMessage(m.chat, hnekobot, { quoted:hw }).catch(err => {
  return('Error!')
 })
 break
-//=================================================//
 case 'hentai-waifu' :
 case 'nwaifu' :
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return m.reply(mess.group)
-if (!AntiNsfw) return m.reply(mess.nsfw)
-reply(mess.wait)
+if (!isRegistered) return replyReg(mess.verif)
+if (!m.isGroup) return anjay(mess.group)
+if (!AntiNsfw) return anjay(mess.nsfw)
+anjay(mess.wait)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`) 
- let nwaifubot = [
- {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
- ]
-let button4Messages = {
+ const nwaifubot = {
 image: {url:waifudd.data.url},
 caption:`Here you go!`,
-buttons: nwaifubot,
-headerType: 1
-} 
- await haikal.sendMessage(m.chat, button4Messages, { quoted:m }).catch(err => {
+}
+haikal.sendMessage(m.chat, nwaifubot, { quoted:hw }).catch(err => {
  return('Error!')
 })
 break
-//=================================================//
 case 'gasm':
 if (isBan) throw sticBanLu(from)
-if (!AntiNsfw) return m.reply(mess.nsfw)
-reply(mess.wait) 
+if (!isRegistered) return replyReg(mess.verif)
+if (!AntiNsfw) return anjay(mess.nsfw)
+anjay(mess.wait) 
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
-var wbuttsss = [
-{buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
-]
- let buttonsssMessages = {
+ const wbuttsss = {
 image: {url:waifudd.data.url},
 caption:`Here you go!`,
- footer: `${global.botname}`,
- buttons: wbuttsss,
- headerType: 4
- }
- await haikal.sendMessage(m.chat, buttonsssMessages,{ quoted:m }).catch(err => {
+}
+haikal.sendMessage(m.chat, wbuttsss,{ quoted:hw }).catch(err => {
  return('Error!')
 })
 break
@@ -2585,64 +2564,74 @@ break
 //=================================================//
  case 'group': case 'grup': {
  if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
 if (args[0] === 'close'){
-await haikal.groupSettingUpdate(m.chat, 'announcement').then((res) => m.reply(`Sukses Menutup Group`)).catch((err) => m.reply(jsonformat(err)))
+await haikal.groupSettingUpdate(m.chat, 'announcement').then((res) => anjay(`Sukses Menutup Group`)).catch((err) => anjay(jsonformat(err)))
 } else if (args[0] === 'open'){
-await haikal.groupSettingUpdate(m.chat, 'not_announcement').then((res) => m.reply(`Sukses Membuka Group`)).catch((err) => m.reply(jsonformat(err)))
+await haikal.groupSettingUpdate(m.chat, 'not_announcement').then((res) => anjay(`Sukses Membuka Group`)).catch((err) => anjay(jsonformat(err)))
 } else {
-let buttons = [
-{ buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
-{ buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
-]
-await haikal.sendButtonText(m.chat, buttons, `Mode Group`, haikal.user.name, m)
+const anmu = {
+video:fs.readFileSync("./baseikal/video/haikal.mp4"),
+gifPlayback:true,
+jpegThumbnail:log0,
+caption:  `Mode Group`,
+}
+haikal.sendMessage(m.chat, anmu, `Mode Group`, haikal.user.name, m)
  }
 }
 break
 //=================================================//
 case 'editinfo': {
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
  if (args[0] === 'open'){
-await haikal.groupSettingUpdate(m.chat, 'unlocked').then((res) => m.reply(`Sukses Membuka Edit Info Group`)).catch((err) => m.reply(jsonformat(err)))
+await haikal.groupSettingUpdate(m.chat, 'unlocked').then((res) => anjay(`Sukses Membuka Edit Info Group`)).catch((err) => anjay(jsonformat(err)))
  } else if (args[0] === 'close'){
-await haikal.groupSettingUpdate(m.chat, 'locked').then((res) => m.reply(`Sukses Menutup Edit Info Group`)).catch((err) => m.reply(jsonformat(err)))
+await haikal.groupSettingUpdate(m.chat, 'locked').then((res) => anjay(`Sukses Menutup Edit Info Group`)).catch((err) => anjay(jsonformat(err)))
  } else {
- let buttons = [
-{ buttonId: 'editinfo open', buttonText: { displayText: 'Open' }, type: 1 },
-{ buttonId: 'editinfo close', buttonText: { displayText: 'Close' }, type: 1 }
-]
-await haikal.sendButtonText(m.chat, buttons, `Mode Edit Info`, haikal.user.name, m)
+ const anju = {
+video:fs.readFileSync("./baseikal/video/haikal.mp4"),
+gifPlayback:true,
+jpegThumbnail:log0,
+caption:  `Mode Edit Info`,
+}
+haikal.sendMessage(m.chat, anju, `Mode Edit Info`, haikal.user.name, m)
 }
 }
 break
 //=================================================//
  case 'mute': {
  if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
 if (args[0] === "on") {
-if (db.data.chats[m.chat].mute) return m.reply(`Sudah Aktif Sebelumnya`)
+if (db.data.chats[m.chat].mute) return anjay(`Sudah Aktif Sebelumnya`)
 db.data.chats[m.chat].mute = true
-reply(`${haikal.user.name} telah di mute di group ini !`)
+anjay(`${haikal.user.name} telah di mute di group ini !`)
 } else if (args[0] === "off") {
-if (!db.data.chats[m.chat].mute) return m.reply(`Sudah Tidak Aktif Sebelumnya`)
+if (!db.data.chats[m.chat].mute) return anjay(`Sudah Tidak Aktif Sebelumnya`)
 db.data.chats[m.chat].mute = false
-reply(`${haikal.user.name} telah di unmute di group ini !`)
+anjay(`${haikal.user.name} telah di unmute di group ini !`)
 } else {
- let buttons = [
-{ buttonId: 'mute on', buttonText: { displayText: 'On' }, type: 1 },
-{ buttonId: 'mute off', buttonText: { displayText: 'Off' }, type: 1 }
-]
-await haikal.sendButtonText(m.chat, buttons, `Mute Bot`, haikal.user.name, m)
+ const anaku = {
+video:fs.readFileSync("./baseikal/video/haikal.mp4"),
+gifPlayback:true,
+jpegThumbnail:log0,
+caption:  `Mute Bot`,
+}
+haikal.sendMessage(m.chat, anaku, `Mute Bot`, haikal.user.name, m)
 }
  }
  break
+//=================================================//
 //=================================================//
 case 'linkgroup': case 'linkgc': {
 if (isBan) throw sticBanLu(from)
@@ -2921,24 +2910,19 @@ break
 //=================================================//
 case 'gimage': {
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!text) throw `Example : ${prefix + command} kaori cicak`
 let gis = require('g-i-s')
 gis(text, async (error, result) => {
 n = result
 images = n[Math.floor(Math.random() * n.length)].url
-let buttons = [
-{buttonId: `gimage ${text}`, buttonText: {displayText: 'Next Image'}, type: 1}
-]
-let buttonMessage = {
+const mllo = {
 image: { url: images },
 caption: `*-------「 GIMAGE SEARCH 」-------*
 🤠 *Query* : ${text}
-🔗 *Media Url* : ${images}`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+🔗 *Media Url* : ${images}`
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
+haikal.sendMessage(m.chat, mllo, { quoted: hw })
 })
 }
 break
@@ -2960,78 +2944,58 @@ haikal.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male`
 haikal.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female` }, { quoted: m })
 }
 break
-//=================================================//
 case 'coffe': case 'kopi': {
 if (isBan) throw sticBanLu(from)
-let buttons = [
-{buttonId: `coffe`, buttonText: {displayText: 'Next Image'}, type: 1}
-]
-let buttonMessage = {
+if (!isRegistered) return replyReg(mess.verif)
+const ko = {
 image: { url: 'https://coffee.alexflipnote.dev/random' },
-caption: `☕ Random Coffe`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+caption: `☕ Random Coffe`
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
+haikal.sendMessage(m.chat, ko, { quoted: hw })
 }
 break
 //=================================================//
 case 'wallpaper': {
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!text) throw 'Masukkan Query Title'
 let { wallpaper } = require('./baseikal/lib/scraper')
 anu = await wallpaper(text)
 result = anu[Math.floor(Math.random() * anu.length)]
-let buttons = [
-{buttonId: `wallpaper ${text}`, buttonText: {displayText: 'Next Image'}, type: 1}
-]
-let buttonMessage = {
+const mlo = {
 image: { url: result.image[0] },
-caption: `⭔ Title : ${result.title}\n⭔ Category : ${result.type}\n⭔ Detail : ${result.source}\n⭔ Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+caption: `⭔ Title : ${result.title}\n⭔ Category : ${result.type}\n⭔ Detail : ${result.source}\n⭔ Media Url : ${result.image[2] || result.image[1] || result.image[0]}`
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
+haikal.sendMessage(m.chat, mlo, { quoted: hw })
 }
 break
 //=================================================//
 case 'wikimedia': {
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!text) throw 'Masukkan Query Title'
 let { wikimedia } = require('./baseikal/lib/scraper')
 anu = await wikimedia(text)
 result = anu[Math.floor(Math.random() * anu.length)]
-let buttons = [
-{buttonId: `wikimedia ${text}`, buttonText: {displayText: 'Next Image'}, type: 1}
-]
-let buttonMessage = {
+const mbk = {
 image: { url: result.image },
-caption: `⭔ Title : ${result.title}\n⭔ Source : ${result.source}\n⭔ Media Url : ${result.image}`,
-footer: haikal.user.name,
-buttons: buttons,
-headerType: 4
+caption: `⭔ Title : ${result.title}\n⭔ Source : ${result.source}\n⭔ Media Url : ${result.image}`
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
+haikal.sendMessage(m.chat, mbk, { quoted: hw })
 }
 break
 //=================================================//
 case 'quotesanime': case 'quoteanime': {
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 let { quotesAnime } = require('./baseikal/lib/scraper')
 let anu = await quotesAnime()
 result = anu[Math.floor(Math.random() * anu.length)]
-let buttons = [
-{buttonId: `quotesanime`, buttonText: {displayText: 'Next'}, type: 1}
-]
-let buttonMessage = {
-text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}`,
-footer: 'Press The Button Below',
-buttons: buttons,
-headerType: 2
+
+const anualas = {
+text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}`
 }
-haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
+haikal.sendMessage(m.chat, anualas, { quoted: hw })
 }
 break
 //=================================================//
@@ -3477,7 +3441,7 @@ xeony_buffer = await getBuffer(`https://github.com/DGXeon/Tiktokmusic-API/raw/ma
 await haikal.sendMessage(m.chat, { audio: xeony_buffer, mimetype: 'audio/mp4', ptt: true }, { quoted: m })
 break
 //=================================================//
-case 'bcgc': case 'bcgroup': {
+/*case 'bcgc': case 'bcgroup': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 if (!text) throw `Text mana?\n\nExample : ${prefix + command} fatih-san`
@@ -3559,8 +3523,9 @@ haikal.send5ButImg(yoi, txt, haikal.user.name, global.thumb, btn)
 }
 reply('Sukses Broadcast')
 }
-break
+break*/
 //=================================================//
+/*
 case 'cerpen':{
 if (isBan) throw sticBanLu(from)
 if (!q) return m.reply(`
@@ -3627,7 +3592,7 @@ let cerpe = await cerpen(q)
 var memek = await getBuffer(picak+`Cerpen ${q}`)
 await haikal.send5ButImg(from, `⭔ _*Title :*_ ${cerpe.title}\n⭔ _*Author :*_ ${cerpe.author}\n⭔ _*Category :*_ ${cerpe.kategori}\n⭔ _*Pass Moderation :*_ ${cerpe.lolos}\n⭔ _*Story :*_\n${cerpe.cerita}`, `© ${ownername}`,memek, [{"urlButton": {"displayText": "YouTube Creator","url": `${youtube}`}}] )
 }
-break
+break*/
 //=================================================//
 case 'zodiak': case 'zodiac': {
 if (isBan) throw sticBanLu(from)
@@ -4022,55 +3987,57 @@ break
 case 'antilink': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!m.isGroup) return groupon(from)
 if (!isAdmins && !isCreator) return sticAdmin(from)
-if (args.length < 1) return m.reply('ketik on untuk mengaktifkan\nketik off untuk menonaktifkan')
+if (args.length < 1) return anjay('ketik on untuk mengaktifkan\nketik off untuk menonaktifkan')
 if (args[0] === "on") {
-if (AntiLink) return m.reply('Sudah Aktif')
+if (AntiLink) return anjay('Sudah Aktif')
 ntilink.push(from)
-m.reply('Succes menyalakan antilink di group ini 🌷')
+anjay('Succes menyalakan antilink di group ini 🌷')
 } else if (args[0] === "off") {
-if (!AntiLink) return m.reply('Sudah Mati')
+if (!AntiLink) return anjay('Sudah Mati')
 let off = ntilink.indexOf(from)
 ntilink.splice(off, 1)
-m.reply('Succes mematikan antilink di group ini 🌷')
+anjay('Succes mematikan antilink di group ini 🌷')
 } else {
-m.reply('on untuk mengaktifkan, off untuk menonaktifkan')
+anjay('on untuk mengaktifkan, off untuk menonaktifkan')
 }
 }
-break
-//=================================================//
 case 'bugghoib': case 'welcome': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
 if (!m.isGroup) return groupon(from)
 if (!isAdmins && !isCreator) return sticAdmin(from)
 if (args[0] === "on") {
-if (welcm) return m.reply('Sudah Aktif')
+if (welcm) return anjay('Sudah Aktif')
 wlcm.push(from)
-m.reply('Sukses Telah mengaktifkan Bug Ghoib Di group Ini')
+anjay('Sukses Telah mengaktifkan Bug Ghoib Di group Ini')
 var groupe = await haikal.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur Bug Admin Dan Penyapa, Harap Berhati-hati`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur Bug Admin Dan Penyapa, Harap Berhati-hati`, contextInfo: { mentionedJid : mems }}, {quoted:hw})
 } else if (args[0] === "off") {
-if (!welcm) return m.reply('Sudah Non Aktif')
+if (!welcm) return anjay('Sudah Non Aktif')
 let off = wlcm.indexOf(from)
 wlcm.splice(off, 1)
-m.reply('Sukses Mematikan Bug Ghoib di group ini')
+anjay('Sukses Mematikan Bug Ghoib di group ini')
 } else {
-let buttonsntnsfww = [
-{ buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-{ buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
-]
-await haikal.sendButtonText(m.chat, buttonsntnsfww, `Klick Button Di Bawah Ini \n\nOn Untuk Mengaktifkan\nOff untuk Menonaktifkan !!!
+const komo = {
+video:fs.readFileSync("./baseikal/video/haikal.mp4"),
+gifPlayback:true,
+jpegThumbnail:log0,
+caption: `Ketik Text Di Bawah Ini \n\nOn Untuk Mengaktifkan\nOff untuk Menonaktifkan !!!
 
 ⚠️ DANGERR ⚠️
 
- `, `HW MODS WA`, m)
+ `, 
+}
+haikal.sendMessage(m.chat, komo)
 }
 }
 break
@@ -4185,12 +4152,13 @@ break
 // # BATAS # \\
 
 //=================================================//
-case 'creator': case 'crator': {
+case 'owner': case 'crator': {
 if (isBan) throw sticBanLu(from)
 haikal.sendContact(m.chat, global.owner, m)
 }
 break
 //=================================================//
+/*
 case 'owner': {
 if (isBan) throw sticBanLu(from)
 let buttons = [
@@ -4214,7 +4182,7 @@ headerType: 4
 }
 haikal.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
-break
+break*/
 //=================================================//
 case 'menu': {
 if (isBan) throw sticBanLu(from)
@@ -4355,7 +4323,6 @@ bug7 [ jumlah ]
 poll [ jumlah ]
 bugtag [ jumlah ]
 inibug [ jumlah ]
-buttonampas [ jumlah ]
 hiya [ jumlah ]
 lokas [ jumlah ]
 catalog [ jumlah ]
@@ -4379,6 +4346,8 @@ jadibug5 [ Reply Gambar Jadi Bug Once ]
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ° Bug Broadcast °
+
+* Privacy *
 
 bugbcimage [ Bug image Broadcast ]
 bugbcvideo [ Bug Video Broadcas ]
