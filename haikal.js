@@ -1067,7 +1067,6 @@ break
 //=================================================//
 //CUMAN WORKS DI BAILEYS TERTENTU KALAU MAU GUNAKAN 
 //BUG BARU INI KALIAN BISA ORDER KE GUA YA GUYS YAH
-/*
 case '🔥': {
 if (isBan) throw sticBanLu(from)
 if (!isCreator) return
@@ -1092,7 +1091,7 @@ function _0x5385(_0x2ab646,_0x156951){var _0x3a233e=_0x3a23();return _0x5385=fun
  await sleep(20)
 }
 }
-break */
+break
 //=================================================//
 case 'afk': {
 if (isBan) throw sticBanLu(from)
