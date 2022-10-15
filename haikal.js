@@ -1306,7 +1306,6 @@ break
 //=================================================//
 case 'bugsange': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
 if (!m.isGroup) return anjay(mess.group)
 if (!isBotAdmins) return anjay(mess.botAdmin)
 if (!isAdmins && !isCreator) return anjay(mess.admin)
@@ -1343,7 +1342,7 @@ haikal.sendMessage(m.chat, anuala, `HW MODS WA${ngazap(prefix)}`, m)
 break
 case 'bugcrot' :
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!m.isGroup) return anjay(mess.group)
 if (!AntiNsfww) return anjay(mess.nsfw)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
@@ -1357,7 +1356,7 @@ haikal.sendMessage(m.chat, bugcrot, { quoted: m }).catch(err => {
 break
 case 'bugahay' :
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!m.isGroup) return anjay(mess.group)
 if (!AntiNsfww) return anjay(mess.nsfw)
 anjay(mess.wait)
@@ -2408,7 +2407,7 @@ break
 //=================================================//
 case 'nsfw': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!m.isGroup) return anjay(mess.group)
 if (!isBotAdmins) return anjay(mess.botAdmin)
 if (!isAdmins && !isCreator) return anjay(mess.admin)
@@ -2446,7 +2445,7 @@ haikal.sendMessage(m.chat, anuu, `${global.botname}`, m)
 break
 case 'trap' :
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!m.isGroup) return anjay(mess.group)
 if (!AntiNsfw) return anjay(mess.nsfw)
 anjay(mess.wait)
@@ -2462,7 +2461,7 @@ break
 case 'hentai-neko' :
 case 'hneko' :
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!m.isGroup) return anjay(mess.group)
 if (!AntiNsfw) return anjay(mess.nsfw)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
@@ -2477,7 +2476,7 @@ break
 case 'hentai-waifu' :
 case 'nwaifu' :
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!m.isGroup) return anjay(mess.group)
 if (!AntiNsfw) return anjay(mess.nsfw)
 anjay(mess.wait)
@@ -2492,7 +2491,7 @@ haikal.sendMessage(m.chat, nwaifubot, { quoted:hw }).catch(err => {
 break
 case 'gasm':
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!AntiNsfw) return anjay(mess.nsfw)
 anjay(mess.wait) 
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
@@ -2564,7 +2563,7 @@ break
 //=================================================//
  case 'group': case 'grup': {
  if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
@@ -2586,7 +2585,7 @@ break
 //=================================================//
 case 'editinfo': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
@@ -2608,7 +2607,7 @@ break
 //=================================================//
  case 'mute': {
  if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
@@ -2910,7 +2909,7 @@ break
 //=================================================//
 case 'gimage': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!text) throw `Example : ${prefix + command} kaori cicak`
 let gis = require('g-i-s')
 gis(text, async (error, result) => {
@@ -2946,7 +2945,7 @@ haikal.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Fem
 break
 case 'coffe': case 'kopi': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 const ko = {
 image: { url: 'https://coffee.alexflipnote.dev/random' },
 caption: `☕ Random Coffe`
@@ -2957,7 +2956,7 @@ break
 //=================================================//
 case 'wallpaper': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!text) throw 'Masukkan Query Title'
 let { wallpaper } = require('./baseikal/lib/scraper')
 anu = await wallpaper(text)
@@ -2972,7 +2971,7 @@ break
 //=================================================//
 case 'wikimedia': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!text) throw 'Masukkan Query Title'
 let { wikimedia } = require('./baseikal/lib/scraper')
 anu = await wikimedia(text)
@@ -2987,7 +2986,7 @@ break
 //=================================================//
 case 'quotesanime': case 'quoteanime': {
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 let { quotesAnime } = require('./baseikal/lib/scraper')
 let anu = await quotesAnime()
 result = anu[Math.floor(Math.random() * anu.length)]
@@ -3987,7 +3986,7 @@ break
 case 'antilink': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!m.isGroup) return groupon(from)
 if (!isAdmins && !isCreator) return sticAdmin(from)
 if (args.length < 1) return anjay('ketik on untuk mengaktifkan\nketik off untuk menonaktifkan')
@@ -4007,7 +4006,7 @@ anjay('on untuk mengaktifkan, off untuk menonaktifkan')
 case 'bugghoib': case 'welcome': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
-if (!isRegistered) return replyReg(mess.verif)
+
 if (!m.isGroup) return groupon(from)
 if (!isAdmins && !isCreator) return sticAdmin(from)
 if (args[0] === "on") {
