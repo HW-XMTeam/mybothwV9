@@ -4186,48 +4186,32 @@ case 'menu': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ◎ ＲＥＸＪＵ ＢＯＴ◎
-
- ┊, ▇▇▇▇▇ 
-┊┊▇▇▇▇▇
-┊┊▇▇▇▇▇
-▅▅▇▇▇▇▇▅▅
-▕▍╱╲╲╱╱╲
-╭▎▏▍╲╱▍▕
-┃╯╲＿╱╲＿╱
-╰╯┊┊╭╰━━━╮
-┊┳┳╯╰━━━╮┃
-┊┃┃━╯╰━┊╰╯
-┊┃╰┳┳┳┳┛
-┊╰━┻┻┻┻━╮
-┊┊┊┊┊┊┊┊┃
-╰━━━━━━━╯
-◎ ＲＥＸＪＵ ＢＯＴ◎
 ◎ 𝐋𝐢𝐛 : 𝐌𝐮𝐥𝐭𝐢-𝐃𝐞𝐯𝐢𝐜𝐞
 ╔════[ AUTO ]══════⊱
-❰☢❱ 𝐀𝐮𝐭𝐨𝐤𝐞𝐭𝐢𝐤 𝐨𝐧 / 𝐨𝐟𝐟
-❰☢❱ 𝐀𝐮𝐭𝐨𝐯𝐧 𝐎𝐧 / 𝐎𝐟𝐟
-❰☢❱ 𝐀𝐮𝐭𝐨𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐨𝐧 / 𝐨𝐟𝐟
-❰☢❱ 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐨𝐧 / 𝐨𝐟𝐟 [ Crash ]
+╠➤ 𝐀𝐮𝐭𝐨𝐤𝐞𝐭𝐢𝐤 𝐨𝐧 / 𝐨𝐟𝐟
+╠➤ 𝐀𝐮𝐭𝐨𝐯𝐧 𝐎𝐧 / 𝐎𝐟𝐟
+╠➤ 𝐀𝐮𝐭𝐨𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐨𝐧 / 𝐨𝐟𝐟
+╠➤ 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐨𝐧 / 𝐨𝐟𝐟 [ Crash ]
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 ╔══[ MENU ]══════⊱
-❰☢❱ 𝐁𝐮𝐠𝐦𝐞𝐧𝐮
-❰☢❱ 𝐒𝐜𝐫𝐚𝐩𝐞𝐫𝐢𝐦𝐚𝐠𝐞
-❰☢❱ 𝐀𝐬𝐮𝐩𝐚𝐧𝐦𝐚𝐭𝐚
-❰☢❱ 𝐒𝐜𝐫𝐚𝐩𝐜𝐨𝐧𝐯𝐞𝐫𝐭
-❰☢❱ 𝐑𝐚𝐧𝐝𝐨𝐦𝐬𝐨𝐮𝐧𝐝
-❰☢❱ 𝐍𝐬𝐟𝐰
-❰☢❱ 𝐒𝐨𝐮𝐧𝐝𝐛𝐨𝐭
-❰☢❱ 𝐅𝐮𝐧𝐧𝐦𝐞𝐧𝐮
-❰☢❱ 𝐏𝐫𝐢𝐦𝐛𝐨𝐧𝐦𝐞𝐧𝐮
-❰☢❱ 𝐈𝐬𝐥𝐚𝐦𝐢𝐲𝐚𝐡
-❰☢❱ 𝐕𝐨𝐢𝐜𝐞𝐜𝐡𝐚𝐧𝐠𝐞𝐫
-❰☢❱ 𝐁𝐞𝐫𝐢𝐭𝐚𝐧𝐞𝐰𝐬
-❰☢❱ 𝐂𝐦𝐝𝐦𝐞𝐧𝐮
-❰☢❱ 𝐬𝐞𝐚𝐫𝐜𝐡𝐦𝐞𝐧𝐮
-❰☢❱ 𝐆𝐫𝐨𝐮𝐩𝐦𝐞𝐧𝐮
-❰☢❱ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐦𝐞𝐧𝐮
-❰☢❱ 𝐎𝐰𝐧𝐞𝐫𝐦𝐞𝐧𝐮
+╠➤ 𝐁𝐮𝐠𝐦𝐞𝐧𝐮
+╠➤ 𝐒𝐜𝐫𝐚𝐩𝐞𝐫𝐢𝐦𝐚𝐠𝐞
+╠➤ 𝐀𝐬𝐮𝐩𝐚𝐧𝐦𝐚𝐭𝐚
+╠➤ 𝐒𝐜𝐫𝐚𝐩𝐜𝐨𝐧𝐯𝐞𝐫𝐭
+╠➤ 𝐑𝐚𝐧𝐝𝐨𝐦𝐬𝐨𝐮𝐧𝐝
+╠➤ 𝐍𝐬𝐟𝐰
+╠➤ 𝐒𝐨𝐮𝐧𝐝𝐛𝐨𝐭
+╠➤ 𝐅𝐮𝐧𝐧𝐦𝐞𝐧𝐮
+╠➤ 𝐏𝐫𝐢𝐦𝐛𝐨𝐧𝐦𝐞𝐧𝐮
+╠➤ 𝐈𝐬𝐥𝐚𝐦𝐢𝐲𝐚𝐡
+╠➤ 𝐕𝐨𝐢𝐜𝐞𝐜𝐡𝐚𝐧𝐠𝐞𝐫
+╠➤ 𝐁𝐞𝐫𝐢𝐭𝐚𝐧𝐞𝐰𝐬
+╠➤ 𝐂𝐦𝐝𝐦𝐞𝐧𝐮
+╠➤ 𝐬𝐞𝐚𝐫𝐜𝐡𝐦𝐞𝐧𝐮
+╠➤ 𝐆𝐫𝐨𝐮𝐩𝐦𝐞𝐧𝐮
+╠➤ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐦𝐞𝐧𝐮
+╠➤ 𝐎𝐰𝐧𝐞𝐫𝐦𝐞𝐧𝐮
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 Base Script
@@ -4249,130 +4233,112 @@ haikal.sendMessage(m.chat, { image: kalimage, caption: `© Hay Kak ${pushname} �
 ◎ 𝐎𝐰𝐧𝐞𝐫 : ${botname}
 ◎ 𝐋𝐢𝐛 : 𝐌𝐮𝐥𝐭𝐢-𝐃𝐞𝐯𝐢𝐜𝐞
 ◎ 𝐓𝐞𝐫𝐛𝐢𝐭 : *𝟎𝟏-𝟎𝟗-𝟏𝟗𝟗𝟗*
-
-◎ ＲＥＸＪＵ ＢＯＴ◎
-
-┊, ▇▇▇▇▇ 
-┊┊▇▇▇▇▇
-┊┊▇▇▇▇▇
-▅▅▇▇▇▇▇▅▅
-▕▍╱╲╲╱╱╲
-╭▎▏▍╲╱▍▕
-┃╯╲＿╱╲＿╱
-╰╯┊┊╭╰━━━╮
-┊┳┳╯╰━━━╮┃
-┊┃┃━╯╰━┊╰╯
-┊┃╰┳┳┳┳┛
-┊╰━┻┻┻┻━╮
-┊┊┊┊┊┊┊┊┃
-╰━━━━━━━╯
-◎ ＲＥＸＪＵ ＢＯＴ◎
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 ^𝐀𝐤𝐬𝐞𝐬 𝐕𝐢𝐩 𝐁𝐮𝐠^
 ^𝐇𝐮𝐛 : ${botname}^
 ╔════[ 𝐕𝐈𝐏 ]═══════⊱
-❰☢❱🌷 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ] #𝐔𝐩𝐝𝐚𝐭𝐞 𝐁𝐚𝐢𝐥𝐞𝐲𝐬
-❰☢❱🔥 𝟔𝟐𝟖𝐱𝐱𝐱|𝟓|𝟓 #𝐔𝐩𝐝𝐚𝐭𝐞 𝐁𝐚𝐢𝐥𝐞𝐲𝐬
+╠➤🌷 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ] #𝐔𝐩𝐝𝐚𝐭𝐞 𝐁𝐚𝐢𝐥𝐞𝐲𝐬
+╠➤🔥 𝟔𝟐𝟖𝐱𝐱𝐱|𝟓|𝟓 #𝐔𝐩𝐝𝐚𝐭𝐞 𝐁𝐚𝐢𝐥𝐞𝐲𝐬
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ╔════[ 𝐁𝐔𝐆 𝐒𝐏𝐄𝐂𝐈𝐀𝐋 ]══════⊱
-❰☢❱𝐚𝐟𝐤 { 𝐤𝐚𝐬𝐢𝐡 𝐫𝐞𝐚𝐜𝐭𝐢𝐨𝐧𝐬 }
-❰☢❱𝐫𝐞𝐱𝐠𝐡𝐨𝐢𝐛 [ 𝐨𝐧 / 𝐨𝐟𝐟 ]
-❰☢❱𝐫𝐞𝐱𝐣𝐚𝐠𝐨𝐚𝐧 [ 𝐫𝐞𝐩𝐥𝐲 𝐭𝐚𝐫𝐠𝐞𝐭 ]
-❰☢❱𝐫𝐞𝐱𝐬𝐚𝐧𝐠𝐞 [ 𝐇𝐚𝐫𝐮𝐬 𝐌𝐞𝐧𝐣𝐚𝐝𝐢 𝐀𝐝𝐦𝐢𝐧 ]
-❰☢❱𝐛𝐮𝐠𝐭𝐢𝐤𝐭𝐨𝐤 [ 𝐋𝐢𝐧𝐤 ] - 𝐁𝐮𝐠 𝐒𝐰
-❰☢❱𝐣𝐚𝐝𝐢𝐤𝐚𝐭𝐚𝐥𝐨𝐠 [ 𝐫𝐞𝐩𝐥𝐲 𝐬𝐭𝐢𝐜𝐤𝐞𝐫 ] 𝐣𝐮𝐦𝐥𝐚𝐡
+╠➤𝐚𝐟𝐤 { 𝐤𝐚𝐬𝐢𝐡 𝐫𝐞𝐚𝐜𝐭𝐢𝐨𝐧𝐬 }
+╠➤𝐫𝐞𝐱𝐠𝐡𝐨𝐢𝐛 [ 𝐨𝐧 / 𝐨𝐟𝐟 ]
+╠➤𝐫𝐞𝐱𝐣𝐚𝐠𝐨𝐚𝐧 [ 𝐫𝐞𝐩𝐥𝐲 𝐭𝐚𝐫𝐠𝐞𝐭 ]
+╠➤𝐫𝐞𝐱𝐬𝐚𝐧𝐠𝐞 [ 𝐇𝐚𝐫𝐮𝐬 𝐌𝐞𝐧𝐣𝐚𝐝𝐢 𝐀𝐝𝐦𝐢𝐧 ]
+╠➤𝐛𝐮𝐠𝐭𝐢𝐤𝐭𝐨𝐤 [ 𝐋𝐢𝐧𝐤 ] - 𝐁𝐮𝐠 𝐒𝐰
+╠➤𝐣𝐚𝐝𝐢𝐤𝐚𝐭𝐚𝐥𝐨𝐠 [ 𝐫𝐞𝐩𝐥𝐲 𝐬𝐭𝐢𝐜𝐤𝐞𝐫 ] 𝐣𝐮𝐦𝐥𝐚𝐡
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ╔══════[ 𝐁𝐔𝐆 𝐓𝐀𝐑𝐆𝐄𝐓 ]══════⊱
-❰☢❱𝐫𝐞𝐱𝐬𝐤𝐮𝐲 𝟔𝟐𝟖𝐱𝐱𝐱
-❰☢❱𝐫𝐞𝐱𝐬𝐚𝐧𝐭𝐞𝐭 𝟔𝟐𝟖𝐱𝐱𝐱@𝐬.𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩.𝐧𝐞𝐭|𝟏𝟎|𝟏𝟎𝐬
-❰☢❱𝐜𝐚𝐭𝐚𝐥𝐨𝐠𝐩𝐜 𝟔𝟐𝟖𝐱𝐱𝐱@𝐬.𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩.𝐧𝐞𝐭|𝟏𝟎|𝟏𝟎𝐬
+╠➤𝐫𝐞𝐱𝐬𝐤𝐮𝐲 𝟔𝟐𝟖𝐱𝐱𝐱
+╠➤𝐫𝐞𝐱𝐬𝐚𝐧𝐭𝐞𝐭 𝟔𝟐𝟖𝐱𝐱𝐱@𝐬.𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩.𝐧𝐞𝐭|𝟏𝟎|𝟏𝟎𝐬
+╠➤𝐜𝐚𝐭𝐚𝐥𝐨𝐠𝐩𝐜 𝟔𝟐𝟖𝐱𝐱𝐱@𝐬.𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩.𝐧𝐞𝐭|𝟏𝟎|𝟏𝟎𝐬
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 𝐊𝐞𝐭𝐢𝐤 > 𝐦.𝐜𝐡𝐚𝐭 ( 𝐝𝐢 𝐠𝐫𝐨𝐮𝐩 𝐝𝐮𝐥𝐮🌷)
 ╔══════[ 𝐁𝐔𝐆 𝐆𝐑𝐎𝐔𝐏 ]══════⊱
-❰☢❱𝐠𝐚𝐬𝐫𝐞𝐱 𝟏𝟏𝟐𝟔𝟕𝟒𝟒𝟒𝟖𝐱𝐱𝐱
-❰☢❱𝐫𝐞𝐱𝐬𝐚𝐧𝐭𝐞𝐭𝐠𝐜  𝟏𝟐𝟑𝟕𝟖𝟗𝟏𝐱𝐱𝐱𝐱@𝐠.𝐮𝐬|𝟏𝟎|𝟏𝟎𝐬
-❰☢❱𝐜𝐚𝐭𝐚𝐥𝐨𝐠𝐠𝐜 𝟏𝟐𝟑𝟕𝟖𝟗𝟏𝐱𝐱𝐱𝐱@𝐠.𝐮𝐬|𝟏𝟎|𝟏𝟎𝐬
+╠➤𝐠𝐚𝐬𝐫𝐞𝐱 𝟏𝟏𝟐𝟔𝟕𝟒𝟒𝟒𝟖𝐱𝐱𝐱
+╠➤𝐫𝐞𝐱𝐬𝐚𝐧𝐭𝐞𝐭𝐠𝐜  𝟏𝟐𝟑𝟕𝟖𝟗𝟏𝐱𝐱𝐱𝐱@𝐠.𝐮𝐬|𝟏𝟎|𝟏𝟎𝐬
+╠➤𝐜𝐚𝐭𝐚𝐥𝐨𝐠𝐠𝐜 𝟏𝟐𝟑𝟕𝟖𝟗𝟏𝐱𝐱𝐱𝐱@𝐠.𝐮𝐬|𝟏𝟎|𝟏𝟎𝐬
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ╔══════[ 𝐕𝐈𝐑𝐓𝐄𝐗𝐓 ]══════⊱
-❰☢❱𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟏 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟐 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟑 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟒 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟓 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟔 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟕 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟖 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟗 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟏𝟎 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟏 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟐 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟑 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟒 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟓 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟔 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟕 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟖 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟗 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐯𝐢𝐫𝐭𝐞𝐱𝐭𝟏𝟎 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ╔══════[ 𝐁𝐔𝐆 𝐒𝐏𝐀𝐌 ]══════⊱
-❰☢❱𝐫𝐞𝐱𝐝𝐞𝐥𝐚𝐲 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐬𝐭𝐢𝐤 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐮𝐠𝐢𝐞 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐛𝐮𝐠𝐥𝐨𝐤𝐚𝐬 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐭𝐨𝐝 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐨𝐤𝐞𝐩 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐛𝐮𝐠𝐢𝐧𝐯𝐢𝐭𝐞 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ] 𝐏𝐜
-❰☢❱𝐫𝐞𝐱𝐡𝐚 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐡𝐢 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐫𝐞𝐱𝐡𝐮 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐡𝐞 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐚 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐞 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐮 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐢 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐜𝐚 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐜𝐢 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐜𝐮 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐜𝐨 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐮𝐠𝟏 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐮𝐠𝟐 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐮𝐠𝟑 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐮𝐠𝟒 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐮𝐠𝟓 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐮𝐠𝟔 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐛𝐮𝐠𝟕 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐩𝐨𝐥𝐥 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐭𝐚𝐠 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐢𝐧𝐢𝐛𝐮𝐠 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐡𝐢𝐲𝐚 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐥𝐨𝐤𝐚𝐬 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐜𝐚𝐭𝐚𝐥𝐨𝐠 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐝𝐨𝐜𝐮 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐝𝐚𝐜𝐚 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐝𝐮𝐜 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐝𝐮𝐜𝐮 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐭𝐫𝐨𝐥𝐢 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐭𝐫𝐨𝐥𝐢𝟐 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐫𝐞𝐱𝐭𝐫𝐨𝐥𝐢𝟑 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
-❰☢❱𝐬𝐩𝐚𝐦 [ 𝐑𝐞𝐩𝐥𝐲 𝐏𝐞𝐬𝐚𝐧 ]
+╠➤𝐫𝐞𝐱𝐝𝐞𝐥𝐚𝐲 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐬𝐭𝐢𝐤 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐮𝐠𝐢𝐞 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐛𝐮𝐠𝐥𝐨𝐤𝐚𝐬 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐭𝐨𝐝 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐨𝐤𝐞𝐩 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐛𝐮𝐠𝐢𝐧𝐯𝐢𝐭𝐞 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ] 𝐏𝐜
+╠➤𝐫𝐞𝐱𝐡𝐚 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐡𝐢 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐫𝐞𝐱𝐡𝐮 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐡𝐞 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐚 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐞 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐮 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐢 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐜𝐚 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐜𝐢 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐜𝐮 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐜𝐨 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐮𝐠𝟏 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐮𝐠𝟐 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐮𝐠𝟑 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐮𝐠𝟒 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐮𝐠𝟓 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐮𝐠𝟔 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐛𝐮𝐠𝟕 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐩𝐨𝐥𝐥 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐭𝐚𝐠 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐢𝐧𝐢𝐛𝐮𝐠 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐡𝐢𝐲𝐚 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐥𝐨𝐤𝐚𝐬 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐜𝐚𝐭𝐚𝐥𝐨𝐠 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐝𝐨𝐜𝐮 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐝𝐚𝐜𝐚 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐝𝐮𝐜 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐝𝐮𝐜𝐮 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐭𝐫𝐨𝐥𝐢 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐭𝐫𝐨𝐥𝐢𝟐 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐫𝐞𝐱𝐭𝐫𝐨𝐥𝐢𝟑 [ 𝐣𝐮𝐦𝐥𝐚𝐡 ]
+╠➤𝐬𝐩𝐚𝐦 [ 𝐑𝐞𝐩𝐥𝐲 𝐏𝐞𝐬𝐚𝐧 ]
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ╔══════[ 𝐉𝐀𝐃𝐈 𝐁𝐔𝐆 ]══════⊱
-❰☢❱𝐣𝐚𝐝𝐢𝐛𝐮𝐠𝟏 [ 𝐑𝐞𝐩𝐥𝐲 𝐕𝐢𝐝𝐞𝐨 𝐉𝐚𝐝𝐢 𝐁𝐮𝐠 𝐀𝐮𝐝𝐢𝐨 ]
-❰☢❱𝐣𝐚𝐝𝐢𝐛𝐮𝐠𝟐 [ 𝐑𝐞𝐩𝐥𝐲 𝐕𝐢𝐝𝐞𝐨 𝐉𝐚𝐝𝐢 𝐁𝐮𝐠 𝐌𝐩𝟑 ]
-❰☢❱𝐣𝐚𝐝𝐢𝐛𝐮𝐠𝟑 [ 𝐑𝐞𝐩𝐥𝐲 𝐀𝐮𝐝𝐢𝐨 𝐉𝐚𝐝𝐢 𝐁𝐮𝐠 𝐕𝐧 ]
-❰☢❱𝐣𝐚𝐝𝐢𝐛𝐮𝐠𝟒 [ 𝐑𝐞𝐩𝐥𝐲 𝐒𝐭𝐢𝐜𝐤𝐞𝐫 𝐉𝐚𝐝𝐢 𝐁𝐮𝐠 𝐆𝐚𝐦𝐛𝐚𝐫 ]
-❰☢❱𝐣𝐚𝐝𝐢𝐛𝐮𝐠𝟓 [ 𝐑𝐞𝐩𝐥𝐲 𝐆𝐚𝐦𝐛𝐚𝐫 𝐉𝐚𝐝𝐢 𝐁𝐮𝐠 𝐎𝐧𝐜𝐞 ] 
+╠➤𝐣𝐚𝐝𝐢𝐛𝐮𝐠𝟏 [ 𝐑𝐞𝐩𝐥𝐲 𝐕𝐢𝐝𝐞𝐨 𝐉𝐚𝐝𝐢 𝐁𝐮𝐠 𝐀𝐮𝐝𝐢𝐨 ]
+╠➤𝐣𝐚𝐝𝐢𝐛𝐮𝐠𝟐 [ 𝐑𝐞𝐩𝐥𝐲 𝐕𝐢𝐝𝐞𝐨 𝐉𝐚𝐝𝐢 𝐁𝐮𝐠 𝐌𝐩𝟑 ]
+╠➤𝐣𝐚𝐝𝐢𝐛𝐮𝐠𝟑 [ 𝐑𝐞𝐩𝐥𝐲 𝐀𝐮𝐝𝐢𝐨 𝐉𝐚𝐝𝐢 𝐁𝐮𝐠 𝐕𝐧 ]
+╠➤𝐣𝐚𝐝𝐢𝐛𝐮𝐠𝟒 [ 𝐑𝐞𝐩𝐥𝐲 𝐒𝐭𝐢𝐜𝐤𝐞𝐫 𝐉𝐚𝐝𝐢 𝐁𝐮𝐠 𝐆𝐚𝐦𝐛𝐚𝐫 ]
+╠➤𝐣𝐚𝐝𝐢𝐛𝐮𝐠𝟓 [ 𝐑𝐞𝐩𝐥𝐲 𝐆𝐚𝐦𝐛𝐚𝐫 𝐉𝐚𝐝𝐢 𝐁𝐮𝐠 𝐎𝐧𝐜𝐞 ] 
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 
 ╔══════[ 𝐁𝐔𝐆 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 ]══════⊱
-❰☢❱𝐛𝐮𝐠𝐛𝐜𝐢𝐦𝐚𝐠𝐞 [ 𝐁𝐮𝐠 𝐢𝐦𝐚𝐠𝐞 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 ]
-❰☢❱𝐛𝐮𝐠𝐛𝐜𝐯𝐢𝐝𝐞𝐨 [ 𝐁𝐮𝐠 𝐕𝐢𝐝𝐞𝐨 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬 ]
-❰☢❱𝐛𝐮𝐠𝐛𝐜 𝐚𝐮𝐝𝐢𝐨 [ 𝐁𝐮𝐠 𝐀𝐮𝐝𝐢𝐨 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 ]
-❰☢❱𝐛𝐮𝐠𝐛𝐜𝐭𝐞𝐱𝐭 [ 𝐁𝐮𝐠 𝐓𝐞𝐱𝐭 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 ]
+╠➤𝐛𝐮𝐠𝐛𝐜𝐢𝐦𝐚𝐠𝐞 [ 𝐁𝐮𝐠 𝐢𝐦𝐚𝐠𝐞 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 ]
+╠➤𝐛𝐮𝐠𝐛𝐜𝐯𝐢𝐝𝐞𝐨 [ 𝐁𝐮𝐠 𝐕𝐢𝐝𝐞𝐨 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬 ]
+╠➤𝐛𝐮𝐠𝐛𝐜 𝐚𝐮𝐝𝐢𝐨 [ 𝐁𝐮𝐠 𝐀𝐮𝐝𝐢𝐨 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 ]
+╠➤𝐛𝐮𝐠𝐛𝐜𝐭𝐞𝐱𝐭 [ 𝐁𝐮𝐠 𝐓𝐞𝐱𝐭 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 ]
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4420,18 +4386,18 @@ case 'soundbot': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ SOUNDBOT MENU ]══════⊱ 
-❰☢❱kal
-❰☢❱ngakak
-❰☢❱ketawa
-❰☢❱awkwk
-❰☢❱bang
-❰☢❱nob
-❰☢❱musik
-❰☢❱mastah
-❰☢❱slebew
-❰☢❱cantik
-❰☢❱kesel
-❰☢❱ngeselin
+╠➤kal
+╠➤ngakak
+╠➤ketawa
+╠➤awkwk
+╠➤bang
+╠➤nob
+╠➤musik
+╠➤mastah
+╠➤slebew
+╠➤cantik
+╠➤kesel
+╠➤ngeselin
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4447,27 +4413,27 @@ case 'funnmenu': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ FUN MENU ]══════⊱
-❰☢❱bagaimanakah
-❰☢❱kapankah
-❰☢❱apakah
-❰☢❱bisakah
-❰☢❱rate
-❰☢❱wangy
-❰☢❱gantengcek
-❰☢❱cekganteng
-❰☢❱cantikcek
-❰☢❱cekcantik
-❰☢❱sangecek
-❰☢❱ceksange
-❰☢❱gaycek
-❰☢❱cekgay
-❰☢❱lesbicek
-❰☢❱halah
-❰☢❱hilih
-❰☢❱huluh
-❰☢❱heleh
-❰☢❱holoh
-❰☢❱delttt]
+╠➤bagaimanakah
+╠➤kapankah
+╠➤apakah
+╠➤bisakah
+╠➤rate
+╠➤wangy
+╠➤gantengcek
+╠➤cekganteng
+╠➤cantikcek
+╠➤cekcantik
+╠➤sangecek
+╠➤ceksange
+╠➤gaycek
+╠➤cekgay
+╠➤lesbicek
+╠➤halah
+╠➤hilih
+╠➤huluh
+╠➤heleh
+╠➤holoh
+╠➤delttt]
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4484,35 +4450,35 @@ if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ PRIMBON MENU ]══════⊱
 nomorhoki
-❰☢❱artimimpi
-❰☢❱artinama
-❰☢❱ramaljodoh
-❰☢❱ramaljodohbali
-❰☢❱suamiistri
-❰☢❱ramalcinta
-❰☢❱cocoknama
-❰☢❱pasangan
-❰☢❱jadiannikah
-❰☢❱sifatusaha
-❰☢❱rezeki
-❰☢❱pekerjaan
-❰☢❱nasib
-❰☢❱penyakit
-❰☢❱tarot
-❰☢❱fengshui
-❰☢❱haribaik
-❰☢❱harisangar
-❰☢❱harisial
-❰☢❱nagahari
-❰☢❱arahrezeki
-❰☢❱peruntungan
-❰☢❱weton
-❰☢❱karakter
-❰☢❱keberuntungan
-❰☢❱memancing
-❰☢❱masasubur
-❰☢❱zodiak
-❰☢❱shio
+╠➤artimimpi
+╠➤artinama
+╠➤ramaljodoh
+╠➤ramaljodohbali
+╠➤suamiistri
+╠➤ramalcinta
+╠➤cocoknama
+╠➤pasangan
+╠➤jadiannikah
+╠➤sifatusaha
+╠➤rezeki
+╠➤pekerjaan
+╠➤nasib
+╠➤penyakit
+╠➤tarot
+╠➤fengshui
+╠➤haribaik
+╠➤harisangar
+╠➤harisial
+╠➤nagahari
+╠➤arahrezeki
+╠➤peruntungan
+╠➤weton
+╠➤karakter
+╠➤keberuntungan
+╠➤memancing
+╠➤masasubur
+╠➤zodiak
+╠➤shio
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4528,10 +4494,10 @@ case 'islamiyah': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ ISLAM MENU ]══════⊱
-❰☢❱hadist
-❰☢❱alquran
-❰☢❱juzamma
-❰☢❱tafsirsurah
+╠➤hadist
+╠➤alquran
+╠➤juzamma
+╠➤tafsirsurah
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4547,21 +4513,21 @@ case 'beritanews': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ BERITA MENU ]══════⊱
-❰☢❱merdeka-news
-❰☢❱kontan-news 
-❰☢❱cnbc-news
-❰☢❱tribun-news
-❰☢❱indozone-news
-❰☢❱kompas-news
-❰☢❱detik-news
-❰☢❱daily-news
-❰☢❱inews-news
-❰☢❱okezone-news
-❰☢❱sindo-news
-❰☢❱tempo-news
-❰☢❱antara-news
-❰☢❱cnn-news
-❰☢❱fajar-news
+╠➤merdeka-news
+╠➤kontan-news 
+╠➤cnbc-news
+╠➤tribun-news
+╠➤indozone-news
+╠➤kompas-news
+╠➤detik-news
+╠➤daily-news
+╠➤inews-news
+╠➤okezone-news
+╠➤sindo-news
+╠➤tempo-news
+╠➤antara-news
+╠➤cnn-news
+╠➤fajar-news
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱ `,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4577,29 +4543,29 @@ case 'groupmenu': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ GROUP MENU ]══════⊱
-❰☢❱linkgroup
-❰☢❱ephemeral [di group]
-❰☢❱setppgc /full [image]
-❰☢❱setppbot / full [image]
-❰☢❱setname [text]
-❰☢❱setdesc [text]
-❰☢❱group [option]
-❰☢❱editinfo [option]
-❰☢❱add @user
-❰☢❱kick @user
-❰☢❱ban [targer]
-❰☢❱hidetag [text]
-❰☢❱tagall [text]
-❰☢❱promote @user
-❰☢❱demote @user
-❰☢❱mute on / off
-❰☢❱getname
-❰☢❱translate
-❰☢❱kalkulator
-❰☢❱intro
-❰☢❱getpic
-❰☢❱penjara
-❰☢❱intro
+╠➤linkgroup
+╠➤ephemeral [di group]
+╠➤setppgc /full [image]
+╠➤setppbot / full [image]
+╠➤setname [text]
+╠➤setdesc [text]
+╠➤group [option]
+╠➤editinfo [option]
+╠➤add @user
+╠➤kick @user
+╠➤ban [targer]
+╠➤hidetag [text]
+╠➤tagall [text]
+╠➤promote @user
+╠➤demote @user
+╠➤mute on / off
+╠➤getname
+╠➤translate
+╠➤kalkulator
+╠➤intro
+╠➤getpic
+╠➤penjara
+╠➤intro
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4615,17 +4581,17 @@ case 'voicechanger': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ VOICE MENU ]══════⊱
-❰☢❱bass
-❰☢❱blown
-❰☢❱deep
-❰☢❱earrape
-❰☢❱fast
-❰☢❱fat
-❰☢❱nightcore
-❰☢❱reverse
-❰☢❱robot
-❰☢❱slow
-❰☢❱tupai
+╠➤bass
+╠➤blown
+╠➤deep
+╠➤earrape
+╠➤fast
+╠➤fat
+╠➤nightcore
+╠➤reverse
+╠➤robot
+╠➤slow
+╠➤tupai
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4656,12 +4622,12 @@ case 'searchmenu': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ SEARCH MENU ]══════⊱
-❰☢❱gimage [query]
-❰☢❱pinterest [query]
-❰☢❱wallpaper [query]
-❰☢❱wikimedia [query]
-❰☢❱ringtone [query]
-❰☢❱searchgroups [query]
+╠➤gimage [query]
+╠➤pinterest [query]
+╠➤wallpaper [query]
+╠➤wikimedia [query]
+╠➤ringtone [query]
+╠➤searchgroups [query]
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4677,24 +4643,24 @@ case 'scrapconvert': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ SCRAPE CONVERT ]]══════⊱
-❰☢❱attp
-❰☢❱ttp
-❰☢❱toimage
-❰☢❱sticker
-❰☢❱emojimix
-❰☢❱emojimix2
-❰☢❱tovideo
-❰☢❱togif
-❰☢❱tourl
-❰☢❱tovn
-❰☢❱toonce
-❰☢❱tomp3
-❰☢❱toaudio
-❰☢❱ebinary
-❰☢❱dbinary
-❰☢❱styletext
-❰☢❱smeme
-❰☢❱ss [url]
+╠➤attp
+╠➤ttp
+╠➤toimage
+╠➤sticker
+╠➤emojimix
+╠➤emojimix2
+╠➤tovideo
+╠➤togif
+╠➤tourl
+╠➤tovn
+╠➤toonce
+╠➤tomp3
+╠➤toaudio
+╠➤ebinary
+╠➤dbinary
+╠➤styletext
+╠➤smeme
+╠➤ss [url]
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4710,10 +4676,10 @@ case 'cmdmenu': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ CMD MENU ]══════⊱
-❰☢❱setcmd
-❰☢❱listcmd
-❰☢❱delcmd
-❰☢❱lockcmd
+╠➤setcmd
+╠➤listcmd
+╠➤delcmd
+╠➤lockcmd
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4745,26 +4711,26 @@ case 'ownermenu': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ OWNER MENU ]══════⊱
-❰☢❱react [emoji]
-❰☢❱chat [option]
-❰☢❱join [link]
-❰☢❱leave
-❰☢❱block @user
-❰☢❱unblock @user
-❰☢❱bcText [text]
-❰☢❱setexif
-❰☢❱ban add
-❰☢❱ping
-❰☢❱owner
-❰☢❱creator
-❰☢❱delete
-❰☢❱infochat
-❰☢❱quoted
-❰☢❱cowner add 628xx
-❰☢❱listpc
-❰☢❱listgc
-❰☢❱listonline
-❰☢❱speedtest
+╠➤react [emoji]
+╠➤chat [option]
+╠➤join [link]
+╠➤leave
+╠➤block @user
+╠➤unblock @user
+╠➤bcText [text]
+╠➤setexif
+╠➤ban add
+╠➤ping
+╠➤owner
+╠➤creator
+╠➤delete
+╠➤infochat
+╠➤quoted
+╠➤cowner add 628xx
+╠➤listpc
+╠➤listgc
+╠➤listonline
+╠➤speedtest
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4780,41 +4746,41 @@ case 'scraperimage': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ SCRAPE IMAGE ]══════⊱
-❰☢❱coffe
-❰☢❱quotesanime
-❰☢❱couple
-❰☢❱wibu
-❰☢❱loli
-❰☢❱bully
-❰☢❱waifu
-❰☢❱cuddle
-❰☢❱neko
-❰☢❱cry
-❰☢❱kiss
-❰☢❱hug
-❰☢❱lick
-❰☢❱awoo
-❰☢❱yeet
-❰☢❱bite
-❰☢❱lick
-❰☢❱pat
-❰☢❱killnom
-❰☢❱poke
-❰☢❱wink
-❰☢❱bonk
-❰☢❱glomp
-❰☢❱smug
-❰☢❱blush
-❰☢❱wave
-❰☢❱smile
-❰☢❱highfive
-❰☢❱cringe
-❰☢❱dance
-❰☢❱happy
-❰☢❱handhold
-❰☢❱darkjoke
-❰☢❱meme
-❰☢❱meme2
+╠➤coffe
+╠➤quotesanime
+╠➤couple
+╠➤wibu
+╠➤loli
+╠➤bully
+╠➤waifu
+╠➤cuddle
+╠➤neko
+╠➤cry
+╠➤kiss
+╠➤hug
+╠➤lick
+╠➤awoo
+╠➤yeet
+╠➤bite
+╠➤lick
+╠➤pat
+╠➤killnom
+╠➤poke
+╠➤wink
+╠➤bonk
+╠➤glomp
+╠➤smug
+╠➤blush
+╠➤wave
+╠➤smile
+╠➤highfive
+╠➤cringe
+╠➤dance
+╠➤happy
+╠➤handhold
+╠➤darkjoke
+╠➤meme
+╠➤meme2
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
@@ -4831,167 +4797,167 @@ case 'randomsound': {
 if (isBan) throw sticBanLu(from)
 haikal.sendMessage(m.chat, { image: kalimage, caption: `
 ╔══════[ Sound Menu ]══════⊱
-❰☢❱rexsound1
-❰☢❱rexsound2
-❰☢❱rexsound3
-❰☢❱rexsound4
-❰☢❱rexsound5
-❰☢❱rexsound6
-❰☢❱rexsound7
-❰☢❱rexsound8
-❰☢❱rexsound9
-❰☢❱rexsound10
-❰☢❱rexsound11
-❰☢❱rexsound12
-❰☢❱rexsound13
-❰☢❱rexsound14
-❰☢❱rexsound15
-❰☢❱rexsound16
-❰☢❱rexsound17
-❰☢❱rexsound18
-❰☢❱rexsound19
-❰☢❱rexsound20
-❰☢❱rexsound21
-❰☢❱rexsound22
-❰☢❱rexsound23
-❰☢❱rexsound24
-❰☢❱rexsound25
-❰☢❱rexsound26
-❰☢❱rexsound27
-❰☢❱rexsound28
-❰☢❱rexsound29
-❰☢❱rexsound30
-❰☢❱rexsound31
-❰☢❱rexsound32
-❰☢❱rexsound33
-❰☢❱rexsound34
-❰☢❱rexsound35
-❰☢❱rexsound36
-❰☢❱rexsound37
-❰☢❱rexsound38
-❰☢❱rexsound39
-❰☢❱rexsound40
-❰☢❱rexsound41
-❰☢❱rexsound42
-❰☢❱rexsound43
-❰☢❱rexsound44
-❰☢❱rexsound45
-❰☢❱rexsound46
-❰☢❱rexsound47
-❰☢❱rexsound48
-❰☢❱rexsound49
-❰☢❱rexsound50
-❰☢❱rexsound51
-❰☢❱rexsound52
-❰☢❱rexsound53
-❰☢❱rexsound54
-❰☢❱rexsound55
-❰☢❱rexsound56
-❰☢❱rexsound57
-❰☢❱rexsound58
-❰☢❱rexsound59
-❰☢❱rexsound60
-❰☢❱rexsound61
-❰☢❱rexsound62
-❰☢❱rexsound63
-❰☢❱rexsound64
-❰☢❱rexsound65
-❰☢❱rexsound66
-❰☢❱rexsound67
-❰☢❱rexsound68
-❰☢❱rexsound69
-❰☢❱rexsound70
-❰☢❱rexsound71
-❰☢❱rexsound72
-❰☢❱rexsound73
-❰☢❱rexsound74
-❰☢❱rexsound75
-❰☢❱rexsound76
-❰☢❱rexsound77
-❰☢❱rexsound78
-❰☢❱rexsound79
-❰☢❱rexsound80
-❰☢❱rexsound81
-❰☢❱rexsound82
-❰☢❱rexsound83
-❰☢❱rexsound84
-❰☢❱rexsound85
-❰☢❱rexsound86
-❰☢❱rexsound87
-❰☢❱rexsound88
-❰☢❱rexsound89
-❰☢❱rexsound90
-❰☢❱rexsound91
-❰☢❱rexsound92
-❰☢❱rexsound93
-❰☢❱rexsound94
-❰☢❱rexsound95
-❰☢❱rexsound96
-❰☢❱rexsound97
-❰☢❱rexsound98
-❰☢❱rexsound99
-❰☢❱rexsound100
-❰☢❱rexsound101
-❰☢❱rexsound102
-❰☢❱rexsound103
-❰☢❱rexsound104
-❰☢❱rexsound105
-❰☢❱rexsound106
-❰☢❱rexsound107
-❰☢❱rexsound108
-❰☢❱rexsound109
-❰☢❱rexsound110
-❰☢❱rexsound111
-❰☢❱rexsound112
-❰☢❱rexsound113
-❰☢❱rexsound114
-❰☢❱rexsound115
-❰☢❱rexsound116
-❰☢❱rexsound117
-❰☢❱rexsound118
-❰☢❱rexsound119
-❰☢❱rexsound120
-❰☢❱rexsound121
-❰☢❱rexsound122
-❰☢❱rexsound123
-❰☢❱rexsound124
-❰☢❱rexsound125
-❰☢❱rexsound126
-❰☢❱rexsound127
-❰☢❱rexsound128
-❰☢❱rexsound129
-❰☢❱rexsound130
-❰☢❱rexsound131
-❰☢❱rexsound132
-❰☢❱rexsound133
-❰☢❱rexsound134
-❰☢❱rexsound135
-❰☢❱rexsound136
-❰☢❱rexsound137
-❰☢❱rexsound138
-❰☢❱rexsound139
-❰☢❱rexsound140
-❰☢❱rexsound141
-❰☢❱rexsound142
-❰☢❱rexsound143
-❰☢❱rexsound144
-❰☢❱rexsound145
-❰☢❱rexsound146
-❰☢❱rexsound147
-❰☢❱rexsound148
-❰☢❱rexsound149
-❰☢❱rexsound150
-❰☢❱rexsound151
-❰☢❱rexsound152
-❰☢❱rexsound153
-❰☢❱rexsound154
-❰☢❱rexsound155
-❰☢❱rexsound156
-❰☢❱rexsound157
-❰☢❱rexsound158
-❰☢❱rexsound159
-❰☢❱rexsound160
-❰☢❱rexsound161
+╠➤rexsound1
+╠➤rexsound2
+╠➤rexsound3
+╠➤rexsound4
+╠➤rexsound5
+╠➤rexsound6
+╠➤rexsound7
+╠➤rexsound8
+╠➤rexsound9
+╠➤rexsound10
+╠➤rexsound11
+╠➤rexsound12
+╠➤rexsound13
+╠➤rexsound14
+╠➤rexsound15
+╠➤rexsound16
+╠➤rexsound17
+╠➤rexsound18
+╠➤rexsound19
+╠➤rexsound20
+╠➤rexsound21
+╠➤rexsound22
+╠➤rexsound23
+╠➤rexsound24
+╠➤rexsound25
+╠➤rexsound26
+╠➤rexsound27
+╠➤rexsound28
+╠➤rexsound29
+╠➤rexsound30
+╠➤rexsound31
+╠➤rexsound32
+╠➤rexsound33
+╠➤rexsound34
+╠➤rexsound35
+╠➤rexsound36
+╠➤rexsound37
+╠➤rexsound38
+╠➤rexsound39
+╠➤rexsound40
+╠➤rexsound41
+╠➤rexsound42
+╠➤rexsound43
+╠➤rexsound44
+╠➤rexsound45
+╠➤rexsound46
+╠➤rexsound47
+╠➤rexsound48
+╠➤rexsound49
+╠➤rexsound50
+╠➤rexsound51
+╠➤rexsound52
+╠➤rexsound53
+╠➤rexsound54
+╠➤rexsound55
+╠➤rexsound56
+╠➤rexsound57
+╠➤rexsound58
+╠➤rexsound59
+╠➤rexsound60
+╠➤rexsound61
+╠➤rexsound62
+╠➤rexsound63
+╠➤rexsound64
+╠➤rexsound65
+╠➤rexsound66
+╠➤rexsound67
+╠➤rexsound68
+╠➤rexsound69
+╠➤rexsound70
+╠➤rexsound71
+╠➤rexsound72
+╠➤rexsound73
+╠➤rexsound74
+╠➤rexsound75
+╠➤rexsound76
+╠➤rexsound77
+╠➤rexsound78
+╠➤rexsound79
+╠➤rexsound80
+╠➤rexsound81
+╠➤rexsound82
+╠➤rexsound83
+╠➤rexsound84
+╠➤rexsound85
+╠➤rexsound86
+╠➤rexsound87
+╠➤rexsound88
+╠➤rexsound89
+╠➤rexsound90
+╠➤rexsound91
+╠➤rexsound92
+╠➤rexsound93
+╠➤rexsound94
+╠➤rexsound95
+╠➤rexsound96
+╠➤rexsound97
+╠➤rexsound98
+╠➤rexsound99
+╠➤rexsound100
+╠➤rexsound101
+╠➤rexsound102
+╠➤rexsound103
+╠➤rexsound104
+╠➤rexsound105
+╠➤rexsound106
+╠➤rexsound107
+╠➤rexsound108
+╠➤rexsound109
+╠➤rexsound110
+╠➤rexsound111
+╠➤rexsound112
+╠➤rexsound113
+╠➤rexsound114
+╠➤rexsound115
+╠➤rexsound116
+╠➤rexsound117
+╠➤rexsound118
+╠➤rexsound119
+╠➤rexsound120
+╠➤rexsound121
+╠➤rexsound122
+╠➤rexsound123
+╠➤rexsound124
+╠➤rexsound125
+╠➤rexsound126
+╠➤rexsound127
+╠➤rexsound128
+╠➤rexsound129
+╠➤rexsound130
+╠➤rexsound131
+╠➤rexsound132
+╠➤rexsound133
+╠➤rexsound134
+╠➤rexsound135
+╠➤rexsound136
+╠➤rexsound137
+╠➤rexsound138
+╠➤rexsound139
+╠➤rexsound140
+╠➤rexsound141
+╠➤rexsound142
+╠➤rexsound143
+╠➤rexsound144
+╠➤rexsound145
+╠➤rexsound146
+╠➤rexsound147
+╠➤rexsound148
+╠➤rexsound149
+╠➤rexsound150
+╠➤rexsound151
+╠➤rexsound152
+╠➤rexsound153
+╠➤rexsound154
+╠➤rexsound155
+╠➤rexsound156
+╠➤rexsound157
+╠➤rexsound158
+╠➤rexsound159
+╠➤rexsound160
+╠➤rexsound161
 ╚════[ ℜ𝔢𝔵𝔧𝔲 ]══════⊱`,
 contextInfo:{"externalAdReply": {"title": `SC ℜ𝔢𝔵𝔧𝔲`,"body": `Selamat ${salam} kak ${pushname}`,
 previewType: "PHOTO",
