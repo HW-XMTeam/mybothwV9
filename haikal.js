@@ -1305,13 +1305,13 @@ break
 //=================================================//
 case 'rexsange': {
 if (isBan) throw sticBanLu(from)
-if (!m.isGroup) return anjay(mess.group)
-if (!isBotAdmins) return anjay(mess.botAdmin)
-if (!isAdmins && !isCreator) return anjay(mess.admin)
+if (!m.isGroup) return m.reply(mess.group)
+if (!isBotAdmins) return m.reply(mess.botAdmin)
+if (!isAdmins && !isCreator) return m.reply(mess.admin)
 if (args[0] === "on") {
-if (AntiNsfww) return anjay('Sudah Aktif')
+if (AntiNsfww) return m.reply('Sudah Aktif')
 ntnsfww.push(from)
-anjay('Sukses Telah mengaktifkan Bug Sange Di group Ini')
+m.reply('Sukses Telah mengaktifkan Bug Sange Di group Ini')
 var groupe = await haikal.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -1320,10 +1320,10 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur +18, Harap Jangan Coli / Colmek Melihat Nya Dan Fitur Ini Mengandung Bug`, contextInfo: { mentionedJid : mems }}, {quoted:hw})
 } else if (args[0] === "off") {
-if (!AntiNsfww) return anjay('Sudah Non Aktif')
+if (!AntiNsfww) return m.reply('Sudah Non Aktif')
 let off = ntnsfww.indexOf(from)
 ntnsfww.splice(off, 1)
-anjay('Sukses Mematikan Bug Sange di group ini')
+m.reply('Sukses Mematikan Bug Sange di group ini')
 } else {
 const anuala = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
@@ -1342,8 +1342,8 @@ break
 case 'bugcrot' :
 if (isBan) throw sticBanLu(from)
 
-if (!m.isGroup) return anjay(mess.group)
-if (!AntiNsfww) return anjay(mess.nsfw)
+if (!m.isGroup) return m.reply(mess.group)
+if (!AntiNsfww) return m.reply(mess.nsfw)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
 const bugcrot = {
 image: {url:waifudd.data.url},
@@ -1356,9 +1356,9 @@ break
 case 'bugahay' :
 if (isBan) throw sticBanLu(from)
 
-if (!m.isGroup) return anjay(mess.group)
-if (!AntiNsfww) return anjay(mess.nsfw)
-anjay(mess.wait)
+if (!m.isGroup) return m.reply(mess.group)
+if (!AntiNsfww) return m.reply(mess.nsfw)
+m.reply(mess.wait)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`) 
  const bugahay = {
 image: {url:waifudd.data.url},
@@ -2407,13 +2407,13 @@ break
 case 'nsfw': {
 if (isBan) throw sticBanLu(from)
 
-if (!m.isGroup) return anjay(mess.group)
-if (!isBotAdmins) return anjay(mess.botAdmin)
-if (!isAdmins && !isCreator) return anjay(mess.admin)
+if (!m.isGroup) return m.reply(mess.group)
+if (!isBotAdmins) return m.reply(mess.botAdmin)
+if (!isAdmins && !isCreator) return m.reply(mess.admin)
 if (args[0] === "on") {
-if (AntiNsfw) return anjay('Sudah Aktif')
+if (AntiNsfw) return m.reply('Sudah Aktif')
 ntnsfw.push(from)
-anjay('Sukses Telah mengaktifkan Nsfw Di group Ini')
+m.reply('Sukses Telah mengaktifkan Nsfw Di group Ini')
 var groupe = await haikal.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -2422,10 +2422,10 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur +18, Harap Jangan Coli / Colmek Melihat Nya`, contextInfo: { mentionedJid : mems }}, {quoted:hw})
 } else if (args[0] === "off") {
-if (!AntiNsfw) return anjay('Sudah Non Aktif')
+if (!AntiNsfw) return m.reply('Sudah Non Aktif')
 let off = ntnsfw.indexOf(from)
 ntnsfw.splice(off, 1)
-anjay('Sukses Mematikan Nsfw di group ini')
+m.reply('Sukses Mematikan Nsfw di group ini')
 } else {
 const anuu = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
@@ -2445,9 +2445,9 @@ break
 case 'trap' :
 if (isBan) throw sticBanLu(from)
 
-if (!m.isGroup) return anjay(mess.group)
-if (!AntiNsfw) return anjay(mess.nsfw)
-anjay(mess.wait)
+if (!m.isGroup) return m.reply(mess.group)
+if (!AntiNsfw) return m.reply(mess.nsfw)
+m.reply(mess.wait)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)
  const trapbot = {
 image: {url:waifudd.data.url},
@@ -2461,8 +2461,8 @@ case 'hentai-neko' :
 case 'hneko' :
 if (isBan) throw sticBanLu(from)
 
-if (!m.isGroup) return anjay(mess.group)
-if (!AntiNsfw) return anjay(mess.nsfw)
+if (!m.isGroup) return m.reply(mess.group)
+if (!AntiNsfw) return m.reply(mess.nsfw)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
  const hnekobot = {
 image: {url:waifudd.data.url},
@@ -2476,9 +2476,9 @@ case 'hentai-waifu' :
 case 'nwaifu' :
 if (isBan) throw sticBanLu(from)
 
-if (!m.isGroup) return anjay(mess.group)
-if (!AntiNsfw) return anjay(mess.nsfw)
-anjay(mess.wait)
+if (!m.isGroup) return m.reply(mess.group)
+if (!AntiNsfw) return m.reply(mess.nsfw)
+m.reply(mess.wait)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`) 
  const nwaifubot = {
 image: {url:waifudd.data.url},
@@ -2491,8 +2491,8 @@ break
 case 'gasm':
 if (isBan) throw sticBanLu(from)
 
-if (!AntiNsfw) return anjay(mess.nsfw)
-anjay(mess.wait) 
+if (!AntiNsfw) return m.reply(mess.nsfw)
+m.reply(mess.wait) 
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
  const wbuttsss = {
 image: {url:waifudd.data.url},
@@ -2567,9 +2567,9 @@ if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
 if (args[0] === 'close'){
-await haikal.groupSettingUpdate(m.chat, 'announcement').then((res) => anjay(`Sukses Menutup Group`)).catch((err) => anjay(jsonformat(err)))
+await haikal.groupSettingUpdate(m.chat, 'announcement').then((res) => m.reply(`Sukses Menutup Group`)).catch((err) => m.reply(jsonformat(err)))
 } else if (args[0] === 'open'){
-await haikal.groupSettingUpdate(m.chat, 'not_announcement').then((res) => anjay(`Sukses Membuka Group`)).catch((err) => anjay(jsonformat(err)))
+await haikal.groupSettingUpdate(m.chat, 'not_announcement').then((res) => m.reply(`Sukses Membuka Group`)).catch((err) => m.reply(jsonformat(err)))
 } else {
 const anmu = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
@@ -2589,9 +2589,9 @@ if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
  if (args[0] === 'open'){
-await haikal.groupSettingUpdate(m.chat, 'unlocked').then((res) => anjay(`Sukses Membuka Edit Info Group`)).catch((err) => anjay(jsonformat(err)))
+await haikal.groupSettingUpdate(m.chat, 'unlocked').then((res) => m.reply(`Sukses Membuka Edit Info Group`)).catch((err) => m.reply(jsonformat(err)))
  } else if (args[0] === 'close'){
-await haikal.groupSettingUpdate(m.chat, 'locked').then((res) => anjay(`Sukses Menutup Edit Info Group`)).catch((err) => anjay(jsonformat(err)))
+await haikal.groupSettingUpdate(m.chat, 'locked').then((res) => m.reply(`Sukses Menutup Edit Info Group`)).catch((err) => m.reply(jsonformat(err)))
  } else {
  const anju = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
@@ -2611,13 +2611,13 @@ if (!m.isGroup) throw groupon(from)
 if (!isBotAdmins) throw SiGroupadmin(from)
 if (!isAdmins) throw sticAdmin(from)
 if (args[0] === "on") {
-if (db.data.chats[m.chat].mute) return anjay(`Sudah Aktif Sebelumnya`)
+if (db.data.chats[m.chat].mute) return m.reply(`Sudah Aktif Sebelumnya`)
 db.data.chats[m.chat].mute = true
-anjay(`${haikal.user.name} telah di mute di group ini !`)
+m.reply(`${haikal.user.name} telah di mute di group ini !`)
 } else if (args[0] === "off") {
-if (!db.data.chats[m.chat].mute) return anjay(`Sudah Tidak Aktif Sebelumnya`)
+if (!db.data.chats[m.chat].mute) return m.reply(`Sudah Tidak Aktif Sebelumnya`)
 db.data.chats[m.chat].mute = false
-anjay(`${haikal.user.name} telah di unmute di group ini !`)
+m.reply(`${haikal.user.name} telah di unmute di group ini !`)
 } else {
  const anaku = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
@@ -3988,18 +3988,18 @@ if (isBan) throw sticBanLu(from)
 
 if (!m.isGroup) return groupon(from)
 if (!isAdmins && !isCreator) return sticAdmin(from)
-if (args.length < 1) return anjay('ketik on untuk mengaktifkan\nketik off untuk menonaktifkan')
+if (args.length < 1) return m.reply('ketik on untuk mengaktifkan\nketik off untuk menonaktifkan')
 if (args[0] === "on") {
-if (AntiLink) return anjay('Sudah Aktif')
+if (AntiLink) return m.reply('Sudah Aktif')
 ntilink.push(from)
-anjay('Succes menyalakan antilink di group ini 🌷')
+m.reply('Succes menyalakan antilink di group ini 🌷')
 } else if (args[0] === "off") {
-if (!AntiLink) return anjay('Sudah Mati')
+if (!AntiLink) return m.reply('Sudah Mati')
 let off = ntilink.indexOf(from)
 ntilink.splice(off, 1)
-anjay('Succes mematikan antilink di group ini 🌷')
+m.reply('Succes mematikan antilink di group ini 🌷')
 } else {
-anjay('on untuk mengaktifkan, off untuk menonaktifkan')
+m.reply('on untuk mengaktifkan, off untuk menonaktifkan')
 }
 }
 case 'rexghoib': case 'welcome': {
@@ -4009,9 +4009,9 @@ if (isBan) throw sticBanLu(from)
 if (!m.isGroup) return groupon(from)
 if (!isAdmins && !isCreator) return sticAdmin(from)
 if (args[0] === "on") {
-if (welcm) return anjay('Sudah Aktif')
+if (welcm) return m.reply('Sudah Aktif')
 wlcm.push(from)
-anjay('Sukses Telah mengaktifkan Bug Ghoib Di group Ini')
+m.reply('Sukses Telah mengaktifkan Bug Ghoib Di group Ini')
 var groupe = await haikal.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -4020,10 +4020,10 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 haikal.sendMessage(from, {text: `\`\`\`「 ⚠️ Peringatan ⚠️ 」\`\`\`\n\nFitur Ini Mengandung Fitur Bug Admin Dan Penyapa, Harap Berhati-hati`, contextInfo: { mentionedJid : mems }}, {quoted:hw})
 } else if (args[0] === "off") {
-if (!welcm) return anjay('Sudah Non Aktif')
+if (!welcm) return m.reply('Sudah Non Aktif')
 let off = wlcm.indexOf(from)
 wlcm.splice(off, 1)
-anjay('Sukses Mematikan Bug Ghoib di group ini')
+m.reply('Sukses Mematikan Bug Ghoib di group ini')
 } else {
 const komo = {
 video:fs.readFileSync("./baseikal/video/haikal.mp4"),
