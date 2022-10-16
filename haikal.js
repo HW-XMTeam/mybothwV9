@@ -4002,6 +4002,7 @@ m.reply('Succes mematikan antilink di group ini 🌷')
 m.reply('on untuk mengaktifkan, off untuk menonaktifkan')
 }
 }
+break
 case 'rexghoib': case 'welcome': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
