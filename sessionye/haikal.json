@@ -3,42 +3,42 @@
     "noiseKey": {
       "private": {
         "type": "Buffer",
-        "data": "oIdMoZGZ2WhlHepGdhGdyDFD+zQKAzhd9P99yzItuFM="
+        "data": "AOOpJqx9mrJD54kMr3YR1d8ZLPwMDKntVN0/7fyQQFM="
       },
       "public": {
         "type": "Buffer",
-        "data": "2v8eAHHTGiwVUZ3Ut6i7KLhcP7NmGGwNRw3vlftEUhg="
+        "data": "hGtaHaD4JzXyW9H97BFcxxwHj3+UlbTZtsknh1ajsys="
       }
     },
     "signedIdentityKey": {
       "private": {
         "type": "Buffer",
-        "data": "GJL0FVdCiPhKFzd6OJ3g4skEmf0SR2BFPGt1X3N9cGE="
+        "data": "KA1/4EghXjoZVYUy5M0YVH4TSeI1BxWS8ZwurEktT1A="
       },
       "public": {
         "type": "Buffer",
-        "data": "DeDEhMr4dB8AHq+ZQJPx98KtG+U5LngKkEeNgR0L0z8="
+        "data": "VNJamcHvZFpXsxQpFKYQ1Jeu3wr8eZajqIPNZAMq8lI="
       }
     },
     "signedPreKey": {
       "keyPair": {
         "private": {
           "type": "Buffer",
-          "data": "qJyLG2knAYjZAobwPUg/S5dtfLbeZz5b5mh/QBdaKkA="
+          "data": "yEXkPOX3Nxe5VYCWCrZm8Abse5X/+NP+TpDd0uCQvXA="
         },
         "public": {
           "type": "Buffer",
-          "data": "u897Or/Xmq8DJWyMuw1D8jUAbiU7qBQSYwZ3NVjPzSs="
+          "data": "Jn9Lrlio7MnfPK17+83HTcZlwQcd/CXO2vUwl6Tu53o="
         }
       },
       "signature": {
         "type": "Buffer",
-        "data": "fMqk5w4aw18m3uQcjNkmPIZfhpxNcwN4y89P8ptGJhmINl+7mKga6aTaiMe/06wNzKSUmjHL8zDVaM3nFJKMCg=="
+        "data": "nxLZYS03KMi7Oy6FLcS5FXk+NK0H0GwJN1iMpGBnguvSvEyaCzl5rNhKaTp1QmJHrnLzvvai8ChUKa5wUhB7Cg=="
       },
       "keyId": 1
     },
-    "registrationId": 243,
-    "advSecretKey": "kCclJRPcVQReqOUYnYopwBJ5m93d7GcpkFhG7gibyZc=",
+    "registrationId": 45,
+    "advSecretKey": "rXL+QOPME/LKckr7aJp95Btm5Z77uOuvy9m5Qm2uPNs=",
     "processedHistoryMessages": [],
     "nextPreKeyId": 1,
     "firstUnuploadedPreKeyId": 1,
@@ -46,29 +46,28 @@
       "unarchiveChats": false
     },
     "account": {
-      "details": "CMyEjvIHELaVsJoGGAE=",
-      "accountSignatureKey": "+Kk9+QqwEUOuTRbqdbwpgklO1YMoudj3vrv+dGG4qms=",
-      "accountSignature": "lBGGJ1VCFZ73YqSaKwJ0KMcrGRLVTXPy3N9dbZxhb480tTKV6y/QmoQJE7cQ+/sqLYgKVsB50YiYN6UbcwvhCw==",
-      "deviceSignature": "uM1hAhBdfHUdn/uJBWLz50wfR6smYYstxQlsuRzK3MV8rlQRmS+urA3g9W2L5eYGPc6sQQrhb4yTUeFapJfABA=="
+      "details": "COvSj2UQosPEmgYYAQ==",
+      "accountSignatureKey": "+kgwzgfuwKeHOZmBYkDOoy5CmyyL8rFDGf7SR6YPfzs=",
+      "accountSignature": "Uk7tDw2p/PgNLczguIBC+QAOv7MeYCqVkHHW72tJCngHeBF1Eo1Tu8ObutAig72u1mEOxkahG9I8j3IjZtSHDg==",
+      "deviceSignature": "sgxSt4y4y4wgJDvH7ER8hhIGPnjk+x+DTa5L0EWt/4C9wcpuK0pjxJLrqfkLfZw8/X6aNfpY2xbpSy9c6V56Cw=="
     },
     "me": {
-      "id": "6281214281312:52@s.whatsapp.net",
-      "name": "Haikal"
+      "id": "15176579704:1@s.whatsapp.net"
     },
     "signalIdentities": [
       {
         "identifier": {
-          "name": "6281214281312:52@s.whatsapp.net",
+          "name": "15176579704:1@s.whatsapp.net",
           "deviceId": 0
         },
         "identifierKey": {
           "type": "Buffer",
-          "data": "BfipPfkKsBFDrk0W6nW8KYJJTtWDKLnY9767/nRhuKpr"
+          "data": "BfpIMM4H7sCnhzmZgWJAzqMuQpssi/KxQxn+0kemD387"
         }
       }
     ],
-    "platform": "smba",
-    "lastAccountSyncTimestamp": 1665927867
+    "platform": "android",
+    "lastAccountSyncTimestamp": 1666261415
   },
   "keys": {}
 }
