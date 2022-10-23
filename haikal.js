@@ -11,7 +11,7 @@
 🌷 KALAU MAU RENAME TARO CREDITS GUA : DenzTzy⏧ */
 
 //=================================================//
-require('./denzkal')
+require('./hwkal')
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
 const fs = require('fs')
 const util = require('util')
