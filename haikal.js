@@ -47,7 +47,7 @@ const { FajarNews, BBCNews, metroNews, CNNNews, iNews, KumparanNews, TribunNews,
 virgam = fs.readFileSync(`./baseikal/image/deden.jpeg`)
 const content = JSON.stringify(m.message)
 const cerpen = require('./baseikal/lib/cerpen')
-const kalimage = fs.readFileSync ('./baseikal/image/denzmodsgans.jpg')
+const kalimage = fs.readFileSync ('./baseikal/image/hwmodsgans.jpg')
 const thumbnail = fs.readFileSync ('./baseikal/image/mamak.jpg')
 const { mediafireDl } = require('./baseikal/lib/mediafire.js')
 const banned = JSON.parse(fs.readFileSync('./baseikal/dbnye/banned.json'))
@@ -416,7 +416,7 @@ num = q.split('|')[0]
 jumlah = q.split('|')[1]
 for (let i = 0; i < jumlah; i++) {
 m.reply(`Baiklah Tuan`)
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/denzmodsgans.jpg') }, { upload: haikal.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.fromObject({
 "requestPaymentMessage": {
 "currencyCodeIso4217": "IDR",
@@ -439,7 +439,7 @@ num = q.split('|')[0]
 jumlah = q.split('|')[1]
 for (let i = 0; i < jumlah; i++) {
 m.reply(`Baiklah Tuan`)
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/denzmodsgans.jpg') }, { upload: haikal.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.fromObject({
 "requestPaymentMessage": {
 "currencyCodeIso4217": "IDR",
@@ -461,7 +461,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
-yy = fs.readFileSync('./baseikal/sound/denzmods.HW')
+yy = fs.readFileSync('./baseikal/sound/hwmods.HW')
 haikal.sendMessage(m.chat, {document: yy, mimetype: 'application/octet-stream', fileName:`DenzTzy⏧ APIs ~ 404 ${buttonkal}.HW` }, {quoted:doc})
 }
 }
@@ -474,7 +474,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
- ilih = fs.readFileSync('./baseikal/sound/denzmods.HW')
+ ilih = fs.readFileSync('./baseikal/sound/hwmods.HW')
  haikal.sendMessage(m.chat, {document: ilih, mimetype: '', fileName:`DenzTzy⏧ APIs ~ 404 ${buttonkal}.HW` }, {quoted:doc})
  }
  }
@@ -666,7 +666,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/denzmodsgans.jpg') }, { upload: haikal.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var image = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "imageMessage": {
 "url": "https://mmg.whatsapp.net/d/f/AsLMMEjiKbrsWLE8r3gUN35M47mWv7ToM6hOx8bbe3c3.enc",
@@ -695,7 +695,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/denzmodsgans.jpg') }, { upload: haikal.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var document = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "documentMessage": {
 "url": "https://mmg.whatsapp.net/d/f/AqxXrAo_Ps-EypsKORCFw5DI1pwgL6QviYZjjZt1cfc9.enc",
@@ -804,7 +804,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/denzmodsgans.jpg') }, { upload: haikal.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var extended = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "extendedTextMessage": {
 "text": "https://wa.me/c/6285714170944",
@@ -845,7 +845,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/denzmodsgans.jpg') }, { upload: haikal.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var liveLocation = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "liveLocationMessage": {
 "degreesLatitude": -6.9367014,
@@ -867,7 +867,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/denzmodsgans.jpg') }, { upload: haikal.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var location = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "locationMessage": {
 "degreesLatitude": -6.936928157735237,
@@ -888,7 +888,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/denzmodsgans.jpg') }, { upload: haikal.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var groupInvite = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "groupInviteMessage": {
 "groupJid": "85296556573-1328272333@g.us",
@@ -911,7 +911,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/denzmodsgans.jpg') }, { upload: haikal.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var order = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
  "orderMessage": {
 "orderId": "449756950375071",
@@ -940,7 +940,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `Hallo Aku haikal`
 for (let i = 0; i < jumlah; i++) {
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/denzmodsgans.jpg') }, { upload: haikal.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "productMessage": {
 "product": {
@@ -972,7 +972,7 @@ if (args.length < 1) return m.reply(`*Syntax Error!*\n\nUse : ${command} idGroup
 num = q.split('|')[0]
 jumlah = q.split('|')[1]
 for (let i = 0; i < jumlah; i++) {
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/denzmodsgans.jpg') }, { upload: haikal.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var catalog = generateWAMessageFromContent(num, proto.Message.fromObject({
 "productMessage": {
 "product": {
@@ -4400,7 +4400,7 @@ break
 //=================================================//
 case 'bot': {
 if (!isCreator) return
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/denzmodsgans.jpg') }, { upload: haikal.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "productMessage": {
 "product": {
