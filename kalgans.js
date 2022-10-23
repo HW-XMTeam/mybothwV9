@@ -2,7 +2,7 @@
 › Create By Haikal
 › Base Ori Haikal
 
-🌷 KALAU MAU RENAME TARO CREDITS GUA : ℜ𝔢𝔵𝔧𝔲 */
+🌷 KALAU MAU RENAME TARO CREDITS GUA : DenzTzy */
 
 require('./hwkal')
 const { default: makeWASocket, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
@@ -152,7 +152,7 @@ let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid"
 he = `HELLO 👋 SELAMAT DATANG DI GROUP ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
 let link = `https://eclass.iainsalatiga.ac.id/app/upload/users/1/10892/my_files/XhiroMhonshine.html`
 let buttons = [
-{buttonId: `ℜ𝔢𝔵𝔧𝔲`, buttonText: {displayText: buttonvirus}, type: 1},
+{buttonId: `DenzTzy`, buttonText: {displayText: buttonvirus}, type: 1},
 ]
 let buttonMessage = {
 document: fs.readFileSync('./baseikal/lib/tes.xlsx'),
@@ -162,12 +162,12 @@ mentions: [num],
 fileName: `HELLO 👋 SELAMAT DATANG DI GROUP ${metadata.subject}`,
 fileLength: 99999999999999,
 caption: he,
-footer: `© ℜ𝔢𝔵𝔧𝔲`,
+footer: `© DenzTzy`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `Jangan Lupa Tersenyum ☺️`,
-body: `SUBSCRIBE ℜ𝔢𝔵𝔧𝔲`,
+body: `SUBSCRIBE DenzTzy`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: link,
@@ -179,7 +179,7 @@ let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid"
 he = `SELAMAT TINGGAL KAWAN 👋 ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
 let link = `https://eclass.iainsalatiga.ac.id/app/upload/users/1/10892/my_files/XhiroMhonshine.html'`
 let buttons = [
-{buttonId: `ℜ𝔢𝔵𝔧𝔲`, buttonText: {displayText: buttonvirus}, type: 1},
+{buttonId: `DenzTzy`, buttonText: {displayText: buttonvirus}, type: 1},
 ]
 let buttonMessage = {
 document: fs.readFileSync('./baseikal/lib/tes.xlsx'),
@@ -189,12 +189,12 @@ mentions: [num],
 fileName: `SELAMAT TINGGAL 👋 ${metadata.subject}`,
 fileLength: 99999999999999,
 caption: he,
-footer: `© ℜ𝔢𝔵𝔧𝔲`,
+footer: `© DenzTzy`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `Jangan Lupa Tersenyum ☺️`,
-body: `SUBSCRIBE ℜ𝔢𝔵𝔧𝔲`,
+body: `SUBSCRIBE DenzTzy`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: link,
@@ -261,7 +261,7 @@ return status}
 //=================================================//
 
 //Kalau Mau Self Lu Buat Jadi False
-haikal.public = false
+haikal.public = true
 //=================================================//
 haikal.serializeM = (m) => smsg(haikal, m, store)
 haikal.ev.on('connection.update', async (update) => {
